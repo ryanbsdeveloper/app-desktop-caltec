@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file>person-falling-burst-solid.svg</file>
+    <file>person-walking-arrow-loop-left-solid.svg</file>
+    <file>arrow-right-to-bracket-solid.svg</file>
+    <file>github-brands.svg</file>
+    <file>ori.png</file>
+    <file>icon.png</file>
+    <file>circle-info-solidg.svg</file>
+    <file>circle-info-solid.svg</file>
+    <file>plug-solid (1).svg</file>
+    <file>plug-circle-exclamation-solid.svg</file>
+    <file>crown-solid (2).svg</file>
+    <file>logo.png</file>
+    <file>layer-group-solid (1).svg</file>
+    <file>scale-balanced-solid (1).svg</file>
+    <file>person-walking-arrow-right-solid (1).svg</file>
+    <file>person-walking-solid (1).svg</file>
+    <file>file-lines-solid (1).svg</file>
+    <file>crown-solid (1).svg</file>
+  </qresource>
+</RCC>

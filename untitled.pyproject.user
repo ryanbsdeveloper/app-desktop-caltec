@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 7.0.2, 2022-05-26T04:07:21. -->
+<!-- Written by QtCreator 7.0.2, 2022-05-26T05:16:04. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -118,16 +118,16 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/ryanl/Desktop/untitled/untitled/mainwindow.py</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/ryanl/Desktop/untitled/untitled/mainwindow.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/ryanl/Desktop/untitled/untitled/mainwindow.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">C:/Users/ryanl/Desktop/untitled/mainwindow.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/ryanl/Desktop/untitled/mainwindow.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/ryanl/Desktop/untitled/mainwindow.py</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{ea44cc79-a589-438b-b46c-d62aa8278c9a}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\ryanl\Desktop\untitled\untitled\mainwindow.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\ryanl\Desktop\untitled\mainwindow.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/ryanl/Desktop/untitled/untitled</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/ryanl/Desktop/untitled</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
