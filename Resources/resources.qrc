@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>icon (2).png</file>
     <file>person-falling-burst-solid.svg</file>
     <file>person-walking-arrow-loop-left-solid.svg</file>
     <file>arrow-right-to-bracket-solid.svg</file>

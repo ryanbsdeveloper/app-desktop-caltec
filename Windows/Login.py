@@ -13,6 +13,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 import resources_rc
+import resources_rc
 
 class Ui_Login_Widget(object):
     def setupUi(self, Login_Widget):
@@ -32,7 +33,7 @@ class Ui_Login_Widget(object):
         Login_Widget.setTabletTracking(False)
         Login_Widget.setAcceptDrops(False)
         icon = QIcon()
-        icon.addFile(u":/icons/icon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/icon (2).png", QSize(), QIcon.Normal, QIcon.Off)
         Login_Widget.setWindowIcon(icon)
         Login_Widget.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.verticalLayout = QVBoxLayout(Login_Widget)
@@ -224,7 +225,7 @@ class Ui_Login_Widget(object):
     # setupUi
 
     def retranslateUi(self, Login_Widget):
-        Login_Widget.setWindowTitle(QCoreApplication.translate("Login_Widget", u"Caltec - Aplicativo de pesagem", None))
+        Login_Widget.setWindowTitle(QCoreApplication.translate("Login_Widget", u"Caltec - Software de pesagem", None))
         self.label_2.setText(QCoreApplication.translate("Login_Widget", u"E-mail:", None))
         self.label_3.setText(QCoreApplication.translate("Login_Widget", u"Senha:", None))
         self.entrar_button.setText(QCoreApplication.translate("Login_Widget", u"Entrar na conta", None))

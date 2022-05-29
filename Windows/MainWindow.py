@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         icon = QIcon()
-        icon.addFile(u":/icons/icon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/icon (2).png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setToolButtonStyle(Qt.ToolButtonIconOnly)
         MainWindow.setAnimated(True)
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(250, 0))
-        self.label.setMaximumSize(QSize(200, 16777215))
+        self.label.setMaximumSize(QSize(199, 16777215))
         self.label.setPixmap(QPixmap(u":/icons/logo.png"))
         self.label.setScaledContents(False)
         self.label.setAlignment(Qt.AlignCenter)
@@ -641,7 +641,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Caltec - Sistema de pesagem", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Caltec - Software de pesagem", None))
         self.adicionar_balanca.setText(QCoreApplication.translate("MainWindow", u"Conectar balan\u00e7a", None))
         self.fechar_aplicativo.setText(QCoreApplication.translate("MainWindow", u"Fechar aplicativo", None))
         self.actionAvan_adas.setText(QCoreApplication.translate("MainWindow", u"Configura\u00e7\u00f5es Avan\u00e7adas", None))

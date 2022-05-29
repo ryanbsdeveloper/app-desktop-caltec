@@ -24,7 +24,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Resources/resources.qrc">
-    <normaloff>:/icons/icon.png</normaloff>:/icons/icon.png</iconset>
+    <normaloff>:/icons/icon (2).png</normaloff>:/icons/icon (2).png</iconset>
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonIconOnly</enum>
@@ -126,7 +126,7 @@ border-bottom: 1px solid rgb(181, 181, 181)</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>200</width>
+              <width>199</width>
               <height>16777215</height>
              </size>
             </property>

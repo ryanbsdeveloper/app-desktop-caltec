@@ -1,4 +1,5 @@
 import psycopg2
+import webbrowser
 
 class DB():
     def __init__(self) -> None:
@@ -13,3 +14,7 @@ class DB():
                 if senha in v:
                     return True
         return False
+
+
+def open_link(url):
+    webbrowser.open(url)

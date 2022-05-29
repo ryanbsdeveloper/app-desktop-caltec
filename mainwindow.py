@@ -31,20 +31,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def menu_grupos(self):
         if self.menu_grupos_frame.isHidden():
             self.menu_grupos_frame.show()
-            self.aba_grupo_button.setText('Grupos                    ▼')
+            self.aba_grupo_button.setText('Grupos                    ▲')
         else:
             self.menu_grupos_frame.hide()
-            self.aba_grupo_button.setText('Grupos                    ▲')
+            self.aba_grupo_button.setText('Grupos                    ▼')
 
 
     def menu_pesagem(self):
         if self.menu_pesagem_frame.isHidden():
             self.menu_pesagem_frame.show()
-            self.aba_pesagem_button.setText('Pesagens                 ▼')
+            self.aba_pesagem_button.setText('Pesagens                 ▲')
 
         else:
             self.menu_pesagem_frame.hide()
-            self.aba_pesagem_button.setText('Pesagens                 ▲')
+            self.aba_pesagem_button.setText('Pesagens                 ▼')
 
 class LoginWindow(QWidget, Ui_Login_Widget):
     def __init__(self):
@@ -54,7 +54,7 @@ class LoginWindow(QWidget, Ui_Login_Widget):
         self.entrar_button.setDisabled(True)
         self.email_input.textChanged.connect(self.disableButton)
         self._senha_input.textChanged.connect(self.disableButton)
-
+        self.mais_servicos_button.clicked.connect(self.more_services)
         self.entrar_button.clicked.connect(self.login)
 
         self.main_window = MainWindow()
@@ -78,6 +78,9 @@ class LoginWindow(QWidget, Ui_Login_Widget):
             self.dialog_login.show()
             self.email_input.setText('')
             self._senha_input.setText('')
+
+    def more_services(self):
+        utils.open_link('https://www.caltecbalancas.com.br/servicos.html')
 
 
 if __name__ == '__main__':
