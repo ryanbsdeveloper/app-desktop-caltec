@@ -22,11 +22,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
-        self.info_frame.hide()
         self.menu_grupos_frame.hide()
         self.menu_pesagem_frame.hide()
         self.aba_pesagem_button.clicked.connect(self.menu_pesagem)
         self.aba_grupo_button.clicked.connect(self.menu_grupos)
+
+        #PAGES
+        self.aba_conta_button.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_conta))
+        self.aba_relatorio_button.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_relatorio))
             
     def menu_grupos(self):
         if self.menu_grupos_frame.isHidden():

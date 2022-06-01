@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>print-solid.svg</file>
+    <file>filter-solid.svg</file>
+    <file>magnifying-glass-solid.svg</file>
+    <file>logo.ico</file>
+    <file>angle-down-solid.svg</file>
     <file>icon (2).png</file>
     <file>person-falling-burst-solid.svg</file>
     <file>person-walking-arrow-loop-left-solid.svg</file>
