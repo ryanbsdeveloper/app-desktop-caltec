@@ -1,5 +1,13 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>plus-solid.svg</file>
+    <file>trash-can-solid.svg</file>
+    <file>clock-rotate-left-solid.svg</file>
+    <file>caret-right-solid.svg</file>
+    <file>caret-left-solid.svg</file>
+    <file>cubes-solid.svg</file>
+    <file>cubes-solid.svg</file>
+    <file>cubes-solid.svg</file>
     <file>print-solid.svg</file>
     <file>filter-solid.svg</file>
     <file>magnifying-glass-solid.svg</file>

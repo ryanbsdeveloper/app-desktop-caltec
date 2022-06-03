@@ -94,6 +94,7 @@ class Ui_MainWindow(object):
         font1.setBold(False)
         font1.setWeight(50)
         self.aba_pesagem_button.setFont(font1)
+        self.aba_pesagem_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.aba_pesagem_button.setFocusPolicy(Qt.ClickFocus)
         self.aba_pesagem_button.setLayoutDirection(Qt.LeftToRight)
         self.aba_pesagem_button.setAutoFillBackground(False)
@@ -128,6 +129,7 @@ class Ui_MainWindow(object):
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.menu_pesagem_frame.sizePolicy().hasHeightForWidth())
         self.menu_pesagem_frame.setSizePolicy(sizePolicy3)
+        self.menu_pesagem_frame.setMaximumSize(QSize(16777215, 79))
         self.menu_pesagem_frame.setFrameShape(QFrame.NoFrame)
         self.menu_pesagem_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_8 = QVBoxLayout(self.menu_pesagem_frame)
@@ -144,7 +146,11 @@ class Ui_MainWindow(object):
         self.button_simples_pesagens.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_8.addWidget(self.button_simples_pesagens)
 
@@ -155,7 +161,11 @@ class Ui_MainWindow(object):
         self.button_entsaid_pesagens.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_8.addWidget(self.button_entsaid_pesagens)
 
@@ -167,7 +177,11 @@ class Ui_MainWindow(object):
         self.button_avulsas_pesagens.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_8.addWidget(self.button_avulsas_pesagens)
 
@@ -194,6 +208,7 @@ class Ui_MainWindow(object):
         font3.setFamily(u"Century Gothic")
         font3.setPointSize(10)
         self.aba_grupo_button.setFont(font3)
+        self.aba_grupo_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.aba_grupo_button.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
 "}\n"
@@ -230,7 +245,11 @@ class Ui_MainWindow(object):
         self.button_clientes_grupos.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_7.addWidget(self.button_clientes_grupos)
 
@@ -241,7 +260,11 @@ class Ui_MainWindow(object):
         self.button_produtos_grupos.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_7.addWidget(self.button_produtos_grupos)
 
@@ -252,7 +275,12 @@ class Ui_MainWindow(object):
         self.button_fornecedores_grupos.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_7.addWidget(self.button_fornecedores_grupos)
 
@@ -264,7 +292,11 @@ class Ui_MainWindow(object):
         self.button_veiculos_grupos.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid\n"
-"}")
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"}\n"
+"")
 
         self.verticalLayout_7.addWidget(self.button_veiculos_grupos)
 
@@ -280,6 +312,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button.setMaximumSize(QSize(5555, 40))
         self.aba_relatorio_button.setBaseSize(QSize(555, 2))
         self.aba_relatorio_button.setFont(font3)
+        self.aba_relatorio_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.aba_relatorio_button.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -302,6 +335,7 @@ class Ui_MainWindow(object):
         self.aba_conta_button.setObjectName(u"aba_conta_button")
         self.aba_conta_button.setMinimumSize(QSize(160, 40))
         self.aba_conta_button.setFont(font3)
+        self.aba_conta_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.aba_conta_button.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
 "}\n"
@@ -395,6 +429,7 @@ class Ui_MainWindow(object):
         self.aba_sair_button.setObjectName(u"aba_sair_button")
         self.aba_sair_button.setMinimumSize(QSize(60, 40))
         self.aba_sair_button.setFont(font3)
+        self.aba_sair_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.aba_sair_button.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
 "}\n"
@@ -1395,6 +1430,41 @@ class Ui_MainWindow(object):
         self.frame_14.setFrameShadow(QFrame.Raised)
         self.verticalLayout_18 = QVBoxLayout(self.frame_14)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.frame_2 = QFrame(self.frame_14)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setMaximumSize(QSize(16777215, 35))
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.label_3 = QLabel(self.frame_2)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(127, 0))
+        self.label_3.setMaximumSize(QSize(124, 30))
+        font17 = QFont()
+        font17.setFamily(u"Century Gothic")
+        font17.setPointSize(14)
+        font17.setBold(True)
+        font17.setWeight(75)
+        self.label_3.setFont(font17)
+        self.label_3.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_3.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_5.addWidget(self.label_3)
+
+        self.label_12 = QLabel(self.frame_2)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setMaximumSize(QSize(30, 30))
+        self.label_12.setPixmap(QPixmap(u":/icons/cubes-solid.svg"))
+        self.label_12.setScaledContents(True)
+
+        self.horizontalLayout_5.addWidget(self.label_12)
+
+
+        self.verticalLayout_18.addWidget(self.frame_2, 0, Qt.AlignHCenter)
+
         self.frame_16 = QFrame(self.frame_14)
         self.frame_16.setObjectName(u"frame_16")
         self.frame_16.setStyleSheet(u"background-color: rgb(235, 235, 235);")
@@ -1487,9 +1557,7 @@ class Ui_MainWindow(object):
 
         self.text_telefone = QLabel(self.frame_18)
         self.text_telefone.setObjectName(u"text_telefone")
-        font17 = QFont()
-        font17.setPointSize(10)
-        self.text_telefone.setFont(font17)
+        self.text_telefone.setFont(font2)
 
         self.gridLayout_7.addWidget(self.text_telefone, 1, 0, 1, 1)
 
@@ -1693,7 +1761,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.aba_pesagem_button.setDefault(False)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(3)
         self.comboBox_produto.setCurrentIndex(0)
         self.comboBox_cliente.setCurrentIndex(0)
         self.comboBox_fornecedor.setCurrentIndex(0)
@@ -1770,13 +1838,13 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"KG (ENTRADA)", None));
         ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"KG (SAIDA)", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"KG (SA\u00cdDA)", None));
         ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"DATA", None));
         ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(9)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"HORARIO", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"HOR\u00c1RIO", None));
         ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(10)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"VEICULO", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"VE\u00cdCULO", None));
         ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"0", None));
         ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(1)
@@ -1879,6 +1947,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setSortingEnabled(__sortingEnabled)
 
         self.title.setText(QCoreApplication.translate("MainWindow", u"Conta", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"SEUS DADOS", None))
+        self.label_12.setText("")
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"NOME EMPRESA / PESSOAL", None))
         self.text_empresa_pessoal.setText(QCoreApplication.translate("MainWindow", u"rbsservices", None))
         self.btn_alterar_nome.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))

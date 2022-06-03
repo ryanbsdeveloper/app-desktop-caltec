@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>AcessoNegado</class>
+ <widget class="QDialog" name="AcessoNegado">
   <property name="windowModality">
    <enum>Qt::WindowModal</enum>
   </property>
@@ -36,7 +36,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Resources/resources.qrc">
-    <normaloff>:/icons/arrow-right-to-bracket-solid.svg</normaloff>:/icons/arrow-right-to-bracket-solid.svg</iconset>
+    <normaloff>:/icons/logo.ico</normaloff>:/icons/logo.ico</iconset>
   </property>
   <property name="sizeGripEnabled">
    <bool>false</bool>
@@ -84,8 +84,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">color: rgb(255, 0, 0);
-background-color: rgb(255, 170, 170);
-border:1px solid red;</string>
+</string>
         </property>
         <property name="text">
          <string>Email ou Senha não são válidos.</string>

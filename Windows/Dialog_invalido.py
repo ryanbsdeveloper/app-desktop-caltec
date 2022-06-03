@@ -14,28 +14,28 @@ from PySide2.QtWidgets import *
 
 import resources_rc
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
-        Dialog.setWindowModality(Qt.WindowModal)
-        Dialog.setEnabled(True)
-        Dialog.resize(292, 135)
-        Dialog.setMinimumSize(QSize(292, 135))
-        Dialog.setMaximumSize(QSize(292, 135))
-        Dialog.setCursor(QCursor(Qt.ArrowCursor))
+class Ui_AcessoNegado(object):
+    def setupUi(self, AcessoNegado):
+        if not AcessoNegado.objectName():
+            AcessoNegado.setObjectName(u"AcessoNegado")
+        AcessoNegado.setWindowModality(Qt.WindowModal)
+        AcessoNegado.setEnabled(True)
+        AcessoNegado.resize(341, 120)
+        AcessoNegado.setMinimumSize(QSize(175, 120))
+        AcessoNegado.setMaximumSize(QSize(341, 120))
+        AcessoNegado.setCursor(QCursor(Qt.ArrowCursor))
         icon = QIcon()
-        icon.addFile(u":/icons/person-falling-burst-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
-        Dialog.setWindowIcon(icon)
-        Dialog.setSizeGripEnabled(False)
-        Dialog.setModal(True)
-        self.verticalLayout = QVBoxLayout(Dialog)
+        icon.addFile(u":/icons/logo.ico", QSize(), QIcon.Normal, QIcon.Off)
+        AcessoNegado.setWindowIcon(icon)
+        AcessoNegado.setSizeGripEnabled(False)
+        AcessoNegado.setModal(True)
+        self.verticalLayout = QVBoxLayout(AcessoNegado)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.frame = QFrame(Dialog)
+        self.frame = QFrame(AcessoNegado)
         self.frame.setObjectName(u"frame")
-        self.frame.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frame.setStyleSheet(u"")
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame)
@@ -48,7 +48,8 @@ class Ui_Dialog(object):
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet(u"color: rgb(255, 60, 60);")
+        self.label.setStyleSheet(u"color: rgb(255, 0, 0);\n"
+"")
         self.label.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_2.addWidget(self.label)
@@ -62,8 +63,11 @@ class Ui_Dialog(object):
         font1.setWeight(50)
         self.pushButton.setFont(font1)
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet(u"QPushButton:hover{\n"
-"	border:0;\n"
+        self.pushButton.setStyleSheet(u"QPushButton{border:1px solid;\n"
+"background:rgb(250, 250, 250);\n"
+"padding:5px}\n"
+"\n"
+"QPushButton:hover{\n"
 "	background-color: rgb(204, 204, 204);\n"
 "}")
         icon1 = QIcon()
@@ -78,14 +82,14 @@ class Ui_Dialog(object):
         self.verticalLayout.addWidget(self.frame)
 
 
-        self.retranslateUi(Dialog)
+        self.retranslateUi(AcessoNegado)
 
-        QMetaObject.connectSlotsByName(Dialog)
+        QMetaObject.connectSlotsByName(AcessoNegado)
     # setupUi
 
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Acesso Negado", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"Email ou Senha n\u00e3o s\u00e3o v\u00e1lidos.", None))
-        self.pushButton.setText(QCoreApplication.translate("Dialog", u"Tentar novamente", None))
+    def retranslateUi(self, AcessoNegado):
+        AcessoNegado.setWindowTitle(QCoreApplication.translate("AcessoNegado", u"Acesso Negado", None))
+        self.label.setText(QCoreApplication.translate("AcessoNegado", u"Email ou Senha n\u00e3o s\u00e3o v\u00e1lidos.", None))
+        self.pushButton.setText(QCoreApplication.translate("AcessoNegado", u"Tentar novamente", None))
     # retranslateUi
 

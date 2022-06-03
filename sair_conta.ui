@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>SairConta</class>
+ <widget class="QDialog" name="SairConta">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Resources/resources.qrc">
-    <normaloff>:/icons/person-walking-arrow-right-solid (1).svg</normaloff>:/icons/person-walking-arrow-right-solid (1).svg</iconset>
+    <normaloff>:/icons/logo.ico</normaloff>:/icons/logo.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
