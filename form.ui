@@ -5926,7 +5926,7 @@ QScrollBar::add-line:horizontal {
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -5941,7 +5941,7 @@ color: rgb(255, 255, 255);</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_103">
                  <property name="spacing">
-                  <number>7</number>
+                  <number>0</number>
                  </property>
                  <property name="leftMargin">
                   <number>0</number>
