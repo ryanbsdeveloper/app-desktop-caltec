@@ -163,7 +163,7 @@ QLineEdit:focus
 QLineEdit{
 	border-radius:5px;
 	border:1px solid;
-	padding:11px;
+	padding:10px;
 }</string>
          </property>
         </widget>
@@ -206,12 +206,16 @@ QLineEdit{
            <bold>false</bold>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 		border-radius:10px;
+		outline:0px
 }
 
 
@@ -254,7 +258,7 @@ QLineEdit:focus
 QLineEdit{
 	border-radius:5px;
 	border:1px solid;
-	padding:11px;
+	padding:10px;
 }</string>
          </property>
         </widget>
@@ -349,9 +353,13 @@ QLineEdit{
            <bold>false</bold>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:0;
-color: rgb(0, 213, 0);</string>
+color: rgb(0, 213, 0);
+outline:0</string>
          </property>
          <property name="text">
           <string>Clique aqui.</string>
@@ -482,9 +490,13 @@ color: rgb(0, 213, 0);</string>
            <bold>false</bold>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:0;
-color: rgb(0, 213, 0);</string>
+color: rgb(0, 213, 0);
+outline:0</string>
          </property>
          <property name="text">
           <string>Clicando aqui.</string>
@@ -520,7 +532,7 @@ color: rgb(0, 213, 0);</string>
  </tabstops>
  <resources>
   <include location="Resources/resources.qrc"/>
-  <include location="../Resources/resources.qrc"/>
+  <include location="Resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

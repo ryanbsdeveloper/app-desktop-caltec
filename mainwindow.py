@@ -1,11 +1,14 @@
 import os
 from atexit import register
 import sys
+from time import sleep
 from turtle import width
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog
-from PySide2.QtCore import QPropertyAnimation
+from PySide2.QtCore import QPropertyAnimation, Qt
+from PySide2.QtGui import QRegion
 
 from Windows.MainWindow import Ui_MainWindow
+from Windows.Premium import Ui_Dialog
 from Windows.Login import Ui_Login_Widget
 from Windows.Dialog_invalido import Ui_AcessoNegado
 from Windows.DialogAtualizarNome import Ui_AtualizarNome
@@ -78,12 +81,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
- 
-        # MENU
+
+        # MENU TOP
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.btn_close_windows.clicked.connect(lambda: self.close())
+        self.btn_minimize_window.clicked.connect(lambda: self.showMinimized())
+
+        # MENUS
         self.menu_grupos_frame.setMaximumHeight(0)
         self.menu_pesagem_frame.setMaximumHeight(0)
         self.aba_pesagem_button.clicked.connect(self.menu_pesagem)
-        self.aba_grupo_button.clicked.connect(self.menu_grupos)        
+        self.aba_grupo_button.clicked.connect(self.menu_grupos)
+        self.btn_menu_registrar_clientes.clicked.connect(self.animation_menu_clientes)
+        self.btn_menu_registrar_forne.clicked.connect(self.animation_menu_forne)
+        self.btn_menu_registrar_produtos.clicked.connect(self.animation_menu_produtos)
+        self.btn_menu_registrar_veiculos.clicked.connect(self.animation_menu_veiculos)
 
         # DIALOGS
         self.dialog_sair_conta = DialogSairConta()
@@ -91,12 +104,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dialog_atualizar_nome = DialogAtualizarNome()
         self.dialog_atualizar_senha = DialogAtualizarSenha()
         self.dialog_atualizar_telefone = DialogAtualizarTelefone()
+        self.premium = PremiumWindow()
+        self.btn_virepro_button.clicked.connect(lambda: self.premium.showMaximized())
+
 
         # PAGES
         self.aba_conta_button.clicked.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.page_conta))
         self.aba_relatorio_button.clicked.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.page_relatorio))
+        self.button_clientes_grupos.clicked.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.page_clientes))
+        self.button_produtos_grupos.clicked.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.page_produtos))
+        self.button_fornecedores_grupos.clicked.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.page_fornecedores))
+        self.button_veiculos_grupos.clicked.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.page_veiculos))
+
 
         # BUTTONS CONTA
         self.aba_sair_button.clicked.connect(self.show_sair_conta)   
@@ -104,6 +129,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_alterar_nome.clicked.connect(self.show_atualizar_nome) 
         self.btn_alterar_senha.clicked.connect(self.show_atualizar_senha) 
         self.btn_alterar_telefone.clicked.connect(self.show_atualizar_telefone) 
+        self.btn_atualizar_licenca.clicked.connect(lambda: self.premium.showMaximized())
 
     def menu_grupos(self):
         self.animation_grupo()
@@ -163,12 +189,69 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setStartValue(height)
         self.animation.setEndValue(height_extend)
         self.animation.start()
+    
+    def animation_menu_clientes(self):
+        width = self.frame_43.maximumWidth()
+
+        if width == 0:
+            width_extend = 300
+        else:
+            width_extend = 0
+
+        self.animation = QPropertyAnimation(self.frame_43, b'maximumWidth')
+        self.animation.setDuration(150)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(width_extend)
+        self.animation.start()    
+
+    def animation_menu_produtos(self):
+        width = self.frame_105.maximumWidth()
+
+        if width == 0:
+            width_extend = 300
+        else:
+            width_extend = 0
+
+        self.animation = QPropertyAnimation(self.frame_105, b'maximumWidth')
+        self.animation.setDuration(150)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(width_extend)
+        self.animation.start()   
+
+    def animation_menu_forne(self):
+        width = self.frame_57.maximumWidth()
+
+        if width == 0:
+            width_extend = 300
+        else:
+            width_extend = 0
+
+        self.animation = QPropertyAnimation(self.frame_57, b'maximumWidth')
+        self.animation.setDuration(150)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(width_extend)
+        self.animation.start() 
+
+    def animation_menu_veiculos(self):
+        width = self.frame_68.maximumWidth()
+
+        if width == 0:
+            width_extend = 300
+        else:
+            width_extend = 0
+
+        self.animation = QPropertyAnimation(self.frame_68, b'maximumWidth')
+        self.animation.setDuration(150)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(width_extend)
+        self.animation.start() 
 
 
-class LoginWindow(QWidget, Ui_Login_Widget):
+class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
         super(LoginWindow, self).__init__()
         self.setupUi(self)
+        
         self._senha_input.setEchoMode(self._senha_input.Password)
         self.entrar_button.setDisabled(True)
         self.email_input.textChanged.connect(self.disableButton)
@@ -176,6 +259,7 @@ class LoginWindow(QWidget, Ui_Login_Widget):
         self.mais_servicos_button.clicked.connect(self.more_services)
         self.entrar_button.clicked.connect(self.login)
 
+        self.premium = PremiumWindow()
         self.main_window = MainWindow()
         self.dialog_login = DialogLogin()
 
@@ -193,6 +277,8 @@ class LoginWindow(QWidget, Ui_Login_Widget):
         if register:
             self.close()
             self.main_window.showMaximized()
+            sleep(1)
+            self.premium.showMaximized()
         else:
             self.dialog_login.show()
             self.email_input.setText('')
@@ -200,6 +286,34 @@ class LoginWindow(QWidget, Ui_Login_Widget):
 
     def more_services(self):
         utils.open_link('https://www.caltecbalancas.com.br/servicos.html')
+
+
+class PremiumWindow(QDialog, Ui_Dialog):
+    def __init__(self):
+        super(PremiumWindow, self).__init__()
+        self.setupUi(self)
+        self.btn_voltar.clicked.connect(self.voltar)
+        self.btn_comprar.clicked.connect(self.comprar)
+        self.btn_pular.clicked.connect(lambda: self.close())
+        self.pushButton_2.clicked.connect(self.comprar)
+        self.btn_licenca.clicked.connect(self.licenca)
+        self.btn_close_window.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+    def licenca(self):
+        self.animation = QPropertyAnimation(self.page, b'maximumHeight')
+        self.animation.setDuration(100)
+        self.animation.setStartValue(398)
+        self.animation.setEndValue(265)
+        self.animation.start() 
+        self.stackedWidget.setCurrentWidget(self.page)
+
+    def comprar(self):
+        self.stackedWidget.setCurrentWidget(self.page_plano)
+
+    def voltar(self):
+        self.stackedWidget.setCurrentWidget(self.page_inicial) 
 
 
 if __name__ == '__main__':

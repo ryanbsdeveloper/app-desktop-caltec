@@ -1,13 +1,21 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>scale-balanced-solid .svg</file>
+    <file>layer-group-solid .svg</file>
+    <file>person-walking-solid .svg</file>
+    <file>file-lines-solid (2).svg</file>
+    <file>delete_cross_remove_cancel_icon_219222.png</file>
+    <file>remove_minimize_minus_delete_icon_219231.png</file>
+    <file>check-solid.svg</file>
+    <file>sobre.jpg</file>
+    <file>key-solid.svg</file>
+    <file>xmark-solid.svg</file>
     <file>plus-solid.svg</file>
     <file>trash-can-solid.svg</file>
     <file>clock-rotate-left-solid.svg</file>
+    <file>cubes-solid.svg</file>
     <file>caret-right-solid.svg</file>
     <file>caret-left-solid.svg</file>
-    <file>cubes-solid.svg</file>
-    <file>cubes-solid.svg</file>
-    <file>cubes-solid.svg</file>
     <file>print-solid.svg</file>
     <file>filter-solid.svg</file>
     <file>magnifying-glass-solid.svg</file>

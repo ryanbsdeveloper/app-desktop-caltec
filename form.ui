@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>950</width>
-    <height>703</height>
+    <height>718</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -55,7 +55,7 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QFrame" name="menu_frame">
       <property name="maximumSize">
        <size>
@@ -159,9 +159,9 @@
                <property name="font">
                 <font>
                  <family>Century Gothic</family>
-                 <pointsize>10</pointsize>
-                 <weight>50</weight>
-                 <bold>false</bold>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
                 </font>
                </property>
                <property name="cursor">
@@ -263,6 +263,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -294,6 +296,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -331,6 +335,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -397,7 +403,9 @@ QPushButton:hover{
                <property name="font">
                 <font>
                  <family>Century Gothic</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
                 </font>
                </property>
                <property name="cursor">
@@ -482,6 +490,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -513,6 +523,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -544,6 +556,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -581,6 +595,8 @@ QPushButton:hover{
                    <font>
                     <family>Century Gothic</family>
                     <pointsize>9</pointsize>
+                    <weight>50</weight>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -629,7 +645,9 @@ QPushButton:hover{
             <property name="font">
              <font>
               <family>Century Gothic</family>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
@@ -680,7 +698,9 @@ QPushButton:hover{
             <property name="font">
              <font>
               <family>Century Gothic</family>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
@@ -825,7 +845,7 @@ QPushButton:hover{
                 </font>
                </property>
                <property name="text">
-                <string>Pesagens restantes: 30</string>
+                <string>Pesagens restantes: 26</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -898,7 +918,9 @@ QPushButton:hover{
             <property name="font">
              <font>
               <family>Century Gothic</family>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="cursor">
@@ -944,7 +966,7 @@ QPushButton:hover{
       <zorder>info_menu_pro_frame</zorder>
      </widget>
     </item>
-    <item row="1" column="1">
+    <item row="2" column="1">
      <widget class="QFrame" name="principal_frame">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -963,16 +985,16 @@ QPushButton:hover{
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>15</number>
+        <number>10</number>
        </property>
        <property name="topMargin">
-        <number>15</number>
+        <number>10</number>
        </property>
        <property name="rightMargin">
-        <number>15</number>
+        <number>10</number>
        </property>
        <property name="bottomMargin">
-        <number>15</number>
+        <number>10</number>
        </property>
        <item>
         <widget class="QFrame" name="info_frame">
@@ -1020,7 +1042,7 @@ QPushButton:hover{
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(231, 231, 231);
-border: 1px solid rgb(181, 181, 181)</string>
+</string>
          </property>
          <property name="currentIndex">
           <number>0</number>
@@ -1062,27 +1084,34 @@ border: 1px solid rgb(181, 181, 181)</string>
                <number>11</number>
               </property>
               <property name="leftMargin">
-               <number>9</number>
+               <number>0</number>
               </property>
               <property name="topMargin">
-               <number>9</number>
+               <number>0</number>
               </property>
               <property name="rightMargin">
-               <number>9</number>
+               <number>0</number>
               </property>
               <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
                <widget class="QFrame" name="frame_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -1111,13 +1140,13 @@ border: 1px solid rgb(181, 181, 181)</string>
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>17</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>40</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -1129,7 +1158,9 @@ border: 1px solid rgb(181, 181, 181)</string>
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -1145,7 +1176,7 @@ border: 1px solid rgb(181, 181, 181)</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/file-lines-solid (1).svg</normaloff>:/icons/file-lines-solid (1).svg</iconset>
+                     <normaloff>:/icons/file-lines-solid (2).svg</normaloff>:/icons/file-lines-solid (2).svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -2073,7 +2104,7 @@ QScrollBar::add-line:horizontal {
                  <enum>QAbstractScrollArea::AdjustIgnored</enum>
                 </property>
                 <property name="autoScroll">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="autoScrollMargin">
                  <number>22</number>
@@ -2100,13 +2131,13 @@ QScrollBar::add-line:horizontal {
                  <bool>true</bool>
                 </property>
                 <property name="selectionMode">
-                 <enum>QAbstractItemView::NoSelection</enum>
+                 <enum>QAbstractItemView::SingleSelection</enum>
                 </property>
                 <property name="selectionBehavior">
                  <enum>QAbstractItemView::SelectRows</enum>
                 </property>
                 <property name="textElideMode">
-                 <enum>Qt::ElideLeft</enum>
+                 <enum>Qt::ElideRight</enum>
                 </property>
                 <property name="horizontalScrollMode">
                  <enum>QAbstractItemView::ScrollPerItem</enum>
@@ -2132,6 +2163,9 @@ QScrollBar::add-line:horizontal {
                 <property name="columnCount">
                  <number>11</number>
                 </property>
+                <attribute name="horizontalHeaderVisible">
+                 <bool>true</bool>
+                </attribute>
                 <attribute name="horizontalHeaderCascadingSectionResizes">
                  <bool>false</bool>
                 </attribute>
@@ -2631,6 +2665,18 @@ QScrollBar::add-line:horizontal {
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_22">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_22">
              <property name="frameShape">
@@ -2657,14 +2703,26 @@ QScrollBar::add-line:horizontal {
               </property>
               <item>
                <widget class="QFrame" name="frame_23">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -2693,13 +2751,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>39</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>82</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -2711,7 +2769,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -2727,7 +2787,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/layer-group-solid (1).svg</normaloff>:/icons/layer-group-solid (1).svg</iconset>
+                     <normaloff>:/icons/layer-group-solid .svg</normaloff>:/icons/layer-group-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -2777,7 +2837,7 @@ QScrollBar::add-line:horizontal {
                   <widget class="QFrame" name="frame_43">
                    <property name="minimumSize">
                     <size>
-                     <width>300</width>
+                     <width>0</width>
                      <height>0</height>
                     </size>
                    </property>
@@ -3289,8 +3349,8 @@ QPushButton:hover{
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border:1px solid;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">border-radius:2px;
+background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="text">
                     <string/>
@@ -3737,6 +3797,21 @@ QScrollBar::add-line:horizontal {
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_27">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_25">
              <property name="frameShape">
@@ -3766,17 +3841,18 @@ QScrollBar::add-line:horizontal {
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -3805,13 +3881,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>37</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>37</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -3823,7 +3899,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -3839,7 +3917,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/layer-group-solid (1).svg</normaloff>:/icons/layer-group-solid (1).svg</iconset>
+                     <normaloff>:/icons/layer-group-solid .svg</normaloff>:/icons/layer-group-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -3913,7 +3991,7 @@ QScrollBar::add-line:horizontal {
                      <widget class="QFrame" name="frame_57">
                       <property name="minimumSize">
                        <size>
-                        <width>300</width>
+                        <width>0</width>
                         <height>0</height>
                        </size>
                       </property>
@@ -4425,8 +4503,8 @@ QPushButton:hover{
                        <cursorShape>PointingHandCursor</cursorShape>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">border:1px solid;
-background-color: rgb(255, 255, 255);</string>
+                       <string notr="true">border-radius:2px;
+background-color: rgb(43, 43, 43);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -4644,7 +4722,7 @@ QScrollBar::add-line:horizontal {
                           <bool>true</bool>
                          </property>
                          <property name="rowCount">
-                          <number>2</number>
+                          <number>1</number>
                          </property>
                          <attribute name="horizontalHeaderCascadingSectionResizes">
                           <bool>false</bool>
@@ -4661,7 +4739,6 @@ QScrollBar::add-line:horizontal {
                          <attribute name="verticalHeaderVisible">
                           <bool>false</bool>
                          </attribute>
-                         <row/>
                          <row/>
                          <column>
                           <property name="text">
@@ -4777,27 +4854,27 @@ QScrollBar::add-line:horizontal {
                          </item>
                          <item row="0" column="2">
                           <property name="text">
-                           <string>Ryan Barbosa</string>
+                           <string>CALTEC</string>
                           </property>
                          </item>
                          <item row="0" column="3">
                           <property name="text">
-                           <string>567.765.576-56</string>
+                           <string>222.222.222-22</string>
                           </property>
                          </item>
                          <item row="0" column="4">
                           <property name="text">
-                           <string>50.510.954-8</string>
+                           <string/>
                           </property>
                          </item>
                          <item row="0" column="5">
                           <property name="text">
-                           <string>Rua Napolés, 18</string>
+                           <string>Anaoplos, 22</string>
                           </property>
                          </item>
                          <item row="0" column="6">
                           <property name="text">
-                           <string>Guarulhos</string>
+                           <string>Pinheiros</string>
                           </property>
                          </item>
                          <item row="0" column="7">
@@ -4807,52 +4884,7 @@ QScrollBar::add-line:horizontal {
                          </item>
                          <item row="0" column="8">
                           <property name="text">
-                           <string>11990901254</string>
-                          </property>
-                         </item>
-                         <item row="1" column="0">
-                          <property name="checkState">
-                           <enum>Unchecked</enum>
-                          </property>
-                         </item>
-                         <item row="1" column="1">
-                          <property name="text">
-                           <string>2</string>
-                          </property>
-                         </item>
-                         <item row="1" column="2">
-                          <property name="text">
-                           <string>Cleber Silva</string>
-                          </property>
-                         </item>
-                         <item row="1" column="3">
-                          <property name="text">
-                           <string>354.543.534-45</string>
-                          </property>
-                         </item>
-                         <item row="1" column="4">
-                          <property name="text">
-                           <string>40.410.684-9</string>
-                          </property>
-                         </item>
-                         <item row="1" column="5">
-                          <property name="text">
-                           <string>Rua da lua, 99</string>
-                          </property>
-                         </item>
-                         <item row="1" column="6">
-                          <property name="text">
-                           <string>Guarujá</string>
-                          </property>
-                         </item>
-                         <item row="1" column="7">
-                          <property name="text">
-                           <string>SP</string>
-                          </property>
-                         </item>
-                         <item row="1" column="8">
-                          <property name="text">
-                           <string>11952354578</string>
+                           <string>1158235665</string>
                           </property>
                          </item>
                         </widget>
@@ -4876,6 +4908,21 @@ QScrollBar::add-line:horizontal {
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_33">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_31">
              <property name="frameShape">
@@ -4902,14 +4949,21 @@ QScrollBar::add-line:horizontal {
               </property>
               <item>
                <widget class="QFrame" name="frame_32">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -4938,13 +4992,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>39</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>82</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -4956,7 +5010,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -4972,7 +5028,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/layer-group-solid (1).svg</normaloff>:/icons/layer-group-solid (1).svg</iconset>
+                     <normaloff>:/icons/layer-group-solid .svg</normaloff>:/icons/layer-group-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -5022,7 +5078,7 @@ QScrollBar::add-line:horizontal {
                   <widget class="QFrame" name="frame_68">
                    <property name="minimumSize">
                     <size>
-                     <width>300</width>
+                     <width>0</width>
                      <height>0</height>
                     </size>
                    </property>
@@ -5339,7 +5395,7 @@ QComboBox QListView{
                              <number>0</number>
                             </property>
                             <property name="maxVisibleItems">
-                             <number>10</number>
+                             <number>5</number>
                             </property>
                             <property name="insertPolicy">
                              <enum>QComboBox::NoInsert</enum>
@@ -5363,12 +5419,12 @@ QComboBox QListView{
                             </item>
                             <item>
                              <property name="text">
-                              <string>Teste1</string>
+                              <string>Cigarro</string>
                              </property>
                             </item>
                             <item>
                              <property name="text">
-                              <string>Teste2</string>
+                              <string>Whisky</string>
                              </property>
                             </item>
                            </widget>
@@ -5426,8 +5482,8 @@ QPushButton:hover{
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border:1px solid;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">border-radius:2px;
+background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="text">
                     <string/>
@@ -5699,7 +5755,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>CPF</string>
+                        <string>VALOR PESAGEM</string>
                        </property>
                        <property name="font">
                         <font>
@@ -5710,7 +5766,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>RG</string>
+                        <string>PLACA</string>
                        </property>
                        <property name="font">
                         <font>
@@ -5721,40 +5777,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>ENDEREÇO</string>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string>CIDADE</string>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string>ESTADO</string>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string>TELEFONE</string>
+                        <string>PRODUTO</string>
                        </property>
                        <property name="font">
                         <font>
@@ -5778,40 +5801,28 @@ QScrollBar::add-line:horizontal {
                       </item>
                       <item row="0" column="2">
                        <property name="text">
-                        <string>Ryan Barbosa</string>
+                        <string>VOLVO</string>
                        </property>
                       </item>
                       <item row="0" column="3">
                        <property name="text">
-                        <string>567.765.576-56</string>
+                        <string>500</string>
                        </property>
                       </item>
                       <item row="0" column="4">
                        <property name="text">
-                        <string>50.510.954-8</string>
+                        <string>FTG567</string>
                        </property>
                       </item>
                       <item row="0" column="5">
                        <property name="text">
-                        <string>Rua Napolés, 18</string>
-                       </property>
-                      </item>
-                      <item row="0" column="6">
-                       <property name="text">
-                        <string>Guarulhos</string>
-                       </property>
-                      </item>
-                      <item row="0" column="7">
-                       <property name="text">
-                        <string>SP</string>
-                       </property>
-                      </item>
-                      <item row="0" column="8">
-                       <property name="text">
-                        <string>11990901254</string>
+                        <string>Cigarro</string>
                        </property>
                       </item>
                       <item row="1" column="0">
+                       <property name="text">
+                        <string/>
+                       </property>
                        <property name="checkState">
                         <enum>Unchecked</enum>
                        </property>
@@ -5823,37 +5834,22 @@ QScrollBar::add-line:horizontal {
                       </item>
                       <item row="1" column="2">
                        <property name="text">
-                        <string>Cleber Silva</string>
+                        <string>NISSAN</string>
                        </property>
                       </item>
                       <item row="1" column="3">
                        <property name="text">
-                        <string>354.543.534-45</string>
+                        <string>500</string>
                        </property>
                       </item>
                       <item row="1" column="4">
                        <property name="text">
-                        <string>40.410.684-9</string>
+                        <string>HJA899</string>
                        </property>
                       </item>
                       <item row="1" column="5">
                        <property name="text">
-                        <string>Rua da lua, 99</string>
-                       </property>
-                      </item>
-                      <item row="1" column="6">
-                       <property name="text">
-                        <string>Guarujá</string>
-                       </property>
-                      </item>
-                      <item row="1" column="7">
-                       <property name="text">
-                        <string>SP</string>
-                       </property>
-                      </item>
-                      <item row="1" column="8">
-                       <property name="text">
-                        <string>11952354578</string>
+                        <string>Whisky</string>
                        </property>
                       </item>
                      </widget>
@@ -5870,10 +5866,31 @@ QScrollBar::add-line:horizontal {
           </layout>
          </widget>
          <widget class="QWidget" name="page_produtos">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>45</height>
+           </size>
+          </property>
           <property name="styleSheet">
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_115">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_28">
              <property name="frameShape">
@@ -5900,6 +5917,12 @@ QScrollBar::add-line:horizontal {
               </property>
               <item>
                <widget class="QFrame" name="frame_103">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
@@ -5907,7 +5930,8 @@ QScrollBar::add-line:horizontal {
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -5936,13 +5960,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>39</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>82</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -5954,7 +5978,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -5970,7 +5996,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/layer-group-solid (1).svg</normaloff>:/icons/layer-group-solid (1).svg</iconset>
+                     <normaloff>:/icons/layer-group-solid .svg</normaloff>:/icons/layer-group-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6020,7 +6046,7 @@ QScrollBar::add-line:horizontal {
                   <widget class="QFrame" name="frame_105">
                    <property name="minimumSize">
                     <size>
-                     <width>300</width>
+                     <width>0</width>
                      <height>0</height>
                     </size>
                    </property>
@@ -6476,8 +6502,8 @@ QPushButton:hover{
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border:1px solid;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">border-radius:2px;
+background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="text">
                     <string/>
@@ -6749,7 +6775,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>CPF</string>
+                        <string>ESTOQUE</string>
                        </property>
                        <property name="font">
                         <font>
@@ -6760,7 +6786,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>RG</string>
+                        <string>PREÇO</string>
                        </property>
                        <property name="font">
                         <font>
@@ -6771,7 +6797,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>ENDEREÇO</string>
+                        <string>DENSIDADE</string>
                        </property>
                        <property name="font">
                         <font>
@@ -6782,29 +6808,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>CIDADE</string>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string>ESTADO</string>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                      </column>
-                      <column>
-                       <property name="text">
-                        <string>TELEFONE</string>
+                        <string>EMBALAGEM</string>
                        </property>
                        <property name="font">
                         <font>
@@ -6828,40 +6832,33 @@ QScrollBar::add-line:horizontal {
                       </item>
                       <item row="0" column="2">
                        <property name="text">
-                        <string>Ryan Barbosa</string>
+                        <string>Whisky</string>
                        </property>
                       </item>
                       <item row="0" column="3">
                        <property name="text">
-                        <string>567.765.576-56</string>
+                        <string>1</string>
                        </property>
                       </item>
                       <item row="0" column="4">
                        <property name="text">
-                        <string>50.510.954-8</string>
+                        <string>200</string>
                        </property>
                       </item>
                       <item row="0" column="5">
                        <property name="text">
-                        <string>Rua Napolés, 18</string>
+                        <string>0</string>
                        </property>
                       </item>
                       <item row="0" column="6">
                        <property name="text">
-                        <string>Guarulhos</string>
-                       </property>
-                      </item>
-                      <item row="0" column="7">
-                       <property name="text">
-                        <string>SP</string>
-                       </property>
-                      </item>
-                      <item row="0" column="8">
-                       <property name="text">
-                        <string>11990901254</string>
+                        <string>0100</string>
                        </property>
                       </item>
                       <item row="1" column="0">
+                       <property name="text">
+                        <string/>
+                       </property>
                        <property name="checkState">
                         <enum>Unchecked</enum>
                        </property>
@@ -6873,37 +6870,27 @@ QScrollBar::add-line:horizontal {
                       </item>
                       <item row="1" column="2">
                        <property name="text">
-                        <string>Cleber Silva</string>
+                        <string>Cigarro</string>
                        </property>
                       </item>
                       <item row="1" column="3">
                        <property name="text">
-                        <string>354.543.534-45</string>
+                        <string>1</string>
                        </property>
                       </item>
                       <item row="1" column="4">
                        <property name="text">
-                        <string>40.410.684-9</string>
+                        <string>50</string>
                        </property>
                       </item>
                       <item row="1" column="5">
                        <property name="text">
-                        <string>Rua da lua, 99</string>
+                        <string>0</string>
                        </property>
                       </item>
                       <item row="1" column="6">
                        <property name="text">
-                        <string>Guarujá</string>
-                       </property>
-                      </item>
-                      <item row="1" column="7">
-                       <property name="text">
-                        <string>SP</string>
-                       </property>
-                      </item>
-                      <item row="1" column="8">
-                       <property name="text">
-                        <string>11952354578</string>
+                        <string>0020</string>
                        </property>
                       </item>
                      </widget>
@@ -6924,6 +6911,21 @@ QScrollBar::add-line:horizontal {
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_42">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_40">
              <property name="frameShape">
@@ -6950,14 +6952,21 @@ QScrollBar::add-line:horizontal {
               </property>
               <item>
                <widget class="QFrame" name="frame_41">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -6986,13 +6995,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>17</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>40</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -7004,7 +7013,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -7020,7 +7031,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/scale-balanced-solid (1).svg</normaloff>:/icons/scale-balanced-solid (1).svg</iconset>
+                     <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7056,6 +7067,21 @@ QScrollBar::add-line:horizontal {
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_39">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_37">
              <property name="frameShape">
@@ -7082,14 +7108,21 @@ QScrollBar::add-line:horizontal {
               </property>
               <item>
                <widget class="QFrame" name="frame_38">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -7118,13 +7151,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>17</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>40</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -7136,7 +7169,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -7152,7 +7187,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/scale-balanced-solid (1).svg</normaloff>:/icons/scale-balanced-solid (1).svg</iconset>
+                     <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7188,6 +7223,21 @@ QScrollBar::add-line:horizontal {
            <string notr="true">border:0</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_36">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_34">
              <property name="frameShape">
@@ -7214,14 +7264,21 @@ QScrollBar::add-line:horizontal {
               </property>
               <item>
                <widget class="QFrame" name="frame_35">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -7250,13 +7307,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>17</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>40</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -7268,7 +7325,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -7284,7 +7343,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/scale-balanced-solid (1).svg</normaloff>:/icons/scale-balanced-solid (1).svg</iconset>
+                     <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7348,27 +7407,34 @@ QScrollBar::add-line:horizontal {
                <number>9</number>
               </property>
               <property name="leftMargin">
-               <number>9</number>
+               <number>0</number>
               </property>
               <property name="topMargin">
-               <number>9</number>
+               <number>0</number>
               </property>
               <property name="rightMargin">
-               <number>9</number>
+               <number>0</number>
               </property>
               <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
                <widget class="QFrame" name="frame_12">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>40</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-bottom:1px solid rgb(154, 154, 154)</string>
+                 <string notr="true">background-color: rgb(43, 43, 43);
+color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -7397,13 +7463,13 @@ QScrollBar::add-line:horizontal {
                    <property name="minimumSize">
                     <size>
                      <width>160</width>
-                     <height>29</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>5555</width>
-                     <height>40</height>
+                     <height>45</height>
                     </size>
                    </property>
                    <property name="baseSize">
@@ -7415,7 +7481,9 @@ QScrollBar::add-line:horizontal {
                    <property name="font">
                     <font>
                      <family>Century Gothic</family>
-                     <pointsize>19</pointsize>
+                     <pointsize>17</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="layoutDirection">
@@ -7431,7 +7499,7 @@ QScrollBar::add-line:horizontal {
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/person-walking-solid (1).svg</normaloff>:/icons/person-walking-solid (1).svg</iconset>
+                     <normaloff>:/icons/person-walking-solid .svg</normaloff>:/icons/person-walking-solid .svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7479,8 +7547,8 @@ QScrollBar::add-line:horizontal {
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color:rgb(255, 255, 255);
-border-radius:15px;
+                    <string notr="true">border-radius:15px;
+background-color: rgb(255, 255, 255);
 </string>
                    </property>
                    <property name="frameShape">
@@ -8218,18 +8286,18 @@ QPushButton:hover{
       </layout>
      </widget>
     </item>
-    <item row="0" column="0" colspan="2">
+    <item row="1" column="0" colspan="2">
      <widget class="QFrame" name="top_frame">
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>100</height>
+        <height>110</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>100</height>
+        <height>110</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -8250,7 +8318,7 @@ background-color: rgb(43, 43, 43);</string>
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>0</number>
+        <number>10</number>
        </property>
        <property name="topMargin">
         <number>0</number>
@@ -8285,25 +8353,28 @@ background-color: rgb(43, 43, 43);</string>
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item>
+          <item alignment="Qt::AlignLeft">
            <widget class="QLabel" name="label">
             <property name="minimumSize">
              <size>
-              <width>250</width>
+              <width>167</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>199</width>
-              <height>16777215</height>
+              <width>183</width>
+              <height>96</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border:0</string>
+            </property>
             <property name="pixmap">
-             <pixmap resource="Resources/resources.qrc">:/icons/logo.png</pixmap>
+             <pixmap resource="Resources/resources.qrc">:/icons/ori.png</pixmap>
             </property>
             <property name="scaledContents">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -8353,10 +8424,10 @@ background-color: rgb(43, 43, 43);</string>
            <number>20</number>
           </property>
           <property name="bottomMargin">
-           <number>0</number>
+           <number>15</number>
           </property>
           <property name="horizontalSpacing">
-           <number>10</number>
+           <number>15</number>
           </property>
           <property name="verticalSpacing">
            <number>0</number>
@@ -8411,34 +8482,6 @@ QPushButton:hover{
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="label_2">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Century Gothic</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);
-border:0</string>
-            </property>
-            <property name="text">
-             <string>Status Balança:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="conexao_label">
             <property name="enabled">
@@ -8464,6 +8507,9 @@ border:0</string>
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="mouseTracking">
              <bool>false</bool>
             </property>
@@ -8476,7 +8522,7 @@ border:0</string>
             <property name="styleSheet">
              <string notr="true">QPushButton{
 	border:1px solid white;
-	color: rgb(255, 83, 83);
+	color: rgb(218, 14, 14);
 	border-radius:5px;
 	background-color: rgb(48, 48, 48);
 }</string>
@@ -8500,6 +8546,275 @@ border:0</string>
             </property>
            </widget>
           </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_2">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Century Gothic</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+border:0</string>
+            </property>
+            <property name="text">
+             <string>Status Balança:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QFrame" name="frame_29">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(25, 25, 25);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QFrame" name="frame_44">
+         <property name="minimumSize">
+          <size>
+           <width>147</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <property name="spacing">
+           <number>16</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_30">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="Resources/resources.qrc">:/icons/icon (2).png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Century Gothic</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+
+QPushButton{
+color: rgb(255, 255, 255);
+border:0
+}
+
+QPushButton:hover{
+background-color: rgb(43, 43, 43);
+}</string>
+            </property>
+            <property name="text">
+             <string>Conectar balança</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label_29">
+         <property name="font">
+          <font>
+           <family>Ebrima</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>ryanbs - Software de pesagem</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QFrame" name="frame_30">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:0</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btn_minimize_window">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+background-color: rgb(43, 43, 43);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/resources.qrc">
+              <normaloff>:/icons/remove_minimize_minus_delete_icon_219231.png</normaloff>:/icons/remove_minimize_minus_delete_icon_219231.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_close_windows">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+
+background-color: rgb(218, 14, 14)}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/resources.qrc">
+              <normaloff>:/icons/delete_cross_remove_cancel_icon_219222.png</normaloff>:/icons/delete_cross_remove_cancel_icon_219222.png</iconset>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -8507,27 +8822,6 @@ border:0</string>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>950</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuConfiguracoes">
-    <property name="title">
-     <string>Configurações</string>
-    </property>
-    <addaction name="separator"/>
-    <addaction name="adicionar_balanca"/>
-    <addaction name="actionAvan_adas"/>
-    <addaction name="separator"/>
-    <addaction name="fechar_aplicativo"/>
-   </widget>
-   <addaction name="menuConfiguracoes"/>
   </widget>
   <action name="adicionar_balanca">
    <property name="text">

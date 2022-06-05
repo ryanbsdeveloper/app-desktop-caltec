@@ -80,7 +80,7 @@ class Ui_Login_Widget(object):
 "QLineEdit{\n"
 "	border-radius:5px;\n"
 "	border:1px solid;\n"
-"	padding:11px;\n"
+"	padding:10px;\n"
 "}")
         self.label_3 = QLabel(self.frame_3)
         self.label_3.setObjectName(u"label_3")
@@ -94,9 +94,11 @@ class Ui_Login_Widget(object):
         self.entrar_button.setObjectName(u"entrar_button")
         self.entrar_button.setGeometry(QRect(440, 310, 131, 38))
         self.entrar_button.setFont(font1)
+        self.entrar_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.entrar_button.setLayoutDirection(Qt.LeftToRight)
         self.entrar_button.setStyleSheet(u"QPushButton{\n"
 "		border-radius:10px;\n"
+"		outline:0px\n"
 "}\n"
 "\n"
 "\n"
@@ -119,7 +121,7 @@ class Ui_Login_Widget(object):
 "QLineEdit{\n"
 "	border-radius:5px;\n"
 "	border:1px solid;\n"
-"	padding:11px;\n"
+"	padding:10px;\n"
 "}")
         self.label_4 = QLabel(self.frame_3)
         self.label_4.setObjectName(u"label_4")
@@ -157,8 +159,10 @@ class Ui_Login_Widget(object):
         font5.setBold(False)
         font5.setWeight(50)
         self.esqueceu_senha_button.setFont(font5)
+        self.esqueceu_senha_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.esqueceu_senha_button.setStyleSheet(u"border:0;\n"
-"color: rgb(0, 213, 0);")
+"color: rgb(0, 213, 0);\n"
+"outline:0")
         self.label_7 = QLabel(self.frame_3)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setGeometry(QRect(57, 370, 135, 17))
@@ -192,8 +196,10 @@ class Ui_Login_Widget(object):
         self.mais_servicos_button.setObjectName(u"mais_servicos_button")
         self.mais_servicos_button.setGeometry(QRect(133, 241, 107, 17))
         self.mais_servicos_button.setFont(font5)
+        self.mais_servicos_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.mais_servicos_button.setStyleSheet(u"border:0;\n"
-"color: rgb(0, 213, 0);")
+"color: rgb(0, 213, 0);\n"
+"outline:0")
         self.email_input.raise_()
         self.entrar_button.raise_()
         self.label_2.raise_()
