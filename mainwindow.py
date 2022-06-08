@@ -1,5 +1,6 @@
 import os
 from atexit import register
+from sre_parse import expand_template
 import sys
 from time import sleep
 from turtle import width
@@ -54,7 +55,6 @@ class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
         self.setupUi(self)
         self.text_info.hide()
         self.bt_cancelar.clicked.connect(lambda: self.close())
-
 
 
 
@@ -132,6 +132,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_alterar_telefone.clicked.connect(self.show_atualizar_telefone) 
         self.btn_atualizar_licenca.clicked.connect(lambda: self.premium.showMaximized())
 
+        # BUTTONS AVULSAS
+        self.btn_peso_manualmente.toggled.connect(self.func_peso_manualmente)
+
     def menu_grupos(self):
         self.animation_grupo()
         if self.menu_grupos_frame.isHidden():
@@ -146,6 +149,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             self.aba_pesagem_button.setText('Pesagens                 ▼')
 
+    def func_peso_manualmente(self):
+        width = self.peso_manualmente.width()
+
+        if width == 135:
+            expand = 0
+        else:
+            expand = 150
+
+        self.animation = QPropertyAnimation(self.peso_manualmente, b'maximumWidth')
+        self.animation.setDuration(300)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(expand)
+        self.animation.start()
 
     ## SHOW DIALOGS
     def show_sair_conta(self):
@@ -320,6 +336,6 @@ class PremiumWindow(QDialog, Ui_Dialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    Window = LoginWindow()
-    Window.show()
+    Window = MainWindow()
+    Window.showMaximized()
     app.exec_()

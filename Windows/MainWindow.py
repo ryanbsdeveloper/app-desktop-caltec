@@ -3484,7 +3484,7 @@ class Ui_MainWindow(object):
         self.peso_manualmente = QLineEdit(self.frame_85)
         self.peso_manualmente.setObjectName(u"peso_manualmente")
         self.peso_manualmente.setMinimumSize(QSize(0, 30))
-        self.peso_manualmente.setMaximumSize(QSize(150, 16777215))
+        self.peso_manualmente.setMaximumSize(QSize(0, 16777215))
         self.peso_manualmente.setFont(font16)
         self.peso_manualmente.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
@@ -4024,23 +4024,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setSpacing(2)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.button_avulsas_pesagens = QPushButton(self.menu_pesagem_frame)
-        self.button_avulsas_pesagens.setObjectName(u"button_avulsas_pesagens")
-        self.button_avulsas_pesagens.setMinimumSize(QSize(0, 25))
-        self.button_avulsas_pesagens.setFont(font11)
-        self.button_avulsas_pesagens.setStyleSheet(u"QPushButton{\n"
-"	background-color: rgb(250, 250, 250);\n"
-"	border:1px solid\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: rgb(231, 231, 231);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
-"}\n"
-"")
-
-        self.verticalLayout_8.addWidget(self.button_avulsas_pesagens)
-
         self.button_entsaid_pesagens = QPushButton(self.menu_pesagem_frame)
         self.button_entsaid_pesagens.setObjectName(u"button_entsaid_pesagens")
         self.button_entsaid_pesagens.setMinimumSize(QSize(130, 25))
@@ -4057,6 +4040,23 @@ class Ui_MainWindow(object):
 "")
 
         self.verticalLayout_8.addWidget(self.button_entsaid_pesagens)
+
+        self.button_avulsas_pesagens = QPushButton(self.menu_pesagem_frame)
+        self.button_avulsas_pesagens.setObjectName(u"button_avulsas_pesagens")
+        self.button_avulsas_pesagens.setMinimumSize(QSize(0, 25))
+        self.button_avulsas_pesagens.setFont(font11)
+        self.button_avulsas_pesagens.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(250, 250, 250);\n"
+"	border:1px solid\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(231, 231, 231);\n"
+"	color: rgb(15, 202, 2);\n"
+"\n"
+"}\n"
+"")
+
+        self.verticalLayout_8.addWidget(self.button_avulsas_pesagens)
 
 
         self.verticalLayout_9.addWidget(self.menu_pesagem_frame, 0, Qt.AlignRight)
@@ -4944,8 +4944,8 @@ class Ui_MainWindow(object):
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"Deseja excluir sua conta permanentemente?", None))
         self.btn_excluir_conta.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
         self.aba_pesagem_button.setText(QCoreApplication.translate("MainWindow", u"Pesagens                 \u25bc", None))
-        self.button_avulsas_pesagens.setText(QCoreApplication.translate("MainWindow", u"Avulsas", None))
         self.button_entsaid_pesagens.setText(QCoreApplication.translate("MainWindow", u"Entradas e Sa\u00eddas", None))
+        self.button_avulsas_pesagens.setText(QCoreApplication.translate("MainWindow", u"Avulsas", None))
         self.aba_grupo_button.setText(QCoreApplication.translate("MainWindow", u"Grupos                    \u25bc", None))
         self.button_clientes_grupos.setText(QCoreApplication.translate("MainWindow", u"Clientes", None))
         self.button_produtos_grupos.setText(QCoreApplication.translate("MainWindow", u"Produtos", None))

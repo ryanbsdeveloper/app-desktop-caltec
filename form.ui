@@ -6908,41 +6908,17 @@ border-radius:10px</string>
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QLabel" name="label_33">
+                     <widget class="QFrame" name="frame_dados_avulsa">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>30</height>
+                        <height>0</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>30</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Century Gothic</family>
-                        <pointsize>16</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Dados da pesagem</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QFrame" name="frame_79">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>99999</height>
+                        <height>999</height>
                        </size>
                       </property>
                       <property name="frameShape">
@@ -7665,7 +7641,7 @@ QRadioButton::indicator:unchecked {
                             </property>
                             <property name="maximumSize">
                              <size>
-                              <width>150</width>
+                              <width>0</width>
                               <height>16777215</height>
                              </size>
                             </property>
@@ -7703,7 +7679,7 @@ QLineEdit:focus{
                       </layout>
                      </widget>
                     </item>
-                    <item>
+                    <item alignment="Qt::AlignBottom">
                      <widget class="QFrame" name="frame_82">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
@@ -7727,16 +7703,16 @@ QLineEdit:focus{
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignVCenter">
-                        <widget class="QPushButton" name="pushButton_3">
+                       <item>
+                        <widget class="QPushButton" name="btn_historico_obs">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
-                           <height>23</height>
+                           <height>25</height>
                           </size>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(43, 43, 43);</string>
+                          <string notr="true">background-color: rgb(25, 25, 25);</string>
                          </property>
                          <property name="text">
                           <string/>
@@ -7760,12 +7736,21 @@ QLineEdit:focus{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_40">
+                        <widget class="QFrame" name="frame_historico_avulsas">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
                            <height>0</height>
                           </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(43, 43, 43);</string>
                          </property>
                          <property name="frameShape">
                           <enum>QFrame::StyledPanel</enum>
@@ -7773,6 +7758,262 @@ QLineEdit:focus{
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_41">
+                          <item alignment="Qt::AlignHCenter">
+                           <widget class="QFrame" name="frame_41">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_20">
+                             <item alignment="Qt::AlignRight">
+                              <widget class="QLabel" name="label_49">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="pixmap">
+                                <pixmap resource="Resources/resources.qrc">:/icons/clock-rotate-left-solid.svg</pixmap>
+                               </property>
+                               <property name="scaledContents">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_48">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Century Gothic</family>
+                                 <pointsize>16</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">	color:white;
+</string>
+                               </property>
+                               <property name="text">
+                                <string>Historico de Observações</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QTableWidget" name="tableWidget_5">
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>1999999</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QTableWidget{
+	font: 10pt &quot;Century Gothic&quot;;
+	outline:0;	color:white;
+
+}
+QHeaderView::section {
+	color:white;
+	border:1px solid white;
+	background-color: rgb(15, 202, 2);
+}
+
+QTableView::item:focus{
+    border: 1px solid ;
+	color:rgb(67, 202, 0)
+}
+QScrollBar:vertical {
+    border: 1px solid #999999;
+    background:white;
+    width:15px;    
+    margin: 3px
+}
+QScrollBar::handle:vertical {
+    background: rgb(43, 43, 43);
+    min-height: 0px;
+}
+QScrollBar::add-line:vertical {
+    background:rgb(50, 50, 50);
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+    stop: 0  rgb(32, 47, 130), stop: 0.5 rgb(32, 47, 130),  stop:1 rgb(32, 47, 130));
+	height:0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+
+QScrollBar:horizontal {
+    border: 1px solid #999999;
+    background:white;
+    height:15px;    
+    margin: 3px
+ }
+
+ QScrollBar::handle:horizontal {
+    background: rgb(43, 43, 43);
+    min-width: 0px;
+ }
+QScrollBar::add-line:horizontal {
+    background:rgb(50, 50, 50);
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+    stop: 0  rgb(32, 47, 130), stop: 0.5 rgb(32, 47, 130),  stop:1 rgb(32, 47, 130));
+	height:0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+ }
+
+</string>
+                            </property>
+                            <property name="autoScroll">
+                             <bool>true</bool>
+                            </property>
+                            <property name="autoScrollMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="editTriggers">
+                             <set>QAbstractItemView::NoEditTriggers</set>
+                            </property>
+                            <property name="dragDropMode">
+                             <enum>QAbstractItemView::NoDragDrop</enum>
+                            </property>
+                            <property name="defaultDropAction">
+                             <enum>Qt::IgnoreAction</enum>
+                            </property>
+                            <property name="alternatingRowColors">
+                             <bool>false</bool>
+                            </property>
+                            <property name="selectionMode">
+                             <enum>QAbstractItemView::SingleSelection</enum>
+                            </property>
+                            <property name="textElideMode">
+                             <enum>Qt::ElideRight</enum>
+                            </property>
+                            <property name="sortingEnabled">
+                             <bool>true</bool>
+                            </property>
+                            <property name="rowCount">
+                             <number>2</number>
+                            </property>
+                            <attribute name="horizontalHeaderCascadingSectionResizes">
+                             <bool>false</bool>
+                            </attribute>
+                            <attribute name="horizontalHeaderDefaultSectionSize">
+                             <number>115</number>
+                            </attribute>
+                            <attribute name="horizontalHeaderMinimumSectionSize">
+                             <number>95</number>
+                            </attribute>
+                            <attribute name="horizontalHeaderStretchLastSection">
+                             <bool>true</bool>
+                            </attribute>
+                            <attribute name="verticalHeaderVisible">
+                             <bool>false</bool>
+                            </attribute>
+                            <row/>
+                            <row/>
+                            <column>
+                             <property name="text">
+                              <string>ID</string>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <weight>75</weight>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                            </column>
+                            <column>
+                             <property name="text">
+                              <string>Motorista</string>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <weight>75</weight>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                            </column>
+                            <column>
+                             <property name="text">
+                              <string>OBSERVAÇÃO</string>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <weight>75</weight>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                            </column>
+                            <item row="0" column="0">
+                             <property name="text">
+                              <string>1</string>
+                             </property>
+                            </item>
+                            <item row="0" column="1">
+                             <property name="text">
+                              <string>VOLVO</string>
+                             </property>
+                            </item>
+                            <item row="0" column="2">
+                             <property name="text">
+                              <string>Cigarro</string>
+                             </property>
+                            </item>
+                            <item row="1" column="0">
+                             <property name="text">
+                              <string>2</string>
+                             </property>
+                            </item>
+                            <item row="1" column="1">
+                             <property name="text">
+                              <string>NISSAN</string>
+                             </property>
+                            </item>
+                            <item row="1" column="2">
+                             <property name="text">
+                              <string>Whisky</string>
+                             </property>
+                            </item>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                       </layout>
