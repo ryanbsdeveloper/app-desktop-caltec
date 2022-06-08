@@ -72,7 +72,6 @@ class DialogSairConta(QDialog, Ui_SairConta):
         self.setupUi(self)
         self.nao.clicked.connect(lambda: self.close())
 
-        
 
 #######################################################################
 
@@ -121,6 +120,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.page_fornecedores))
         self.button_veiculos_grupos.clicked.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.page_veiculos))
+        self.button_avulsas_pesagens.clicked.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.page_avulsas))
 
 
         # BUTTONS CONTA

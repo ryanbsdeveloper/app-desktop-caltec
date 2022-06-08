@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>sort-down-solid.svg</file>
+    <file>sort-up-solid.svg</file>
     <file>scale-balanced-solid .svg</file>
     <file>layer-group-solid .svg</file>
     <file>person-walking-solid .svg</file>
