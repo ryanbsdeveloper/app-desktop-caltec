@@ -146,19 +146,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             self.aba_pesagem_button.setText('Pesagens                 ▼')
 
+
     ## SHOW DIALOGS
     def show_sair_conta(self):
         self.dialog_sair_conta.show()
-    
+
     def show_excluir_conta(self):
         self.dialog_excluir_conta.show()
-    
+
     def show_atualizar_nome(self):
         self.dialog_atualizar_nome.show()
-    
+
     def show_atualizar_senha(self):
         self.dialog_atualizar_senha.show()
-        
+
     def show_atualizar_telefone(self):
         self.dialog_atualizar_telefone.show()
 
