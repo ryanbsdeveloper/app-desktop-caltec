@@ -25,6 +25,9 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgba(0, 0, 0, 130);</string>
   </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>0</number>
@@ -47,7 +50,7 @@
       <string notr="true">background-color: rgba(0, 0, 0, 130);</string>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
@@ -86,7 +89,7 @@
          <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
         </property>
         <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
+         <enum>QFrame::NoFrame</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
@@ -232,7 +235,7 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(43, 43, 43);
+                <string notr="true">background-color: rgb(25, 25, 25);
 color: rgb(0, 0, 0);</string>
                </property>
                <property name="frameShape">
@@ -381,7 +384,8 @@ color: rgb(0, 0, 0);</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color:rgb(55, 55, 55);border:0</string>
+                <string notr="true">border:0;
+background-color: rgb(43, 43, 43);</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -393,18 +397,18 @@ color: rgb(0, 0, 0);</string>
                 <property name="geometry">
                  <rect>
                   <x>100</x>
-                  <y>130</y>
-                  <width>231</width>
-                  <height>41</height>
+                  <y>120</y>
+                  <width>241</width>
+                  <height>20</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
-                  <weight>50</weight>
+                  <family>Dubai</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
                   <italic>false</italic>
-                  <bold>false</bold>
+                  <bold>true</bold>
                   <underline>false</underline>
                  </font>
                 </property>
@@ -419,18 +423,18 @@ color: rgb(0, 0, 0);</string>
                 <property name="geometry">
                  <rect>
                   <x>100</x>
-                  <y>60</y>
-                  <width>201</width>
-                  <height>41</height>
+                  <y>56</y>
+                  <width>231</width>
+                  <height>20</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
-                  <weight>50</weight>
+                  <family>Dubai</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
                   <italic>false</italic>
-                  <bold>false</bold>
+                  <bold>true</bold>
                   <underline>false</underline>
                   <strikeout>false</strikeout>
                   <stylestrategy>PreferDefault</stylestrategy>
@@ -459,18 +463,18 @@ color: rgb(0, 0, 0);</string>
                 <property name="geometry">
                  <rect>
                   <x>100</x>
-                  <y>240</y>
-                  <width>231</width>
-                  <height>41</height>
+                  <y>251</y>
+                  <width>261</width>
+                  <height>20</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
-                  <weight>50</weight>
+                  <family>Dubai</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
                   <italic>false</italic>
-                  <bold>false</bold>
+                  <bold>true</bold>
                   <underline>false</underline>
                  </font>
                 </property>
@@ -485,18 +489,18 @@ color: rgb(0, 0, 0);</string>
                 <property name="geometry">
                  <rect>
                   <x>100</x>
-                  <y>200</y>
-                  <width>260</width>
-                  <height>41</height>
+                  <y>174</y>
+                  <width>281</width>
+                  <height>70</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
-                  <weight>50</weight>
+                  <family>Dubai</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
                   <italic>false</italic>
-                  <bold>false</bold>
+                  <bold>true</bold>
                   <underline>false</underline>
                  </font>
                 </property>
@@ -513,16 +517,16 @@ color: rgb(0, 0, 0);</string>
                <widget class="QLabel" name="label_2">
                 <property name="geometry">
                  <rect>
-                  <x>130</x>
-                  <y>90</y>
-                  <width>191</width>
-                  <height>31</height>
+                  <x>120</x>
+                  <y>80</y>
+                  <width>201</width>
+                  <height>20</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>9</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>10</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -538,16 +542,16 @@ color: rgb(0, 0, 0);</string>
                <widget class="QLabel" name="label_3">
                 <property name="geometry">
                  <rect>
-                  <x>130</x>
-                  <y>160</y>
-                  <width>191</width>
+                  <x>120</x>
+                  <y>140</y>
+                  <width>211</width>
                   <height>31</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>9</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>10</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -564,15 +568,15 @@ color: rgb(0, 0, 0);</string>
                 <property name="geometry">
                  <rect>
                   <x>130</x>
-                  <y>23</y>
+                  <y>20</y>
                   <width>221</width>
                   <height>21</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>13</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>14</pointsize>
                   <weight>75</weight>
                   <bold>true</bold>
                  </font>
@@ -590,8 +594,8 @@ color: rgb(0, 0, 0);</string>
                <widget class="QLabel" name="label_16">
                 <property name="geometry">
                  <rect>
-                  <x>80</x>
-                  <y>10</y>
+                  <x>83</x>
+                  <y>4</y>
                   <width>51</width>
                   <height>41</height>
                  </rect>
@@ -626,7 +630,8 @@ color: rgb(0, 0, 0);</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(43, 43, 43)</string>
+                <string notr="true">background-color: rgb(25, 25, 25);
+</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -657,8 +662,8 @@ color: rgb(0, 0, 0);</string>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>12</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
@@ -695,8 +700,8 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>12</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
@@ -738,8 +743,8 @@ border:0
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>12</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
@@ -820,7 +825,7 @@ QPushButton:hover{
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
+                  <family>Dubai</family>
                   <pointsize>13</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
@@ -839,14 +844,14 @@ QPushButton:hover{
                  <rect>
                   <x>30</x>
                   <y>101</y>
-                  <width>101</width>
+                  <width>381</width>
                   <height>31</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>11</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <bold>false</bold>
                  </font>
@@ -881,14 +886,14 @@ QRadioButton::indicator:unchecked {
                  <rect>
                   <x>30</x>
                   <y>150</y>
-                  <width>91</width>
+                  <width>381</width>
                   <height>30</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>11</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <bold>false</bold>
                  </font>
@@ -965,7 +970,7 @@ border-radius:5px</string>
                 <property name="font">
                  <font>
                   <family>Dubai</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <bold>false</bold>
                  </font>
@@ -989,7 +994,7 @@ border-radius:5px</string>
                 <property name="font">
                  <font>
                   <family>Dubai</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <bold>false</bold>
                  </font>
@@ -1004,9 +1009,9 @@ border-radius:5px</string>
                <widget class="QFrame" name="frame_9">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
+                  <x>-20</x>
                   <y>0</y>
-                  <width>448</width>
+                  <width>491</width>
                   <height>39</height>
                  </rect>
                 </property>
@@ -1023,9 +1028,9 @@ border-radius:5px</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(43, 43, 43);
+                 <string notr="true">background-color: rgb(25, 25, 25);
 color: rgb(0, 0, 0);
-border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
+margin: 0px 15px</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -1036,7 +1041,7 @@ border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
                 <widget class="QLabel" name="label_21">
                  <property name="geometry">
                   <rect>
-                   <x>20</x>
+                   <x>40</x>
                    <y>10</y>
                    <width>71</width>
                    <height>21</height>
@@ -1060,7 +1065,7 @@ border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
                 <widget class="QLabel" name="label_22">
                  <property name="geometry">
                   <rect>
-                   <x>91</x>
+                   <x>111</x>
                    <y>10</y>
                    <width>21</width>
                    <height>21</height>
@@ -1084,7 +1089,7 @@ border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
                 <widget class="QLabel" name="label_23">
                  <property name="geometry">
                   <rect>
-                   <x>106</x>
+                   <x>126</x>
                    <y>10</y>
                    <width>45</width>
                    <height>21</height>
@@ -1108,7 +1113,7 @@ border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
                 <widget class="QLabel" name="label_24">
                  <property name="geometry">
                   <rect>
-                   <x>153</x>
+                   <x>173</x>
                    <y>10</y>
                    <width>21</width>
                    <height>21</height>
@@ -1132,7 +1137,7 @@ border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
                 <widget class="QLabel" name="label_25">
                  <property name="geometry">
                   <rect>
-                   <x>167</x>
+                   <x>187</x>
                    <y>10</y>
                    <width>121</width>
                    <height>21</height>
@@ -1199,8 +1204,8 @@ margin: 0px 15px</string>
                   <widget class="QPushButton" name="btn_voltar">
                    <property name="font">
                     <font>
-                     <family>Century Gothic</family>
-                     <pointsize>10</pointsize>
+                     <family>Dubai</family>
+                     <pointsize>12</pointsize>
                      <weight>75</weight>
                      <italic>false</italic>
                      <bold>true</bold>
@@ -1236,8 +1241,8 @@ border:0
                    </property>
                    <property name="font">
                     <font>
-                     <family>Century Gothic</family>
-                     <pointsize>10</pointsize>
+                     <family>Dubai</family>
+                     <pointsize>12</pointsize>
                      <weight>75</weight>
                      <italic>false</italic>
                      <bold>true</bold>
@@ -1318,7 +1323,7 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                  </property>
                  <property name="font">
                   <font>
-                   <family>Century Gothic</family>
+                   <family>Dubai</family>
                    <pointsize>15</pointsize>
                    <weight>75</weight>
                    <italic>false</italic>
@@ -1343,8 +1348,10 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                  </property>
                  <property name="font">
                   <font>
-                   <family>Century Gothic</family>
-                   <pointsize>9</pointsize>
+                   <family>Dubai</family>
+                   <pointsize>10</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -1370,7 +1377,7 @@ color: rgb(255, 255, 255);</string>
                  <property name="font">
                   <font>
                    <family>Dubai</family>
-                   <pointsize>15</pointsize>
+                   <pointsize>16</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -1379,7 +1386,7 @@ color: rgb(255, 255, 255);</string>
                   <string notr="true">color: rgb(255, 255, 255);border:0</string>
                  </property>
                  <property name="text">
-                  <string>R$  119,99 </string>
+                  <string/>
                  </property>
                 </widget>
                </widget>
@@ -1453,7 +1460,7 @@ color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
+                  <family>Dubai</family>
                   <pointsize>13</pointsize>
                   <weight>75</weight>
                   <italic>false</italic>
@@ -1512,7 +1519,7 @@ background-color: rgb(43, 43, 43);</string>
                  </property>
                  <property name="font">
                   <font>
-                   <family>Century Gothic</family>
+                   <family>Dubai</family>
                    <pointsize>13</pointsize>
                    <weight>75</weight>
                    <italic>false</italic>
@@ -1549,7 +1556,7 @@ color:white
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
+                  <family>Dubai</family>
                   <pointsize>12</pointsize>
                   <weight>75</weight>
                   <bold>true</bold>
@@ -1570,15 +1577,15 @@ color: rgb(255, 255, 255);</string>
                 <property name="geometry">
                  <rect>
                   <x>70</x>
-                  <y>145</y>
+                  <y>138</y>
                   <width>291</width>
-                  <height>33</height>
+                  <height>50</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>12</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1595,16 +1602,16 @@ color: rgb(255, 255, 255);</string>
                <widget class="QPushButton" name="pushButton_2">
                 <property name="geometry">
                  <rect>
-                  <x>114</x>
-                  <y>160</y>
+                  <x>107</x>
+                  <y>166</y>
                   <width>95</width>
                   <height>20</height>
                  </rect>
                 </property>
                 <property name="font">
                  <font>
-                  <family>Century Gothic</family>
-                  <pointsize>10</pointsize>
+                  <family>Dubai</family>
+                  <pointsize>12</pointsize>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1643,9 +1650,9 @@ color: rgb(85, 85, 255);</string>
                <widget class="QFrame" name="frame_12">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
+                  <x>-20</x>
                   <y>0</y>
-                  <width>448</width>
+                  <width>491</width>
                   <height>39</height>
                  </rect>
                 </property>
@@ -1662,9 +1669,9 @@ color: rgb(85, 85, 255);</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(43, 43, 43);
+                 <string notr="true">background-color: rgb(25, 25, 25);
 color: rgb(0, 0, 0);
-border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
+;margin: 0px 15px</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -1675,7 +1682,7 @@ border-bottom:1px solid rgb(88, 88, 88);margin: 0px 15px</string>
                 <widget class="QLabel" name="label_30">
                  <property name="geometry">
                   <rect>
-                   <x>20</x>
+                   <x>40</x>
                    <y>10</y>
                    <width>91</width>
                    <height>21</height>
