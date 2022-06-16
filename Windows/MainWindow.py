@@ -2423,7 +2423,7 @@ class Ui_MainWindow(object):
 "")
         self.tableWidget_2.setAlternatingRowColors(True)
         self.tableWidget_2.setSortingEnabled(True)
-        self.tableWidget_2.horizontalHeader().setDefaultSectionSize(152)
+        self.tableWidget_2.horizontalHeader().setDefaultSectionSize(135)
         self.tableWidget_2.horizontalHeader().setProperty("showSortIndicator", True)
         self.tableWidget_2.horizontalHeader().setStretchLastSection(True)
 

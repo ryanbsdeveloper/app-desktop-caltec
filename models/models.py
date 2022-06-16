@@ -3,6 +3,7 @@ from datetime import datetime
 import sqlalchemy as sql
 from sqlalchemy.orm import relationship, backref, Session, sessionmaker
 import sqlalchemy.ext.declarative as declarative
+from sqlalchemy import select
 
 
 BASE_DIR = os.path.dirname(__file__)
@@ -14,10 +15,7 @@ Session = sessionmaker()
 Session.configure(bind=engine)
 session = Session()
 
-
 # use direct
-
-
 class UserLogado(Base):
     __tablename__ = "user_logado"
 
@@ -143,3 +141,12 @@ def add_user(id, nome, email, telefone, senha, licenca, pesagens):
                 senha=senha, licenca=licenca, max_pesagens=pesagens)
     session.add(user)
     session.commit()
+
+
+def get_all_users():
+    users = []
+    with engine.begin() as conn:
+        for c in conn.execute(sql.text('select * from users')):
+            users.append(c)
+
+    return users

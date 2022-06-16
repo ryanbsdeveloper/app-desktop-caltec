@@ -39,6 +39,8 @@ class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
         self.setupUi(self)
         self.text_info.hide()
         self.bt_cancelar.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
 
 class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
@@ -47,6 +49,8 @@ class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
         self.setupUi(self)
         self.text_info.hide()
         self.btn_cancelar.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
 
 class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
@@ -55,6 +59,8 @@ class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
         self.setupUi(self)
         self.text_info.hide()
         self.bt_cancelar.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
 
 class DialogExcluirConta(QDialog, Ui_ExcluirConta):
@@ -63,6 +69,8 @@ class DialogExcluirConta(QDialog, Ui_ExcluirConta):
         self.setupUi(self)
         self.text_info.hide()
         self.nao.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
 
 class DialogSairConta(QDialog, Ui_SairConta):
@@ -70,6 +78,8 @@ class DialogSairConta(QDialog, Ui_SairConta):
         super(DialogSairConta, self).__init__()
         self.setupUi(self)
         self.nao.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
 
 #######################################################################
@@ -176,19 +186,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     # SHOW DIALOGS
     def show_sair_conta(self):
-        self.dialog_sair_conta.show()
+        self.dialog_sair_conta.showMaximized()
 
     def show_excluir_conta(self):
-        self.dialog_excluir_conta.show()
+        self.dialog_excluir_conta.showMaximized()
 
     def show_atualizar_nome(self):
-        self.dialog_atualizar_nome.show()
+        self.dialog_atualizar_nome.showMaximized()
 
     def show_atualizar_senha(self):
-        self.dialog_atualizar_senha.show()
+        self.dialog_atualizar_senha.showMaximized()
 
     def show_atualizar_telefone(self):
-        self.dialog_atualizar_telefone.show()
+        self.dialog_atualizar_telefone.showMaximized()
 
     # ANIMATIONS FUNCTIONS
     def animation_pesagem(self):

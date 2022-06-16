@@ -28,9 +28,17 @@ class Ui_AtualizarNome(object):
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.frame_13 = QFrame(AtualizarNome)
+        self.frame_31 = QFrame(AtualizarNome)
+        self.frame_31.setObjectName(u"frame_31")
+        self.frame_31.setFrameShape(QFrame.StyledPanel)
+        self.frame_31.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_14 = QVBoxLayout(self.frame_31)
+        self.verticalLayout_14.setSpacing(0)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.frame_13 = QFrame(self.frame_31)
         self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setMaximumSize(QSize(409, 249))
+        self.frame_13.setMaximumSize(QSize(409, 216))
         font = QFont()
         font.setPointSize(5)
         self.frame_13.setFont(font)
@@ -157,7 +165,15 @@ class Ui_AtualizarNome(object):
 
         self.verticalLayout_13.addWidget(self.text_info)
 
-        self.bt_cancelar = QPushButton(self.frame_6)
+        self.frame_32 = QFrame(self.frame_6)
+        self.frame_32.setObjectName(u"frame_32")
+        self.frame_32.setFrameShape(QFrame.StyledPanel)
+        self.frame_32.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_32)
+        self.horizontalLayout_6.setSpacing(10)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.bt_cancelar = QPushButton(self.frame_32)
         self.bt_cancelar.setObjectName(u"bt_cancelar")
         self.bt_cancelar.setFont(font5)
         self.bt_cancelar.setCursor(QCursor(Qt.PointingHandCursor))
@@ -169,9 +185,9 @@ class Ui_AtualizarNome(object):
 "	background-color: rgb(204, 204, 204);\n"
 "}")
 
-        self.verticalLayout_13.addWidget(self.bt_cancelar)
+        self.horizontalLayout_6.addWidget(self.bt_cancelar)
 
-        self.btn_alterar = QPushButton(self.frame_6)
+        self.btn_alterar = QPushButton(self.frame_32)
         self.btn_alterar.setObjectName(u"btn_alterar")
         self.btn_alterar.setFont(font5)
         self.btn_alterar.setCursor(QCursor(Qt.PointingHandCursor))
@@ -186,7 +202,10 @@ class Ui_AtualizarNome(object):
 "	background-color: rgb(151, 255, 151);\n"
 "}")
 
-        self.verticalLayout_13.addWidget(self.btn_alterar)
+        self.horizontalLayout_6.addWidget(self.btn_alterar)
+
+
+        self.verticalLayout_13.addWidget(self.frame_32)
 
 
         self.verticalLayout_12.addWidget(self.frame_6)
@@ -195,7 +214,10 @@ class Ui_AtualizarNome(object):
         self.verticalLayout.addWidget(self.frame_30)
 
 
-        self.verticalLayout_4.addWidget(self.frame_13, 0, Qt.AlignHCenter)
+        self.verticalLayout_14.addWidget(self.frame_13, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_4.addWidget(self.frame_31)
 
 
         self.retranslateUi(AtualizarNome)

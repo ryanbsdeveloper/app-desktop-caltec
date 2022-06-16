@@ -34,16 +34,18 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.frame = QFrame(AtualizarSenha)
         self.frame.setObjectName(u"frame")
+        font1 = QFont()
+        font1.setFamily(u"Segoe UI")
+        self.frame.setFont(font1)
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_6 = QVBoxLayout(self.frame)
-        self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.frame_2 = QFrame(self.frame)
         self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setMinimumSize(QSize(390, 320))
-        self.frame_2.setMaximumSize(QSize(390, 320))
+        self.frame_2.setMinimumSize(QSize(390, 316))
+        self.frame_2.setMaximumSize(QSize(390, 315))
+        self.frame_2.setFont(font1)
         self.frame_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
@@ -54,22 +56,24 @@ class Ui_AtualizarSenha(object):
         self.frame_7 = QFrame(self.frame_2)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setMinimumSize(QSize(0, 50))
+        self.frame_7.setFont(font1)
         self.frame_7.setStyleSheet(u"background-color: rgb(43, 43, 43);")
         self.frame_7.setFrameShape(QFrame.NoFrame)
         self.frame_7.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.frame_7)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(155, 17, 100, 16))
-        font1 = QFont()
-        font1.setFamily(u"Century Gothic")
-        font1.setPointSize(11)
-        font1.setBold(True)
-        font1.setWeight(75)
-        self.label.setFont(font1)
+        font2 = QFont()
+        font2.setFamily(u"Segoe UI")
+        font2.setPointSize(11)
+        font2.setBold(True)
+        font2.setWeight(75)
+        self.label.setFont(font2)
         self.label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.pushButton = QPushButton(self.frame_7)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(318, 15, 51, 23))
+        self.pushButton.setGeometry(QRect(330, 15, 51, 23))
+        self.pushButton.setFont(font1)
         self.pushButton.setStyleSheet(u"border:0")
         icon1 = QIcon()
         icon1.addFile(u":/icons/xmark-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
@@ -80,6 +84,7 @@ class Ui_AtualizarSenha(object):
 
         self.frame_6 = QFrame(self.frame_2)
         self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setFont(font1)
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.frame_6)
@@ -90,10 +95,10 @@ class Ui_AtualizarSenha(object):
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMinimumSize(QSize(0, 30))
         self.frame_3.setMaximumSize(QSize(16777215, 50))
-        font2 = QFont()
-        font2.setFamily(u"Mudir MT")
-        font2.setPointSize(9)
-        self.frame_3.setFont(font2)
+        font3 = QFont()
+        font3.setFamily(u"Segoe UI")
+        font3.setPointSize(9)
+        self.frame_3.setFont(font3)
         self.frame_3.setFrameShape(QFrame.NoFrame)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_3)
@@ -101,10 +106,10 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout_3.setContentsMargins(-1, 0, -1, 0)
         self.label_2 = QLabel(self.frame_3)
         self.label_2.setObjectName(u"label_2")
-        font3 = QFont()
-        font3.setFamily(u"Century Gothic")
-        font3.setPointSize(9)
-        self.label_2.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI")
+        font4.setPointSize(10)
+        self.label_2.setFont(font4)
         self.label_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.label_2)
@@ -114,21 +119,25 @@ class Ui_AtualizarSenha(object):
 
         self.frame_4 = QFrame(self.frame_6)
         self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFont(font1)
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.frame_4)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.label_3 = QLabel(self.frame_4)
         self.label_3.setObjectName(u"label_3")
-        font4 = QFont()
-        font4.setFamily(u"Century Gothic")
-        font4.setPointSize(10)
-        self.label_3.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI")
+        font5.setPointSize(10)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.label_3.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.label_3)
 
         self.input_senha_atual = QLineEdit(self.frame_4)
         self.input_senha_atual.setObjectName(u"input_senha_atual")
+        self.input_senha_atual.setFont(font1)
         self.input_senha_atual.setStyleSheet(u"QLineEdit{padding:3px}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
@@ -139,12 +148,13 @@ class Ui_AtualizarSenha(object):
 
         self.label_4 = QLabel(self.frame_4)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setFont(font4)
+        self.label_4.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.label_4)
 
         self.input_senha_nova_1 = QLineEdit(self.frame_4)
         self.input_senha_nova_1.setObjectName(u"input_senha_nova_1")
+        self.input_senha_nova_1.setFont(font1)
         self.input_senha_nova_1.setStyleSheet(u"QLineEdit{padding:3px}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
@@ -155,12 +165,13 @@ class Ui_AtualizarSenha(object):
 
         self.label_5 = QLabel(self.frame_4)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font4)
+        self.label_5.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.label_5)
 
         self.input_senha_nova_2 = QLineEdit(self.frame_4)
         self.input_senha_nova_2.setObjectName(u"input_senha_nova_2")
+        self.input_senha_nova_2.setFont(font1)
         self.input_senha_nova_2.setStyleSheet(u"QLineEdit{padding:3px}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
@@ -174,6 +185,7 @@ class Ui_AtualizarSenha(object):
 
         self.frame_5 = QFrame(self.frame_6)
         self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setFont(font1)
         self.frame_5.setFrameShape(QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame_5)
@@ -217,18 +229,16 @@ class Ui_AtualizarSenha(object):
 
         self.text_info = QLabel(self.frame_2)
         self.text_info.setObjectName(u"text_info")
-        font5 = QFont()
-        font5.setPointSize(10)
-        self.text_info.setFont(font5)
+        self.text_info.setFont(font4)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
 
         self.verticalLayout_2.addWidget(self.text_info, 0, Qt.AlignHCenter)
 
 
-        self.verticalLayout_6.addWidget(self.frame_2)
+        self.verticalLayout_6.addWidget(self.frame_2, 0, Qt.AlignHCenter)
 
 
-        self.verticalLayout.addWidget(self.frame, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.verticalLayout.addWidget(self.frame)
 
 
         self.retranslateUi(AtualizarSenha)
