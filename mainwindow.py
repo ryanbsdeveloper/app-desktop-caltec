@@ -17,11 +17,11 @@ from Windows.DialogAtualizarSenha import Ui_AtualizarSenha
 from Windows.DialogAtualizarTelefone import Ui_AtualizarTelefone
 from Windows.DialogExcluirConta import Ui_ExcluirConta
 from Windows.DialogSairConta import Ui_SairConta
-from Utils import utils
+from utils import utils
+from models import database
 import resources_rc
 
 # DIALOGs
-
 
 class DialogLogin(QDialog, Ui_AcessoNegado):
     def __init__(self):
@@ -79,6 +79,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
+        
+        # HIDE
+        self.digite_um_id.hide()
+        self.digite_um_id_2.hide()
 
         # MENU TOP
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -95,8 +99,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.btn_menu_registrar_clientes.clicked.connect(
             self.animation_menu_clientes)
-        self.btn_menu_registrar_forne.clicked.connect(
-            self.animation_menu_forne)
         self.btn_menu_registrar_produtos.clicked.connect(
             self.animation_menu_produtos)
         self.btn_menu_registrar_veiculos.clicked.connect(
@@ -119,8 +121,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.page_clientes))
         self.button_produtos_grupos.clicked.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.page_produtos))
-        self.button_fornecedores_grupos.clicked.connect(
-            lambda: self.stackedWidget.setCurrentWidget(self.page_fornecedores))
         self.button_veiculos_grupos.clicked.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.page_veiculos))
         self.button_avulsas_pesagens.clicked.connect(
@@ -421,7 +421,7 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
             self.entrar_button.setDisabled(True)
 
     def login(self):
-        db = utils.DB()
+        db = database.DB()
         email = self.email_input.text()
         senha = self._senha_input.text()
         register = db.user_log(email, senha)
@@ -523,5 +523,6 @@ class PremiumWindow(QDialog, Ui_Dialog):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     Window = LoginWindow()
-    Window.showMaximized()
+    Window.show()
     app.exec_()
+ 

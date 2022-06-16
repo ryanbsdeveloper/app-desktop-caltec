@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>xmark-solid.svg</file>
     <file>sort-down-solid.svg</file>
     <file>sort-up-solid.svg</file>
     <file>scale-balanced-solid .svg</file>

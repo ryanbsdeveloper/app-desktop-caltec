@@ -87,8 +87,8 @@ class Ui_Dialog(object):
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(0, 0))
         self.frame.setMaximumSize(QSize(16777215, 39))
-        self.frame.setStyleSheet(u"background-color: rgb(25, 25, 25);\n"
-"color: rgb(0, 0, 0);")
+        self.frame.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"background-color: rgb(208, 208, 208);")
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.frame)
@@ -100,7 +100,7 @@ class Ui_Dialog(object):
         font.setBold(True)
         font.setWeight(75)
         self.label.setFont(font)
-        self.label.setStyleSheet(u"border:0;color:white")
+        self.label.setStyleSheet(u"border:0;")
         self.label_4 = QLabel(self.frame)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(91, 10, 21, 21))
@@ -110,7 +110,7 @@ class Ui_Dialog(object):
         font1.setBold(True)
         font1.setWeight(75)
         self.label_4.setFont(font1)
-        self.label_4.setStyleSheet(u"border:0;;color:white")
+        self.label_4.setStyleSheet(u"border:0;")
         self.label_14 = QLabel(self.frame)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setGeometry(QRect(106, 10, 45, 21))
@@ -120,17 +120,17 @@ class Ui_Dialog(object):
         font2.setBold(False)
         font2.setWeight(50)
         self.label_14.setFont(font2)
-        self.label_14.setStyleSheet(u"border:0;color:white")
+        self.label_14.setStyleSheet(u"border:0;")
         self.label_15 = QLabel(self.frame)
         self.label_15.setObjectName(u"label_15")
         self.label_15.setGeometry(QRect(153, 10, 21, 21))
         self.label_15.setFont(font1)
-        self.label_15.setStyleSheet(u"border:0;;color:white")
+        self.label_15.setStyleSheet(u"border:0;")
         self.label_19 = QLabel(self.frame)
         self.label_19.setObjectName(u"label_19")
         self.label_19.setGeometry(QRect(169, 10, 121, 21))
         self.label_19.setFont(font2)
-        self.label_19.setStyleSheet(u"border:0;;color:white")
+        self.label_19.setStyleSheet(u"border:0;")
 
         self.verticalLayout_2.addWidget(self.frame)
 
@@ -145,7 +145,7 @@ class Ui_Dialog(object):
         font3.setWeight(75)
         self.frame_2.setFont(font3)
         self.frame_2.setStyleSheet(u"border:0;\n"
-"background-color: rgb(43, 43, 43);")
+"background-color: rgb(255, 255, 255);")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.label_5 = QLabel(self.frame_2)
@@ -203,13 +203,15 @@ class Ui_Dialog(object):
         font7.setFamily(u"Dubai")
         font7.setPointSize(10)
         self.label_2.setFont(font7)
-        self.label_2.setStyleSheet(u"color: rgb(255, 255, 255);border:0")
+        self.label_2.setStyleSheet(u";border:0;\n"
+"color: rgb(0, 0, 0);")
         self.label_2.setWordWrap(True)
         self.label_3 = QLabel(self.frame_2)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(120, 140, 211, 31))
         self.label_3.setFont(font7)
-        self.label_3.setStyleSheet(u"color: rgb(255, 255, 255);border:0")
+        self.label_3.setStyleSheet(u";border:0;\n"
+"color: rgb(0, 0, 0);")
         self.label_3.setWordWrap(True)
         self.label_6 = QLabel(self.frame_2)
         self.label_6.setObjectName(u"label_6")
@@ -220,7 +222,8 @@ class Ui_Dialog(object):
         font8.setBold(True)
         font8.setWeight(75)
         self.label_6.setFont(font8)
-        self.label_6.setStyleSheet(u"color:white")
+        self.label_6.setStyleSheet(u";border:0;\n"
+"color: rgb(0, 0, 0);")
         self.label_6.setAlignment(Qt.AlignCenter)
         self.label_16 = QLabel(self.frame_2)
         self.label_16.setObjectName(u"label_16")
@@ -235,13 +238,13 @@ class Ui_Dialog(object):
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMinimumSize(QSize(0, 70))
         self.frame_3.setMaximumSize(QSize(16777215, 70))
-        self.frame_3.setStyleSheet(u"background-color: rgb(25, 25, 25);\n"
-"")
+        self.frame_3.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"background-color: rgb(208, 208, 208);")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.btn_comprar = QPushButton(self.frame_3)
         self.btn_comprar.setObjectName(u"btn_comprar")
-        self.btn_comprar.setGeometry(QRect(268, 15, 133, 40))
+        self.btn_comprar.setGeometry(QRect(268, 12, 133, 40))
         self.btn_comprar.setMinimumSize(QSize(133, 40))
         self.btn_comprar.setMaximumSize(QSize(50, 40))
         self.btn_comprar.setFont(font4)
@@ -258,7 +261,7 @@ class Ui_Dialog(object):
 "}")
         self.btn_pular = QPushButton(self.frame_3)
         self.btn_pular.setObjectName(u"btn_pular")
-        self.btn_pular.setGeometry(QRect(200, 49, 50, 16))
+        self.btn_pular.setGeometry(QRect(191, 41, 50, 16))
         font9 = QFont()
         font9.setFamily(u"Dubai")
         font9.setPointSize(12)
@@ -273,7 +276,7 @@ class Ui_Dialog(object):
 "")
         self.btn_licenca = QPushButton(self.frame_3)
         self.btn_licenca.setObjectName(u"btn_licenca")
-        self.btn_licenca.setGeometry(QRect(41, 27, 138, 16))
+        self.btn_licenca.setGeometry(QRect(41, 25, 138, 16))
         self.btn_licenca.setMinimumSize(QSize(50, 0))
         self.btn_licenca.setMaximumSize(QSize(16777215, 40))
         self.btn_licenca.setFont(font4)
@@ -309,7 +312,8 @@ class Ui_Dialog(object):
         font10.setItalic(False)
         font10.setWeight(50)
         self.frame_4.setFont(font10)
-        self.frame_4.setStyleSheet(u"background-color: rgb(43, 43, 43);border:0")
+        self.frame_4.setStyleSheet(u";border:0;\n"
+"background-color: rgb(255, 255, 255);")
         self.frame_4.setFrameShape(QFrame.NoFrame)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.label_8 = QLabel(self.frame_4)
@@ -333,7 +337,6 @@ class Ui_Dialog(object):
         font12.setWeight(50)
         self.radioButton_anual.setFont(font12)
         self.radioButton_anual.setStyleSheet(u"QRadioButton {\n"
-"    color:                  white;\n"
 "}\n"
 "\n"
 "QRadioButton::indicator {\n"
@@ -356,7 +359,6 @@ class Ui_Dialog(object):
         self.radioButton_6m.setGeometry(QRect(30, 150, 381, 30))
         self.radioButton_6m.setFont(font12)
         self.radioButton_6m.setStyleSheet(u"QRadioButton {\n"
-"    color:                  white;\n"
 "}\n"
 "\n"
 "QRadioButton::indicator {\n"
@@ -392,19 +394,18 @@ class Ui_Dialog(object):
         self.label_10.setObjectName(u"label_10")
         self.label_10.setGeometry(QRect(320, 110, 91, 21))
         self.label_10.setFont(font12)
-        self.label_10.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_10.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_13 = QLabel(self.frame_4)
         self.label_13.setObjectName(u"label_13")
         self.label_13.setGeometry(QRect(330, 150, 81, 30))
         self.label_13.setFont(font12)
-        self.label_13.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.label_13.setStyleSheet(u"border:0;;color:;margin:0")
         self.frame_9 = QFrame(self.frame_4)
         self.frame_9.setObjectName(u"frame_9")
         self.frame_9.setGeometry(QRect(-20, 0, 491, 39))
         self.frame_9.setMinimumSize(QSize(0, 0))
         self.frame_9.setMaximumSize(QSize(16777215, 39))
-        self.frame_9.setStyleSheet(u"background-color: rgb(25, 25, 25);\n"
-"color: rgb(0, 0, 0);\n"
+        self.frame_9.setStyleSheet(u"color: rgb(0, 0, 0);background-color: rgb(208, 208, 208);color: rgb(0, 0, 0);\n"
 "margin: 0px 15px")
         self.frame_9.setFrameShape(QFrame.NoFrame)
         self.frame_9.setFrameShadow(QFrame.Raised)
@@ -412,34 +413,33 @@ class Ui_Dialog(object):
         self.label_21.setObjectName(u"label_21")
         self.label_21.setGeometry(QRect(40, 10, 71, 21))
         self.label_21.setFont(font2)
-        self.label_21.setStyleSheet(u"border:0;color:white;margin:0")
+        self.label_21.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_22 = QLabel(self.frame_9)
         self.label_22.setObjectName(u"label_22")
         self.label_22.setGeometry(QRect(111, 10, 21, 21))
         self.label_22.setFont(font1)
-        self.label_22.setStyleSheet(u"border:0;;color:white;margin:0")
+        self.label_22.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_23 = QLabel(self.frame_9)
         self.label_23.setObjectName(u"label_23")
         self.label_23.setGeometry(QRect(126, 10, 45, 21))
         self.label_23.setFont(font)
-        self.label_23.setStyleSheet(u"border:0;color:white;margin:0")
+        self.label_23.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_24 = QLabel(self.frame_9)
         self.label_24.setObjectName(u"label_24")
         self.label_24.setGeometry(QRect(173, 10, 21, 21))
         self.label_24.setFont(font1)
-        self.label_24.setStyleSheet(u"border:0;;color:white;margin:0")
+        self.label_24.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_25 = QLabel(self.frame_9)
         self.label_25.setObjectName(u"label_25")
         self.label_25.setGeometry(QRect(187, 10, 121, 21))
         self.label_25.setFont(font2)
-        self.label_25.setStyleSheet(u"border:0;;color:white;margin:0")
+        self.label_25.setStyleSheet(u"border:0;;color:;margin:0")
         self.frame_10 = QFrame(self.frame_4)
         self.frame_10.setObjectName(u"frame_10")
-        self.frame_10.setGeometry(QRect(0, 328, 448, 70))
+        self.frame_10.setGeometry(QRect(-30, 328, 501, 70))
         self.frame_10.setMinimumSize(QSize(0, 70))
         self.frame_10.setMaximumSize(QSize(16777215, 70))
-        self.frame_10.setStyleSheet(u"background-color: rgb(43, 43, 43);\n"
-"margin: 0px 15px")
+        self.frame_10.setStyleSheet(u"color: rgb(0, 0, 0);background-color: rgb(208, 208, 208);margin: 0px 15px")
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_10)
@@ -450,9 +450,7 @@ class Ui_Dialog(object):
         self.btn_voltar.setObjectName(u"btn_voltar")
         self.btn_voltar.setFont(font9)
         self.btn_voltar.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_voltar.setStyleSheet(u"color: rgb(91, 91, 91);\n"
-"border:0\n"
-"")
+        self.btn_voltar.setStyleSheet(u"border:0;;color:;margin:0")
 
         self.horizontalLayout_2.addWidget(self.btn_voltar)
 
@@ -498,7 +496,7 @@ class Ui_Dialog(object):
         font14.setItalic(False)
         font14.setWeight(75)
         self.label_27.setFont(font14)
-        self.label_27.setStyleSheet(u"color: rgb(255, 255, 255);border:0")
+        self.label_27.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_28 = QLabel(self.frame_11)
         self.label_28.setObjectName(u"label_28")
         self.label_28.setGeometry(QRect(82, 60, 290, 41))
@@ -508,8 +506,7 @@ class Ui_Dialog(object):
         font15.setBold(False)
         font15.setWeight(50)
         self.label_28.setFont(font15)
-        self.label_28.setStyleSheet(u"border:0;\n"
-"color: rgb(255, 255, 255);")
+        self.label_28.setStyleSheet(u"border:0;;color:;margin:0")
         self.label_28.setWordWrap(True)
         self.text_valor_total = QLabel(self.frame_11)
         self.text_valor_total.setObjectName(u"text_valor_total")
@@ -520,7 +517,7 @@ class Ui_Dialog(object):
         font16.setBold(True)
         font16.setWeight(75)
         self.text_valor_total.setFont(font16)
-        self.text_valor_total.setStyleSheet(u"color: rgb(255, 255, 255);border:0")
+        self.text_valor_total.setStyleSheet(u"border:0;;color:;margin:0")
 
         self.verticalLayout_3.addWidget(self.frame_4)
 

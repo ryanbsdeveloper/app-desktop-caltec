@@ -235,8 +235,8 @@
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(25, 25, 25);
-color: rgb(0, 0, 0);</string>
+                <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(208, 208, 208);</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -262,7 +262,7 @@ color: rgb(0, 0, 0);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border:0;color:white</string>
+                 <string notr="true">border:0;</string>
                 </property>
                 <property name="text">
                  <string>Benefícios</string>
@@ -286,7 +286,7 @@ color: rgb(0, 0, 0);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border:0;;color:white</string>
+                 <string notr="true">border:0;</string>
                 </property>
                 <property name="text">
                  <string>&gt;</string>
@@ -310,7 +310,7 @@ color: rgb(0, 0, 0);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border:0;color:white</string>
+                 <string notr="true">border:0;</string>
                 </property>
                 <property name="text">
                  <string>Planos</string>
@@ -334,7 +334,7 @@ color: rgb(0, 0, 0);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border:0;;color:white</string>
+                 <string notr="true">border:0;</string>
                 </property>
                 <property name="text">
                  <string>&gt;</string>
@@ -358,7 +358,7 @@ color: rgb(0, 0, 0);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border:0;;color:white</string>
+                 <string notr="true">border:0;</string>
                 </property>
                 <property name="text">
                  <string>Redirecionamento</string>
@@ -385,7 +385,7 @@ color: rgb(0, 0, 0);</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">border:0;
-background-color: rgb(43, 43, 43);</string>
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -530,7 +530,8 @@ background-color: rgb(43, 43, 43);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);border:0</string>
+                 <string notr="true">;border:0;
+color: rgb(0, 0, 0);</string>
                 </property>
                 <property name="text">
                  <string>30 pesagens disponíveis para não VIP</string>
@@ -555,7 +556,8 @@ background-color: rgb(43, 43, 43);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);border:0</string>
+                 <string notr="true">;border:0;
+color: rgb(0, 0, 0);</string>
                 </property>
                 <property name="text">
                  <string>Não-vip terá algumas telas bloqueadas</string>
@@ -582,7 +584,8 @@ background-color: rgb(43, 43, 43);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:white</string>
+                 <string notr="true">;border:0;
+color: rgb(0, 0, 0);</string>
                 </property>
                 <property name="text">
                  <string>Benefícios para PREMIUM</string>
@@ -630,8 +633,8 @@ background-color: rgb(43, 43, 43);</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(25, 25, 25);
-</string>
+                <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(208, 208, 208);</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -643,7 +646,7 @@ background-color: rgb(43, 43, 43);</string>
                 <property name="geometry">
                  <rect>
                   <x>268</x>
-                  <y>15</y>
+                  <y>12</y>
                   <width>133</width>
                   <height>40</height>
                  </rect>
@@ -692,8 +695,8 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                <widget class="QPushButton" name="btn_pular">
                 <property name="geometry">
                  <rect>
-                  <x>200</x>
-                  <y>49</y>
+                  <x>191</x>
+                  <y>41</y>
                   <width>50</width>
                   <height>16</height>
                  </rect>
@@ -724,7 +727,7 @@ border:0
                 <property name="geometry">
                  <rect>
                   <x>41</x>
-                  <y>27</y>
+                  <y>25</y>
                   <width>138</width>
                   <height>16</height>
                  </rect>
@@ -806,7 +809,8 @@ QPushButton:hover{
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(43, 43, 43);border:0</string>
+                <string notr="true">;border:0;
+background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -858,7 +862,6 @@ QPushButton:hover{
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QRadioButton {
-    color:                  white;
 }
 
 QRadioButton::indicator {
@@ -900,7 +903,6 @@ QRadioButton::indicator:unchecked {
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QRadioButton {
-    color:                  white;
 }
 
 QRadioButton::indicator {
@@ -976,7 +978,7 @@ border-radius:5px</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);</string>
+                 <string notr="true">border:0;;color:;margin:0</string>
                 </property>
                 <property name="text">
                  <string>R$  119,99 </string>
@@ -1000,7 +1002,7 @@ border-radius:5px</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);</string>
+                 <string notr="true">border:0;;color:;margin:0</string>
                 </property>
                 <property name="text">
                  <string>R$  79,99</string>
@@ -1028,8 +1030,7 @@ border-radius:5px</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(25, 25, 25);
-color: rgb(0, 0, 0);
+                 <string notr="true">color: rgb(0, 0, 0);background-color: rgb(208, 208, 208);color: rgb(0, 0, 0);
 margin: 0px 15px</string>
                 </property>
                 <property name="frameShape">
@@ -1056,7 +1057,7 @@ margin: 0px 15px</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;color:white;margin:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>Benefícios</string>
@@ -1080,7 +1081,7 @@ margin: 0px 15px</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;;color:white;margin:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>&gt;</string>
@@ -1104,7 +1105,7 @@ margin: 0px 15px</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;color:white;margin:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>Planos</string>
@@ -1128,7 +1129,7 @@ margin: 0px 15px</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;;color:white;margin:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>&gt;</string>
@@ -1152,7 +1153,7 @@ margin: 0px 15px</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;;color:white;margin:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>Redirecionamento</string>
@@ -1162,9 +1163,9 @@ margin: 0px 15px</string>
                <widget class="QFrame" name="frame_10">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
+                  <x>-30</x>
                   <y>328</y>
-                  <width>448</width>
+                  <width>501</width>
                   <height>70</height>
                  </rect>
                 </property>
@@ -1181,8 +1182,7 @@ margin: 0px 15px</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(43, 43, 43);
-margin: 0px 15px</string>
+                 <string notr="true">color: rgb(0, 0, 0);background-color: rgb(208, 208, 208);margin: 0px 15px</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -1216,9 +1216,7 @@ margin: 0px 15px</string>
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(91, 91, 91);
-border:0
-</string>
+                    <string notr="true">border:0;;color:;margin:0</string>
                    </property>
                    <property name="text">
                     <string>Voltar</string>
@@ -1331,7 +1329,7 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);border:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>Total:</string>
@@ -1355,8 +1353,7 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;
-color: rgb(255, 255, 255);</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string>O preço final será cobrado apenas essa vez. Ao expirar será possível assinar novamente.</string>
@@ -1383,7 +1380,7 @@ color: rgb(255, 255, 255);</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);border:0</string>
+                  <string notr="true">border:0;;color:;margin:0</string>
                  </property>
                  <property name="text">
                   <string/>
