@@ -55,7 +55,7 @@
       </font>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
@@ -81,7 +81,9 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(255, 255, 255);
+border:0
+</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -119,7 +121,8 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(43, 43, 43);</string>
+            <string notr="true">background-color: rgb(43, 43, 43);
+border:0</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
@@ -245,7 +248,7 @@
                  <property name="font">
                   <font>
                    <family>Segoe UI</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>11</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -296,7 +299,8 @@
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QLineEdit{padding:3px}
+                  <string notr="true">QLineEdit{padding:3px;
+border:1px solid}
 QLineEdit:focus{
 border:1px solid rgb(67, 202, 0)
 }</string>
@@ -329,7 +333,8 @@ border:1px solid rgb(67, 202, 0)
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QLineEdit{padding:3px}
+                  <string notr="true">QLineEdit{padding:3px;
+border:1px solid}
 QLineEdit:focus{
 border:1px solid rgb(67, 202, 0)
 }</string>
@@ -362,7 +367,8 @@ border:1px solid rgb(67, 202, 0)
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QLineEdit{padding:3px}
+                  <string notr="true">QLineEdit{padding:3px;
+border:1px solid}
 QLineEdit:focus{
 border:1px solid rgb(67, 202, 0)
 }</string>

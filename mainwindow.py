@@ -443,11 +443,11 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
         register = db.user_log(email, senha)
         if register:
             self.close()
-            self.main_window.showMaximized()
+            self.main_window.showFullScreen()
             sleep(1)
             user = database.DBLocal()
             user.add_user(email)
-            self.premium.showMaximized()
+            self.premium.showFullScreen()
         else:
             self.erro.show()
             self._senha_input.setText('')
