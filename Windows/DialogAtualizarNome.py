@@ -114,7 +114,7 @@ class Ui_AtualizarNome(object):
         self.frame_4.setMaximumSize(QSize(16777215, 33))
         font3 = QFont()
         font3.setFamily(u"Segoe UI")
-        font3.setPointSize(9)
+        font3.setPointSize(11)
         self.frame_4.setFont(font3)
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)

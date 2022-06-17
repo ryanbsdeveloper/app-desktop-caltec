@@ -109,7 +109,7 @@ class Ui_AtualizarTelefone(object):
         self.label_2.setMinimumSize(QSize(0, 13))
         font3 = QFont()
         font3.setFamily(u"Segoe UI")
-        font3.setPointSize(10)
+        font3.setPointSize(11)
         self.label_2.setFont(font3)
         self.label_2.setAlignment(Qt.AlignCenter)
 
@@ -160,7 +160,10 @@ class Ui_AtualizarTelefone(object):
         self.text_info = QLabel(self.frame_6)
         self.text_info.setObjectName(u"text_info")
         self.text_info.setMaximumSize(QSize(16777215, 30))
-        self.text_info.setFont(font3)
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI")
+        font5.setPointSize(10)
+        self.text_info.setFont(font5)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
         self.text_info.setAlignment(Qt.AlignCenter)
 
@@ -178,7 +181,7 @@ class Ui_AtualizarTelefone(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.bt_cancelar = QPushButton(self.frame_2)
         self.bt_cancelar.setObjectName(u"bt_cancelar")
-        self.bt_cancelar.setFont(font3)
+        self.bt_cancelar.setFont(font5)
         self.bt_cancelar.setCursor(QCursor(Qt.PointingHandCursor))
         self.bt_cancelar.setStyleSheet(u"\n"
 "QPushButton{border:1px solid;\n"
@@ -192,7 +195,7 @@ class Ui_AtualizarTelefone(object):
 
         self.btn_alterar = QPushButton(self.frame_2)
         self.btn_alterar.setObjectName(u"btn_alterar")
-        self.btn_alterar.setFont(font3)
+        self.btn_alterar.setFont(font5)
         self.btn_alterar.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_alterar.setStyleSheet(u"\n"
 "\n"
