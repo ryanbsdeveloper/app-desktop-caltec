@@ -1,11 +1,8 @@
-import os
-from atexit import register
-from sre_parse import expand_template
 import sys
 from time import sleep
-from turtle import width
+
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog
-from PySide2.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup, QAbstractAnimation, QSize
+from PySide2.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup, QAbstractAnimation, QSize, QTime, QTimer, QDate
 from PySide2.QtGui import QRegion, QIcon, QFont
 
 from Windows.MainWindow import Ui_MainWindow
@@ -22,16 +19,6 @@ from models import database
 import resources_rc
 
 # DIALOGs
-
-class DialogLogin(QDialog, Ui_AcessoNegado):
-    def __init__(self):
-        super(DialogLogin, self).__init__()
-        self.setupUi(self)
-        self.pushButton.clicked.connect(self.exit)
-
-    def exit(self):
-        self.close()
-
 
 class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
     def __init__(self):
@@ -90,6 +77,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         
+        #INITIAL
+        timer = QTimer(self)
+        timer.timeout.connect(self.showTime)
+        timer.start(1000)
+
+        self.nome_pc.setText(f'{utils.name_locauser()} - Software de pesagem')
+
         # HIDE
         self.digite_um_id.hide()
         self.digite_um_id_2.hide()
@@ -122,7 +116,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dialog_atualizar_telefone = DialogAtualizarTelefone()
         self.premium = PremiumWindow()
         self.btn_virepro_button.clicked.connect(
-            lambda: self.premium.showMaximized())
+            lambda: self.premium.showFullScreen())
 
         # PAGES
         self.aba_conta_button.clicked.connect(
@@ -143,8 +137,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.page_relatorio_avulsas))
         self.btn_alterar_saida.clicked.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.page_saida))
-        self.btn_alterar_entrada.clicked.connect(
-            lambda: self.stackedWidget.setCurrentWidget(self.page_entrada))
 
         # BUTTONS CONTA
         self.aba_sair_button.clicked.connect(self.show_sair_conta)
@@ -153,7 +145,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_alterar_senha.clicked.connect(self.show_atualizar_senha)
         self.btn_alterar_telefone.clicked.connect(self.show_atualizar_telefone)
         self.btn_atualizar_licenca.clicked.connect(
-            lambda: self.premium.showMaximized())
+            lambda: self.premium.showFullScreen())
 
         # BUTTONS AVULSAS
         self.btn_peso_manualmente_2.toggled.connect(self.func_peso_manualmente)
@@ -163,42 +155,52 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # FUCTIONS BUTTONS
         self.peso_manualmente_2.textChanged.connect(self.peso_manual)
 
+    # TIME
+    
+    def showTime(self):  
+        current_time = QTime.currentTime()
+        current_data = QDate.currentDate()
+        label_date = current_data.toString('dd/MM/yyyy')
+        label_time = current_time.toString('hh:mm:ss')
+        self.hora.setText(label_time)
+        self.data.setText(label_date)
+
     def menu_grupos(self):
-        self.animation_grupo()
-        if self.menu_grupos_frame.width() == 0:
+        if self.menu_grupos_frame.height() == 0:
             self.aba_grupo_button.setText('Grupos                    ▲')
         else:
             self.aba_grupo_button.setText('Grupos                    ▼')
+        self.animation_grupo()
 
     def menu_pesagem(self):
-        self.animation_pesagem()
-        if self.menu_pesagem_frame.width() == 0:
+        if self.menu_pesagem_frame.height() == 0:
             self.aba_pesagem_button.setText('Pesagens                 ▲')
         else:
             self.aba_pesagem_button.setText('Pesagens                 ▼')
+        self.animation_pesagem()
 
     def menu_relatorio(self):
-        self.animatio_relatorio()
-        if self.menu_relatorio_frame.width() == 0:
+        if self.menu_relatorio_frame.height() == 0:
             self.aba_relatorio_button.setText('Relatórios                 ▲')
         else:
             self.aba_relatorio_button.setText('Relatórios                 ▼')
+        self.animatio_relatorio()
 
     # SHOW DIALOGS
     def show_sair_conta(self):
-        self.dialog_sair_conta.showMaximized()
+        self.dialog_sair_conta.showFullScreen()
 
     def show_excluir_conta(self):
-        self.dialog_excluir_conta.showMaximized()
+        self.dialog_excluir_conta.showFullScreen()
 
     def show_atualizar_nome(self):
-        self.dialog_atualizar_nome.showMaximized()
+        self.dialog_atualizar_nome.showFullScreen()
 
     def show_atualizar_senha(self):
-        self.dialog_atualizar_senha.showMaximized()
+        self.dialog_atualizar_senha.showFullScreen()
 
     def show_atualizar_telefone(self):
-        self.dialog_atualizar_telefone.showMaximized()
+        self.dialog_atualizar_telefone.showFullScreen()
 
     # ANIMATIONS FUNCTIONS
     def animation_pesagem(self):
@@ -418,14 +420,18 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
         self.email_input.textChanged.connect(self.disableButton)
         self._senha_input.textChanged.connect(self.disableButton)
         self.mais_servicos_button.clicked.connect(self.more_services)
+        self.btn_close_windows.clicked.connect(lambda: self.close())
         self.entrar_button.clicked.connect(self.login)
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.erro.hide()
 
         self.premium = PremiumWindow()
         self.main_window = MainWindow()
-        self.dialog_login = DialogLogin()
 
     def disableButton(self):
         if len(self.email_input.text()) > 0 and len(self._senha_input.text()) > 0:
+            self.erro.hide()
             self.entrar_button.setDisabled(False)
         else:
             self.entrar_button.setDisabled(True)
@@ -439,10 +445,11 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
             self.close()
             self.main_window.showMaximized()
             sleep(1)
+            user = database.DBLocal()
+            user.add_user(email)
             self.premium.showMaximized()
         else:
-            self.dialog_login.show()
-            self.email_input.setText('')
+            self.erro.show()
             self._senha_input.setText('')
 
     def more_services(self):
@@ -535,4 +542,4 @@ if __name__ == '__main__':
     Window = LoginWindow()
     Window.show()
     app.exec_()
- 
+

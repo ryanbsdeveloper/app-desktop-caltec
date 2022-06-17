@@ -1,9 +1,11 @@
+import sqlite3
 from typing import Tuple
 import psycopg2
-import sqlite3
-import json
+import os
 
-import models
+from . import models
+
+BASE_DIR = os.path.dirname(__file__)
 
 #Database in cloud
 class DB():
@@ -28,26 +30,38 @@ class DB():
 
         return self.users
 
+
 #Database in localhost
 class DBLocal():
     def __init__(self) -> None:
-        self.con = sqlite3.connect('database.db')
+        self.con = sqlite3.connect(f'{BASE_DIR}/database.db')
         self.cur = self.con.cursor()
         self.db_cloud = DB()
 
-    def add_user(self, email) -> Tuple:
-        id = 0
-        dados = {}
-        for user in self.db_cloud.list_users():
-            if email in user:
-                id = user[0]
-                nome_empresa = user[1]
-                e_mail = user[2]
-                whatsapp = user[3]
-                senha = user[4]
-                licenca = user[5]
-                max_pesagem = user[6]
-                models.add_user(id, nome_empresa, e_mail, whatsapp, senha, licenca, max_pesagem)
+    def list_users_local(self):
+        lista = []
+        SQL = 'SELECT * from users'
+        self.cur.execute(SQL)  
+        for c in self.cur.fetchall():
+            lista.append(c)
 
-# data = DBLocal()
-# data.add_user('rybala63@gmail.com')
+        return lista
+
+    def add_user(self, email) -> Tuple:
+        for user in self.db_cloud.list_users():
+            if email in  user:
+                if user not in self.list_users_local():
+                    nome_empresa = user[1]
+                    e_mail = user[2]
+                    whatsapp = user[3]
+                    senha = user[4]
+                    licenca = user[5]
+                    max_pesagem = user[6]
+                    models.add_user(nome_empresa, e_mail,
+                                    whatsapp, senha, licenca, max_pesagem)
+
+
+
+if __name__ == '__main__':
+    db = DBLocal()
+    print(db.list_users_local())

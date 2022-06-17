@@ -3,7 +3,7 @@ from datetime import datetime
 import sqlalchemy as sql
 from sqlalchemy.orm import relationship, backref, Session, sessionmaker
 import sqlalchemy.ext.declarative as declarative
-from sqlalchemy import select
+from sqlalchemy import select, update
 
 
 BASE_DIR = os.path.dirname(__file__)
@@ -16,18 +16,6 @@ Session.configure(bind=engine)
 session = Session()
 
 # use direct
-class UserLogado(Base):
-    __tablename__ = "user_logado"
-
-    id = sql.Column(sql.Integer, index=True, primary_key=True)
-    nome_empresa = sql.Column(sql.String, index=True)
-    email = sql.Column(sql.String, index=True)
-    whatsapp = sql.Column(sql.String, index=True)
-    senha = sql.Column(sql.String, index=True)
-    licenca = sql.Column(sql.String, index=True, default=data)
-    max_pesagens = sql.Column(sql.String, index=True)
-
-
 class User(Base):
     __tablename__ = "users"
 
@@ -136,12 +124,20 @@ def add_tables():
     Base.metadata.create_all(bind=engine)
 
 
-def add_user(id, nome, email, telefone, senha, licenca, pesagens):
-    user = User(id=id, nome_empresa=nome, email=email, whatsapp=telefone,
-                senha=senha, licenca=licenca, max_pesagens=pesagens)
-    session.add(user)
-    session.commit()
+def add_user(nome, email, telefone, senha, licenca, pesagens):
+    # user = User(nome_empresa=nome, email=email, whatsapp=telefone,
+    #             senha=senha, licenca=licenca, max_pesagens=pesagens)
+    # session.add(user)
+    session.query(User).filter(User.id == 1).update(
+                    {
+                    'nome_empresa':nome, 'email':email, 
+                    'whatsapp':telefone, 'senha':senha, 
+                    'licenca':licenca, 'max_pesagens':pesagens
+                    }
+                )
 
+    session.commit()
+    session.flush()
 
 def get_all_users():
     users = []
@@ -150,3 +146,4 @@ def get_all_users():
             users.append(c)
 
     return users
+

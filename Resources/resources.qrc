@@ -1,7 +1,12 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>calendar-days-solid.svg</file>
+    <file>clock-solid.svg</file>
+    <file>minus-solid.svg</file>
     <file>xmark-solid.svg</file>
     <file>sort-down-solid.svg</file>
+    <file>check-solid_green.svg</file>
+    <file>exclamation-solid_yellow.svg</file>
     <file>sort-up-solid.svg</file>
     <file>scale-balanced-solid .svg</file>
     <file>layer-group-solid .svg</file>
@@ -12,13 +17,14 @@
     <file>check-solid.svg</file>
     <file>sobre.jpg</file>
     <file>key-solid.svg</file>
-    <file>xmark-solid.svg</file>
     <file>plus-solid.svg</file>
     <file>trash-can-solid.svg</file>
     <file>clock-rotate-left-solid.svg</file>
     <file>cubes-solid.svg</file>
     <file>caret-right-solid.svg</file>
     <file>caret-left-solid.svg</file>
+    <file>angle-up-solid_white.svg</file>
+    <file>angle-down-solid_white.svg</file>
     <file>print-solid.svg</file>
     <file>filter-solid.svg</file>
     <file>magnifying-glass-solid.svg</file>
