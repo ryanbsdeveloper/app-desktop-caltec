@@ -10,8 +10,8 @@ BASE_DIR = os.path.dirname(__file__)
 #Database in cloud
 class DB():
     def __init__(self) -> None:
-        self.con = psycopg2.connect(host='caltecbalancas.postgres.database.azure.com',
-                                    database='caltecbalancas', user='ryanl', password='842684265@Ry')
+        self.con = psycopg2.connect(host='localhost',
+                                    database='caltecbalancas', user='postgres', password='842684265santos')
         self.cur = self.con.cursor()
 
     def user_log(self, email, senha):
