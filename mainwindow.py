@@ -21,8 +21,8 @@ import resources_rc
 # DIALOGs
 
 class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
-    def __init__(self):
-        super(DialogAtualizarNome, self).__init__()
+    def __init__(self, parent):
+        super(DialogAtualizarNome, self).__init__(parent)
         self.setupUi(self)
         self.text_info.hide()
         self.bt_cancelar.clicked.connect(lambda: self.close())
@@ -31,8 +31,8 @@ class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
 
 
 class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
-    def __init__(self):
-        super(DialogAtualizarSenha, self).__init__()
+    def __init__(self, parent):
+        super(DialogAtualizarSenha, self).__init__(parent)
         self.setupUi(self)
         self.text_info.hide()
         self.btn_cancelar.clicked.connect(lambda: self.close())
@@ -41,8 +41,8 @@ class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
 
 
 class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
-    def __init__(self):
-        super(DialogAtualizarTelefone, self).__init__()
+    def __init__(self, parent):
+        super(DialogAtualizarTelefone, self).__init__(parent)
         self.setupUi(self)
         self.text_info.hide()
         self.bt_cancelar.clicked.connect(lambda: self.close())
@@ -51,8 +51,8 @@ class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
 
 
 class DialogExcluirConta(QDialog, Ui_ExcluirConta):
-    def __init__(self):
-        super(DialogExcluirConta, self).__init__()
+    def __init__(self, parent):
+        super(DialogExcluirConta, self).__init__(parent)
         self.setupUi(self)
         self.text_info.hide()
         self.nao.clicked.connect(lambda: self.close())
@@ -61,8 +61,8 @@ class DialogExcluirConta(QDialog, Ui_ExcluirConta):
 
 
 class DialogSairConta(QDialog, Ui_SairConta):
-    def __init__(self):
-        super(DialogSairConta, self).__init__()
+    def __init__(self, parent):
+        super(DialogSairConta, self).__init__(parent)
         self.setupUi(self)
         self.nao.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -87,6 +87,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # HIDE
         self.digite_um_id.hide()
         self.digite_um_id_2.hide()
+        self.frame_saida.hide()
 
         # MENU TOP
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -109,12 +110,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.animation_menu_veiculos)
 
         # DIALOGS
-        self.dialog_sair_conta = DialogSairConta()
-        self.dialog_excluir_conta = DialogExcluirConta()
-        self.dialog_atualizar_nome = DialogAtualizarNome()
-        self.dialog_atualizar_senha = DialogAtualizarSenha()
-        self.dialog_atualizar_telefone = DialogAtualizarTelefone()
-        self.premium = PremiumWindow()
+        self.dialog_sair_conta = DialogSairConta(self)
+        self.dialog_excluir_conta = DialogExcluirConta(self)
+        self.dialog_atualizar_nome = DialogAtualizarNome(self)
+        self.dialog_atualizar_senha = DialogAtualizarSenha(self)
+        self.dialog_atualizar_telefone = DialogAtualizarTelefone(self)
+        self.premium = PremiumWindow(self)
         self.btn_virepro_button.clicked.connect(
             lambda: self.premium.showFullScreen())
 
@@ -426,7 +427,7 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.erro.hide()
 
-        self.premium = PremiumWindow()
+        self.premium = PremiumWindow(self)
         self.main_window = MainWindow()
 
     def disableButton(self):
@@ -457,14 +458,13 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
 
 
 class PremiumWindow(QDialog, Ui_Dialog):
-    def __init__(self):
-        super(PremiumWindow, self).__init__()
+    def __init__(self, parent):
+        super(PremiumWindow, self).__init__(parent)
         self.setupUi(self)
         self.btn_voltar.clicked.connect(self.voltar)
         self.btn_comprar.clicked.connect(self.comprar)
         self.btn_pular.clicked.connect(lambda: self.close())
         self.pushButton_2.clicked.connect(self.comprar)
-        self.btn_licenca.clicked.connect(self.licenca)
         self.btn_close_window.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -539,7 +539,7 @@ class PremiumWindow(QDialog, Ui_Dialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    Window = LoginWindow()
-    Window.show()
+    Window = MainWindow()
+    Window.showFullScreen()
     app.exec_()
 

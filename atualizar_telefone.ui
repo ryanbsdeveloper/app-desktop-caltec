@@ -69,6 +69,9 @@
           <family>Segoe UI</family>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">border:</string>
+        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -101,8 +104,12 @@
            <family>Segoe UI</family>
           </font>
          </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(43, 43, 43);</string>
+          <string notr="true">background-color: rgb(43, 43, 43);
+</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -147,6 +154,9 @@
            <font>
             <family>Segoe UI</family>
            </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
            <string notr="true">border:0</string>

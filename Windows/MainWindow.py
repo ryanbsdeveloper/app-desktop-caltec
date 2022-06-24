@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setWindowModality(Qt.ApplicationModal)
-        MainWindow.resize(1019, 721)
+        MainWindow.resize(1076, 727)
         sizePolicy = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -159,9 +159,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -177,9 +177,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -195,9 +195,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(255, 46, 46);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -273,9 +273,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -291,9 +291,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -310,9 +310,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -374,9 +374,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -392,9 +392,9 @@ class Ui_MainWindow(object):
 "	border:1px solid\n"
 "}\n"
 "QPushButton:hover{\n"
+"font: bold 10pt \"Segoe UI\";\n"
 "	background-color: rgb(43, 43, 43);\n"
-"	color: rgb(15, 202, 2);\n"
-"\n"
+"color:white;\n"
 "}\n"
 "")
 
@@ -3579,59 +3579,6 @@ class Ui_MainWindow(object):
         self.gridLayout_14.setHorizontalSpacing(15)
         self.gridLayout_14.setVerticalSpacing(6)
         self.gridLayout_14.setContentsMargins(-1, 0, -1, -1)
-        self.comboBox_fornecedor_12 = QComboBox(self.frame_89)
-        self.comboBox_fornecedor_12.addItem("")
-        self.comboBox_fornecedor_12.addItem("")
-        self.comboBox_fornecedor_12.addItem("")
-        self.comboBox_fornecedor_12.setObjectName(u"comboBox_fornecedor_12")
-        self.comboBox_fornecedor_12.setMinimumSize(QSize(0, 30))
-        self.comboBox_fornecedor_12.setFont(font15)
-        self.comboBox_fornecedor_12.setStyleSheet(u"QComboBox{\n"
-"	border:1px solid rgb(15, 202, 2);\n"
-"	padding-left:10px;\n"
-"	font-size:15px;\n"
-"	\n"
-"	background-color: rgb(250, 252, 250);\n"
-"}\n"
-"\n"
-"QComboBox::drop-down{\n"
-"	border:0px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow{\n"
-"	image: url(:/icons/angle-down-solid.svg);\n"
-"	width:12px;\n"
-"	height:12px;\n"
-"	margin-right:15px;\n"
-"}\n"
-"\n"
-"QComboBox::on{\n"
-"	border:2px solid rgb(67, 202, 0);\n"
-"}\n"
-"\n"
-"QComboBox QListView{\n"
-"	padding:5px;\n"
-"	border:1px solid;\n"
-"	background-color: rgba(255, 255, 255, 50%);\n"
-"	outline:0;\n"
-"}\n"
-"")
-        self.comboBox_fornecedor_12.setMaxVisibleItems(10)
-        self.comboBox_fornecedor_12.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_fornecedor_12.setIconSize(QSize(32, 32))
-        self.comboBox_fornecedor_12.setDuplicatesEnabled(True)
-        self.comboBox_fornecedor_12.setFrame(True)
-
-        self.gridLayout_14.addWidget(self.comboBox_fornecedor_12, 3, 5, 1, 1)
-
-        self.label_53 = QLabel(self.frame_89)
-        self.label_53.setObjectName(u"label_53")
-        self.label_53.setMinimumSize(QSize(0, 19))
-        self.label_53.setMaximumSize(QSize(16777215, 13))
-        self.label_53.setFont(font5)
-
-        self.gridLayout_14.addWidget(self.label_53, 0, 5, 2, 1)
-
         self.lineEdit_4 = QLineEdit(self.frame_89)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
         self.lineEdit_4.setMinimumSize(QSize(0, 30))
@@ -3651,14 +3598,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_14.addWidget(self.lineEdit_4, 3, 0, 1, 1)
 
-        self.label_54 = QLabel(self.frame_89)
-        self.label_54.setObjectName(u"label_54")
-        self.label_54.setMinimumSize(QSize(0, 19))
-        self.label_54.setMaximumSize(QSize(16777215, 13))
-        self.label_54.setFont(font5)
-
-        self.gridLayout_14.addWidget(self.label_54, 0, 0, 2, 1)
-
         self.label_55 = QLabel(self.frame_89)
         self.label_55.setObjectName(u"label_55")
         self.label_55.setMinimumSize(QSize(0, 19))
@@ -3666,6 +3605,14 @@ class Ui_MainWindow(object):
         self.label_55.setFont(font5)
 
         self.gridLayout_14.addWidget(self.label_55, 1, 1, 1, 1)
+
+        self.label_54 = QLabel(self.frame_89)
+        self.label_54.setObjectName(u"label_54")
+        self.label_54.setMinimumSize(QSize(0, 19))
+        self.label_54.setMaximumSize(QSize(16777215, 13))
+        self.label_54.setFont(font5)
+
+        self.gridLayout_14.addWidget(self.label_54, 0, 0, 2, 1)
 
         self.comboBox_fornecedor_13 = QComboBox(self.frame_89)
         self.comboBox_fornecedor_13.addItem("")
@@ -4314,6 +4261,41 @@ class Ui_MainWindow(object):
         self.gridLayout_13.setHorizontalSpacing(15)
         self.gridLayout_13.setVerticalSpacing(6)
         self.gridLayout_13.setContentsMargins(-1, 0, -1, -1)
+        self.lineEdit = QLineEdit(self.frame_80)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setMinimumSize(QSize(0, 30))
+        self.lineEdit.setMaximumSize(QSize(200, 16777215))
+        self.lineEdit.setFont(font15)
+        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+"	padding-left:10px;\n"
+"	font-size:15px;\n"
+"	border:1px solid;\n"
+"	background-color: rgb(250, 252, 250);\n"
+"}\n"
+"\n"
+"QLineEdit:focus{\n"
+"	border:1px solid rgb(15, 202, 2);\n"
+"\n"
+"}")
+
+        self.gridLayout_13.addWidget(self.lineEdit, 4, 0, 1, 1)
+
+        self.label_41 = QLabel(self.frame_80)
+        self.label_41.setObjectName(u"label_41")
+        self.label_41.setMinimumSize(QSize(0, 18))
+        self.label_41.setMaximumSize(QSize(16777215, 13))
+        self.label_41.setFont(font5)
+
+        self.gridLayout_13.addWidget(self.label_41, 1, 0, 2, 1)
+
+        self.label_44 = QLabel(self.frame_80)
+        self.label_44.setObjectName(u"label_44")
+        self.label_44.setMinimumSize(QSize(0, 18))
+        self.label_44.setMaximumSize(QSize(16777215, 13))
+        self.label_44.setFont(font5)
+
+        self.gridLayout_13.addWidget(self.label_44, 2, 2, 1, 1)
+
         self.comboBox_fornecedor_6 = QComboBox(self.frame_80)
         self.comboBox_fornecedor_6.addItem("")
         self.comboBox_fornecedor_6.addItem("")
@@ -4359,13 +4341,13 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.comboBox_fornecedor_6, 4, 2, 1, 1)
 
-        self.label_44 = QLabel(self.frame_80)
-        self.label_44.setObjectName(u"label_44")
-        self.label_44.setMinimumSize(QSize(0, 18))
-        self.label_44.setMaximumSize(QSize(16777215, 13))
-        self.label_44.setFont(font5)
+        self.label_45 = QLabel(self.frame_80)
+        self.label_45.setObjectName(u"label_45")
+        self.label_45.setMinimumSize(QSize(0, 18))
+        self.label_45.setMaximumSize(QSize(16777215, 13))
+        self.label_45.setFont(font5)
 
-        self.gridLayout_13.addWidget(self.label_44, 2, 2, 1, 1)
+        self.gridLayout_13.addWidget(self.label_45, 2, 3, 1, 1)
 
         self.comboBox_fornecedor_7 = QComboBox(self.frame_80)
         self.comboBox_fornecedor_7.addItem("")
@@ -4412,93 +4394,13 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.comboBox_fornecedor_7, 4, 3, 1, 1)
 
-        self.label_45 = QLabel(self.frame_80)
-        self.label_45.setObjectName(u"label_45")
-        self.label_45.setMinimumSize(QSize(0, 18))
-        self.label_45.setMaximumSize(QSize(16777215, 13))
-        self.label_45.setFont(font5)
+        self.label_47 = QLabel(self.frame_80)
+        self.label_47.setObjectName(u"label_47")
+        self.label_47.setMinimumSize(QSize(0, 18))
+        self.label_47.setMaximumSize(QSize(16777215, 13))
+        self.label_47.setFont(font5)
 
-        self.gridLayout_13.addWidget(self.label_45, 2, 3, 1, 1)
-
-        self.comboBox_fornecedor_8 = QComboBox(self.frame_80)
-        self.comboBox_fornecedor_8.addItem("")
-        self.comboBox_fornecedor_8.addItem("")
-        self.comboBox_fornecedor_8.addItem("")
-        self.comboBox_fornecedor_8.setObjectName(u"comboBox_fornecedor_8")
-        self.comboBox_fornecedor_8.setMinimumSize(QSize(0, 30))
-        self.comboBox_fornecedor_8.setFont(font15)
-        self.comboBox_fornecedor_8.setStyleSheet(u"QComboBox{\n"
-"	border:1px solid rgb(15, 202, 2);\n"
-"	padding-left:10px;\n"
-"	font-size:15px;\n"
-"	\n"
-"	background-color: rgb(250, 252, 250);\n"
-"}\n"
-"\n"
-"QComboBox::drop-down{\n"
-"	border:0px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow{\n"
-"	image: url(:/icons/angle-down-solid.svg);\n"
-"	width:12px;\n"
-"	height:12px;\n"
-"	margin-right:15px;\n"
-"}\n"
-"\n"
-"QComboBox::on{\n"
-"	border:2px solid rgb(67, 202, 0);\n"
-"}\n"
-"\n"
-"QComboBox QListView{\n"
-"	padding:5px;\n"
-"	border:1px solid;\n"
-"	background-color: rgba(255, 255, 255, 50%);\n"
-"	outline:0;\n"
-"}\n"
-"")
-        self.comboBox_fornecedor_8.setMaxVisibleItems(10)
-        self.comboBox_fornecedor_8.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_fornecedor_8.setIconSize(QSize(32, 32))
-        self.comboBox_fornecedor_8.setDuplicatesEnabled(True)
-        self.comboBox_fornecedor_8.setFrame(True)
-
-        self.gridLayout_13.addWidget(self.comboBox_fornecedor_8, 4, 5, 1, 1)
-
-        self.label_46 = QLabel(self.frame_80)
-        self.label_46.setObjectName(u"label_46")
-        self.label_46.setMinimumSize(QSize(0, 18))
-        self.label_46.setMaximumSize(QSize(16777215, 13))
-        self.label_46.setFont(font5)
-
-        self.gridLayout_13.addWidget(self.label_46, 1, 5, 2, 1)
-
-        self.lineEdit = QLineEdit(self.frame_80)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(0, 30))
-        self.lineEdit.setMaximumSize(QSize(200, 16777215))
-        self.lineEdit.setFont(font15)
-        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
-"	padding-left:10px;\n"
-"	font-size:15px;\n"
-"	border:1px solid;\n"
-"	background-color: rgb(250, 252, 250);\n"
-"}\n"
-"\n"
-"QLineEdit:focus{\n"
-"	border:1px solid rgb(15, 202, 2);\n"
-"\n"
-"}")
-
-        self.gridLayout_13.addWidget(self.lineEdit, 4, 0, 1, 1)
-
-        self.label_41 = QLabel(self.frame_80)
-        self.label_41.setObjectName(u"label_41")
-        self.label_41.setMinimumSize(QSize(0, 18))
-        self.label_41.setMaximumSize(QSize(16777215, 13))
-        self.label_41.setFont(font5)
-
-        self.gridLayout_13.addWidget(self.label_41, 1, 0, 2, 1)
+        self.gridLayout_13.addWidget(self.label_47, 2, 1, 1, 1)
 
         self.comboBox_fornecedor_9 = QComboBox(self.frame_80)
         self.comboBox_fornecedor_9.addItem("")
@@ -4544,14 +4446,6 @@ class Ui_MainWindow(object):
         self.comboBox_fornecedor_9.setFrame(True)
 
         self.gridLayout_13.addWidget(self.comboBox_fornecedor_9, 4, 1, 1, 1)
-
-        self.label_47 = QLabel(self.frame_80)
-        self.label_47.setObjectName(u"label_47")
-        self.label_47.setMinimumSize(QSize(0, 18))
-        self.label_47.setMaximumSize(QSize(16777215, 13))
-        self.label_47.setFont(font5)
-
-        self.gridLayout_13.addWidget(self.label_47, 2, 1, 1, 1)
 
 
         self.verticalLayout_69.addWidget(self.frame_80)
@@ -5828,14 +5722,12 @@ class Ui_MainWindow(object):
         self.comboBox_produto_2.setCurrentIndex(0)
         self.comboBox_veiculo_2.setCurrentIndex(0)
         self.comboBox_veiculos_produtos.setCurrentIndex(0)
-        self.comboBox_fornecedor_12.setCurrentIndex(0)
         self.comboBox_fornecedor_13.setCurrentIndex(0)
         self.comboBox_fornecedor_10.setCurrentIndex(0)
         self.comboBox_fornecedor_11.setCurrentIndex(0)
         self.btn_historico_obs_2.setDefault(False)
         self.comboBox_fornecedor_6.setCurrentIndex(0)
         self.comboBox_fornecedor_7.setCurrentIndex(0)
-        self.comboBox_fornecedor_8.setCurrentIndex(0)
         self.comboBox_fornecedor_9.setCurrentIndex(0)
         self.btn_historico_obs.setDefault(False)
         self.comboBox_fornecedor_17.setCurrentIndex(0)
@@ -6168,14 +6060,9 @@ class Ui_MainWindow(object):
         self.btn_peso_manualmente_2.setText(QCoreApplication.translate("MainWindow", u"Capturar peso manualmente", None))
         self.peso_manualmente_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESO (KG)", None))
         self.label_67.setText(QCoreApplication.translate("MainWindow", u"Insira os dados para a pesagem Avulsa", None))
-        self.comboBox_fornecedor_12.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
-        self.comboBox_fornecedor_12.setItemText(1, QCoreApplication.translate("MainWindow", u"Teste1", None))
-        self.comboBox_fornecedor_12.setItemText(2, QCoreApplication.translate("MainWindow", u"Teste2", None))
-
-        self.label_53.setText(QCoreApplication.translate("MainWindow", u"Fornecedor:", None))
         self.lineEdit_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome", None))
-        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
         self.label_55.setText(QCoreApplication.translate("MainWindow", u"Veiculo:", None))
+        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
         self.comboBox_fornecedor_13.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
         self.comboBox_fornecedor_13.setItemText(1, QCoreApplication.translate("MainWindow", u"Teste1", None))
         self.comboBox_fornecedor_13.setItemText(2, QCoreApplication.translate("MainWindow", u"Teste2", None))
@@ -6207,28 +6094,23 @@ class Ui_MainWindow(object):
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"(Entrada)", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"KG", None))
         self.label_60.setText(QCoreApplication.translate("MainWindow", u"Insira os dados para a pesagem de entrada", None))
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome", None))
+        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
+        self.label_44.setText(QCoreApplication.translate("MainWindow", u"Cliente:", None))
         self.comboBox_fornecedor_6.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
         self.comboBox_fornecedor_6.setItemText(1, QCoreApplication.translate("MainWindow", u"Teste1", None))
         self.comboBox_fornecedor_6.setItemText(2, QCoreApplication.translate("MainWindow", u"Teste2", None))
 
-        self.label_44.setText(QCoreApplication.translate("MainWindow", u"Cliente:", None))
+        self.label_45.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
         self.comboBox_fornecedor_7.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
         self.comboBox_fornecedor_7.setItemText(1, QCoreApplication.translate("MainWindow", u"Teste1", None))
         self.comboBox_fornecedor_7.setItemText(2, QCoreApplication.translate("MainWindow", u"Teste2", None))
 
-        self.label_45.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
-        self.comboBox_fornecedor_8.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
-        self.comboBox_fornecedor_8.setItemText(1, QCoreApplication.translate("MainWindow", u"Teste1", None))
-        self.comboBox_fornecedor_8.setItemText(2, QCoreApplication.translate("MainWindow", u"Teste2", None))
-
-        self.label_46.setText(QCoreApplication.translate("MainWindow", u"Fornecedor:", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome", None))
-        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
+        self.label_47.setText(QCoreApplication.translate("MainWindow", u"Veiculo:", None))
         self.comboBox_fornecedor_9.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
         self.comboBox_fornecedor_9.setItemText(1, QCoreApplication.translate("MainWindow", u"Teste1", None))
         self.comboBox_fornecedor_9.setItemText(2, QCoreApplication.translate("MainWindow", u"Teste2", None))
 
-        self.label_47.setText(QCoreApplication.translate("MainWindow", u"Veiculo:", None))
         self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00e3o (Opcional)", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Salvar entrada", None))
         self.btn_historico_obs.setText("")

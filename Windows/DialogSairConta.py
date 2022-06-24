@@ -72,6 +72,7 @@ class Ui_SairConta(object):
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(290, 16, 20, 20))
         self.pushButton.setFont(font)
+        self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         icon1 = QIcon()
         icon1.addFile(u":/icons/xmark-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton.setIcon(icon1)
@@ -124,6 +125,7 @@ class Ui_SairConta(object):
         self.sim = QPushButton(self.frame)
         self.sim.setObjectName(u"sim")
         self.sim.setFont(font2)
+        self.sim.setCursor(QCursor(Qt.PointingHandCursor))
         self.sim.setStyleSheet(u"QPushButton{border:1px solid;\n"
 "background:rgb(250, 250, 250);\n"
 "padding:5px}\n"
@@ -137,6 +139,7 @@ class Ui_SairConta(object):
         self.nao = QPushButton(self.frame)
         self.nao.setObjectName(u"nao")
         self.nao.setFont(font2)
+        self.nao.setCursor(QCursor(Qt.PointingHandCursor))
         self.nao.setStyleSheet(u"QPushButton{border:1px solid red;\n"
 "background:rgb(250, 250, 250);\n"
 "padding:5px}\n"

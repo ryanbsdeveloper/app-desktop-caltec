@@ -168,6 +168,9 @@ border:0</string>
               <family>Segoe UI</family>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="styleSheet">
              <string notr="true">border:0</string>
             </property>

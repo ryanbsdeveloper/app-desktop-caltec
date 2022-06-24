@@ -77,6 +77,7 @@ class Ui_AtualizarSenha(object):
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(330, 15, 51, 23))
         self.pushButton.setFont(font1)
+        self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"border:0")
         icon1 = QIcon()
         icon1.addFile(u":/icons/xmark-solid.svg", QSize(), QIcon.Normal, QIcon.Off)

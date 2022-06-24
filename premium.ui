@@ -151,7 +151,7 @@
               <x>0</x>
               <y>-80</y>
               <width>451</width>
-              <height>181</height>
+              <height>190</height>
              </rect>
             </property>
             <property name="font">
@@ -231,7 +231,7 @@
             <string notr="true">border:0;;color:;margin:0</string>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="page_inicial">
             <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -562,6 +562,8 @@ background-color: rgb(255, 255, 255);</string>
                  <font>
                   <family>Segoe UI</family>
                   <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -588,6 +590,8 @@ color: rgb(0, 0, 0);</string>
                  <font>
                   <family>Segoe UI</family>
                   <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -690,7 +694,7 @@ background-color: rgb(20, 20, 20);</string>
                <widget class="QPushButton" name="btn_comprar">
                 <property name="geometry">
                  <rect>
-                  <x>287</x>
+                  <x>279</x>
                   <y>15</y>
                   <width>133</width>
                   <height>40</height>
@@ -715,7 +719,7 @@ background-color: rgb(20, 20, 20);</string>
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
-                  <underline>true</underline>
+                  <underline>false</underline>
                  </font>
                 </property>
                 <property name="cursor">
@@ -740,9 +744,9 @@ QPushButton:hover{
                <widget class="QPushButton" name="btn_pular">
                 <property name="geometry">
                  <rect>
-                  <x>199</x>
-                  <y>41</y>
-                  <width>60</width>
+                  <x>38</x>
+                  <y>26</y>
+                  <width>150</width>
                   <height>20</height>
                  </rect>
                 </property>
@@ -753,7 +757,7 @@ QPushButton:hover{
                   <weight>75</weight>
                   <italic>false</italic>
                   <bold>true</bold>
-                  <underline>false</underline>
+                  <underline>true</underline>
                  </font>
                 </property>
                 <property name="cursor">
@@ -764,60 +768,7 @@ QPushButton:hover{
 color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string>Pular</string>
-                </property>
-               </widget>
-               <widget class="QPushButton" name="btn_licenca">
-                <property name="geometry">
-                 <rect>
-                  <x>20</x>
-                  <y>20</y>
-                  <width>160</width>
-                  <height>30</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Segoe UI</family>
-                  <pointsize>12</pointsize>
-                  <weight>75</weight>
-                  <italic>false</italic>
-                  <bold>true</bold>
-                  <underline>false</underline>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QPushButton{
-border:0;
-
-	color: rgb(85, 85, 255);
-}
-
-QPushButton:hover{
-
-}</string>
-                </property>
-                <property name="text">
-                 <string>Digite sua licença</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="Resources/resources.qrc">
-                  <normaloff>:/icons/key-solid.svg</normaloff>:/icons/key-solid.svg</iconset>
+                 <string>Deixar para depois</string>
                 </property>
                </widget>
               </widget>
@@ -1294,7 +1245,7 @@ margin: 0px 15px</string>
                    <property name="font">
                     <font>
                      <family>Segoe UI</family>
-                     <pointsize>12</pointsize>
+                     <pointsize>13</pointsize>
                      <weight>75</weight>
                      <italic>false</italic>
                      <bold>true</bold>
@@ -1307,15 +1258,12 @@ margin: 0px 15px</string>
                    <property name="styleSheet">
                     <string notr="true">QPushButton{
 border:0;
-	background-color: qlineargradient(spread:reflect, x1:0.203955, y1:0, x2:1, y2:0, stop:0 rgba(97, 187, 104, 255), stop:0.613636 rgba(6, 180, 20, 255));
-color: rgb(255, 255, 255);
+color: rgb(6, 180, 20);
 border-radius:15px;
 margin:0
 }
 
-QPushButton:hover{
-background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, stop:0.272727 rgba(97, 187, 104, 255), stop:0.613636 rgba(6, 180, 20, 255));
-}</string>
+</string>
                    </property>
                    <property name="text">
                     <string>Continuar</string>
@@ -1412,8 +1360,8 @@ background-color: qlineargradient(spread:reflect, x1:0.573, y1:0, x2:1, y2:0, st
                   <font>
                    <family>Segoe UI</family>
                    <pointsize>10</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -1740,28 +1688,124 @@ color: rgb(0, 0, 0);
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <widget class="QLabel" name="label_30">
+                <widget class="QLabel" name="label_29">
                  <property name="geometry">
                   <rect>
-                   <x>40</x>
+                   <x>187</x>
                    <y>10</y>
-                   <width>91</width>
+                   <width>130</width>
                    <height>21</height>
                   </rect>
                  </property>
                  <property name="font">
                   <font>
-                   <family>Dubai</family>
+                   <family>Segoe UI</family>
                    <pointsize>11</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border:0;color:white;margin:0</string>
+                  <string notr="true">border:0;margin:0;border:0;color:white</string>
                  </property>
                  <property name="text">
-                  <string>Ativar licença</string>
+                  <string>Redirecionamento</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_30">
+                 <property name="geometry">
+                  <rect>
+                   <x>111</x>
+                   <y>10</y>
+                   <width>21</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0;margin:0;border:0;color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_31">
+                 <property name="geometry">
+                  <rect>
+                   <x>173</x>
+                   <y>10</y>
+                   <width>10</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0;margin:0;border:0;color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_32">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>10</y>
+                   <width>71</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI</family>
+                   <pointsize>11</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0;margin:0;border:0;color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Benefícios</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_33">
+                 <property name="geometry">
+                  <rect>
+                   <x>126</x>
+                   <y>10</y>
+                   <width>45</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI</family>
+                   <pointsize>11</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0;margin:0;border:0;color:white</string>
+                 </property>
+                 <property name="text">
+                  <string>Planos</string>
                  </property>
                 </widget>
                </widget>
