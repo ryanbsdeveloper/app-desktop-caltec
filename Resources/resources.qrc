@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>circle-info-solidr.svg</file>
+    <file>8726126_layer_group_icon.svg</file>
     <file>calendar-days-solid.svg</file>
     <file>clock-solid.svg</file>
     <file>minus-solid.svg</file>

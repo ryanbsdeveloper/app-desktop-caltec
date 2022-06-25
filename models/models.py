@@ -16,10 +16,13 @@ Session.configure(bind=engine)
 session = Session()
 
 # use direct
+
+
 class User(Base):
     __tablename__ = "users"
 
     id = sql.Column(sql.Integer, index=True, primary_key=True)
+    id_na_cloud = sql.Column(sql.Integer, index=True, primary_key=True)
     nome_empresa = sql.Column(sql.String, index=True)
     email = sql.Column(sql.String, index=True)
     whatsapp = sql.Column(sql.String, index=True)
@@ -124,20 +127,22 @@ def add_tables():
     Base.metadata.create_all(bind=engine)
 
 
-def add_user(nome, email, telefone, senha, licenca, pesagens):
+def add_user(id_cloud, nome, email, telefone, senha, licenca, pesagens):
     # user = User(nome_empresa=nome, email=email, whatsapp=telefone,
     #             senha=senha, licenca=licenca, max_pesagens=pesagens)
     # session.add(user)
     session.query(User).filter(User.id == 1).update(
-                    {
-                    'nome_empresa':nome, 'email':email, 
-                    'whatsapp':telefone, 'senha':senha, 
-                    'licenca':licenca, 'max_pesagens':pesagens
-                    }
-                )
+        {
+            'id_na_cloud': id_cloud,
+            'nome_empresa': nome, 'email': email,
+            'whatsapp': telefone, 'senha': senha,
+            'licenca': licenca, 'max_pesagens': pesagens
+        }
+    )
 
     session.commit()
     session.flush()
+
 
 def get_all_users():
     users = []

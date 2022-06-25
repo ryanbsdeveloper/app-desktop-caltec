@@ -3,7 +3,7 @@ from time import sleep
 
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog
 from PySide2.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup, QAbstractAnimation, QSize, QTime, QTimer, QDate
-from PySide2.QtGui import QRegion, QIcon, QFont
+from PySide2.QtGui import QRegion, QIcon, QFont, QPixmap
 
 from Windows.MainWindow import Ui_MainWindow
 from Windows.Premium import Ui_Dialog
@@ -19,6 +19,7 @@ from models import database
 import resources_rc
 
 # DIALOGs
+
 
 class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
     def __init__(self, parent):
@@ -76,8 +77,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
-        
-        #INITIAL
+
+        # INITIAL
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
         timer.start(1000)
@@ -155,10 +156,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # FUCTIONS BUTTONS
         self.peso_manualmente_2.textChanged.connect(self.peso_manual)
+        self.btn_registrar_produtos.clicked.connect(self.get_dados_carga)
+        self.btn_registrar_clientes.clicked.connect(self.get_dados_cliente)
 
     # TIME
-    
-    def showTime(self):  
+
+    def showTime(self):
         current_time = QTime.currentTime()
         current_data = QDate.currentDate()
         label_date = current_data.toString('dd/MM/yyyy')
@@ -410,6 +413,135 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         text = self.peso_manualmente_2.text()
         self.lcdNumber_2.display(text)
 
+    def is_num(self, valor):
+        try:
+            float(valor)
+        except:
+            return False
+        else:
+            return True
+
+    def get_dados_carga(self):
+        nome = self.input_produtos_nome.text()
+        densidade = self.input_produtos_densidade.text()
+        embalagem = self.input_produtos_embalagemKG.text()
+        estoque = self.input_produtos_estoqueKG.text()
+        desconto = self.input_produtos_desconto.text()
+        saida = None
+
+        if nome:
+            saida = True
+            if densidade:
+                if not self.is_num(densidade):
+                    saida = False
+            if embalagem:
+                if not self.is_num(embalagem):
+                    saida = False
+            if estoque:
+                if not self.is_num(estoque):
+                    saida = False
+            if desconto:
+                if not self.is_num(desconto):
+                    saida = False
+
+        else:
+            self.frame_saida.show()
+            self.label_realizada_ou_erro.setText('Campo obrigatório')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'O campo NOME não pode estar vazio.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+
+        if saida == True:
+            self.frame_saida.show()
+            self.label_realizada_ou_erro.setText('Carga registrada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(6, 180, 20);')
+            self.label_veja_no_relatorio.setText(' ')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/check-solid_green.svg"))
+
+            # add a db
+
+        elif saida == False:
+            self.frame_saida.show()
+            self.label_realizada_ou_erro.setText('Campo incorreto')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Apenas o campo NOME deve conter letras e espaços.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+
+    def get_dados_cliente(self):
+        nome = self.input_clientes_nome.text()
+        cpf = self.input_clientes_cpf.text()
+        rg = self.input_clientes_rg.text()
+        cep = self.input_clientes_cep.text()
+        endereco = self.input_clientes_endereco.text()
+        telefone = self.input_clientes_telefone.text()
+        detalhe_saida = ''
+        saida = None
+
+        if nome and telefone:
+            saida = True
+            if cep:
+                if len(cep.replace('-', '').replace(' ', '')) != 8:
+                    saida = False
+                    detalhe_saida = 'Código postal (CEP) inválido.'
+            else:
+                cep = 'n/a'
+
+            if rg:
+                if len(rg.replace('-', '').replace('.', '').replace(' ', '')) != 9:
+                    saida = False
+                    detalhe_saida = 'Registro geral (RG) inválido.'
+            else:
+                rg = 'n/a'
+
+            if cpf:
+                if not utils.validador(cpf):
+                    saida = False
+                    detalhe_saida = 'Certificação de pessoa física (CPF) inválido'
+            else:
+                cpf = 'n/a'
+
+            if not endereco:
+                endereco = 'n/a'
+        else:
+            self.frame_saida.show()
+            self.label_realizada_ou_erro.setText('Campo obrigatório')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Campo NOME e TELEFONE não pode estar vazio.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+
+        if saida == True:
+            self.frame_saida.show()
+            self.label_realizada_ou_erro.setText('Carga registrada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(6, 180, 20);')
+            self.label_veja_no_relatorio.setText(' ')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/check-solid_green.svg"))
+
+            # add a db
+
+        elif saida == False:
+            self.frame_saida.show()
+            self.label_realizada_ou_erro.setText('Campo incorreto')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(detalhe_saida)
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+
+    def get_dados_veiculos(self):
+        self
 
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
@@ -542,4 +674,3 @@ if __name__ == '__main__':
     Window = MainWindow()
     Window.showFullScreen()
     app.exec_()
-

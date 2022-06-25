@@ -3,11 +3,13 @@ from typing import Tuple
 import psycopg2
 import os
 
-from . import models
+import models
 
 BASE_DIR = os.path.dirname(__file__)
 
 #Database in cloud
+
+
 class DB():
     def __init__(self) -> None:
         self.con = psycopg2.connect(host='localhost',
@@ -41,7 +43,7 @@ class DBLocal():
     def list_users_local(self):
         lista = []
         SQL = 'SELECT * from users'
-        self.cur.execute(SQL)  
+        self.cur.execute(SQL)
         for c in self.cur.fetchall():
             lista.append(c)
 
@@ -49,17 +51,17 @@ class DBLocal():
 
     def add_user(self, email) -> Tuple:
         for user in self.db_cloud.list_users():
-            if email in  user:
+            if email in user:
                 if user not in self.list_users_local():
+                    id_cloud = user[0]
                     nome_empresa = user[1]
                     e_mail = user[2]
                     whatsapp = user[3]
                     senha = user[4]
                     licenca = user[5]
                     max_pesagem = user[6]
-                    models.add_user(nome_empresa, e_mail,
+                    models.add_user(id_cloud, nome_empresa, e_mail,
                                     whatsapp, senha, licenca, max_pesagem)
-
 
 
 if __name__ == '__main__':
