@@ -40,7 +40,7 @@ class DBLocal():
         self.cur = self.con.cursor()
         self.db_cloud = DB()
 
-    def list_users_local(self):
+    def list_user_local(self):
         lista = []
         SQL = 'SELECT * from users'
         self.cur.execute(SQL)
@@ -66,4 +66,4 @@ class DBLocal():
 
 if __name__ == '__main__':
     db = DBLocal()
-    print(db.list_users_local())
+    print(db.list_user_local())

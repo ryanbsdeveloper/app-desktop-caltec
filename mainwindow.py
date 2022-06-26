@@ -80,6 +80,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.ss15 = 15
 
         # INITIAL
+        self.user()
+
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
         timer.start(1000)
@@ -175,6 +177,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
            self.ss15 = 15
 
         self.ss15 = self.ss15 - 1
+
+
+    # FUCTIONS INITIAL
+    def user(self):
+        db = database.DBLocal()
+        user = db.list_user_local()[0]
+        self.text_empresa_pessoal.setText(user[2])
+        self.text_email.setText(user[3])
+        self.text_telefone.setText(user[4])
+        self.text_licenca.setText(user[6])
 
 
     def showTime(self):

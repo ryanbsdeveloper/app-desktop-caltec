@@ -27,8 +27,8 @@ class User(Base):
     email = sql.Column(sql.String, index=True)
     whatsapp = sql.Column(sql.String, index=True)
     senha = sql.Column(sql.String, index=True)
-    licenca = sql.Column(sql.String, index=True)
-    max_pesagens = sql.Column(sql.String, index=True)
+    licenca = sql.Column(sql.String, index=True, default="Gratuita")
+    max_pesagens = sql.Column(sql.String, index=True, default="30")
 
 
 class PesagemAvulsa(Base):
