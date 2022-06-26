@@ -1,9 +1,16 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>free_icon_1 (3).svg</file>
+    <file>16089630971558965371.svg</file>
+    <file>free_icon_1 (2).svg</file>
+    <file>eye-slash-solid.svg</file>
+    <file>notepad-with-text-svgrepo-com.svg</file>
+    <file>weight-scale-solid.svg</file>
+    <file>circle-user-solid.svg</file>
+    <file>eye-solid.svg</file>
     <file>circle-info-solidr.svg</file>
     <file>8726126_layer_group_icon.svg</file>
     <file>calendar-days-solid.svg</file>
-    <file>clock-solid.svg</file>
     <file>minus-solid.svg</file>
     <file>xmark-solid.svg</file>
     <file>sort-down-solid.svg</file>

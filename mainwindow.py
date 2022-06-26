@@ -77,11 +77,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
+        self.ss15 = 15
 
         # INITIAL
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
         timer.start(1000)
+
+        self.timer2 = QTimer(self)
+        self.timer2.timeout.connect(self.hide_segundos)
 
         self.nome_pc.setText(f'{utils.name_locauser()} - Software de pesagem')
 
@@ -158,8 +162,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.peso_manualmente_2.textChanged.connect(self.peso_manual)
         self.btn_registrar_produtos.clicked.connect(self.get_dados_carga)
         self.btn_registrar_clientes.clicked.connect(self.get_dados_cliente)
+        self.btn_registrar_veiculos.clicked.connect(self.get_dados_veiculos)
 
-    # TIME
+    # TIMES
+    def hide_segundos(self):
+        self.timer2.start(1000)
+        self.segundos.setText(f'{self.ss15} Segundos')
+
+        if self.ss15 == 0:
+           self.timer2.stop()
+           self.frame_saida.hide()
+           self.ss15 = 15
+
+        self.ss15 = self.ss15 - 1
+
 
     def showTime(self):
         current_time = QTime.currentTime()
@@ -171,23 +187,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def menu_grupos(self):
         if self.menu_grupos_frame.height() == 0:
-            self.aba_grupo_button.setText('Grupos                    ▲')
+            self.aba_grupo_button.setText('Grupos                  ▲')
         else:
-            self.aba_grupo_button.setText('Grupos                    ▼')
+            self.aba_grupo_button.setText('Grupos                  ▼')
         self.animation_grupo()
 
     def menu_pesagem(self):
         if self.menu_pesagem_frame.height() == 0:
-            self.aba_pesagem_button.setText('Pesagens                 ▲')
+            self.aba_pesagem_button.setText('Pesagens               ▲')
         else:
-            self.aba_pesagem_button.setText('Pesagens                 ▼')
+            self.aba_pesagem_button.setText('Pesagens               ▼')
         self.animation_pesagem()
 
     def menu_relatorio(self):
         if self.menu_relatorio_frame.height() == 0:
-            self.aba_relatorio_button.setText('Relatórios                 ▲')
+            self.aba_relatorio_button.setText('Relatórios             ▲')
         else:
-            self.aba_relatorio_button.setText('Relatórios                 ▼')
+            self.aba_relatorio_button.setText('Relatórios             ▼')
         self.animatio_relatorio()
 
     # SHOW DIALOGS
@@ -413,13 +429,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         text = self.peso_manualmente_2.text()
         self.lcdNumber_2.display(text)
 
-    def is_num(self, valor):
-        try:
-            float(valor)
-        except:
-            return False
+    def is_num(self, valor, type=float):
+        if type == int:
+            try:
+                int(valor)
+            except:
+                return False
+            else:
+                return True
         else:
-            return True
+            try:
+                float(valor)
+            except:
+                return False
+            else:
+                return True
 
     def get_dados_carga(self):
         nome = self.input_produtos_nome.text()
@@ -428,6 +452,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         estoque = self.input_produtos_estoqueKG.text()
         desconto = self.input_produtos_desconto.text()
         saida = None
+        self.ss15 = 15
 
         if nome:
             saida = True
@@ -446,6 +471,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         else:
             self.frame_saida.show()
+            self.hide_segundos()
             self.label_realizada_ou_erro.setText('Campo obrigatório')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
@@ -456,7 +482,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         if saida == True:
             self.frame_saida.show()
-            self.label_realizada_ou_erro.setText('Carga registrada')
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Carga adicionada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText(' ')
@@ -467,6 +494,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         elif saida == False:
             self.frame_saida.show()
+            self.hide_segundos()
             self.label_realizada_ou_erro.setText('Campo incorreto')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
@@ -484,6 +512,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         telefone = self.input_clientes_telefone.text()
         detalhe_saida = ''
         saida = None
+        self.ss15 = 15
 
         if nome and telefone:
             saida = True
@@ -512,6 +541,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 endereco = 'n/a'
         else:
             self.frame_saida.show()
+            self.hide_segundos()
             self.label_realizada_ou_erro.setText('Campo obrigatório')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
@@ -522,7 +552,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         if saida == True:
             self.frame_saida.show()
-            self.label_realizada_ou_erro.setText('Carga registrada')
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Cliente adicionado')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText(' ')
@@ -533,6 +564,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         elif saida == False:
             self.frame_saida.show()
+            self.hide_segundos()
             self.label_realizada_ou_erro.setText('Campo incorreto')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
@@ -541,7 +573,31 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 QPixmap(u":/icons/circle-info-solidr.svg"))
 
     def get_dados_veiculos(self):
-        self
+        nome = self.input_veiculos_nome.text()
+        placa = self.input_veiculos_placa.text()
+        proprietario = self.input_veiculos_valor_2.text()
+        produto = self.comboBox_veiculos_produtos.currentText()
+        self.ss15 = 15
+
+        if nome and placa and proprietario and str(produto) != 'Nenhum':
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Veículo adicionado')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(6, 180, 20);')
+            self.label_veja_no_relatorio.setText(' ')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/check-solid_green.svg"))
+        else:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Campo obrigatório')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Todos os campos devem ser preenchidos.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))            
 
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):

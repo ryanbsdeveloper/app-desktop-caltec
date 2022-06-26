@@ -89,13 +89,13 @@
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>0</number>
+        <number>8</number>
        </property>
        <property name="topMargin">
         <number>0</number>
        </property>
        <property name="rightMargin">
-        <number>0</number>
+        <number>8</number>
        </property>
        <property name="bottomMargin">
         <number>0</number>
@@ -197,7 +197,7 @@
                 <string notr="true">QPushButton{
 	border:0;
 	color:white;
-	
+	padding-left:10px;
 	background-color: rgb(43, 43, 43);
 }
 
@@ -209,16 +209,16 @@ QPushButton:hover{
 </string>
                </property>
                <property name="text">
-                <string>Pesagens                 ▼</string>
+                <string>Pesagens              ▼</string>
                </property>
                <property name="icon">
                 <iconset resource="Resources/resources.qrc">
-                 <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
+                 <normaloff>:/icons/weight-scale-solid.svg</normaloff>:/icons/weight-scale-solid.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
-                 <width>20</width>
-                 <height>20</height>
+                 <width>23</width>
+                 <height>22</height>
                 </size>
                </property>
                <property name="autoExclusive">
@@ -448,7 +448,7 @@ color:white;
                 <string notr="true">QPushButton{
 	border:0;
 	color:white;
-	
+	padding-left:10px;
 	background-color: rgb(43, 43, 43);
 }
 
@@ -460,7 +460,7 @@ QPushButton:hover{
 </string>
                </property>
                <property name="text">
-                <string>Grupos                    ▼</string>
+                <string>Grupos                  ▼</string>
                </property>
                <property name="icon">
                 <iconset resource="Resources/resources.qrc">
@@ -468,8 +468,8 @@ QPushButton:hover{
                </property>
                <property name="iconSize">
                 <size>
-                 <width>20</width>
-                 <height>20</height>
+                 <width>22</width>
+                 <height>22</height>
                 </size>
                </property>
                <property name="flat">
@@ -676,27 +676,28 @@ color:white;
              <string notr="true">QPushButton{
 	border:0;
 	color:white;
-	
+	padding-left:10px;
 	background-color: rgb(43, 43, 43);
 }
 
-QPushButton:hover{	
+QPushButton:hover{
+	
 	background-color: rgb(70, 70, 70);
 	
 }
 </string>
             </property>
             <property name="text">
-             <string>Relatórios                 ▼</string>
+             <string>Relatórios             ▼</string>
             </property>
             <property name="icon">
              <iconset resource="Resources/resources.qrc">
-              <normaloff>:/icons/file-lines-solid (2).svg</normaloff>:/icons/file-lines-solid (2).svg</iconset>
+              <normaloff>:/icons/notepad-with-text-svgrepo-com.svg</normaloff>:/icons/notepad-with-text-svgrepo-com.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>20</width>
-              <height>20</height>
+              <width>24</width>
+              <height>23</height>
              </size>
             </property>
             <property name="flat">
@@ -843,27 +844,28 @@ color:white;
              <string notr="true">QPushButton{
 	border:0;
 	color:white;
-	
+	padding-left:10px;
 	background-color: rgb(43, 43, 43);
 }
 
-QPushButton:hover{	
+QPushButton:hover{
+	
 	background-color: rgb(70, 70, 70);
 	
 }
 </string>
             </property>
             <property name="text">
-             <string>Conta                           </string>
+             <string>Conta                       </string>
             </property>
             <property name="icon">
              <iconset resource="Resources/resources.qrc">
-              <normaloff>:/icons/person-walking-solid .svg</normaloff>:/icons/person-walking-solid .svg</iconset>
+              <normaloff>:/icons/circle-user-solid.svg</normaloff>:/icons/circle-user-solid.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>20</width>
-              <height>20</height>
+              <width>24</width>
+              <height>22</height>
              </size>
             </property>
             <property name="autoExclusive">
@@ -1007,7 +1009,7 @@ QPushButton:hover{
                 </font>
                </property>
                <property name="text">
-                <string>Pesagens restantes: 28</string>
+                <string>Pesagens restantes: 30</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -1814,7 +1816,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1951,12 +1953,12 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/file-lines-solid (2).svg</normaloff>:/icons/file-lines-solid (2).svg</iconset>
+                     <normaloff>:/icons/notepad-with-text-svgrepo-com.svg</normaloff>:/icons/notepad-with-text-svgrepo-com.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -3297,12 +3299,12 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/file-lines-solid (2).svg</normaloff>:/icons/file-lines-solid (2).svg</iconset>
+                     <normaloff>:/icons/notepad-with-text-svgrepo-com.svg</normaloff>:/icons/notepad-with-text-svgrepo-com.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -4461,8 +4463,8 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -4586,7 +4588,7 @@ background-color: rgb(43, 43, 43);</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>Registrar novos clientes</string>
+                          <string>Adicionar novos clientes</string>
                          </property>
                         </widget>
                        </item>
@@ -4965,7 +4967,7 @@ QPushButton:hover{
 }</string>
                          </property>
                          <property name="text">
-                          <string>REGISTRAR</string>
+                          <string>Adicionar</string>
                          </property>
                         </widget>
                        </item>
@@ -5063,7 +5065,7 @@ background-color: rgb(43, 43, 43);</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>Historico de Clientes registrados</string>
+                          <string>Historico de Clientes adicionados</string>
                          </property>
                         </widget>
                        </item>
@@ -5437,8 +5439,8 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -5562,7 +5564,7 @@ background-color: rgb(43, 43, 43);</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>Registrar novos veículos</string>
+                          <string>Adicionar novos veículos</string>
                          </property>
                         </widget>
                        </item>
@@ -5693,7 +5695,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>NOME</string>
+                             <string>MODELO</string>
                             </property>
                            </widget>
                           </item>
@@ -5806,6 +5808,9 @@ border:1px solid rgb(67, 202, 0)
                               <bold>false</bold>
                              </font>
                             </property>
+                            <property name="cursor">
+                             <cursorShape>ArrowCursor</cursorShape>
+                            </property>
                             <property name="styleSheet">
                              <string notr="true">QComboBox{
 	border:1px solid rgb(15, 202, 2);
@@ -5902,6 +5907,9 @@ QComboBox QListView{
                            <bold>true</bold>
                           </font>
                          </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">QPushButton{
 	border:1px solid rgb(15, 202, 2);
@@ -5914,7 +5922,7 @@ QPushButton:hover{
 }</string>
                          </property>
                          <property name="text">
-                          <string>REGISTRAR</string>
+                          <string>Adicionar</string>
                          </property>
                         </widget>
                        </item>
@@ -6022,7 +6030,7 @@ background-color: rgb(43, 43, 43);</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>Historico de Clientes registrados</string>
+                          <string>Historico de Veículos adicionados</string>
                          </property>
                         </widget>
                        </item>
@@ -6415,8 +6423,8 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -6540,7 +6548,7 @@ background-color: rgb(43, 43, 43);</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>Registrar nova carga</string>
+                          <string>Adicionar nova carga</string>
                          </property>
                         </widget>
                        </item>
@@ -6629,14 +6637,14 @@ border:1px solid rgb(67, 202, 0)
                           </font>
                          </property>
                          <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                          <enum>QFrame::NoFrame</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_12">
                           <property name="spacing">
-                           <number>0</number>
+                           <number>5</number>
                           </property>
                           <property name="leftMargin">
                            <number>0</number>
@@ -6704,14 +6712,14 @@ border:1px solid rgb(67, 202, 0)
                           </font>
                          </property>
                          <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                          <enum>QFrame::NoFrame</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_13">
                           <property name="spacing">
-                           <number>0</number>
+                           <number>5</number>
                           </property>
                           <property name="leftMargin">
                            <number>0</number>
@@ -6782,14 +6790,14 @@ border:1px solid rgb(67, 202, 0)
                           </font>
                          </property>
                          <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                          <enum>QFrame::NoFrame</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_14">
                           <property name="spacing">
-                           <number>0</number>
+                           <number>5</number>
                           </property>
                           <property name="leftMargin">
                            <number>0</number>
@@ -6855,14 +6863,14 @@ border:1px solid rgb(67, 202, 0)
                        <item>
                         <widget class="QFrame" name="frame_8">
                          <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                          <enum>QFrame::NoFrame</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_38">
                           <property name="spacing">
-                           <number>0</number>
+                           <number>5</number>
                           </property>
                           <property name="leftMargin">
                            <number>0</number>
@@ -6909,7 +6917,7 @@ border:1px solid rgb(67, 202, 0)
                             <property name="font">
                              <font>
                               <family>Segoe UI</family>
-                              <pointsize>11</pointsize>
+                              <pointsize>14</pointsize>
                               <weight>75</weight>
                               <bold>true</bold>
                              </font>
@@ -6950,7 +6958,7 @@ QPushButton:hover{
 }</string>
                          </property>
                          <property name="text">
-                          <string>REGISTRAR</string>
+                          <string>Adicionar</string>
                          </property>
                         </widget>
                        </item>
@@ -7058,7 +7066,7 @@ background-color: rgb(43, 43, 43);</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>Historico de Cargas registrados</string>
+                          <string>Historico de Cargas adicionadas</string>
                          </property>
                         </widget>
                        </item>
@@ -7421,12 +7429,12 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
+                     <normaloff>:/icons/weight-scale-solid.svg</normaloff>:/icons/weight-scale-solid.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -8993,12 +9001,12 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
+                     <normaloff>:/icons/weight-scale-solid.svg</normaloff>:/icons/weight-scale-solid.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -10430,12 +10438,12 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/scale-balanced-solid .svg</normaloff>:/icons/scale-balanced-solid .svg</iconset>
+                     <normaloff>:/icons/weight-scale-solid.svg</normaloff>:/icons/weight-scale-solid.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -11526,7 +11534,7 @@ QScrollBar::add-line:horizontal {
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
-                 <item alignment="Qt::AlignTop">
+                 <item>
                   <widget class="QPushButton" name="title">
                    <property name="minimumSize">
                     <size>
@@ -11566,12 +11574,12 @@ background-color: rgb(43, 43, 43);</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
-                     <normaloff>:/icons/person-walking-solid .svg</normaloff>:/icons/person-walking-solid .svg</iconset>
+                     <normaloff>:/icons/circle-user-solid.svg</normaloff>:/icons/circle-user-solid.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>29</width>
-                     <height>28</height>
+                     <width>30</width>
+                     <height>30</height>
                     </size>
                    </property>
                    <property name="flat">
@@ -11647,14 +11655,14 @@ background-color: rgb(255, 255, 255);</string>
                        <string notr="true">border:0</string>
                       </property>
                       <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
+                       <enum>QFrame::NoFrame</enum>
                       </property>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_5">
                        <property name="spacing">
-                        <number>0</number>
+                        <number>8</number>
                        </property>
                        <property name="leftMargin">
                         <number>0</number>
@@ -11678,7 +11686,7 @@ background-color: rgb(255, 255, 255);</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>124</width>
+                           <width>241</width>
                            <height>30</height>
                           </size>
                          </property>
@@ -11694,7 +11702,7 @@ background-color: rgb(255, 255, 255);</string>
                           <string notr="true">color:  rgb(15, 202, 2);</string>
                          </property>
                          <property name="text">
-                          <string>SEUS DADOS</string>
+                          <string>Informações da conta</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -12421,7 +12429,7 @@ QPushButton:hover{
        <string notr="true">background-color: rgb(20, 20, 20);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
@@ -12562,6 +12570,77 @@ QPushButton:hover{
                </property>
               </widget>
              </item>
+             <item alignment="Qt::AlignRight">
+              <widget class="QFrame" name="frame_9">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_40">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>22</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item alignment="Qt::AlignRight">
+                 <widget class="QPushButton" name="pushButton_3">
+                  <property name="styleSheet">
+                   <string notr="true">border:0</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/resources.qrc">
+                    <normaloff>:/icons/eye-slash-solid.svg</normaloff>:/icons/eye-slash-solid.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="segundos">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI</family>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(109, 109, 109);</string>
+                  </property>
+                  <property name="text">
+                   <string>15 Segundos</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
@@ -12589,78 +12668,152 @@ QPushButton:hover{
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item>
-           <widget class="QLabel" name="label_6">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QLabel" name="label_9">
+            <property name="minimumSize">
+             <size>
+              <width>26</width>
+              <height>31</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
-              <width>16</width>
-              <height>16</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="Resources/resources.qrc">:/icons/clock-solid.svg</pixmap>
+             <pixmap resource="Resources/resources.qrc">:/icons/free_icon_1 (3).svg</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
             </property>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignRight">
-           <widget class="QLabel" name="hora">
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string>14:14:50</string>
+            <property name="wordWrap">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_7">
-            <property name="maximumSize">
+           <widget class="QFrame" name="frame_10">
+            <property name="minimumSize">
              <size>
-              <width>16</width>
-              <height>16</height>
+              <width>100</width>
+              <height>0</height>
              </size>
             </property>
-            <property name="text">
-             <string/>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
             </property>
-            <property name="pixmap">
-             <pixmap resource="Resources/resources.qrc">:/icons/calendar-days-solid.svg</pixmap>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
             </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_53">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(109, 109, 109);</string>
+               </property>
+               <property name="text">
+                <string>Horário</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignTop">
+              <widget class="QLabel" name="hora">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>14:14:50</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
-          <item alignment="Qt::AlignRight">
-           <widget class="QLabel" name="data">
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
+          <item>
+           <widget class="QFrame" name="frame_25">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);</string>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
             </property>
-            <property name="text">
-             <string>17/06/2022</string>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_52">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(109, 109, 109);</string>
+               </property>
+               <property name="text">
+                <string>Data</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="data">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>17/06/2022</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
