@@ -1,6 +1,7 @@
 import webbrowser
 import os
 from datetime import datetime
+import re
 
 def open_link(url):
     webbrowser.open(url)
@@ -8,14 +9,11 @@ def open_link(url):
 def name_locauser():
     return os.getlogin()
 
-import re
-
-
 def validador(entrada):
     cpf = re.sub(r'[^0-9]', '', entrada)
 
     if not len(cpf) == 11:
-        return False
+        return None
 
     soma = 0
     for pos, c in enumerate(range(10, 1, -1)):
