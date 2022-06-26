@@ -1031,7 +1031,7 @@ QPushButton:hover{
              <number>0</number>
             </property>
             <property name="text">
-             <string>Atualize para a versão PRO e aproveite todos os recursos sem limitações.</string>
+             <string>Atualize para a versão PREMIUM e aproveite todos os recursos sem limitações.</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -5895,6 +5895,8 @@ QComboBox QListView{
                              <font>
                               <family>Segoe UI</family>
                               <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
                              </font>
                             </property>
                             <property name="text">
@@ -7905,7 +7907,7 @@ QLineEdit:focus{
                               <number>6</number>
                              </property>
                              <item row="3" column="0">
-                              <widget class="QLineEdit" name="lineEdit_4">
+                              <widget class="QLineEdit" name="input_avulsas_motorista">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -7996,7 +7998,7 @@ QLineEdit:focus{
                               </widget>
                              </item>
                              <item row="3" column="1">
-                              <widget class="QComboBox" name="comboBox_fornecedor_13">
+                              <widget class="QComboBox" name="comboBox_avulsas_veiculo">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -8096,7 +8098,7 @@ QComboBox QListView{
                               </widget>
                              </item>
                              <item row="3" column="2">
-                              <widget class="QComboBox" name="comboBox_fornecedor_10">
+                              <widget class="QComboBox" name="comboBox_avulsas_cliente">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -8169,7 +8171,7 @@ QComboBox QListView{
                               </widget>
                              </item>
                              <item row="3" column="3">
-                              <widget class="QComboBox" name="comboBox_fornecedor_11">
+                              <widget class="QComboBox" name="comboBox_avulsas_carga">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -8365,7 +8367,7 @@ QComboBox QListView{
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLineEdit" name="lineEdit_5">
+                              <widget class="QLineEdit" name="input_avulsas_obs">
                                <property name="minimumSize">
                                 <size>
                                  <width>400</width>
@@ -8419,7 +8421,7 @@ QLineEdit:focus{
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_24">
                              <item>
-                              <widget class="QPushButton" name="pushButton_4">
+                              <widget class="QPushButton" name="btn_fazer_pesagem_avulsa">
                                <property name="minimumSize">
                                 <size>
                                  <width>219</width>

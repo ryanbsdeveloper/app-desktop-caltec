@@ -165,6 +165,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_registrar_produtos.clicked.connect(self.get_dados_carga)
         self.btn_registrar_clientes.clicked.connect(self.get_dados_cliente)
         self.btn_registrar_veiculos.clicked.connect(self.get_dados_veiculos)
+        self.btn_fazer_pesagem_avulsa.clicked.connect(self.get_pesagem_avulsas)
 
     # TIMES
     def hide_segundos(self):
@@ -498,7 +499,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_realizada_ou_erro.setText('Carga adicionada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
-            self.label_veja_no_relatorio.setText(' ')
+            self.label_veja_no_relatorio.setText('')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
 
@@ -568,7 +569,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_realizada_ou_erro.setText('Cliente adicionado')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
-            self.label_veja_no_relatorio.setText(' ')
+            self.label_veja_no_relatorio.setText('')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
 
@@ -597,7 +598,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_realizada_ou_erro.setText('Veículo adicionado')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
-            self.label_veja_no_relatorio.setText(' ')
+            self.label_veja_no_relatorio.setText('')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
         else:
@@ -610,6 +611,42 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 'Todos os campos devem ser preenchidos.')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))            
+
+    def get_pesagem_avulsas(self):
+        motorista = self.input_avulsas_motorista.text()
+        veiculo = self.comboBox_avulsas_veiculo.currentText() 
+        cliente = self.comboBox_avulsas_cliente.currentText() 
+        carga = self.comboBox_avulsas_carga.currentText() 
+        obs = self.input_avulsas_obs.text()
+        saida = None
+
+        if motorista and veiculo != 'Nenhum' and cliente != 'Nenhum' and carga != 'Nenhum':
+            if not obs:
+                obs = 'Sem observação'
+
+            # add db
+
+            saida = True
+
+        if saida:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem Avulsa realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(6, 180, 20);')
+            self.label_veja_no_relatorio.setText('Veja em relatório avulsas')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/check-solid_green.svg"))
+        else:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem Avulsa não realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Todos os campos devem ser preenchidos.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))  
 
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
