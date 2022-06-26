@@ -1816,7 +1816,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>8</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -7428,7 +7428,7 @@ background-color: rgb(43, 43, 43);</string>
 }</string>
                    </property>
                    <property name="text">
-                    <string> Avulsa</string>
+                    <string>Avulsa</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
@@ -9000,7 +9000,7 @@ background-color: rgb(43, 43, 43);</string>
 }</string>
                    </property>
                    <property name="text">
-                    <string> Entrada</string>
+                    <string>Entrada</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
@@ -10437,7 +10437,7 @@ background-color: rgb(43, 43, 43);</string>
 }</string>
                    </property>
                    <property name="text">
-                    <string> Saída</string>
+                    <string>Saída</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">

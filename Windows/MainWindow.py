@@ -5773,7 +5773,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.aba_pesagem_button.setDefault(False)
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(8)
         self.comboBox_veiculo_6.setCurrentIndex(0)
         self.comboBox_produto_6.setCurrentIndex(0)
         self.comboBox_cliente_6.setCurrentIndex(0)
@@ -6100,7 +6100,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem77.setText(QCoreApplication.translate("MainWindow", u"n/a", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled3)
 
-        self.aba_relatorio_button_8.setText(QCoreApplication.translate("MainWindow", u" Avulsa", None))
+        self.aba_relatorio_button_8.setText(QCoreApplication.translate("MainWindow", u"Avulsa", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"Peso bruto", None))
         self.label_50.setText(QCoreApplication.translate("MainWindow", u"KG", None))
         self.btn_peso_manualmente_2.setText(QCoreApplication.translate("MainWindow", u"Capturar peso manualmente", None))
@@ -6129,7 +6129,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem79.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
         ___qtablewidgetitem80 = self.tableWidget_6.horizontalHeaderItem(2)
         ___qtablewidgetitem80.setText(QCoreApplication.translate("MainWindow", u"OBSERVA\u00c7\u00c3O", None));
-        self.aba_relatorio_button_7.setText(QCoreApplication.translate("MainWindow", u" Entrada", None))
+        self.aba_relatorio_button_7.setText(QCoreApplication.translate("MainWindow", u"Entrada", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"(Entrada)", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"KG", None))
@@ -6155,7 +6155,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem82.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
         ___qtablewidgetitem83 = self.tableWidget_5.horizontalHeaderItem(2)
         ___qtablewidgetitem83.setText(QCoreApplication.translate("MainWindow", u"Status", None));
-        self.aba_relatorio_button_9.setText(QCoreApplication.translate("MainWindow", u" Sa\u00edda", None))
+        self.aba_relatorio_button_9.setText(QCoreApplication.translate("MainWindow", u"Sa\u00edda", None))
         self.label_65.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_66.setText(QCoreApplication.translate("MainWindow", u"(Sa\u00edda)", None))
         self.label_58.setText(QCoreApplication.translate("MainWindow", u"KG", None))
