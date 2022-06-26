@@ -2246,6 +2246,7 @@ class Ui_MainWindow(object):
         self.btn_registrar_clientes = QPushButton(self.frame_48)
         self.btn_registrar_clientes.setObjectName(u"btn_registrar_clientes")
         self.btn_registrar_clientes.setFont(font6)
+        self.btn_registrar_clientes.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_registrar_clientes.setStyleSheet(u"QPushButton{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding:7px;\n"
@@ -5799,7 +5800,7 @@ class Ui_MainWindow(object):
         self.adicionar_balanca.setText(QCoreApplication.translate("MainWindow", u"Conectar balan\u00e7a", None))
         self.fechar_aplicativo.setText(QCoreApplication.translate("MainWindow", u"Fechar aplicativo", None))
         self.actionAvan_adas.setText(QCoreApplication.translate("MainWindow", u"Configura\u00e7\u00f5es Avan\u00e7adas", None))
-        self.aba_pesagem_button.setText(QCoreApplication.translate("MainWindow", u"Pesagens              \u25bc", None))
+        self.aba_pesagem_button.setText(QCoreApplication.translate("MainWindow", u"Pesagens               \u25bc", None))
         self.button_avulsas_pesagens.setText(QCoreApplication.translate("MainWindow", u"Avulsa", None))
         self.button_entsaid_pesagens.setText(QCoreApplication.translate("MainWindow", u"Entrada", None))
         self.btn_alterar_saida.setText(QCoreApplication.translate("MainWindow", u"Sa\u00edda", None))
@@ -6099,7 +6100,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem77.setText(QCoreApplication.translate("MainWindow", u"n/a", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled3)
 
-        self.aba_relatorio_button_8.setText(QCoreApplication.translate("MainWindow", u"Avulsa", None))
+        self.aba_relatorio_button_8.setText(QCoreApplication.translate("MainWindow", u" Avulsa", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"Peso bruto", None))
         self.label_50.setText(QCoreApplication.translate("MainWindow", u"KG", None))
         self.btn_peso_manualmente_2.setText(QCoreApplication.translate("MainWindow", u"Capturar peso manualmente", None))
@@ -6128,7 +6129,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem79.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
         ___qtablewidgetitem80 = self.tableWidget_6.horizontalHeaderItem(2)
         ___qtablewidgetitem80.setText(QCoreApplication.translate("MainWindow", u"OBSERVA\u00c7\u00c3O", None));
-        self.aba_relatorio_button_7.setText(QCoreApplication.translate("MainWindow", u"Entrada", None))
+        self.aba_relatorio_button_7.setText(QCoreApplication.translate("MainWindow", u" Entrada", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"(Entrada)", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"KG", None))
@@ -6154,7 +6155,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem82.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
         ___qtablewidgetitem83 = self.tableWidget_5.horizontalHeaderItem(2)
         ___qtablewidgetitem83.setText(QCoreApplication.translate("MainWindow", u"Status", None));
-        self.aba_relatorio_button_9.setText(QCoreApplication.translate("MainWindow", u"Sa\u00edda", None))
+        self.aba_relatorio_button_9.setText(QCoreApplication.translate("MainWindow", u" Sa\u00edda", None))
         self.label_65.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_66.setText(QCoreApplication.translate("MainWindow", u"(Sa\u00edda)", None))
         self.label_58.setText(QCoreApplication.translate("MainWindow", u"KG", None))

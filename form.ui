@@ -209,7 +209,7 @@ QPushButton:hover{
 </string>
                </property>
                <property name="text">
-                <string>Pesagens              ▼</string>
+                <string>Pesagens               ▼</string>
                </property>
                <property name="icon">
                 <iconset resource="Resources/resources.qrc">
@@ -4955,6 +4955,9 @@ border:1px solid rgb(67, 202, 0)
                            <bold>true</bold>
                           </font>
                          </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">QPushButton{
 	border:1px solid rgb(15, 202, 2);
@@ -7425,7 +7428,7 @@ background-color: rgb(43, 43, 43);</string>
 }</string>
                    </property>
                    <property name="text">
-                    <string>Avulsa</string>
+                    <string> Avulsa</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
@@ -8997,7 +9000,7 @@ background-color: rgb(43, 43, 43);</string>
 }</string>
                    </property>
                    <property name="text">
-                    <string>Entrada</string>
+                    <string> Entrada</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
@@ -10434,7 +10437,7 @@ background-color: rgb(43, 43, 43);</string>
 }</string>
                    </property>
                    <property name="text">
-                    <string>Saída</string>
+                    <string> Saída</string>
                    </property>
                    <property name="icon">
                     <iconset resource="Resources/resources.qrc">
