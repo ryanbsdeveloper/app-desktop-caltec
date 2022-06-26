@@ -22,7 +22,7 @@ class User(Base):
     __tablename__ = "users"
 
     id = sql.Column(sql.Integer, index=True, primary_key=True)
-    id_na_cloud = sql.Column(sql.Integer, index=True, primary_key=True)
+    id_na_cloud = sql.Column(sql.Integer, index=True)
     nome_empresa = sql.Column(sql.String, index=True)
     email = sql.Column(sql.String, index=True)
     whatsapp = sql.Column(sql.String, index=True)
@@ -150,4 +150,5 @@ def get_all_users():
             users.append(c)
 
     return users
+
 

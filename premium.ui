@@ -231,7 +231,7 @@
             <string notr="true">border:0;;color:;margin:0</string>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="page_inicial">
             <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -1379,7 +1379,7 @@ margin:0
                   <rect>
                    <x>290</x>
                    <y>7</y>
-                   <width>94</width>
+                   <width>111</width>
                    <height>39</height>
                   </rect>
                  </property>

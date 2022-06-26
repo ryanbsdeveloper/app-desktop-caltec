@@ -489,7 +489,7 @@ class Ui_Dialog(object):
         self.label_28.setWordWrap(True)
         self.text_valor_total = QLabel(self.frame_11)
         self.text_valor_total.setObjectName(u"text_valor_total")
-        self.text_valor_total.setGeometry(QRect(290, 7, 94, 39))
+        self.text_valor_total.setGeometry(QRect(290, 7, 111, 39))
         font14 = QFont()
         font14.setFamily(u"Segoe UI")
         font14.setPointSize(16)
@@ -651,7 +651,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Dialog)

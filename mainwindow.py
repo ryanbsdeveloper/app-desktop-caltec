@@ -77,7 +77,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setupUi(self)
-        self.ss15 = 15
+        self.ss15 = 30
 
         # INITIAL
         self.user()
@@ -174,7 +174,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if self.ss15 == 0:
            self.timer2.stop()
            self.frame_saida.hide()
-           self.ss15 = 15
+           self.ss15 = 30
 
         self.ss15 = self.ss15 - 1
 
@@ -464,7 +464,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         estoque = self.input_produtos_estoqueKG.text()
         desconto = self.input_produtos_desconto.text()
         saida = None
-        self.ss15 = 15
+        self.ss15 = 30
 
         if nome:
             saida = True
@@ -524,7 +524,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         telefone = self.input_clientes_telefone.text()
         detalhe_saida = ''
         saida = None
-        self.ss15 = 15
+        self.ss15 = 30
 
         if nome and telefone:
             saida = True
@@ -589,7 +589,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         placa = self.input_veiculos_placa.text()
         proprietario = self.input_veiculos_valor_2.text()
         produto = self.comboBox_veiculos_produtos.currentText()
-        self.ss15 = 15
+        self.ss15 = 30
 
         if nome and placa and proprietario and str(produto) != 'Nenhum':
             self.frame_saida.show()

@@ -1241,6 +1241,8 @@ QPushButton:hover{
              <font>
               <family>Segoe UI</family>
               <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
              </font>
             </property>
             <property name="cursor">
@@ -1485,7 +1487,7 @@ background-color: rgb(218, 14, 14)}</string>
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item alignment="Qt::AlignLeft">
+          <item>
            <widget class="QLabel" name="label">
             <property name="minimumSize">
              <size>
@@ -1604,6 +1606,9 @@ background-color: rgb(218, 14, 14)}</string>
             </property>
             <property name="mouseTracking">
              <bool>false</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
             </property>
             <property name="acceptDrops">
              <bool>false</bool>
@@ -1816,7 +1821,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>8</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -12637,7 +12642,7 @@ QPushButton:hover{
                    <string notr="true">color: rgb(109, 109, 109);</string>
                   </property>
                   <property name="text">
-                   <string>15 Segundos</string>
+                   <string>30 Segundos</string>
                   </property>
                  </widget>
                 </item>

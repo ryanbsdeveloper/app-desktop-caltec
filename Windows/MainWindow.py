@@ -573,7 +573,12 @@ class Ui_MainWindow(object):
         self.pushButton = QPushButton(self.frame_44)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setMinimumSize(QSize(150, 32))
-        self.pushButton.setFont(font1)
+        font8 = QFont()
+        font8.setFamily(u"Segoe UI")
+        font8.setPointSize(11)
+        font8.setBold(False)
+        font8.setWeight(50)
+        self.pushButton.setFont(font8)
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"\n"
 "\n"
@@ -593,11 +598,6 @@ class Ui_MainWindow(object):
 
         self.nome_pc = QLabel(self.frame_29)
         self.nome_pc.setObjectName(u"nome_pc")
-        font8 = QFont()
-        font8.setFamily(u"Segoe UI")
-        font8.setPointSize(11)
-        font8.setBold(False)
-        font8.setWeight(50)
         self.nome_pc.setFont(font8)
         self.nome_pc.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.nome_pc.setAlignment(Qt.AlignCenter)
@@ -685,7 +685,7 @@ class Ui_MainWindow(object):
         self.label.setWordWrap(False)
         self.label.setOpenExternalLinks(True)
 
-        self.horizontalLayout_2.addWidget(self.label, 0, Qt.AlignLeft)
+        self.horizontalLayout_2.addWidget(self.label)
 
 
         self.horizontalLayout.addWidget(self.frame, 0, Qt.AlignLeft)
@@ -712,6 +712,7 @@ class Ui_MainWindow(object):
         self.conexao_label.setFont(font6)
         self.conexao_label.setCursor(QCursor(Qt.ArrowCursor))
         self.conexao_label.setMouseTracking(False)
+        self.conexao_label.setFocusPolicy(Qt.NoFocus)
         self.conexao_label.setAcceptDrops(False)
         self.conexao_label.setLayoutDirection(Qt.LeftToRight)
         self.conexao_label.setStyleSheet(u"QPushButton{\n"
@@ -5773,7 +5774,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.aba_pesagem_button.setDefault(False)
-        self.stackedWidget.setCurrentIndex(8)
+        self.stackedWidget.setCurrentIndex(5)
         self.comboBox_veiculo_6.setCurrentIndex(0)
         self.comboBox_produto_6.setCurrentIndex(0)
         self.comboBox_cliente_6.setCurrentIndex(0)
@@ -6197,7 +6198,7 @@ class Ui_MainWindow(object):
         self.label_realizada_ou_erro.setText(QCoreApplication.translate("MainWindow", u"Pesagem realizada", None))
         self.label_veja_no_relatorio.setText(QCoreApplication.translate("MainWindow", u"Veja em relat\u00f3rio avulsas", None))
         self.pushButton_3.setText("")
-        self.segundos.setText(QCoreApplication.translate("MainWindow", u"15 Segundos", None))
+        self.segundos.setText(QCoreApplication.translate("MainWindow", u"30 Segundos", None))
         self.label_9.setText("")
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Hor\u00e1rio", None))
         self.hora.setText(QCoreApplication.translate("MainWindow", u"14:14:50", None))
