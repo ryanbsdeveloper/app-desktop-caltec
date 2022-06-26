@@ -121,7 +121,6 @@ class Veiculo(Base):
     carga = relationship(
         "Carga", backref=backref("carga", uselist=False))
 
-
 #ADD and READ
 def add_tables():
     Base.metadata.create_all(bind=engine)
