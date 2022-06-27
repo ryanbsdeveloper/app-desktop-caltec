@@ -5148,7 +5148,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_28 = QHBoxLayout(self.frame_102)
         self.horizontalLayout_28.setSpacing(8)
         self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
-        self.horizontalLayout_28.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_28.setContentsMargins(0, 20, 0, 0)
         self.btn_finalizar_pesagem = QPushButton(self.frame_102)
         self.btn_finalizar_pesagem.setObjectName(u"btn_finalizar_pesagem")
         self.btn_finalizar_pesagem.setMinimumSize(QSize(219, 50))

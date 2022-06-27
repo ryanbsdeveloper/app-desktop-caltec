@@ -95,6 +95,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.digite_um_id.hide()
         self.digite_um_id_2.hide()
         self.frame_saida.hide()
+        self.frame_saida_detalhes.hide()
 
         # MENU TOP
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -191,7 +192,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.text_email.setText(user[3])
         self.text_telefone.setText(user[4])
         self.text_licenca.setText(user[6])
-
 
     def showTime(self):
         current_time = QTime.currentTime()
@@ -753,12 +753,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def detalhes_saida(self):
         pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
 
-        print('ryan')
-        if pesagem_entrada != 'Nenhum':
+        if str(pesagem_entrada) != 'Nenhum':
             self.frame_saida_detalhes.show()
         
         else:
-            self.frame_saida_detalhes.show()
+            self.frame_saida_detalhes.hide()
 
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
