@@ -4985,15 +4985,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_89.addWidget(self.frame_101, 0, Qt.AlignHCenter)
 
-        self.info_pesagem_avulsa_3 = QLabel(self.frame_dados_avulsa_3)
-        self.info_pesagem_avulsa_3.setObjectName(u"info_pesagem_avulsa_3")
-        self.info_pesagem_avulsa_3.setMinimumSize(QSize(0, 30))
-        self.info_pesagem_avulsa_3.setFont(font1)
-        self.info_pesagem_avulsa_3.setStyleSheet(u"color: rgb(255, 0, 0);\n"
-"")
-        self.info_pesagem_avulsa_3.setAlignment(Qt.AlignCenter)
+        self.frame_26 = QFrame(self.frame_dados_avulsa_3)
+        self.frame_26.setObjectName(u"frame_26")
+        self.frame_26.setMinimumSize(QSize(0, 80))
+        self.frame_26.setFrameShape(QFrame.StyledPanel)
+        self.frame_26.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_89.addWidget(self.info_pesagem_avulsa_3)
+        self.verticalLayout_89.addWidget(self.frame_26)
 
         self.frame_102 = QFrame(self.frame_dados_avulsa_3)
         self.frame_102.setObjectName(u"frame_102")
@@ -5002,13 +5000,13 @@ class Ui_MainWindow(object):
         self.frame_102.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_28 = QHBoxLayout(self.frame_102)
         self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
-        self.pushButton_7 = QPushButton(self.frame_102)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setMinimumSize(QSize(219, 50))
-        self.pushButton_7.setMaximumSize(QSize(250, 16777215))
-        self.pushButton_7.setFont(font5)
-        self.pushButton_7.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_7.setStyleSheet(u"\n"
+        self.btn_finalizar_pesagem = QPushButton(self.frame_102)
+        self.btn_finalizar_pesagem.setObjectName(u"btn_finalizar_pesagem")
+        self.btn_finalizar_pesagem.setMinimumSize(QSize(219, 50))
+        self.btn_finalizar_pesagem.setMaximumSize(QSize(250, 16777215))
+        self.btn_finalizar_pesagem.setFont(font5)
+        self.btn_finalizar_pesagem.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_finalizar_pesagem.setStyleSheet(u"\n"
 "\n"
 "QPushButton{\n"
 "background-color: rgb(6, 180, 20);\n"
@@ -5020,7 +5018,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
 
-        self.horizontalLayout_28.addWidget(self.pushButton_7)
+        self.horizontalLayout_28.addWidget(self.btn_finalizar_pesagem)
 
         self.radioButton_3 = QRadioButton(self.frame_102)
         self.radioButton_3.setObjectName(u"radioButton_3")
@@ -6164,8 +6162,7 @@ class Ui_MainWindow(object):
 
         self.label_63.setText(QCoreApplication.translate("MainWindow", u"Pesagem:", None))
         self.label_59.setText(QCoreApplication.translate("MainWindow", u"Selecione uma pesagem de entrada, e finalize com o peso de sa\u00edda.", None))
-        self.info_pesagem_avulsa_3.setText("")
-        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"Finalizar pesagem", None))
+        self.btn_finalizar_pesagem.setText(QCoreApplication.translate("MainWindow", u"Finalizar pesagem", None))
         self.radioButton_3.setText(QCoreApplication.translate("MainWindow", u"Imprimir pesagem", None))
         self.label_64.setText(QCoreApplication.translate("MainWindow", u"Pesagens pendentes", None))
         ___qtablewidgetitem84 = self.tableWidget_8.horizontalHeaderItem(0)

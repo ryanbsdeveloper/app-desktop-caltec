@@ -11028,28 +11028,18 @@ QComboBox QListView{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="info_pesagem_avulsa_3">
+                        <widget class="QFrame" name="frame_26">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
-                           <height>30</height>
+                           <height>80</height>
                           </size>
                          </property>
-                         <property name="font">
-                          <font>
-                           <family>Segoe UI</family>
-                           <pointsize>11</pointsize>
-                          </font>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
                          </property>
-                         <property name="styleSheet">
-                          <string notr="true">color: rgb(255, 0, 0);
-</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
                          </property>
                         </widget>
                        </item>
@@ -11068,7 +11058,7 @@ QComboBox QListView{
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_28">
                           <item>
-                           <widget class="QPushButton" name="pushButton_7">
+                           <widget class="QPushButton" name="btn_finalizar_pesagem">
                             <property name="minimumSize">
                              <size>
                               <width>219</width>

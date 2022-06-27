@@ -167,6 +167,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_registrar_veiculos.clicked.connect(self.get_dados_veiculos)
         self.btn_fazer_pesagem_avulsa.clicked.connect(self.get_pesagem_avulsas)
         self.btn_salvar_entrada.clicked.connect(self.get_pesagem_entrada)
+        self.btn_finalizar_pesagem.clicked.connect(self.get_pesagem_saida)
 
     # TIMES
     def hide_segundos(self):
@@ -717,8 +718,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def get_pesagem_saida(self):
         pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
+        saida = None
 
         if pesagem_entrada != 'Nenhum':
+            saida = True
+            #add db
+            
+        else:
+            saida = False
+
+                
+        if saida:
             self.frame_saida.show()
             self.hide_segundos()
             self.label_realizada_ou_erro.setText('Pesagem realizada')
@@ -727,6 +737,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText('Veja em relatório entradas e saídas')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
+
         else:
             self.frame_saida.show()
             self.hide_segundos()
@@ -736,8 +747,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText(
                 'Escolha uma pesagem de entrada.')
             self.label_logo_saida.setPixmap(
-                QPixmap(u":/icons/circle-info-solidr.svg"))  
-
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+        
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
         super(LoginWindow, self).__init__()
