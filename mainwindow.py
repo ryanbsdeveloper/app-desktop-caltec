@@ -168,6 +168,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_fazer_pesagem_avulsa.clicked.connect(self.get_pesagem_avulsas)
         self.btn_salvar_entrada.clicked.connect(self.get_pesagem_entrada)
         self.btn_finalizar_pesagem.clicked.connect(self.get_pesagem_saida)
+        self.comboBox_pesagem_entrada.currentTextChanged.connect(self.detalhes_saida)
 
     # TIMES
     def hide_segundos(self):
@@ -748,7 +749,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 'Escolha uma pesagem de entrada.')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))
+    
+    def detalhes_saida(self):
+        pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
+
+        print('ryan')
+        if pesagem_entrada != 'Nenhum':
+            self.frame_saida_detalhes.show()
         
+        else:
+            self.frame_saida_detalhes.show()
+
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
         super(LoginWindow, self).__init__()
