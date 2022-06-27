@@ -166,6 +166,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_registrar_clientes.clicked.connect(self.get_dados_cliente)
         self.btn_registrar_veiculos.clicked.connect(self.get_dados_veiculos)
         self.btn_fazer_pesagem_avulsa.clicked.connect(self.get_pesagem_avulsas)
+        self.btn_salvar_entrada.clicked.connect(self.get_pesagem_entrada)
 
     # TIMES
     def hide_segundos(self):
@@ -619,16 +620,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         carga = self.comboBox_avulsas_carga.currentText() 
         obs = self.input_avulsas_obs.text()
         saida = None
+        self.ss15 = 30
 
         if motorista and veiculo != 'Nenhum' and cliente != 'Nenhum' and carga != 'Nenhum':
             if not obs:
                 obs = 'Sem observação'
-
+            if int(self.lcdNumber_2.value()) == 0:
+                saida = False
             # add db
 
             saida = True
 
-        if saida:
+        
+        if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
             self.label_realizada_ou_erro.setText('Pesagem Avulsa realizada')
@@ -637,14 +641,100 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText('Veja em relatório avulsas')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
-        else:
+
+        elif saida == None:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Pesagem Avulsa não realizada')
+            self.label_realizada_ou_erro.setText('Pesagem avulsa não realizada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
             self.label_veja_no_relatorio.setText(
                 'Todos os campos devem ser preenchidos.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))  
+        
+        else:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem não realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Não foi possível coletar o peso com valor: 0')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))  
+
+    # Entrada e Saida
+    def get_pesagem_entrada(self):
+        motorista = self.input_entrada_motorista.text()
+        veiculo = self.comboBox_entrada_veiculo.currentText() 
+        cliente = self.comboBox_entrada_cliente.currentText() 
+        carga = self.comboBox_entrada_carga.currentText() 
+        obs = self.input_entrada_obs.text()
+        saida = None
+        self.ss15 = 30
+
+        if motorista and veiculo != 'Nenhum' and cliente != 'Nenhum' and carga != 'Nenhum':
+            if not obs:
+                obs = 'Sem observação'
+            if int(self.lcdNumber.value()) == 0:
+                saida = False
+            # add db
+
+            saida = True
+        
+        if saida == True:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem de entrada realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(6, 180, 20);')
+            self.label_veja_no_relatorio.setText('realize a pesagem de saída')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/check-solid_green.svg"))
+
+        elif saida == None:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem de entrada não realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Todos os campos devem ser preenchidos.')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))  
+        
+        else:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem não realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Não foi possível coletar o peso com valor: 0')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/circle-info-solidr.svg"))  
+
+    def get_pesagem_saida(self):
+        pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
+
+        if pesagem_entrada != 'Nenhum':
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(6, 180, 20);')
+            self.label_veja_no_relatorio.setText('Veja em relatório entradas e saídas')
+            self.label_logo_saida.setPixmap(
+                QPixmap(u":/icons/check-solid_green.svg"))
+        else:
+            self.frame_saida.show()
+            self.hide_segundos()
+            self.label_realizada_ou_erro.setText('Pesagem de saída não realizada')
+            self.label_realizada_ou_erro.setStyleSheet(
+                'color:rgb(255, 32, 32);')
+            self.label_veja_no_relatorio.setText(
+                'Escolha uma pesagem de entrada.')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))  
 

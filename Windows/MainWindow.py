@@ -3860,7 +3860,7 @@ class Ui_MainWindow(object):
 
         self.radioButton_2 = QRadioButton(self.frame_92)
         self.radioButton_2.setObjectName(u"radioButton_2")
-        self.radioButton_2.setFont(font8)
+        self.radioButton_2.setFont(font5)
         self.radioButton_2.setStyleSheet(u"\n"
 "QRadioButton::indicator {\n"
 "    width:                  12px;\n"
@@ -4268,12 +4268,12 @@ class Ui_MainWindow(object):
         self.gridLayout_13.setHorizontalSpacing(15)
         self.gridLayout_13.setVerticalSpacing(6)
         self.gridLayout_13.setContentsMargins(-1, 0, -1, -1)
-        self.lineEdit = QLineEdit(self.frame_80)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMinimumSize(QSize(0, 30))
-        self.lineEdit.setMaximumSize(QSize(200, 16777215))
-        self.lineEdit.setFont(font15)
-        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+        self.input_entrada_motorista = QLineEdit(self.frame_80)
+        self.input_entrada_motorista.setObjectName(u"input_entrada_motorista")
+        self.input_entrada_motorista.setMinimumSize(QSize(0, 30))
+        self.input_entrada_motorista.setMaximumSize(QSize(200, 16777215))
+        self.input_entrada_motorista.setFont(font15)
+        self.input_entrada_motorista.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
 "	border:1px solid;\n"
@@ -4285,7 +4285,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
 
-        self.gridLayout_13.addWidget(self.lineEdit, 4, 0, 1, 1)
+        self.gridLayout_13.addWidget(self.input_entrada_motorista, 4, 0, 1, 1)
 
         self.label_41 = QLabel(self.frame_80)
         self.label_41.setObjectName(u"label_41")
@@ -4303,12 +4303,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.label_44, 2, 2, 1, 1)
 
-        self.comboBox_fornecedor_6 = QComboBox(self.frame_80)
-        self.comboBox_fornecedor_6.addItem("")
-        self.comboBox_fornecedor_6.setObjectName(u"comboBox_fornecedor_6")
-        self.comboBox_fornecedor_6.setMinimumSize(QSize(0, 30))
-        self.comboBox_fornecedor_6.setFont(font15)
-        self.comboBox_fornecedor_6.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_entrada_cliente = QComboBox(self.frame_80)
+        self.comboBox_entrada_cliente.addItem("")
+        self.comboBox_entrada_cliente.setObjectName(u"comboBox_entrada_cliente")
+        self.comboBox_entrada_cliente.setMinimumSize(QSize(0, 30))
+        self.comboBox_entrada_cliente.setFont(font15)
+        self.comboBox_entrada_cliente.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -4338,13 +4338,13 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_fornecedor_6.setMaxVisibleItems(10)
-        self.comboBox_fornecedor_6.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_fornecedor_6.setIconSize(QSize(32, 32))
-        self.comboBox_fornecedor_6.setDuplicatesEnabled(True)
-        self.comboBox_fornecedor_6.setFrame(True)
+        self.comboBox_entrada_cliente.setMaxVisibleItems(10)
+        self.comboBox_entrada_cliente.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_entrada_cliente.setIconSize(QSize(32, 32))
+        self.comboBox_entrada_cliente.setDuplicatesEnabled(True)
+        self.comboBox_entrada_cliente.setFrame(True)
 
-        self.gridLayout_13.addWidget(self.comboBox_fornecedor_6, 4, 2, 1, 1)
+        self.gridLayout_13.addWidget(self.comboBox_entrada_cliente, 4, 2, 1, 1)
 
         self.label_45 = QLabel(self.frame_80)
         self.label_45.setObjectName(u"label_45")
@@ -4354,12 +4354,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.label_45, 2, 3, 1, 1)
 
-        self.comboBox_fornecedor_7 = QComboBox(self.frame_80)
-        self.comboBox_fornecedor_7.addItem("")
-        self.comboBox_fornecedor_7.setObjectName(u"comboBox_fornecedor_7")
-        self.comboBox_fornecedor_7.setMinimumSize(QSize(0, 30))
-        self.comboBox_fornecedor_7.setFont(font15)
-        self.comboBox_fornecedor_7.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_entrada_carga = QComboBox(self.frame_80)
+        self.comboBox_entrada_carga.addItem("")
+        self.comboBox_entrada_carga.setObjectName(u"comboBox_entrada_carga")
+        self.comboBox_entrada_carga.setMinimumSize(QSize(0, 30))
+        self.comboBox_entrada_carga.setFont(font15)
+        self.comboBox_entrada_carga.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -4389,13 +4389,13 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_fornecedor_7.setMaxVisibleItems(10)
-        self.comboBox_fornecedor_7.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_fornecedor_7.setIconSize(QSize(32, 32))
-        self.comboBox_fornecedor_7.setDuplicatesEnabled(True)
-        self.comboBox_fornecedor_7.setFrame(True)
+        self.comboBox_entrada_carga.setMaxVisibleItems(10)
+        self.comboBox_entrada_carga.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_entrada_carga.setIconSize(QSize(32, 32))
+        self.comboBox_entrada_carga.setDuplicatesEnabled(True)
+        self.comboBox_entrada_carga.setFrame(True)
 
-        self.gridLayout_13.addWidget(self.comboBox_fornecedor_7, 4, 3, 1, 1)
+        self.gridLayout_13.addWidget(self.comboBox_entrada_carga, 4, 3, 1, 1)
 
         self.label_47 = QLabel(self.frame_80)
         self.label_47.setObjectName(u"label_47")
@@ -4405,12 +4405,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.label_47, 2, 1, 1, 1)
 
-        self.comboBox_fornecedor_9 = QComboBox(self.frame_80)
-        self.comboBox_fornecedor_9.addItem("")
-        self.comboBox_fornecedor_9.setObjectName(u"comboBox_fornecedor_9")
-        self.comboBox_fornecedor_9.setMinimumSize(QSize(0, 30))
-        self.comboBox_fornecedor_9.setFont(font15)
-        self.comboBox_fornecedor_9.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_entrada_veiculo = QComboBox(self.frame_80)
+        self.comboBox_entrada_veiculo.addItem("")
+        self.comboBox_entrada_veiculo.setObjectName(u"comboBox_entrada_veiculo")
+        self.comboBox_entrada_veiculo.setMinimumSize(QSize(0, 30))
+        self.comboBox_entrada_veiculo.setFont(font15)
+        self.comboBox_entrada_veiculo.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -4440,13 +4440,13 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_fornecedor_9.setMaxVisibleItems(10)
-        self.comboBox_fornecedor_9.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_fornecedor_9.setIconSize(QSize(32, 32))
-        self.comboBox_fornecedor_9.setDuplicatesEnabled(True)
-        self.comboBox_fornecedor_9.setFrame(True)
+        self.comboBox_entrada_veiculo.setMaxVisibleItems(10)
+        self.comboBox_entrada_veiculo.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_entrada_veiculo.setIconSize(QSize(32, 32))
+        self.comboBox_entrada_veiculo.setDuplicatesEnabled(True)
+        self.comboBox_entrada_veiculo.setFrame(True)
 
-        self.gridLayout_13.addWidget(self.comboBox_fornecedor_9, 4, 1, 1, 1)
+        self.gridLayout_13.addWidget(self.comboBox_entrada_veiculo, 4, 1, 1, 1)
 
 
         self.verticalLayout_69.addWidget(self.frame_80)
@@ -4460,12 +4460,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_94.setSpacing(0)
         self.verticalLayout_94.setObjectName(u"verticalLayout_94")
         self.verticalLayout_94.setContentsMargins(9, 5, 9, 0)
-        self.lineEdit_6 = QLineEdit(self.frame_119)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
-        self.lineEdit_6.setMinimumSize(QSize(400, 30))
-        self.lineEdit_6.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_6.setFont(font15)
-        self.lineEdit_6.setStyleSheet(u"QLineEdit{\n"
+        self.input_entrada_obs = QLineEdit(self.frame_119)
+        self.input_entrada_obs.setObjectName(u"input_entrada_obs")
+        self.input_entrada_obs.setMinimumSize(QSize(400, 30))
+        self.input_entrada_obs.setMaximumSize(QSize(16777215, 16777215))
+        self.input_entrada_obs.setFont(font15)
+        self.input_entrada_obs.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
 "	border:1px solid;\n"
@@ -4477,7 +4477,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
 
-        self.verticalLayout_94.addWidget(self.lineEdit_6)
+        self.verticalLayout_94.addWidget(self.input_entrada_obs)
 
 
         self.verticalLayout_69.addWidget(self.frame_119)
@@ -4502,13 +4502,13 @@ class Ui_MainWindow(object):
         self.frame_81.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_21 = QHBoxLayout(self.frame_81)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
-        self.pushButton_2 = QPushButton(self.frame_81)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(219, 50))
-        self.pushButton_2.setMaximumSize(QSize(250, 16777215))
-        self.pushButton_2.setFont(font5)
-        self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_2.setStyleSheet(u"\n"
+        self.btn_salvar_entrada = QPushButton(self.frame_81)
+        self.btn_salvar_entrada.setObjectName(u"btn_salvar_entrada")
+        self.btn_salvar_entrada.setMinimumSize(QSize(219, 50))
+        self.btn_salvar_entrada.setMaximumSize(QSize(250, 16777215))
+        self.btn_salvar_entrada.setFont(font5)
+        self.btn_salvar_entrada.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_salvar_entrada.setStyleSheet(u"\n"
 "\n"
 "QPushButton{\n"
 "background-color: rgb(6, 180, 20);\n"
@@ -4520,7 +4520,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
 
-        self.horizontalLayout_21.addWidget(self.pushButton_2)
+        self.horizontalLayout_21.addWidget(self.btn_salvar_entrada)
 
 
         self.verticalLayout_69.addWidget(self.frame_81, 0, Qt.AlignHCenter)
@@ -4904,12 +4904,12 @@ class Ui_MainWindow(object):
         self.gridLayout_17.setHorizontalSpacing(0)
         self.gridLayout_17.setVerticalSpacing(6)
         self.gridLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.comboBox_fornecedor_17 = QComboBox(self.frame_100)
-        self.comboBox_fornecedor_17.addItem("")
-        self.comboBox_fornecedor_17.setObjectName(u"comboBox_fornecedor_17")
-        self.comboBox_fornecedor_17.setMinimumSize(QSize(0, 30))
-        self.comboBox_fornecedor_17.setFont(font15)
-        self.comboBox_fornecedor_17.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_pesagem_entrada = QComboBox(self.frame_100)
+        self.comboBox_pesagem_entrada.addItem("")
+        self.comboBox_pesagem_entrada.setObjectName(u"comboBox_pesagem_entrada")
+        self.comboBox_pesagem_entrada.setMinimumSize(QSize(0, 30))
+        self.comboBox_pesagem_entrada.setFont(font15)
+        self.comboBox_pesagem_entrada.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid;\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -4939,13 +4939,13 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_fornecedor_17.setMaxVisibleItems(10)
-        self.comboBox_fornecedor_17.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_fornecedor_17.setIconSize(QSize(32, 32))
-        self.comboBox_fornecedor_17.setDuplicatesEnabled(True)
-        self.comboBox_fornecedor_17.setFrame(True)
+        self.comboBox_pesagem_entrada.setMaxVisibleItems(10)
+        self.comboBox_pesagem_entrada.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_pesagem_entrada.setIconSize(QSize(32, 32))
+        self.comboBox_pesagem_entrada.setDuplicatesEnabled(True)
+        self.comboBox_pesagem_entrada.setFrame(True)
 
-        self.gridLayout_17.addWidget(self.comboBox_fornecedor_17, 3, 0, 1, 1)
+        self.gridLayout_17.addWidget(self.comboBox_pesagem_entrada, 3, 0, 1, 1)
 
         self.label_63 = QLabel(self.frame_100)
         self.label_63.setObjectName(u"label_63")
@@ -5774,7 +5774,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.aba_pesagem_button.setDefault(False)
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(7)
         self.comboBox_veiculo_6.setCurrentIndex(0)
         self.comboBox_produto_6.setCurrentIndex(0)
         self.comboBox_cliente_6.setCurrentIndex(0)
@@ -5786,11 +5786,11 @@ class Ui_MainWindow(object):
         self.comboBox_avulsas_cliente.setCurrentIndex(0)
         self.comboBox_avulsas_carga.setCurrentIndex(0)
         self.btn_historico_obs_2.setDefault(False)
-        self.comboBox_fornecedor_6.setCurrentIndex(0)
-        self.comboBox_fornecedor_7.setCurrentIndex(0)
-        self.comboBox_fornecedor_9.setCurrentIndex(0)
+        self.comboBox_entrada_cliente.setCurrentIndex(0)
+        self.comboBox_entrada_carga.setCurrentIndex(0)
+        self.comboBox_entrada_veiculo.setCurrentIndex(0)
         self.btn_historico_obs.setDefault(False)
-        self.comboBox_fornecedor_17.setCurrentIndex(0)
+        self.comboBox_pesagem_entrada.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -6119,7 +6119,7 @@ class Ui_MainWindow(object):
 
         self.label_52.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
         self.input_avulsas_obs.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00e3o (Opcional)", None))
-        self.btn_fazer_pesagem_avulsa.setText(QCoreApplication.translate("MainWindow", u"Fazer pesagem", None))
+        self.btn_fazer_pesagem_avulsa.setText(QCoreApplication.translate("MainWindow", u"Realizar pesagem", None))
         self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"Imprimir pesagem", None))
         self.btn_historico_obs_2.setText("")
         self.label_56.setText("")
@@ -6135,19 +6135,19 @@ class Ui_MainWindow(object):
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"(Entrada)", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"KG", None))
         self.label_60.setText(QCoreApplication.translate("MainWindow", u"Insira os dados para a pesagem de entrada", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome", None))
+        self.input_entrada_motorista.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome", None))
         self.label_41.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
         self.label_44.setText(QCoreApplication.translate("MainWindow", u"Cliente:", None))
-        self.comboBox_fornecedor_6.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
+        self.comboBox_entrada_cliente.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
 
         self.label_45.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
-        self.comboBox_fornecedor_7.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
+        self.comboBox_entrada_carga.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
 
         self.label_47.setText(QCoreApplication.translate("MainWindow", u"Veiculo:", None))
-        self.comboBox_fornecedor_9.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
+        self.comboBox_entrada_veiculo.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
 
-        self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00e3o (Opcional)", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Salvar entrada", None))
+        self.input_entrada_obs.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00e3o (Opcional)", None))
+        self.btn_salvar_entrada.setText(QCoreApplication.translate("MainWindow", u"Salvar entrada", None))
         self.btn_historico_obs.setText("")
         self.label_48.setText(QCoreApplication.translate("MainWindow", u"Pesagens pendentes", None))
         ___qtablewidgetitem81 = self.tableWidget_5.horizontalHeaderItem(0)
@@ -6160,7 +6160,7 @@ class Ui_MainWindow(object):
         self.label_65.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_66.setText(QCoreApplication.translate("MainWindow", u"(Sa\u00edda)", None))
         self.label_58.setText(QCoreApplication.translate("MainWindow", u"KG", None))
-        self.comboBox_fornecedor_17.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
+        self.comboBox_pesagem_entrada.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
 
         self.label_63.setText(QCoreApplication.translate("MainWindow", u"Pesagem:", None))
         self.label_59.setText(QCoreApplication.translate("MainWindow", u"Selecione uma pesagem de entrada, e finalize com o peso de sa\u00edda.", None))
