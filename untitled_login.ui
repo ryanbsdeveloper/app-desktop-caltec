@@ -126,8 +126,8 @@ background-color: rgb(255, 255, 255);</string>
           <font>
            <family>Segoe UI</family>
            <pointsize>10</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -180,6 +180,8 @@ QLineEdit{
           <font>
            <family>Segoe UI</family>
            <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -202,8 +204,8 @@ QLineEdit{
           <font>
            <family>Segoe UI</family>
            <pointsize>10</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="cursor">
@@ -339,9 +341,9 @@ QLineEdit{
         <widget class="QPushButton" name="esqueceu_senha_button">
          <property name="geometry">
           <rect>
-           <x>187</x>
+           <x>194</x>
            <y>391</y>
-           <width>82</width>
+           <width>80</width>
            <height>23</height>
           </rect>
          </property>
@@ -349,8 +351,8 @@ QLineEdit{
           <font>
            <family>Segoe UI</family>
            <pointsize>11</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="cursor">
@@ -370,7 +372,7 @@ outline:0</string>
           <rect>
            <x>63</x>
            <y>394</y>
-           <width>127</width>
+           <width>130</width>
            <height>17</height>
           </rect>
          </property>
@@ -378,8 +380,8 @@ outline:0</string>
           <font>
            <family>Segoe UI</family>
            <pointsize>11</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -448,9 +450,9 @@ outline:0</string>
         <widget class="QLabel" name="label_9">
          <property name="geometry">
           <rect>
-           <x>56</x>
+           <x>55</x>
            <y>196</y>
-           <width>251</width>
+           <width>260</width>
            <height>141</height>
           </rect>
          </property>
@@ -458,6 +460,8 @@ outline:0</string>
           <font>
            <family>Segoe UI</family>
            <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -476,18 +480,18 @@ outline:0</string>
         <widget class="QPushButton" name="mais_servicos_button">
          <property name="geometry">
           <rect>
-           <x>98</x>
+           <x>101</x>
            <y>278</y>
            <width>100</width>
-           <height>20</height>
+           <height>18</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Segoe UI</family>
            <pointsize>11</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="cursor">
@@ -506,13 +510,13 @@ outline:0</string>
          <property name="geometry">
           <rect>
            <x>-1</x>
-           <y>-10</y>
+           <y>1</y>
            <width>711</width>
-           <height>54</height>
+           <height>35</height>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(20, 20, 20);
+          <string notr="true">background-color: rgb(15, 15, 15);
 border:0</string>
          </property>
          <property name="frameShape">
@@ -538,7 +542,7 @@ border:0</string>
           <property name="geometry">
            <rect>
             <x>261</x>
-            <y>18</y>
+            <y>3</y>
             <width>200</width>
             <height>30</height>
            </rect>
@@ -560,7 +564,7 @@ border:0</string>
           <property name="geometry">
            <rect>
             <x>647</x>
-            <y>16</y>
+            <y>1</y>
             <width>50</width>
             <height>32</height>
            </rect>
@@ -605,7 +609,7 @@ background-color: rgb(218, 14, 14)}</string>
           <property name="geometry">
            <rect>
             <x>13</x>
-            <y>23</y>
+            <y>7</y>
             <width>25</width>
             <height>20</height>
            </rect>
@@ -635,7 +639,7 @@ background-color: rgb(218, 14, 14)}</string>
           <property name="geometry">
            <rect>
             <x>594</x>
-            <y>16</y>
+            <y>1</y>
             <width>50</width>
             <height>32</height>
            </rect>
@@ -690,6 +694,8 @@ background-color: rgb(43, 43, 43);
           <font>
            <family>Segoe UI</family>
            <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">

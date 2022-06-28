@@ -19,8 +19,6 @@ from models import database
 import resources_rc
 
 # DIALOGs
-
-
 class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
     def __init__(self, parent):
         super(DialogAtualizarNome, self).__init__(parent)
@@ -29,6 +27,7 @@ class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
         self.bt_cancelar.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
+        self.pushButton.clicked.connect(lambda: self.close())
 
 
 class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
@@ -39,6 +38,7 @@ class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
         self.btn_cancelar.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
+        self.pushButton.clicked.connect(lambda: self.close())
 
 
 class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
@@ -49,6 +49,7 @@ class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
         self.bt_cancelar.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
+        self.pushButton.clicked.connect(lambda: self.close())
 
 
 class DialogExcluirConta(QDialog, Ui_ExcluirConta):
@@ -59,6 +60,7 @@ class DialogExcluirConta(QDialog, Ui_ExcluirConta):
         self.nao.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
+        self.pushButton.clicked.connect(lambda: self.close())
 
 
 class DialogSairConta(QDialog, Ui_SairConta):
@@ -68,10 +70,9 @@ class DialogSairConta(QDialog, Ui_SairConta):
         self.nao.clicked.connect(lambda: self.close())
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
-
+        self.pushButton.clicked.connect(lambda: self.close())
 
 #######################################################################
-
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -159,7 +160,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # BUTTONS AVULSAS
         self.btn_peso_manualmente_2.toggled.connect(self.func_peso_manualmente)
         self.btn_historico_obs.clicked.connect(self.animation_obs_avulsas)
-        self.btn_historico_obs_2.clicked.connect(self.animation_obs_avulsas_2)
 
         # FUCTIONS BUTTONS
         self.peso_manualmente_2.textChanged.connect(self.peso_manual)
@@ -361,28 +361,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         height_frame_dados = self.frame_dados_avulsa.height()
         height_frame_obs = self.frame_pendentes.height()
 
-        if height_frame_dados > 210:
+        if height_frame_dados > 200:
             expand_dados = 0
             expand_obs = 220
-            icon18 = QIcon()
-            icon18.addFile(u":/icons/sort-down-solid.svg",
-                           QSize(), QIcon.Normal, QIcon.Off)
-            self.btn_historico_obs.setIcon(icon18)
-            self.btn_historico_obs.setIconSize(QSize(23, 23))
-            self.btn_historico_obs.setAutoRepeatDelay(1)
-            self.btn_historico_obs.setAutoDefault(False)
-            self.btn_historico_obs.setFlat(False)
         else:
             expand_dados = 220
             expand_obs = 0
-            icon18 = QIcon()
-            icon18.addFile(u":/icons/sort-up-solid.svg",
-                           QSize(), QIcon.Normal, QIcon.Off)
-            self.btn_historico_obs.setIcon(icon18)
-            self.btn_historico_obs.setIconSize(QSize(23, 23))
-            self.btn_historico_obs.setAutoRepeatDelay(1)
-            self.btn_historico_obs.setAutoDefault(False)
-            self.btn_historico_obs.setFlat(False)
+
 
         animation_dados = QPropertyAnimation(
             self.frame_dados_avulsa, b'maximumHeight')
@@ -397,45 +382,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         animation_obs.setEndValue(expand_obs)
 
         group = QParallelAnimationGroup(self.frame_dados_avulsa)
-        group.addAnimation(animation_dados)
-        group.addAnimation(animation_obs)
-        group.start(QAbstractAnimation.DeleteWhenStopped)
-
-    def animation_obs_avulsas_2(self):
-        height_frame_dados = self.frame_dados_avulsa_2.height()
-        height_frame_obs = self.frame_obs.height()
-
-        if height_frame_dados > 210:
-            expand_dados = 0
-            expand_obs = 265
-            icon18 = QIcon()
-            icon18.addFile(u":/icons/sort-down-solid.svg",
-                           QSize(), QIcon.Normal, QIcon.Off)
-            self.btn_historico_obs_2.setIcon(icon18)
-            self.btn_historico_obs_2.setIconSize(QSize(23, 23))
-            self.btn_historico_obs_2.setFlat(False)
-        else:
-            expand_dados = 250
-            expand_obs = 0
-            icon18 = QIcon()
-            icon18.addFile(u":/icons/sort-up-solid.svg",
-                           QSize(), QIcon.Normal, QIcon.Off)
-            self.btn_historico_obs_2.setIcon(icon18)
-            self.btn_historico_obs_2.setIconSize(QSize(23, 23))
-            self.btn_historico_obs_2.setFlat(False)
-
-        animation_dados = QPropertyAnimation(
-            self.frame_dados_avulsa_2, b'maximumHeight')
-        animation_dados.setDuration(300)
-        animation_dados.setStartValue(height_frame_dados)
-        animation_dados.setEndValue(expand_dados)
-
-        animation_obs = QPropertyAnimation(self.frame_obs, b'maximumHeight')
-        animation_obs.setDuration(300)
-        animation_obs.setStartValue(height_frame_obs)
-        animation_obs.setEndValue(expand_obs)
-
-        group = QParallelAnimationGroup(self.frame_dados_avulsa_2)
         group.addAnimation(animation_dados)
         group.addAnimation(animation_obs)
         group.start(QAbstractAnimation.DeleteWhenStopped)
