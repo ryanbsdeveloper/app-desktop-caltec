@@ -95,7 +95,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.digite_um_id.hide()
         self.digite_um_id_2.hide()
         self.frame_saida.hide()
-        self.frame_saida_detalhes.hide()
+        self.detalhes_saida()
 
         # MENU TOP
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -753,12 +753,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def detalhes_saida(self):
         pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
 
-        if str(pesagem_entrada) != 'Nenhum':
-            self.frame_saida_detalhes.show()
-        
-        else:
-            self.frame_saida_detalhes.hide()
+        height = self.frame_saida_detalhes.maximumHeight()
 
+        if str(pesagem_entrada) != 'Nenhum':
+            height_extend = 80
+        else:
+            height_extend = 0
+
+        self.animation = QPropertyAnimation(
+            self.frame_saida_detalhes, b'maximumHeight')
+        self.animation.setDuration(300)
+        self.animation.setStartValue(height)
+        self.animation.setEndValue(height_extend)
+        self.animation.start()
+ 
+        
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
         super(LoginWindow, self).__init__()

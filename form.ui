@@ -11039,6 +11039,12 @@ QComboBox QListView{
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
                            <height>80</height>
                           </size>
                          </property>
@@ -11049,7 +11055,7 @@ QComboBox QListView{
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_41">
-                          <item alignment="Qt::AlignLeft">
+                          <item>
                            <widget class="QFrame" name="frame_27">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11097,7 +11103,7 @@ QComboBox QListView{
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignLeft">
+                          <item>
                            <widget class="QFrame" name="frame_49">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11145,7 +11151,7 @@ QComboBox QListView{
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignLeft">
+                          <item>
                            <widget class="QFrame" name="frame_53">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11193,7 +11199,7 @@ QComboBox QListView{
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignLeft">
+                          <item>
                            <widget class="QFrame" name="frame_54">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11241,7 +11247,7 @@ QComboBox QListView{
                             </layout>
                            </widget>
                           </item>
-                          <item alignment="Qt::AlignLeft">
+                          <item>
                            <widget class="QFrame" name="frame_57">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
