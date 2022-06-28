@@ -4948,13 +4948,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_17.addWidget(self.comboBox_pesagem_entrada, 3, 0, 1, 1)
 
-        self.label_63 = QLabel(self.frame_100)
-        self.label_63.setObjectName(u"label_63")
-        self.label_63.setMaximumSize(QSize(16777215, 20))
-        self.label_63.setFont(font5)
-
-        self.gridLayout_17.addWidget(self.label_63, 1, 0, 1, 1)
-
         self.label_59 = QLabel(self.frame_100)
         self.label_59.setObjectName(u"label_59")
         font22 = QFont()
@@ -4969,6 +4962,13 @@ class Ui_MainWindow(object):
         self.label_59.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_17.addWidget(self.label_59, 0, 0, 1, 1)
+
+        self.label_63 = QLabel(self.frame_100)
+        self.label_63.setObjectName(u"label_63")
+        self.label_63.setMaximumSize(QSize(16777215, 20))
+        self.label_63.setFont(font5)
+
+        self.gridLayout_17.addWidget(self.label_63, 1, 0, 1, 1)
 
 
         self.verticalLayout_89.addWidget(self.frame_100, 0, Qt.AlignTop)
@@ -4988,57 +4988,14 @@ class Ui_MainWindow(object):
 
         self.frame_saida_detalhes = QFrame(self.frame_dados_avulsa_3)
         self.frame_saida_detalhes.setObjectName(u"frame_saida_detalhes")
-        self.frame_saida_detalhes.setMinimumSize(QSize(0, 80))
+        self.frame_saida_detalhes.setMinimumSize(QSize(0, 0))
+        self.frame_saida_detalhes.setMaximumSize(QSize(16777215, 80))
         self.frame_saida_detalhes.setFrameShape(QFrame.StyledPanel)
         self.frame_saida_detalhes.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_41 = QHBoxLayout(self.frame_saida_detalhes)
-        self.horizontalLayout_41.setObjectName(u"horizontalLayout_41")
-        self.frame_27 = QFrame(self.frame_saida_detalhes)
-        self.frame_27.setObjectName(u"frame_27")
-        self.frame_27.setFrameShape(QFrame.StyledPanel)
-        self.frame_27.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_42 = QHBoxLayout(self.frame_27)
-        self.horizontalLayout_42.setObjectName(u"horizontalLayout_42")
-        self.segundos_3 = QLabel(self.frame_27)
-        self.segundos_3.setObjectName(u"segundos_3")
-        self.segundos_3.setFont(font5)
-        self.segundos_3.setStyleSheet(u"color: rgb(109, 109, 109);")
-
-        self.horizontalLayout_42.addWidget(self.segundos_3)
-
-        self.text_saida_motorista = QLabel(self.frame_27)
-        self.text_saida_motorista.setObjectName(u"text_saida_motorista")
-        self.text_saida_motorista.setFont(font8)
-        self.text_saida_motorista.setStyleSheet(u"color: rgb(109, 109, 109);")
-
-        self.horizontalLayout_42.addWidget(self.text_saida_motorista)
-
-
-        self.horizontalLayout_41.addWidget(self.frame_27, 0, Qt.AlignLeft)
-
-        self.frame_49 = QFrame(self.frame_saida_detalhes)
-        self.frame_49.setObjectName(u"frame_49")
-        self.frame_49.setFrameShape(QFrame.StyledPanel)
-        self.frame_49.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_43 = QHBoxLayout(self.frame_49)
-        self.horizontalLayout_43.setObjectName(u"horizontalLayout_43")
-        self.segundos_5 = QLabel(self.frame_49)
-        self.segundos_5.setObjectName(u"segundos_5")
-        self.segundos_5.setFont(font5)
-        self.segundos_5.setStyleSheet(u"color: rgb(109, 109, 109);")
-
-        self.horizontalLayout_43.addWidget(self.segundos_5)
-
-        self.text_saida_veiculo = QLabel(self.frame_49)
-        self.text_saida_veiculo.setObjectName(u"text_saida_veiculo")
-        self.text_saida_veiculo.setFont(font8)
-        self.text_saida_veiculo.setStyleSheet(u"color: rgb(109, 109, 109);")
-
-        self.horizontalLayout_43.addWidget(self.text_saida_veiculo)
-
-
-        self.horizontalLayout_41.addWidget(self.frame_49, 0, Qt.AlignLeft)
-
+        self.gridLayout_3 = QGridLayout(self.frame_saida_detalhes)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setHorizontalSpacing(0)
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.frame_53 = QFrame(self.frame_saida_detalhes)
         self.frame_53.setObjectName(u"frame_53")
         self.frame_53.setFrameShape(QFrame.StyledPanel)
@@ -5049,6 +5006,7 @@ class Ui_MainWindow(object):
         self.segundos_7.setObjectName(u"segundos_7")
         self.segundos_7.setFont(font5)
         self.segundos_7.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.segundos_7.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_44.addWidget(self.segundos_7)
 
@@ -5060,7 +5018,31 @@ class Ui_MainWindow(object):
         self.horizontalLayout_44.addWidget(self.text_saida_cliente)
 
 
-        self.horizontalLayout_41.addWidget(self.frame_53, 0, Qt.AlignLeft)
+        self.gridLayout_3.addWidget(self.frame_53, 1, 2, 1, 1)
+
+        self.frame_49 = QFrame(self.frame_saida_detalhes)
+        self.frame_49.setObjectName(u"frame_49")
+        self.frame_49.setFrameShape(QFrame.StyledPanel)
+        self.frame_49.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_43 = QHBoxLayout(self.frame_49)
+        self.horizontalLayout_43.setObjectName(u"horizontalLayout_43")
+        self.segundos_5 = QLabel(self.frame_49)
+        self.segundos_5.setObjectName(u"segundos_5")
+        self.segundos_5.setFont(font5)
+        self.segundos_5.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.segundos_5.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_43.addWidget(self.segundos_5)
+
+        self.text_saida_veiculo = QLabel(self.frame_49)
+        self.text_saida_veiculo.setObjectName(u"text_saida_veiculo")
+        self.text_saida_veiculo.setFont(font8)
+        self.text_saida_veiculo.setStyleSheet(u"color: rgb(109, 109, 109);")
+
+        self.horizontalLayout_43.addWidget(self.text_saida_veiculo)
+
+
+        self.gridLayout_3.addWidget(self.frame_49, 1, 1, 1, 1)
 
         self.frame_54 = QFrame(self.frame_saida_detalhes)
         self.frame_54.setObjectName(u"frame_54")
@@ -5072,6 +5054,7 @@ class Ui_MainWindow(object):
         self.segundos_9.setObjectName(u"segundos_9")
         self.segundos_9.setFont(font5)
         self.segundos_9.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.segundos_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_45.addWidget(self.segundos_9)
 
@@ -5083,7 +5066,31 @@ class Ui_MainWindow(object):
         self.horizontalLayout_45.addWidget(self.text_saida_carga)
 
 
-        self.horizontalLayout_41.addWidget(self.frame_54, 0, Qt.AlignLeft)
+        self.gridLayout_3.addWidget(self.frame_54, 1, 3, 1, 1)
+
+        self.frame_27 = QFrame(self.frame_saida_detalhes)
+        self.frame_27.setObjectName(u"frame_27")
+        self.frame_27.setFrameShape(QFrame.StyledPanel)
+        self.frame_27.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_42 = QHBoxLayout(self.frame_27)
+        self.horizontalLayout_42.setObjectName(u"horizontalLayout_42")
+        self.segundos_3 = QLabel(self.frame_27)
+        self.segundos_3.setObjectName(u"segundos_3")
+        self.segundos_3.setFont(font5)
+        self.segundos_3.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.segundos_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_42.addWidget(self.segundos_3)
+
+        self.text_saida_motorista = QLabel(self.frame_27)
+        self.text_saida_motorista.setObjectName(u"text_saida_motorista")
+        self.text_saida_motorista.setFont(font8)
+        self.text_saida_motorista.setStyleSheet(u"color: rgb(109, 109, 109);")
+
+        self.horizontalLayout_42.addWidget(self.text_saida_motorista)
+
+
+        self.gridLayout_3.addWidget(self.frame_27, 1, 0, 1, 1)
 
         self.frame_57 = QFrame(self.frame_saida_detalhes)
         self.frame_57.setObjectName(u"frame_57")
@@ -5102,11 +5109,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_47 = QHBoxLayout(self.frame_58)
         self.horizontalLayout_47.setSpacing(0)
         self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
-        self.horizontalLayout_47.setContentsMargins(0, -1, -1, -1)
+        self.horizontalLayout_47.setContentsMargins(0, 0, -1, 0)
         self.segundos_11 = QLabel(self.frame_58)
         self.segundos_11.setObjectName(u"segundos_11")
         self.segundos_11.setFont(font5)
         self.segundos_11.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.segundos_11.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_47.addWidget(self.segundos_11)
 
@@ -5114,6 +5122,7 @@ class Ui_MainWindow(object):
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font5)
         self.label_10.setStyleSheet(u"color: rgb(6, 180, 20);")
+        self.label_10.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_47.addWidget(self.label_10)
 
@@ -5121,6 +5130,7 @@ class Ui_MainWindow(object):
         self.label_19.setObjectName(u"label_19")
         self.label_19.setFont(font5)
         self.label_19.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.label_19.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_47.addWidget(self.label_19)
 
@@ -5135,7 +5145,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_46.addWidget(self.text_saida_pesoentrada)
 
 
-        self.horizontalLayout_41.addWidget(self.frame_57, 0, Qt.AlignLeft)
+        self.gridLayout_3.addWidget(self.frame_57, 1, 4, 1, 1)
+
+        self.label_24 = QLabel(self.frame_saida_detalhes)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setFont(font5)
+        self.label_24.setStyleSheet(u"color: rgb(109, 109, 109);")
+        self.label_24.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_3.addWidget(self.label_24, 0, 2, 1, 1)
 
 
         self.verticalLayout_89.addWidget(self.frame_saida_detalhes)
@@ -6310,20 +6328,21 @@ class Ui_MainWindow(object):
         self.comboBox_pesagem_entrada.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
         self.comboBox_pesagem_entrada.setItemText(1, QCoreApplication.translate("MainWindow", u"New Item", None))
 
-        self.label_63.setText(QCoreApplication.translate("MainWindow", u"Pesagem:", None))
         self.label_59.setText(QCoreApplication.translate("MainWindow", u"Selecione uma pesagem de entrada, e finalize com o peso de sa\u00edda.", None))
-        self.segundos_3.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
-        self.text_saida_motorista.setText(QCoreApplication.translate("MainWindow", u"Ryan", None))
-        self.segundos_5.setText(QCoreApplication.translate("MainWindow", u"Ve\u00edculo:", None))
-        self.text_saida_veiculo.setText(QCoreApplication.translate("MainWindow", u"VOLVO", None))
+        self.label_63.setText(QCoreApplication.translate("MainWindow", u"Pesagem:", None))
         self.segundos_7.setText(QCoreApplication.translate("MainWindow", u"Cliente:", None))
         self.text_saida_cliente.setText(QCoreApplication.translate("MainWindow", u"Caltec", None))
+        self.segundos_5.setText(QCoreApplication.translate("MainWindow", u"Ve\u00edculo:", None))
+        self.text_saida_veiculo.setText(QCoreApplication.translate("MainWindow", u"VOLVO", None))
         self.segundos_9.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
         self.text_saida_carga.setText(QCoreApplication.translate("MainWindow", u"Whisky", None))
+        self.segundos_3.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
+        self.text_saida_motorista.setText(QCoreApplication.translate("MainWindow", u"Ryan", None))
         self.segundos_11.setText(QCoreApplication.translate("MainWindow", u"Peso ", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"(Entrada)", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u":", None))
         self.text_saida_pesoentrada.setText(QCoreApplication.translate("MainWindow", u"4000", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"Informa\u00e7\u00f5es da pesagem de entrada", None))
         self.btn_finalizar_pesagem.setText(QCoreApplication.translate("MainWindow", u"Finalizar pesagem", None))
         self.radioButton_3.setText(QCoreApplication.translate("MainWindow", u"Imprimir pesagem", None))
         self.label_64.setText(QCoreApplication.translate("MainWindow", u"Pesagens pendentes", None))

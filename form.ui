@@ -10951,27 +10951,6 @@ QComboBox QListView{
                             </item>
                            </widget>
                           </item>
-                          <item row="1" column="0">
-                           <widget class="QLabel" name="label_63">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Segoe UI</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Pesagem:</string>
-                            </property>
-                           </widget>
-                          </item>
                           <item row="0" column="0">
                            <widget class="QLabel" name="label_59">
                             <property name="font">
@@ -10990,6 +10969,27 @@ QComboBox QListView{
                             </property>
                             <property name="alignment">
                              <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_63">
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Segoe UI</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Pesagem:</string>
                             </property>
                            </widget>
                           </item>
@@ -11054,104 +11054,23 @@ QComboBox QListView{
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_41">
-                          <item>
-                           <widget class="QFrame" name="frame_27">
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_42">
-                             <item>
-                              <widget class="QLabel" name="segundos_3">
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">color: rgb(109, 109, 109);</string>
-                               </property>
-                               <property name="text">
-                                <string>Motorista:</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QLabel" name="text_saida_motorista">
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>50</weight>
-                                 <bold>false</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">color: rgb(109, 109, 109);</string>
-                               </property>
-                               <property name="text">
-                                <string>Ryan</string>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="frame_49">
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_43">
-                             <item>
-                              <widget class="QLabel" name="segundos_5">
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">color: rgb(109, 109, 109);</string>
-                               </property>
-                               <property name="text">
-                                <string>Veículo:</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QLabel" name="text_saida_veiculo">
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>50</weight>
-                                 <bold>false</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">color: rgb(109, 109, 109);</string>
-                               </property>
-                               <property name="text">
-                                <string>VOLVO</string>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
+                         <layout class="QGridLayout" name="gridLayout_3">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="horizontalSpacing">
+                           <number>0</number>
+                          </property>
+                          <item row="1" column="2">
                            <widget class="QFrame" name="frame_53">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11176,6 +11095,9 @@ QComboBox QListView{
                                <property name="text">
                                 <string>Cliente:</string>
                                </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
                               </widget>
                              </item>
                              <item>
@@ -11199,7 +11121,58 @@ QComboBox QListView{
                             </layout>
                            </widget>
                           </item>
-                          <item>
+                          <item row="1" column="1">
+                           <widget class="QFrame" name="frame_49">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_43">
+                             <item>
+                              <widget class="QLabel" name="segundos_5">
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(109, 109, 109);</string>
+                               </property>
+                               <property name="text">
+                                <string>Veículo:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="text_saida_veiculo">
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>50</weight>
+                                 <bold>false</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(109, 109, 109);</string>
+                               </property>
+                               <property name="text">
+                                <string>VOLVO</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item row="1" column="3">
                            <widget class="QFrame" name="frame_54">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11224,6 +11197,9 @@ QComboBox QListView{
                                <property name="text">
                                 <string>Carga:</string>
                                </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
                               </widget>
                              </item>
                              <item>
@@ -11247,7 +11223,58 @@ QComboBox QListView{
                             </layout>
                            </widget>
                           </item>
-                          <item>
+                          <item row="1" column="0">
+                           <widget class="QFrame" name="frame_27">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_42">
+                             <item>
+                              <widget class="QLabel" name="segundos_3">
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(109, 109, 109);</string>
+                               </property>
+                               <property name="text">
+                                <string>Motorista:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="text_saida_motorista">
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>50</weight>
+                                 <bold>false</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(109, 109, 109);</string>
+                               </property>
+                               <property name="text">
+                                <string>Ryan</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item row="1" column="4">
                            <widget class="QFrame" name="frame_57">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -11279,6 +11306,12 @@ QComboBox QListView{
                                 <property name="leftMargin">
                                  <number>0</number>
                                 </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
                                 <item>
                                  <widget class="QLabel" name="segundos_11">
                                   <property name="font">
@@ -11294,6 +11327,9 @@ QComboBox QListView{
                                   </property>
                                   <property name="text">
                                    <string>Peso </string>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                                   </property>
                                  </widget>
                                 </item>
@@ -11313,6 +11349,9 @@ QComboBox QListView{
                                   <property name="text">
                                    <string>(Entrada)</string>
                                   </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                  </property>
                                  </widget>
                                 </item>
                                 <item>
@@ -11330,6 +11369,9 @@ QComboBox QListView{
                                   </property>
                                   <property name="text">
                                    <string>:</string>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                                   </property>
                                  </widget>
                                 </item>
@@ -11355,6 +11397,27 @@ QComboBox QListView{
                               </widget>
                              </item>
                             </layout>
+                           </widget>
+                          </item>
+                          <item row="0" column="2">
+                           <widget class="QLabel" name="label_24">
+                            <property name="font">
+                             <font>
+                              <family>Segoe UI</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(109, 109, 109);</string>
+                            </property>
+                            <property name="text">
+                             <string>Informações da pesagem de entrada</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
                            </widget>
                           </item>
                          </layout>
