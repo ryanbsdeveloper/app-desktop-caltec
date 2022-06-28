@@ -8422,6 +8422,9 @@ QLineEdit:focus{
                              <enum>QFrame::Raised</enum>
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_24">
+                             <property name="topMargin">
+                              <number>20</number>
+                             </property>
                              <item>
                               <widget class="QPushButton" name="btn_fazer_pesagem_avulsa">
                                <property name="minimumSize">
@@ -9904,6 +9907,9 @@ QLineEdit:focus{
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_21">
+                          <property name="topMargin">
+                           <number>20</number>
+                          </property>
                           <item>
                            <widget class="QPushButton" name="btn_salvar_entrada">
                             <property name="minimumSize">
