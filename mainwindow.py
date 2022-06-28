@@ -363,9 +363,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         if height_frame_dados > 200:
             expand_dados = 0
-            expand_obs = 220
+            expand_obs = 250
         else:
-            expand_dados = 220
+            expand_dados = 250
             expand_obs = 0
 
 

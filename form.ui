@@ -1821,7 +1821,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>6</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2871,14 +2871,14 @@ QPushButton:hover{
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton{
-border:1px solid red;
-padding:5px
+                    <string notr="true">
+QPushButton{
+border: 1px solid rgb(255, 33, 33);
+padding:5px;
+
 }
-
 QPushButton:hover{
-
-	background-color: rgb(255, 135, 135);
+color:rgb(255, 33, 33)
 }</string>
                    </property>
                    <property name="text">
@@ -4183,14 +4183,14 @@ QPushButton:hover{
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">QPushButton{
-border:1px solid red;
-padding:5px
+                    <string notr="true">
+QPushButton{
+border: 1px solid rgb(255, 33, 33);
+padding:5px;
+
 }
-
 QPushButton:hover{
-
-	background-color: rgb(255, 135, 135);
+color:rgb(255, 33, 33)
 }</string>
                    </property>
                    <property name="text">
@@ -4678,7 +4678,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>NOME</string>
+                             <string>Nome</string>
                             </property>
                            </widget>
                           </item>
@@ -4881,7 +4881,7 @@ border:1px solid rgb(67, 202, 0)
 }</string>
                             </property>
                             <property name="placeholderText">
-                             <string>ENDEREÇO</string>
+                             <string>Endereço</string>
                             </property>
                            </widget>
                           </item>
@@ -4954,7 +4954,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>TELEFONE</string>
+                             <string>Telefone</string>
                             </property>
                            </widget>
                           </item>
@@ -5111,14 +5111,14 @@ background-color: rgb(43, 43, 43);</string>
                        <cursorShape>PointingHandCursor</cursorShape>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QPushButton{
-border:1px solid red;
-padding:5px
+                       <string notr="true">
+QPushButton{
+border: 1px solid rgb(255, 33, 33);
+padding:5px;
+
 }
-
 QPushButton:hover{
-
-	background-color: rgb(255, 135, 135);
+color:rgb(255, 33, 33)
 }</string>
                       </property>
                       <property name="text">
@@ -5223,11 +5223,6 @@ QScrollBar::add-line:horizontal {
                       <attribute name="horizontalHeaderStretchLastSection">
                        <bool>true</bool>
                       </attribute>
-                      <row>
-                       <property name="text">
-                        <string>1</string>
-                       </property>
-                      </row>
                       <column>
                        <property name="text">
                         <string>EXCLUIR</string>
@@ -5268,44 +5263,6 @@ QScrollBar::add-line:horizontal {
                         <string>ENDEREÇO</string>
                        </property>
                       </column>
-                      <item row="0" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checkState">
-                        <enum>Unchecked</enum>
-                       </property>
-                      </item>
-                      <item row="0" column="1">
-                       <property name="text">
-                        <string>Caltec</string>
-                       </property>
-                      </item>
-                      <item row="0" column="2">
-                       <property name="text">
-                        <string>854.745.788-52</string>
-                       </property>
-                      </item>
-                      <item row="0" column="3">
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                      </item>
-                      <item row="0" column="4">
-                       <property name="text">
-                        <string>11 95245-5245</string>
-                       </property>
-                      </item>
-                      <item row="0" column="5">
-                       <property name="text">
-                        <string>07159540</string>
-                       </property>
-                      </item>
-                      <item row="0" column="6">
-                       <property name="text">
-                        <string>Agua azul, Rua napoles n°18</string>
-                       </property>
-                      </item>
                      </widget>
                     </item>
                    </layout>
@@ -5654,7 +5611,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>PROPRIETÁRIO</string>
+                             <string>Proprietário</string>
                             </property>
                            </widget>
                           </item>
@@ -5714,7 +5671,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>MODELO</string>
+                             <string>Modelo</string>
                             </property>
                            </widget>
                           </item>
@@ -5774,7 +5731,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>PLACA</string>
+                             <string>Placa</string>
                             </property>
                            </widget>
                           </item>
@@ -6078,14 +6035,14 @@ background-color: rgb(43, 43, 43);</string>
                        <cursorShape>PointingHandCursor</cursorShape>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QPushButton{
-border:1px solid red;
-padding:5px
+                       <string notr="true">
+QPushButton{
+border: 1px solid rgb(255, 33, 33);
+padding:5px;
+
 }
-
 QPushButton:hover{
-
-	background-color: rgb(255, 135, 135);
+color:rgb(255, 33, 33)
 }</string>
                       </property>
                       <property name="text">
@@ -6190,16 +6147,6 @@ QScrollBar::add-line:horizontal {
                       <attribute name="horizontalHeaderStretchLastSection">
                        <bool>true</bool>
                       </attribute>
-                      <row>
-                       <property name="text">
-                        <string>1</string>
-                       </property>
-                      </row>
-                      <row>
-                       <property name="text">
-                        <string>2</string>
-                       </property>
-                      </row>
                       <column>
                        <property name="text">
                         <string>EXCLUIR</string>
@@ -6230,62 +6177,6 @@ QScrollBar::add-line:horizontal {
                         <string>CARGA</string>
                        </property>
                       </column>
-                      <item row="0" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checkState">
-                        <enum>Unchecked</enum>
-                       </property>
-                      </item>
-                      <item row="0" column="1">
-                       <property name="text">
-                        <string>546GHY</string>
-                       </property>
-                      </item>
-                      <item row="0" column="2">
-                       <property name="text">
-                        <string>Alberto nunes</string>
-                       </property>
-                      </item>
-                      <item row="0" column="3">
-                       <property name="text">
-                        <string>VOLVO</string>
-                       </property>
-                      </item>
-                      <item row="0" column="4">
-                       <property name="text">
-                        <string>Whisky</string>
-                       </property>
-                      </item>
-                      <item row="1" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checkState">
-                        <enum>Unchecked</enum>
-                       </property>
-                      </item>
-                      <item row="1" column="1">
-                       <property name="text">
-                        <string>852IKM</string>
-                       </property>
-                      </item>
-                      <item row="1" column="2">
-                       <property name="text">
-                        <string>Alberto nunes</string>
-                       </property>
-                      </item>
-                      <item row="1" column="3">
-                       <property name="text">
-                        <string>NISSAN</string>
-                       </property>
-                      </item>
-                      <item row="1" column="4">
-                       <property name="text">
-                        <string>Whisky</string>
-                       </property>
-                      </item>
                      </widget>
                     </item>
                    </layout>
@@ -6643,7 +6534,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>NOME</string>
+                             <string>Nome</string>
                             </property>
                            </widget>
                           </item>
@@ -6700,7 +6591,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>PREÇO UNITÁRIO (OPCIONAL)</string>
+                             <string>Preço unitário (OPCIONAL)</string>
                             </property>
                            </widget>
                           </item>
@@ -6778,7 +6669,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>DENSIDADE (OPCIONAL)</string>
+                             <string>Densidade (OPCIONAL)</string>
                             </property>
                            </widget>
                           </item>
@@ -6856,7 +6747,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>EMBALAGEM (OPCIONAL)</string>
+                             <string>Embalagem (OPCIONAL)</string>
                             </property>
                            </widget>
                           </item>
@@ -6929,7 +6820,7 @@ border:1px solid rgb(67, 202, 0)
                              <enum>QLineEdit::Normal</enum>
                             </property>
                             <property name="placeholderText">
-                             <string>DESCONTO (OPCIONAL)</string>
+                             <string>Desconto (OPCIONAL)</string>
                             </property>
                            </widget>
                           </item>
@@ -7114,14 +7005,14 @@ background-color: rgb(43, 43, 43);</string>
                        <cursorShape>PointingHandCursor</cursorShape>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QPushButton{
-border:1px solid red;
-padding:5px
+                       <string notr="true">
+QPushButton{
+border: 1px solid rgb(255, 33, 33);
+padding:5px;
+
 }
-
 QPushButton:hover{
-
-	background-color: rgb(255, 135, 135);
+color:rgb(255, 33, 33)
 }</string>
                       </property>
                       <property name="text">
@@ -7229,11 +7120,6 @@ QScrollBar::add-line:horizontal {
                       <attribute name="horizontalHeaderStretchLastSection">
                        <bool>true</bool>
                       </attribute>
-                      <row>
-                       <property name="text">
-                        <string>1</string>
-                       </property>
-                      </row>
                       <column>
                        <property name="text">
                         <string>EXCLUIR</string>
@@ -7269,39 +7155,6 @@ QScrollBar::add-line:horizontal {
                         <string>DESCONTO</string>
                        </property>
                       </column>
-                      <item row="0" column="0">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checkState">
-                        <enum>Unchecked</enum>
-                       </property>
-                      </item>
-                      <item row="0" column="1">
-                       <property name="text">
-                        <string>Whisky</string>
-                       </property>
-                      </item>
-                      <item row="0" column="2">
-                       <property name="text">
-                        <string>150</string>
-                       </property>
-                      </item>
-                      <item row="0" column="3">
-                       <property name="text">
-                        <string>0</string>
-                       </property>
-                      </item>
-                      <item row="0" column="4">
-                       <property name="text">
-                        <string>0100</string>
-                       </property>
-                      </item>
-                      <item row="0" column="5">
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                      </item>
                      </widget>
                     </item>
                    </layout>
@@ -7794,8 +7647,8 @@ background-color: rgb(255, 255, 255);
                                 <font>
                                  <family>Segoe UI</family>
                                  <pointsize>11</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
+                                 <weight>50</weight>
+                                 <bold>false</bold>
                                 </font>
                                </property>
                                <property name="cursor">
@@ -8485,8 +8338,8 @@ background-color: rgb(5, 161, 15);
                                 <font>
                                  <family>Segoe UI</family>
                                  <pointsize>11</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
+                                 <weight>50</weight>
+                                 <bold>false</bold>
                                 </font>
                                </property>
                                <property name="styleSheet">
@@ -9318,6 +9171,9 @@ background-color: rgb(255, 255, 255);</string>
                     <property name="spacing">
                      <number>0</number>
                     </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
                     <property name="bottomMargin">
                      <number>0</number>
                     </property>
@@ -9332,7 +9188,7 @@ background-color: rgb(255, 255, 255);</string>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>220</height>
+                        <height>250</height>
                        </size>
                       </property>
                       <property name="font">
@@ -10161,7 +10017,74 @@ background-color: rgb(60, 60, 60);
                                 <string notr="true">color: rgb(255, 255, 255);</string>
                                </property>
                                <property name="text">
-                                <string>Pendentes</string>
+                                <string>Realizadas</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_26">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_41">
+                             <property name="spacing">
+                              <number>0</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>5</number>
+                             </property>
+                             <item alignment="Qt::AlignRight">
+                              <widget class="QPushButton" name="pushButton_2">
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>10</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="cursor">
+                                <cursorShape>PointingHandCursor</cursorShape>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">
+QPushButton{
+border: 1px solid rgb(255, 33, 33);
+padding:5px;
+color:white;
+
+}
+QPushButton:hover{
+color:rgb(255, 33, 33)
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Remover pesagem(s) Selecionada(s)</string>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="Resources/resources.qrc">
+                                 <normaloff>:/icons/trash-can-solid-white.svg</normaloff>:/icons/trash-can-solid-white.svg</iconset>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>19</width>
+                                 <height>19</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
@@ -10297,6 +10220,19 @@ QScrollBar::add-line:horizontal {
                             <attribute name="verticalHeaderVisible">
                              <bool>false</bool>
                             </attribute>
+                            <column>
+                             <property name="text">
+                              <string>Excluir</string>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>Segoe UI</family>
+                               <pointsize>10</pointsize>
+                               <weight>75</weight>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                            </column>
                             <column>
                              <property name="text">
                               <string>ID</string>
@@ -11544,8 +11480,8 @@ background-color: rgb(5, 161, 15);
                              <font>
                               <family>Segoe UI</family>
                               <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
+                              <weight>50</weight>
+                              <bold>false</bold>
                              </font>
                             </property>
                             <property name="styleSheet">
