@@ -12,8 +12,11 @@ BASE_DIR = os.path.dirname(__file__)
 
 class DB():
     def __init__(self) -> None:
-        self.con = psycopg2.connect(host='localhost',
-                                    database='caltecbalancas', user='postgres', password='842684265santos')
+        self.con = psycopg2.connect(host='caltec.c4qq48rdfit7.us-east-1.rds.amazonaws.com',
+                                    database='ryanl',
+                                    port='5433', 
+                                    user='ryanl', 
+                                    password='842684265')
         self.cur = self.con.cursor()
 
     def user_log(self, email, senha):
@@ -63,7 +66,11 @@ class DBLocal():
                     models.add_user(id_cloud, nome_empresa, e_mail,
                                     whatsapp, senha, licenca, max_pesagem)
 
+    def add_veiculo(self, id_user_local, proprietario, modelo, placa, produto):
+        SQL = 'INSERT'
+
+
 
 if __name__ == '__main__':
-    db = DBLocal()
-    print(db.list_user_local())
+    db = DB()
+    print(db.list_users())
