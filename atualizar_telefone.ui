@@ -182,7 +182,7 @@
            <x>1</x>
            <y>51</y>
            <width>390</width>
-           <height>155</height>
+           <height>160</height>
           </rect>
          </property>
          <property name="minimumSize">
@@ -286,6 +286,8 @@
                    <font>
                     <family>Segoe UI</family>
                     <pointsize>11</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
@@ -349,8 +351,8 @@
                 <font>
                  <family>Segoe UI</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
+                 <weight>50</weight>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="text">
@@ -391,6 +393,8 @@ border:1px solid rgb(67, 202, 0)
              <font>
               <family>Segoe UI</family>
               <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">

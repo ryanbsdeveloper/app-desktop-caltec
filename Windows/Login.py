@@ -224,7 +224,7 @@ class Ui_Login_Widget(object):
         self.label_11.setStyleSheet(u"color:white")
         self.btn_close_windows = QPushButton(self.frame_2)
         self.btn_close_windows.setObjectName(u"btn_close_windows")
-        self.btn_close_windows.setGeometry(QRect(647, 1, 50, 32))
+        self.btn_close_windows.setGeometry(QRect(649, 1, 50, 32))
         self.btn_close_windows.setMinimumSize(QSize(50, 32))
         self.btn_close_windows.setMaximumSize(QSize(50, 32))
         font8 = QFont()

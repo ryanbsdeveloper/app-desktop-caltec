@@ -8,14 +8,12 @@ import models
 BASE_DIR = os.path.dirname(__file__)
 
 #Database in cloud
-
-
 class DB():
     def __init__(self) -> None:
-        self.con = psycopg2.connect(host='caltec.c4qq48rdfit7.us-east-1.rds.amazonaws.com',
-                                    database='ryanl',
-                                    port='5433', 
-                                    user='ryanl', 
+        self.con = psycopg2.connect(host='mydbcaltec.c4qq48rdfit7.us-east-1.rds.amazonaws.com',
+                                    database='caltecdatabase',
+                                    port='5432', 
+                                    user='postgres', 
                                     password='842684265')
         self.cur = self.con.cursor()
 
@@ -41,7 +39,7 @@ class DBLocal():
     def __init__(self) -> None:
         self.con = sqlite3.connect(f'{BASE_DIR}/database.db')
         self.cur = self.con.cursor()
-        self.db_cloud = DB()
+        # self.db_cloud = DB()
 
     def list_user_local(self):
         lista = []
@@ -66,11 +64,7 @@ class DBLocal():
                     models.add_user(id_cloud, nome_empresa, e_mail,
                                     whatsapp, senha, licenca, max_pesagem)
 
-    def add_veiculo(self, id_user_local, proprietario, modelo, placa, produto):
-        SQL = 'INSERT'
-
-
 
 if __name__ == '__main__':
-    db = DB()
-    print(db.list_users())
+    db = DBLocal()
+    print(db.list_user_local())

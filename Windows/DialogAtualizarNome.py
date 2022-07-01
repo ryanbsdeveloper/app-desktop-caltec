@@ -122,7 +122,7 @@ class Ui_AtualizarNome(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.label_2 = QLabel(self.frame_4)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setFont(font3)
+        self.label_2.setFont(font1)
 
         self.verticalLayout_2.addWidget(self.label_2)
 
@@ -137,8 +137,8 @@ class Ui_AtualizarNome(object):
         font4 = QFont()
         font4.setFamily(u"Segoe UI")
         font4.setPointSize(10)
-        font4.setBold(True)
-        font4.setWeight(75)
+        font4.setBold(False)
+        font4.setWeight(50)
         self.label_3.setFont(font4)
 
         self.verticalLayout_13.addWidget(self.label_3)
@@ -150,7 +150,7 @@ class Ui_AtualizarNome(object):
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
-        self.input_novo_nome.setEchoMode(QLineEdit.Password)
+        self.input_novo_nome.setEchoMode(QLineEdit.Normal)
 
         self.verticalLayout_13.addWidget(self.input_novo_nome)
 
@@ -159,6 +159,8 @@ class Ui_AtualizarNome(object):
         font5 = QFont()
         font5.setFamily(u"Segoe UI")
         font5.setPointSize(10)
+        font5.setBold(True)
+        font5.setWeight(75)
         self.text_info.setFont(font5)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
         self.text_info.setAlignment(Qt.AlignCenter)
@@ -175,7 +177,10 @@ class Ui_AtualizarNome(object):
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.bt_cancelar = QPushButton(self.frame_32)
         self.bt_cancelar.setObjectName(u"bt_cancelar")
-        self.bt_cancelar.setFont(font5)
+        font6 = QFont()
+        font6.setFamily(u"Segoe UI")
+        font6.setPointSize(10)
+        self.bt_cancelar.setFont(font6)
         self.bt_cancelar.setCursor(QCursor(Qt.PointingHandCursor))
         self.bt_cancelar.setStyleSheet(u"\n"
 "QPushButton{border:1px solid;\n"
@@ -189,7 +194,7 @@ class Ui_AtualizarNome(object):
 
         self.btn_alterar = QPushButton(self.frame_32)
         self.btn_alterar.setObjectName(u"btn_alterar")
-        self.btn_alterar.setFont(font5)
+        self.btn_alterar.setFont(font6)
         self.btn_alterar.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_alterar.setStyleSheet(u"\n"
 "\n"

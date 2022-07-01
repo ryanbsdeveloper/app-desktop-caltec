@@ -44,6 +44,10 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">		outline:0px
+</string>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <property name="leftMargin">
      <number>0</number>
@@ -610,6 +614,7 @@ color:white;
                     <pointsize>10</pointsize>
                     <weight>50</weight>
                     <bold>false</bold>
+                    <kerning>false</kerning>
                    </font>
                   </property>
                   <property name="cursor">
@@ -1146,7 +1151,8 @@ QPushButton:hover{
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(15, 15, 15);</string>
+       <string notr="true">background-color: rgb(15, 15, 15);
+</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -1210,7 +1216,7 @@ QPushButton:hover{
             <property name="maximumSize">
              <size>
               <width>25</width>
-              <height>20</height>
+              <height>21</height>
              </size>
             </property>
             <property name="font">
@@ -1226,6 +1232,9 @@ QPushButton:hover{
             </property>
             <property name="scaledContents">
              <bool>true</bool>
+            </property>
+            <property name="buddy">
+             <cstring>pushButton</cstring>
             </property>
            </widget>
           </item>
@@ -1287,6 +1296,9 @@ background-color: rgb(43, 43, 43);
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
+         <property name="buddy">
+          <cstring>btn_minimize_window</cstring>
+         </property>
         </widget>
        </item>
        <item alignment="Qt::AlignRight">
@@ -1306,23 +1318,23 @@ background-color: rgb(43, 43, 43);
           <string notr="true">border:0</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_9">
           <property name="spacing">
-           <number>0</number>
+           <number>3</number>
           </property>
           <property name="leftMargin">
            <number>0</number>
           </property>
           <property name="topMargin">
-           <number>0</number>
+           <number>1</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>1</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
@@ -1529,6 +1541,111 @@ background-color: rgb(218, 14, 14)}</string>
          </layout>
         </widget>
        </item>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QFrame" name="frame_59">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_48">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>56</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+border:0</string>
+            </property>
+            <property name="text">
+             <string>Status balança:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="conexao_label">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>34</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+border:0;
+	color: rgb(255, 80, 80);
+}</string>
+            </property>
+            <property name="text">
+             <string>Ainda sem conexão</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/resources.qrc">
+              <normaloff>:/icons/plug-circle-exclamation-solid.svg</normaloff>
+              <disabledoff>:/icons/plug-circle-exclamation-solid.svg</disabledoff>
+              <disabledon>:/icons/plug-circle-exclamation-solid.svg</disabledon>
+              <activeoff>:/icons/plug-solid (1).svg</activeoff>
+              <activeon>:/icons/plug-solid (1).svg</activeon>:/icons/plug-circle-exclamation-solid.svg</iconset>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
        <item alignment="Qt::AlignRight">
         <widget class="QFrame" name="conteudo_top_frame">
          <property name="minimumSize">
@@ -1568,120 +1685,22 @@ background-color: rgb(218, 14, 14)}</string>
            <number>20</number>
           </property>
           <property name="bottomMargin">
-           <number>15</number>
-          </property>
-          <property name="horizontalSpacing">
-           <number>15</number>
-          </property>
-          <property name="verticalSpacing">
            <number>0</number>
           </property>
-          <item row="1" column="1">
-           <widget class="QPushButton" name="conexao_label">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>150</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>ArrowCursor</cursorShape>
-            </property>
-            <property name="mouseTracking">
-             <bool>false</bool>
-            </property>
-            <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
-            </property>
-            <property name="acceptDrops">
-             <bool>false</bool>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border:1px solid white;
-	color: rgb(255, 80, 80);
-	border-radius:5px;
-	background-color: rgb(48, 48, 48);
-}</string>
-            </property>
-            <property name="text">
-             <string>Sem Conexão</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Resources/resources.qrc">
-              <normaloff>:/icons/plug-circle-exclamation-solid.svg</normaloff>
-              <disabledoff>:/icons/plug-circle-exclamation-solid.svg</disabledoff>
-              <disabledon>:/icons/plug-circle-exclamation-solid.svg</disabledon>
-              <activeoff>:/icons/plug-solid (1).svg</activeoff>
-              <activeon>:/icons/plug-solid (1).svg</activeon>:/icons/plug-circle-exclamation-solid.svg</iconset>
-            </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-            <property name="flat">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="label_2">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>Segoe UI</family>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);
-border:0</string>
-            </property>
-            <property name="text">
-             <string>Status Balança:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="1" column="0" alignment="Qt::AlignVCenter">
            <widget class="QPushButton" name="btn_virepro_button">
             <property name="minimumSize">
              <size>
-              <width>210</width>
+              <width>240</width>
               <height>45</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>170</width>
+              <width>200</width>
               <height>16777215</height>
              </size>
             </property>
@@ -3548,6 +3567,9 @@ QDateEdit::up-arrow{
                    <property name="text">
                     <string/>
                    </property>
+                   <property name="buddy">
+                    <cstring>data_depois_de_2</cstring>
+                   </property>
                   </widget>
                  </item>
                  <item row="1" column="1" alignment="Qt::AlignBottom">
@@ -4928,6 +4950,9 @@ border:1px solid rgb(67, 202, 0)
                             <property name="text">
                              <string>+55</string>
                             </property>
+                            <property name="buddy">
+                             <cstring>input_clientes_telefone</cstring>
+                            </property>
                            </widget>
                           </item>
                           <item>
@@ -5844,11 +5869,6 @@ QComboBox QListView{
                               <string>Nenhum</string>
                              </property>
                             </item>
-                            <item>
-                             <property name="text">
-                              <string>Whisky</string>
-                             </property>
-                            </item>
                            </widget>
                           </item>
                           <item row="0" column="0" alignment="Qt::AlignTop">
@@ -6520,6 +6540,12 @@ background-color: rgb(43, 43, 43);</string>
                               <bold>false</bold>
                              </font>
                             </property>
+                            <property name="mouseTracking">
+                             <bool>false</bool>
+                            </property>
+                            <property name="acceptDrops">
+                             <bool>false</bool>
+                            </property>
                             <property name="styleSheet">
                              <string notr="true">QLineEdit{padding:3px;border:1px solid;background-color: rgb(243, 243, 243);}
 
@@ -6576,6 +6602,12 @@ border:1px solid rgb(67, 202, 0)
                               <weight>50</weight>
                               <bold>false</bold>
                              </font>
+                            </property>
+                            <property name="mouseTracking">
+                             <bool>false</bool>
+                            </property>
+                            <property name="acceptDrops">
+                             <bool>false</bool>
                             </property>
                             <property name="styleSheet">
                              <string notr="true">QLineEdit{padding:3px;border:1px solid;background-color: rgb(243, 243, 243);}
@@ -6655,6 +6687,12 @@ border:1px solid rgb(67, 202, 0)
                               <bold>false</bold>
                              </font>
                             </property>
+                            <property name="mouseTracking">
+                             <bool>false</bool>
+                            </property>
+                            <property name="acceptDrops">
+                             <bool>false</bool>
+                            </property>
                             <property name="styleSheet">
                              <string notr="true">QLineEdit{padding:3px;border:1px solid;background-color: rgb(243, 243, 243);}
 
@@ -6733,6 +6771,12 @@ border:1px solid rgb(67, 202, 0)
                               <bold>false</bold>
                              </font>
                             </property>
+                            <property name="mouseTracking">
+                             <bool>false</bool>
+                            </property>
+                            <property name="acceptDrops">
+                             <bool>false</bool>
+                            </property>
                             <property name="styleSheet">
                              <string notr="true">QLineEdit{padding:3px;border:1px solid;background-color: rgb(243, 243, 243);}
 
@@ -6806,6 +6850,12 @@ border:1px solid rgb(67, 202, 0)
                               <bold>false</bold>
                              </font>
                             </property>
+                            <property name="mouseTracking">
+                             <bool>false</bool>
+                            </property>
+                            <property name="acceptDrops">
+                             <bool>false</bool>
+                            </property>
                             <property name="styleSheet">
                              <string notr="true">QLineEdit{padding:3px;border:1px solid;background-color: rgb(243, 243, 243);}
 
@@ -6857,6 +6907,12 @@ border:1px solid rgb(67, 202, 0)
                          </property>
                          <property name="cursor">
                           <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="mouseTracking">
+                          <bool>false</bool>
+                         </property>
+                         <property name="acceptDrops">
+                          <bool>false</bool>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">QPushButton{
@@ -9779,12 +9835,10 @@ QLineEdit:focus{
                              </font>
                             </property>
                             <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
+                             <cursorShape>ForbiddenCursor</cursorShape>
                             </property>
                             <property name="styleSheet">
-                             <string notr="true">
-
-QPushButton{
+                             <string notr="true">QPushButton{
 background-color: rgb(6, 180, 20);
 color: rgb(255, 255, 255);
 border-radius:10px
@@ -11454,7 +11508,7 @@ QComboBox QListView{
                              </font>
                             </property>
                             <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
+                             <cursorShape>ForbiddenCursor</cursorShape>
                             </property>
                             <property name="styleSheet">
                              <string notr="true">
@@ -12195,6 +12249,9 @@ border:0</string>
                             <property name="text">
                              <string>rbsservices</string>
                             </property>
+                            <property name="buddy">
+                             <cstring>btn_alterar_nome</cstring>
+                            </property>
                            </widget>
                           </item>
                           <item row="1" column="1" alignment="Qt::AlignRight">
@@ -12360,6 +12417,9 @@ QPushButton:hover{
                             <property name="text">
                              <string>11990132993</string>
                             </property>
+                            <property name="buddy">
+                             <cstring>btn_alterar_telefone</cstring>
+                            </property>
                            </widget>
                           </item>
                           <item row="1" column="1" alignment="Qt::AlignRight">
@@ -12508,6 +12568,9 @@ QPushButton:hover{
                             </property>
                             <property name="text">
                              <string>Gratuita</string>
+                            </property>
+                            <property name="buddy">
+                             <cstring>btn_atualizar_licenca</cstring>
                             </property>
                            </widget>
                           </item>

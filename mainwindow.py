@@ -1,7 +1,8 @@
+from pyexpat import model
 import sys
 from time import sleep
 
-from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog
+from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog, QTableWidgetItem
 from PySide2.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup, QAbstractAnimation, QSize, QTime, QTimer, QDate
 from PySide2.QtGui import QRegion, QIcon, QFont, QPixmap
 
@@ -15,10 +16,12 @@ from Windows.DialogAtualizarTelefone import Ui_AtualizarTelefone
 from Windows.DialogExcluirConta import Ui_ExcluirConta
 from Windows.DialogSairConta import Ui_SairConta
 from utils import utils
-from models import database
+from models import database, models
 import resources_rc
 
 # DIALOGs
+
+
 class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
     def __init__(self, parent):
         super(DialogAtualizarNome, self).__init__(parent)
@@ -28,8 +31,17 @@ class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.pushButton.clicked.connect(lambda: self.close())
+        self.btn_alterar.clicked.connect(self.att_nome)
 
+    def att_nome(self):
+        nome = self.input_novo_nome.text()
+        if len(nome) > 6:
+            models.att_user_nome(nome)
+            self.close()
+        else:
+            self.text_info.show()
 
+    
 class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
     def __init__(self, parent):
         super(DialogAtualizarSenha, self).__init__(parent)
@@ -39,6 +51,22 @@ class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.pushButton.clicked.connect(lambda: self.close())
+        self.btn_alterar.clicked.connect(self.att_senha)
+
+    def att_senha(self):
+        senha_atual = self.input_senha_atual.text()
+        senha_1 = self.input_senha_nova_1.text()
+        senha_2 = self.input_senha_nova_2.text()
+        saida = models.att_user_senha(senha_atual, senha_1, senha_2)
+
+        if saida == True:
+            self.close()
+        elif saida == None:
+            self.text_info.show()
+            self.text_info.setText('Senhas não coincidem')
+        else:
+            self.text_info.show()
+            self.text_info.setText('Senha atual inválida')
 
 
 class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
@@ -50,6 +78,17 @@ class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.pushButton.clicked.connect(lambda: self.close())
+        self.pushButton.clicked.connect(self.att_telefone)
+
+    def att_telefone(self):
+        telefone = self.input_novo_telefone.text()
+        telefone = telefone.replace(' ', '').replace('-', '').replace('+55', '').replace('+', '')
+        if len(telefone) < 11:
+            self.text_info.show()
+            self.text_info.setText('Telefone inválido')
+        else:
+            models.att_user_telefone(telefone)
+            self.close()
 
 
 class DialogExcluirConta(QDialog, Ui_ExcluirConta):
@@ -68,11 +107,18 @@ class DialogSairConta(QDialog, Ui_SairConta):
         super(DialogSairConta, self).__init__(parent)
         self.setupUi(self)
         self.nao.clicked.connect(lambda: self.close())
+        self.sim.clicked.connect(self.sair)
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.pushButton.clicked.connect(lambda: self.close())
 
+    def sair(self):
+        Login = LoginWindow()
+        self.parent().close()
+        self.close()
+        Login.show()
 #######################################################################
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -82,6 +128,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # INITIAL
         self.user()
+        self.cargas()
+        self.clientes()
+        self.veiculos()
+        self.cargas_comboBox()
 
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
@@ -91,6 +141,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.timer2.timeout.connect(self.hide_segundos)
 
         self.nome_pc.setText(f'{utils.name_locauser()} - Software de pesagem')
+
+        #TOOLTIP
+        self.btn_salvar_entrada.setToolTip('Acesso somente com conexão com uma balança')
 
         # HIDE
         self.digite_um_id.hide()
@@ -169,7 +222,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_fazer_pesagem_avulsa.clicked.connect(self.get_pesagem_avulsas)
         self.btn_salvar_entrada.clicked.connect(self.get_pesagem_entrada)
         self.btn_finalizar_pesagem.clicked.connect(self.get_pesagem_saida)
-        self.comboBox_pesagem_entrada.currentTextChanged.connect(self.detalhes_saida)
+        self.comboBox_pesagem_entrada.currentTextChanged.connect(
+            self.detalhes_saida)
 
     # TIMES
     def hide_segundos(self):
@@ -177,14 +231,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.segundos.setText(f'{self.ss15} Segundos')
 
         if self.ss15 == 0:
-           self.timer2.stop()
-           self.frame_saida.hide()
-           self.ss15 = 30
+            self.timer2.stop()
+            self.frame_saida.hide()
+            self.ss15 = 30
 
         self.ss15 = self.ss15 - 1
 
-
     # FUCTIONS INITIAL
+
     def user(self):
         db = database.DBLocal()
         user = db.list_user_local()[0]
@@ -368,7 +422,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             expand_dados = 250
             expand_obs = 0
 
-
         animation_dados = QPropertyAnimation(
             self.frame_dados_avulsa, b'maximumHeight')
         animation_dados.setDuration(300)
@@ -407,11 +460,73 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             else:
                 return True
 
+    # Dados adicionados
+    def cargas_comboBox(self):
+        cargas = models.list_cargas()
+        self.comboBox_veiculos_produtos.clear()
+        self.comboBox_veiculos_produtos.addItem('Nenhum')
+
+        for carga in cargas:
+            self.comboBox_veiculos_produtos.addItem(f'{carga}')
+
+    def cargas(self):
+        cargas = models.list_cargas()
+
+        for carga in cargas:
+            linha = self.tableWidget.rowCount()
+            self.tableWidget.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget.setItem(linha, 0, check)
+            self.tableWidget.setItem(linha, 1, QTableWidgetItem(carga.nome))
+            self.tableWidget.setItem(linha, 2, QTableWidgetItem(carga.preco))
+            self.tableWidget.setItem(
+                linha, 3, QTableWidgetItem(carga.densidade))
+            self.tableWidget.setItem(
+                linha, 4, QTableWidgetItem(carga.embalagem))
+            self.tableWidget.setItem(
+                linha, 5, QTableWidgetItem(carga.desconto))
+
+    def clientes(self):
+        clientes = models.list_clientes()
+
+        for cliente in clientes:
+            linha = self.tableWidget_2.rowCount()
+            self.tableWidget_2.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget_2.setItem(linha, 0, check)
+            self.tableWidget_2.setItem(
+                linha, 1, QTableWidgetItem(cliente.nome))
+            self.tableWidget_2.setItem(
+                linha, 2, QTableWidgetItem(cliente.cpf_cnpj))
+            self.tableWidget_2.setItem(linha, 3, QTableWidgetItem(cliente.rg))
+            self.tableWidget_2.setItem(
+                linha, 4, QTableWidgetItem(cliente.telefone))
+            self.tableWidget_2.setItem(linha, 5, QTableWidgetItem(cliente.cep))
+            self.tableWidget_2.setItem(
+                linha, 6, QTableWidgetItem(cliente.endereço))
+
+    def veiculos(self):
+        veiculos = models.list_veiculos()
+
+        for veiculo in veiculos:
+            linha = self.tableWidget_3.rowCount()
+            self.tableWidget_3.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget_3.setItem(linha, 0, check)
+            self.tableWidget_3.setItem(linha, 1, QTableWidgetItem(veiculo.placa))
+            self.tableWidget_3.setItem(linha, 2, QTableWidgetItem(veiculo.proprietario))
+            self.tableWidget_3.setItem(linha, 3, QTableWidgetItem(veiculo.nome))
+            self.tableWidget_3.setItem(linha, 4, QTableWidgetItem(f'{veiculo.carga}'))
+
+    # Pegando dados
     def get_dados_carga(self):
         nome = self.input_produtos_nome.text()
         densidade = self.input_produtos_densidade.text()
         embalagem = self.input_produtos_embalagemKG.text()
-        estoque = self.input_produtos_estoqueKG.text()
+        preco = self.input_produtos_estoqueKG.text().replace(',', '.')
         desconto = self.input_produtos_desconto.text()
         saida = None
         self.ss15 = 30
@@ -421,16 +536,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if densidade:
                 if not self.is_num(densidade):
                     saida = False
+            else:
+                densidade = '0'
+
             if embalagem:
                 if not self.is_num(embalagem):
                     saida = False
-            if estoque:
-                if not self.is_num(estoque):
+            else:
+                embalagem = '0'
+
+            if preco:
+                if not self.is_num(preco):
                     saida = False
+            else:
+                preco = '0'
+
             if desconto:
                 if not self.is_num(desconto):
                     saida = False
-
+            else:
+                desconto = '0'
         else:
             self.frame_saida.show()
             self.hide_segundos()
@@ -445,14 +570,39 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Carga adicionada')
+            self.label_realizada_ou_erro.setText(f'Carga "{nome}" adicionada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText('')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
 
-            # add a db
+            # add db
+            db = database.DBLocal()
+            id_user = db.list_user_local()[0][0]
+            models.add_carga(id_user, nome, preco,
+                             densidade, embalagem, desconto)
+
+            # add table
+            linha = self.tableWidget.rowCount()
+            self.tableWidget.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget.setItem(linha, 0, check)
+            self.tableWidget.setItem(linha, 1, QTableWidgetItem(nome))
+            self.tableWidget.setItem(linha, 2, QTableWidgetItem(preco))
+            self.tableWidget.setItem(linha, 3, QTableWidgetItem(densidade))
+            self.tableWidget.setItem(linha, 4, QTableWidgetItem(embalagem))
+            self.tableWidget.setItem(linha, 5, QTableWidgetItem(desconto))
+            self.cargas_comboBox()
+
+
+            # limpando campos
+            nome = self.input_produtos_nome.setText('')
+            densidade = self.input_produtos_densidade.setText('')
+            embalagem = self.input_produtos_embalagemKG.setText('')
+            preco = self.input_produtos_estoqueKG.setText('')
+            desconto = self.input_produtos_desconto.setText('')
 
         elif saida == False:
             self.frame_saida.show()
@@ -478,15 +628,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         if nome and telefone:
             saida = True
+
+            if not self.is_num(telefone):
+                saida = False
+                detalhe_saida = 'Telefone inválido.'      
+
             if cep:
-                if len(cep.replace('-', '').replace(' ', '')) != 8:
+                if len(cep.replace('-', '').replace(' ', '')) != 8 and self.is_num(cep.replace('-', '').replace(' ', '')):
                     saida = False
                     detalhe_saida = 'Código postal (CEP) inválido.'
             else:
                 cep = 'n/a'
 
             if rg:
-                if len(rg.replace('-', '').replace('.', '').replace(' ', '')) != 9:
+                if len(rg.replace('-', '').replace('.', '').replace(' ', '')) != 9 and self.is_num(rg.replace('-', '').replace(' ', '').replace('.', '')):
                     saida = False
                     detalhe_saida = 'Registro geral (RG) inválido.'
             else:
@@ -508,14 +663,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
             self.label_veja_no_relatorio.setText(
-                'Campo NOME e TELEFONE não pode estar vazio.')
+                'NOME e TELEFONE são obrigatórios.')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))
 
         if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Cliente adicionado')
+            self.label_realizada_ou_erro.setText(f'Cliente "{self.nome}" adicionado')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText('')
@@ -523,6 +678,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 QPixmap(u":/icons/check-solid_green.svg"))
 
             # add a db
+            db = database.DBLocal()
+            id_user = db.list_user_local()[0][0]
+            models.add_cliente(id_user, nome, cpf, rg, telefone, cep, endereco)
+
+            # add table
+            linha = self.tableWidget_2.rowCount()
+            self.tableWidget_2.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget_2.setItem(linha, 0, check)
+            self.tableWidget_2.setItem(linha, 1, QTableWidgetItem(nome))
+            self.tableWidget_2.setItem(linha, 2, QTableWidgetItem(cpf))
+            self.tableWidget_2.setItem(linha, 3, QTableWidgetItem(rg))
+            self.tableWidget_2.setItem(linha, 4, QTableWidgetItem(telefone))
+            self.tableWidget_2.setItem(linha, 5, QTableWidgetItem(cep))
+            self.tableWidget_2.setItem(linha, 6, QTableWidgetItem(endereco))
+
+            # limpando campos
+            nome = self.input_clientes_nome.setText('')
+            cpf = self.input_clientes_cpf.setText('')
+            rg = self.input_clientes_rg.setText('')
+            cep = self.input_clientes_cep.setText('')
+            endereco = self.input_clientes_endereco.setText('')
+            telefone = self.input_clientes_telefone.setText('')
 
         elif saida == False:
             self.frame_saida.show()
@@ -539,6 +718,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         placa = self.input_veiculos_placa.text()
         proprietario = self.input_veiculos_valor_2.text()
         produto = self.comboBox_veiculos_produtos.currentText()
+        id_produto = models.list_cargas(produto)
         self.ss15 = 30
 
         if nome and placa and proprietario and str(produto) != 'Nenhum':
@@ -550,6 +730,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText('')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
+
+            # add db
+            db = database.DBLocal()
+            id_user = db.list_user_local()[0][0]
+            models.add_veiculo(id_user, proprietario, nome, placa, id_produto)
+
+            # add table
+            linha = self.tableWidget_3.rowCount()
+            self.tableWidget_3.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget_3.setItem(linha, 0, check)
+            self.tableWidget_3.setItem(linha, 1, QTableWidgetItem(nome))
+            self.tableWidget_3.setItem(linha, 2, QTableWidgetItem(placa))
+            self.tableWidget_3.setItem(linha, 3, QTableWidgetItem(proprietario))
+            self.tableWidget_3.setItem(linha, 4, QTableWidgetItem(produto))
+
+            # limpando campos
+            nome = self.input_veiculos_nome.setText('')
+            placa = self.input_veiculos_placa.setText('')
+            proprietario = self.input_veiculos_valor_2.setText('')
+            produto = self.comboBox_veiculos_produtos.setCurrentIndex(0)
+
+
         else:
             self.frame_saida.show()
             self.hide_segundos()
@@ -559,13 +763,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText(
                 'Todos os campos devem ser preenchidos.')
             self.label_logo_saida.setPixmap(
-                QPixmap(u":/icons/circle-info-solidr.svg"))            
+                QPixmap(u":/icons/circle-info-solidr.svg"))
 
     def get_pesagem_avulsas(self):
         motorista = self.input_avulsas_motorista.text()
-        veiculo = self.comboBox_avulsas_veiculo.currentText() 
-        cliente = self.comboBox_avulsas_cliente.currentText() 
-        carga = self.comboBox_avulsas_carga.currentText() 
+        veiculo = self.comboBox_avulsas_veiculo.currentText()
+        cliente = self.comboBox_avulsas_cliente.currentText()
+        carga = self.comboBox_avulsas_carga.currentText()
         obs = self.input_avulsas_obs.text()
         saida = None
         self.ss15 = 30
@@ -579,7 +783,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             saida = True
 
-        
         if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
@@ -593,14 +796,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         elif saida == None:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Pesagem avulsa não realizada')
+            self.label_realizada_ou_erro.setText(
+                'Pesagem avulsa não realizada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
             self.label_veja_no_relatorio.setText(
                 'Todos os campos devem ser preenchidos.')
             self.label_logo_saida.setPixmap(
-                QPixmap(u":/icons/circle-info-solidr.svg"))  
-        
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+
         else:
             self.frame_saida.show()
             self.hide_segundos()
@@ -610,14 +814,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText(
                 'Não foi possível coletar o peso com valor: 0')
             self.label_logo_saida.setPixmap(
-                QPixmap(u":/icons/circle-info-solidr.svg"))  
+                QPixmap(u":/icons/circle-info-solidr.svg"))
 
     # Entrada e Saida
     def get_pesagem_entrada(self):
         motorista = self.input_entrada_motorista.text()
-        veiculo = self.comboBox_entrada_veiculo.currentText() 
-        cliente = self.comboBox_entrada_cliente.currentText() 
-        carga = self.comboBox_entrada_carga.currentText() 
+        veiculo = self.comboBox_entrada_veiculo.currentText()
+        cliente = self.comboBox_entrada_cliente.currentText()
+        carga = self.comboBox_entrada_carga.currentText()
         obs = self.input_entrada_obs.text()
         saida = None
         self.ss15 = 30
@@ -630,11 +834,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # add db
 
             saida = True
-        
+
         if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Pesagem de entrada realizada')
+            self.label_realizada_ou_erro.setText(
+                'Pesagem de entrada realizada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText('realize a pesagem de saída')
@@ -644,14 +849,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         elif saida == None:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Pesagem de entrada não realizada')
+            self.label_realizada_ou_erro.setText(
+                'Pesagem de entrada não realizada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
             self.label_veja_no_relatorio.setText(
                 'Todos os campos devem ser preenchidos.')
             self.label_logo_saida.setPixmap(
-                QPixmap(u":/icons/circle-info-solidr.svg"))  
-        
+                QPixmap(u":/icons/circle-info-solidr.svg"))
+
         else:
             self.frame_saida.show()
             self.hide_segundos()
@@ -661,7 +867,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText(
                 'Não foi possível coletar o peso com valor: 0')
             self.label_logo_saida.setPixmap(
-                QPixmap(u":/icons/circle-info-solidr.svg"))  
+                QPixmap(u":/icons/circle-info-solidr.svg"))
 
     def get_pesagem_saida(self):
         pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
@@ -669,33 +875,34 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         if pesagem_entrada != 'Nenhum':
             saida = True
-            #add db
-            
+            # add db
+
         else:
             saida = False
 
-                
         if saida:
             self.frame_saida.show()
             self.hide_segundos()
             self.label_realizada_ou_erro.setText('Pesagem realizada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
-            self.label_veja_no_relatorio.setText('Veja em relatório entradas e saídas')
+            self.label_veja_no_relatorio.setText(
+                'Veja em relatório entradas e saídas')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
 
         else:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText('Pesagem de saída não realizada')
+            self.label_realizada_ou_erro.setText(
+                'Pesagem de saída não realizada')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(255, 32, 32);')
             self.label_veja_no_relatorio.setText(
                 'Escolha uma pesagem de entrada.')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))
-    
+
     def detalhes_saida(self):
         pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
 
@@ -712,8 +919,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setStartValue(height)
         self.animation.setEndValue(height_extend)
         self.animation.start()
- 
-        
+
+
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
     def __init__(self):
         super(LoginWindow, self).__init__()
@@ -725,6 +932,7 @@ class LoginWindow(QWidget, Ui_Login_Widget, QRegion):
         self._senha_input.textChanged.connect(self.disableButton)
         self.mais_servicos_button.clicked.connect(self.more_services)
         self.btn_close_windows.clicked.connect(lambda: self.close())
+        self.btn_minimize_window.clicked.connect(lambda: self.showMinimized())
         self.entrar_button.clicked.connect(self.login)
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)

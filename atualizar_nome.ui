@@ -298,6 +298,8 @@
                         <font>
                          <family>Segoe UI</family>
                          <pointsize>11</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
                         </font>
                        </property>
                        <property name="text">
@@ -317,8 +319,8 @@
                   <font>
                    <family>Segoe UI</family>
                    <pointsize>10</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -340,7 +342,7 @@ border:1px solid rgb(67, 202, 0)
 }</string>
                  </property>
                  <property name="echoMode">
-                  <enum>QLineEdit::Password</enum>
+                  <enum>QLineEdit::Normal</enum>
                  </property>
                 </widget>
                </item>
@@ -350,6 +352,8 @@ border:1px solid rgb(67, 202, 0)
                   <font>
                    <family>Segoe UI</family>
                    <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">

@@ -233,6 +233,8 @@ border:0</string>
                   <font>
                    <family>Segoe UI</family>
                    <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">

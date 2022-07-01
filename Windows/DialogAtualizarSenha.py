@@ -110,10 +110,7 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout_3.setContentsMargins(-1, 0, -1, 0)
         self.label_2 = QLabel(self.frame_3)
         self.label_2.setObjectName(u"label_2")
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(11)
-        self.label_2.setFont(font4)
+        self.label_2.setFont(font2)
         self.label_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.label_2)
@@ -130,12 +127,12 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.label_3 = QLabel(self.frame_4)
         self.label_3.setObjectName(u"label_3")
-        font5 = QFont()
-        font5.setFamily(u"Segoe UI")
-        font5.setPointSize(10)
-        font5.setBold(True)
-        font5.setWeight(75)
-        self.label_3.setFont(font5)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI")
+        font4.setPointSize(10)
+        font4.setBold(False)
+        font4.setWeight(50)
+        self.label_3.setFont(font4)
 
         self.verticalLayout_4.addWidget(self.label_3)
 
@@ -153,7 +150,7 @@ class Ui_AtualizarSenha(object):
 
         self.label_4 = QLabel(self.frame_4)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setFont(font5)
+        self.label_4.setFont(font4)
 
         self.verticalLayout_4.addWidget(self.label_4)
 
@@ -171,7 +168,7 @@ class Ui_AtualizarSenha(object):
 
         self.label_5 = QLabel(self.frame_4)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font5)
+        self.label_5.setFont(font4)
 
         self.verticalLayout_4.addWidget(self.label_5)
 
@@ -186,6 +183,19 @@ class Ui_AtualizarSenha(object):
         self.input_senha_nova_2.setEchoMode(QLineEdit.Password)
 
         self.verticalLayout_4.addWidget(self.input_senha_nova_2)
+
+        self.text_info = QLabel(self.frame_4)
+        self.text_info.setObjectName(u"text_info")
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI")
+        font5.setPointSize(10)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.text_info.setFont(font5)
+        self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
+        self.text_info.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_4.addWidget(self.text_info)
 
 
         self.verticalLayout_5.addWidget(self.frame_4)
@@ -237,13 +247,6 @@ class Ui_AtualizarSenha(object):
 
         self.verticalLayout_2.addWidget(self.frame_6)
 
-        self.text_info = QLabel(self.frame_2)
-        self.text_info.setObjectName(u"text_info")
-        self.text_info.setFont(font6)
-        self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
-
-        self.verticalLayout_2.addWidget(self.text_info, 0, Qt.AlignHCenter)
-
 
         self.verticalLayout_6.addWidget(self.frame_2, 0, Qt.AlignHCenter)
 
@@ -264,8 +267,8 @@ class Ui_AtualizarSenha(object):
         self.label_3.setText(QCoreApplication.translate("AtualizarSenha", u"SENHA ATUAL", None))
         self.label_4.setText(QCoreApplication.translate("AtualizarSenha", u"NOVA SENHA", None))
         self.label_5.setText(QCoreApplication.translate("AtualizarSenha", u"CONFIRMAR NOVA SENHA", None))
+        self.text_info.setText(QCoreApplication.translate("AtualizarSenha", u"Erro", None))
         self.btn_cancelar.setText(QCoreApplication.translate("AtualizarSenha", u"Cancelar", None))
         self.btn_alterar.setText(QCoreApplication.translate("AtualizarSenha", u"Alterar", None))
-        self.text_info.setText("")
     # retranslateUi
 

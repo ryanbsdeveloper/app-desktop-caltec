@@ -61,6 +61,9 @@ class PesagemEntrada(Base):
     data_entrada = sql.Column(sql.String, index=True, default=data)
     placa = sql.Column(sql.String, index=True)
 
+    def __repr__(self):
+        return f'({self.id}) {self.motorista}'
+
 
 class PesagemSaida(Base):
     __tablename__ = "saidas"
@@ -88,9 +91,11 @@ class Cliente(Base):
     cpf_cnpj = sql.Column(sql.String, index=True, default=data)
     rg = sql.Column(sql.String, index=True)
     telefone = sql.Column(sql.String, index=True)
-    uf = sql.Column(sql.String, index=True)
-    cidade = sql.Column(sql.String, index=True)
+    cep = sql.Column(sql.String, index=True)
     endereço = sql.Column(sql.String, index=True)
+
+    def __repr__(self):
+        return f'({self.id}) {self.nome}'
 
 
 class Carga(Base):
@@ -106,20 +111,27 @@ class Carga(Base):
     embalagem = sql.Column(sql.String, index=True)
     desconto = sql.Column(sql.String, index=True)
 
+    def __repr__(self):
+        return f"({self.id}) {self.nome}"
+
 
 class Veiculo(Base):
+
     __tablename__ = "veiculo"
 
     id = sql.Column(sql.Integer, index=True, primary_key=True)
     user_id = sql.Column(sql.Integer, sql.ForeignKey("users.id"))
-    user = relationship(
-        "User", backref=backref("veiculo", uselist=False))
+    user = relationship("User", backref=backref("veiculo", uselist=False))
     proprietario = sql.Column(sql.String, index=True)
     nome = sql.Column(sql.String, index=True)
     placa = sql.Column(sql.String, index=True)
     carga_id = sql.Column(sql.Integer, sql.ForeignKey("carga.id"))
     carga = relationship(
         "Carga", backref=backref("carga", uselist=False))
+
+    def __repr__(self):
+        return f'({self.id}) {self.nome}'
+
 
 #ADD and READ
 def add_tables():
@@ -143,6 +155,74 @@ def add_user(id_cloud, nome, email, telefone, senha, licenca, pesagens):
     session.flush()
 
 
+def add_veiculo(id_user_local, proprietario, modelo, placa, produto):
+    dados = Veiculo(
+        user_id=id_user_local,
+        proprietario=proprietario,
+        nome=modelo,
+        placa=placa,
+        carga_id=produto,
+    )
+    session.add(dados)
+    session.commit()
+    session.flush()
+
+
+def list_veiculos():
+    query = session.query(Veiculo).all()
+    session.commit()
+
+    return query
+
+
+def add_carga(id_user_local, nome, preco, densidade, embalagem, desconto):
+    dados = Carga(
+        user_id=id_user_local,
+        nome=nome,
+        preco=preco,
+        densidade=densidade,
+        embalagem=embalagem,
+        desconto=desconto)
+
+    session.add(dados)
+    session.commit()
+    session.flush()
+
+
+def list_cargas(carga=False):
+    if carga:
+        carga_id = carga.split(')')[0].replace('(', '')
+        query = carga_id
+    else:
+        query = session.query(Carga).all()
+
+    session.commit()
+
+    return query
+
+
+def add_cliente(id_user_local, nome, cpf_cnpj, rg, telefone, cep, endereço):
+    dados = Cliente(
+        user_id=id_user_local,
+        nome=nome,
+        cpf_cnpj=cpf_cnpj,
+        rg=rg,
+        telefone=telefone,
+        cep=cep,
+        endereço=endereço)
+
+    session.add(dados)
+    session.commit()
+    session.flush()
+
+
+def list_clientes():
+    query = session.query(Cliente).all()
+    session.commit()
+
+    return query
+
+
 def get_all_users():
     users = []
     with engine.begin() as conn:
@@ -152,3 +232,39 @@ def get_all_users():
     return users
 
 
+def att_user_nome(nome):
+    query = session.query(User).first()
+    query.nome_empresa = nome
+    session.commit()
+    return True
+
+
+def att_user_telefone(telefone):
+    query = session.query(User).first()
+    query.whatsapp = telefone
+    session.commit()
+
+
+def att_user_senha(senha_atual, senha_1, senha_2):
+    query = session.query(User).first()
+    if senha_atual == query.senha:
+        if senha_1 == senha_2:
+            query.senha = senha_1
+            session.commit()
+            return True
+        else:
+            return None
+    else:
+        return False
+
+
+def excluir_conta(senha):
+    query = session.query(User).first()
+    if query.senha == senha:
+        # Deletar conta
+        pass
+        
+
+
+if __name__ == '__main__':
+    att_user_senha()
