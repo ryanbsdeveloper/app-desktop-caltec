@@ -550,7 +550,7 @@ class Ui_MainWindow(object):
 
         self.frame_29 = QFrame(self.centralwidget)
         self.frame_29.setObjectName(u"frame_29")
-        self.frame_29.setMinimumSize(QSize(0, 35))
+        self.frame_29.setMinimumSize(QSize(0, 36))
         self.frame_29.setFont(font2)
         self.frame_29.setStyleSheet(u"background-color: rgb(15, 15, 15);\n"
 "")
@@ -685,7 +685,7 @@ class Ui_MainWindow(object):
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(167, 0))
-        self.label.setMaximumSize(QSize(183, 96))
+        self.label.setMaximumSize(QSize(190, 96))
         self.label.setFont(font2)
         self.label.setStyleSheet(u"border:0")
         self.label.setPixmap(QPixmap(u":/icons/ori.png"))
@@ -701,6 +701,9 @@ class Ui_MainWindow(object):
 
         self.frame_59 = QFrame(self.top_frame)
         self.frame_59.setObjectName(u"frame_59")
+        font10 = QFont()
+        font10.setPointSize(10)
+        self.frame_59.setFont(font10)
         self.frame_59.setFrameShape(QFrame.NoFrame)
         self.frame_59.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_48 = QHBoxLayout(self.frame_59)
@@ -719,8 +722,8 @@ class Ui_MainWindow(object):
         self.conexao_label.setObjectName(u"conexao_label")
         self.conexao_label.setEnabled(False)
         self.conexao_label.setMinimumSize(QSize(0, 34))
-        self.conexao_label.setMaximumSize(QSize(150, 16777215))
-        self.conexao_label.setFont(font7)
+        self.conexao_label.setMaximumSize(QSize(20000, 16777215))
+        self.conexao_label.setFont(font5)
         self.conexao_label.setCursor(QCursor(Qt.ArrowCursor))
         self.conexao_label.setMouseTracking(False)
         self.conexao_label.setFocusPolicy(Qt.NoFocus)
@@ -747,7 +750,7 @@ class Ui_MainWindow(object):
 
         self.conteudo_top_frame = QFrame(self.top_frame)
         self.conteudo_top_frame.setObjectName(u"conteudo_top_frame")
-        self.conteudo_top_frame.setMinimumSize(QSize(600, 70))
+        self.conteudo_top_frame.setMinimumSize(QSize(571, 70))
         self.conteudo_top_frame.setFont(font2)
         self.conteudo_top_frame.setCursor(QCursor(Qt.ArrowCursor))
         self.conteudo_top_frame.setFrameShape(QFrame.NoFrame)
@@ -762,9 +765,10 @@ class Ui_MainWindow(object):
         self.btn_virepro_button.setObjectName(u"btn_virepro_button")
         self.btn_virepro_button.setMinimumSize(QSize(240, 45))
         self.btn_virepro_button.setMaximumSize(QSize(200, 16777215))
-        self.btn_virepro_button.setFont(font7)
+        self.btn_virepro_button.setFont(font5)
         self.btn_virepro_button.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_virepro_button.setStyleSheet(u"QPushButton{\n"
+"color: rgb(43, 43, 43);\n"
 "	border:0;\n"
 "	border-radius:5px;\n"
 "	background-color: rgb(242, 242, 242);\n"
@@ -781,7 +785,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.btn_virepro_button, 1, 0, 1, 1, Qt.AlignVCenter)
 
 
-        self.horizontalLayout.addWidget(self.conteudo_top_frame, 0, Qt.AlignRight)
+        self.horizontalLayout.addWidget(self.conteudo_top_frame)
 
 
         self.gridLayout.addWidget(self.top_frame, 1, 0, 1, 2)
@@ -852,12 +856,12 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_14.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_14.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_14.setBaseSize(QSize(555, 2))
-        font10 = QFont()
-        font10.setFamily(u"Segoe UI")
-        font10.setPointSize(16)
-        font10.setBold(True)
-        font10.setWeight(75)
-        self.aba_relatorio_button_14.setFont(font10)
+        font11 = QFont()
+        font11.setFamily(u"Segoe UI")
+        font11.setPointSize(16)
+        font11.setBold(True)
+        font11.setWeight(75)
+        self.aba_relatorio_button_14.setFont(font11)
         self.aba_relatorio_button_14.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_14.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -884,7 +888,7 @@ class Ui_MainWindow(object):
         self.gridLayout_30.setContentsMargins(7, 0, 0, 0)
         self.label_93 = QLabel(self.frame_144)
         self.label_93.setObjectName(u"label_93")
-        self.label_93.setMaximumSize(QSize(16777215, 13))
+        self.label_93.setMaximumSize(QSize(16777215, 23))
         self.label_93.setFont(font7)
 
         self.gridLayout_30.addWidget(self.label_93, 2, 1, 1, 1)
@@ -949,27 +953,27 @@ class Ui_MainWindow(object):
         self.gridLayout_32.setContentsMargins(0, 0, 10, 0)
         self.data_fixa_6 = QRadioButton(self.frame_146)
         self.data_fixa_6.setObjectName(u"data_fixa_6")
-        font11 = QFont()
-        font11.setFamily(u"Segoe UI")
-        font11.setPointSize(10)
-        font11.setBold(False)
-        font11.setItalic(False)
-        font11.setWeight(50)
-        self.data_fixa_6.setFont(font11)
+        font12 = QFont()
+        font12.setFamily(u"Segoe UI")
+        font12.setPointSize(10)
+        font12.setBold(False)
+        font12.setItalic(False)
+        font12.setWeight(50)
+        self.data_fixa_6.setFont(font12)
 
         self.gridLayout_32.addWidget(self.data_fixa_6, 0, 0, 1, 1)
 
         self.data_antes_de_6 = QRadioButton(self.frame_146)
         self.data_antes_de_6.setObjectName(u"data_antes_de_6")
         self.data_antes_de_6.setMinimumSize(QSize(0, 1))
-        self.data_antes_de_6.setFont(font11)
+        self.data_antes_de_6.setFont(font12)
 
         self.gridLayout_32.addWidget(self.data_antes_de_6, 1, 0, 1, 1)
 
         self.text_date_6 = QDateEdit(self.frame_146)
         self.text_date_6.setObjectName(u"text_date_6")
         self.text_date_6.setMinimumSize(QSize(0, 27))
-        self.text_date_6.setFont(font11)
+        self.text_date_6.setFont(font12)
         self.text_date_6.setStyleSheet(u"QDateEdit{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -1012,7 +1016,7 @@ class Ui_MainWindow(object):
         self.data_depois_de_6 = QRadioButton(self.frame_146)
         self.data_depois_de_6.setObjectName(u"data_depois_de_6")
         self.data_depois_de_6.setMinimumSize(QSize(0, 1))
-        self.data_depois_de_6.setFont(font11)
+        self.data_depois_de_6.setFont(font12)
 
         self.gridLayout_32.addWidget(self.data_depois_de_6, 2, 0, 1, 1)
 
@@ -1026,12 +1030,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_30.addWidget(self.label_95, 0, 8, 1, 1)
 
-        self.comboBox_veiculo_6 = QComboBox(self.frame_144)
-        self.comboBox_veiculo_6.addItem("")
-        self.comboBox_veiculo_6.setObjectName(u"comboBox_veiculo_6")
-        self.comboBox_veiculo_6.setMinimumSize(QSize(0, 27))
-        self.comboBox_veiculo_6.setFont(font11)
-        self.comboBox_veiculo_6.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_veiculo_2 = QComboBox(self.frame_144)
+        self.comboBox_veiculo_2.addItem("")
+        self.comboBox_veiculo_2.setObjectName(u"comboBox_veiculo_2")
+        self.comboBox_veiculo_2.setMinimumSize(QSize(0, 27))
+        self.comboBox_veiculo_2.setFont(font12)
+        self.comboBox_veiculo_2.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -1061,20 +1065,20 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_veiculo_6.setMaxVisibleItems(10)
-        self.comboBox_veiculo_6.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_veiculo_6.setIconSize(QSize(32, 32))
-        self.comboBox_veiculo_6.setDuplicatesEnabled(True)
-        self.comboBox_veiculo_6.setFrame(True)
+        self.comboBox_veiculo_2.setMaxVisibleItems(10)
+        self.comboBox_veiculo_2.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_veiculo_2.setIconSize(QSize(32, 32))
+        self.comboBox_veiculo_2.setDuplicatesEnabled(True)
+        self.comboBox_veiculo_2.setFrame(True)
 
-        self.gridLayout_30.addWidget(self.comboBox_veiculo_6, 3, 3, 1, 1)
+        self.gridLayout_30.addWidget(self.comboBox_veiculo_2, 3, 3, 1, 1)
 
-        self.comboBox_produto_6 = QComboBox(self.frame_144)
-        self.comboBox_produto_6.addItem("")
-        self.comboBox_produto_6.setObjectName(u"comboBox_produto_6")
-        self.comboBox_produto_6.setMinimumSize(QSize(0, 27))
-        self.comboBox_produto_6.setFont(font11)
-        self.comboBox_produto_6.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_carga_2 = QComboBox(self.frame_144)
+        self.comboBox_carga_2.addItem("")
+        self.comboBox_carga_2.setObjectName(u"comboBox_carga_2")
+        self.comboBox_carga_2.setMinimumSize(QSize(0, 27))
+        self.comboBox_carga_2.setFont(font12)
+        self.comboBox_carga_2.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -1104,20 +1108,20 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_produto_6.setMaxVisibleItems(10)
-        self.comboBox_produto_6.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_produto_6.setIconSize(QSize(32, 32))
-        self.comboBox_produto_6.setDuplicatesEnabled(True)
-        self.comboBox_produto_6.setFrame(True)
+        self.comboBox_carga_2.setMaxVisibleItems(10)
+        self.comboBox_carga_2.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_carga_2.setIconSize(QSize(32, 32))
+        self.comboBox_carga_2.setDuplicatesEnabled(True)
+        self.comboBox_carga_2.setFrame(True)
 
-        self.gridLayout_30.addWidget(self.comboBox_produto_6, 3, 2, 1, 1)
+        self.gridLayout_30.addWidget(self.comboBox_carga_2, 3, 2, 1, 1)
 
-        self.lineEdit_11 = QLineEdit(self.frame_144)
-        self.lineEdit_11.setObjectName(u"lineEdit_11")
-        self.lineEdit_11.setMinimumSize(QSize(0, 27))
-        self.lineEdit_11.setMaximumSize(QSize(200, 16777215))
-        self.lineEdit_11.setFont(font11)
-        self.lineEdit_11.setStyleSheet(u"QLineEdit{\n"
+        self.motorista_filtro_2 = QLineEdit(self.frame_144)
+        self.motorista_filtro_2.setObjectName(u"motorista_filtro_2")
+        self.motorista_filtro_2.setMinimumSize(QSize(0, 27))
+        self.motorista_filtro_2.setMaximumSize(QSize(200, 16777215))
+        self.motorista_filtro_2.setFont(font12)
+        self.motorista_filtro_2.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
 "	border:1px solid;\n"
@@ -1130,14 +1134,14 @@ class Ui_MainWindow(object):
 "\n"
 "}")
 
-        self.gridLayout_30.addWidget(self.lineEdit_11, 3, 4, 1, 1)
+        self.gridLayout_30.addWidget(self.motorista_filtro_2, 3, 4, 1, 1)
 
-        self.comboBox_cliente_6 = QComboBox(self.frame_144)
-        self.comboBox_cliente_6.addItem("")
-        self.comboBox_cliente_6.setObjectName(u"comboBox_cliente_6")
-        self.comboBox_cliente_6.setMinimumSize(QSize(0, 27))
-        self.comboBox_cliente_6.setFont(font11)
-        self.comboBox_cliente_6.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_cliente_2 = QComboBox(self.frame_144)
+        self.comboBox_cliente_2.addItem("")
+        self.comboBox_cliente_2.setObjectName(u"comboBox_cliente_2")
+        self.comboBox_cliente_2.setMinimumSize(QSize(0, 27))
+        self.comboBox_cliente_2.setFont(font12)
+        self.comboBox_cliente_2.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -1167,13 +1171,13 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_cliente_6.setMaxVisibleItems(10)
-        self.comboBox_cliente_6.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_cliente_6.setIconSize(QSize(32, 32))
-        self.comboBox_cliente_6.setDuplicatesEnabled(True)
-        self.comboBox_cliente_6.setFrame(True)
+        self.comboBox_cliente_2.setMaxVisibleItems(10)
+        self.comboBox_cliente_2.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_cliente_2.setIconSize(QSize(32, 32))
+        self.comboBox_cliente_2.setDuplicatesEnabled(True)
+        self.comboBox_cliente_2.setFrame(True)
 
-        self.gridLayout_30.addWidget(self.comboBox_cliente_6, 3, 1, 1, 1)
+        self.gridLayout_30.addWidget(self.comboBox_cliente_2, 3, 1, 1, 1)
 
         self.label_98 = QLabel(self.frame_144)
         self.label_98.setObjectName(u"label_98")
@@ -1184,10 +1188,12 @@ class Ui_MainWindow(object):
 
         self.label_94 = QLabel(self.frame_144)
         self.label_94.setObjectName(u"label_94")
-        self.label_94.setMaximumSize(QSize(16777215, 13))
+        self.label_94.setMinimumSize(QSize(0, 2))
+        self.label_94.setMaximumSize(QSize(16777215, 26))
         self.label_94.setFont(font7)
+        self.label_94.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
-        self.gridLayout_30.addWidget(self.label_94, 2, 2, 1, 1)
+        self.gridLayout_30.addWidget(self.label_94, 2, 2, 1, 1, Qt.AlignTop)
 
         self.label_96 = QLabel(self.frame_144)
         self.label_96.setObjectName(u"label_96")
@@ -1198,12 +1204,12 @@ class Ui_MainWindow(object):
 
         self.radioButton = QRadioButton(self.frame_144)
         self.radioButton.setObjectName(u"radioButton")
-        font12 = QFont()
-        font12.setFamily(u"Segoe UI")
-        font12.setPointSize(8)
-        font12.setBold(False)
-        font12.setWeight(50)
-        self.radioButton.setFont(font12)
+        font13 = QFont()
+        font13.setFamily(u"Segoe UI")
+        font13.setPointSize(8)
+        font13.setBold(False)
+        font13.setWeight(50)
+        self.radioButton.setFont(font13)
         self.radioButton.setStyleSheet(u"\n"
 "QRadioButton::indicator {\n"
 "    width:                  12px;\n"
@@ -1226,10 +1232,10 @@ class Ui_MainWindow(object):
 
         self.digite_um_id_2 = QLabel(self.frame_144)
         self.digite_um_id_2.setObjectName(u"digite_um_id_2")
-        font13 = QFont()
-        font13.setFamily(u"Segoe UI")
-        font13.setPointSize(9)
-        self.digite_um_id_2.setFont(font13)
+        font14 = QFont()
+        font14.setFamily(u"Segoe UI")
+        font14.setPointSize(9)
+        self.digite_um_id_2.setFont(font14)
         self.digite_um_id_2.setStyleSheet(u"color: rgb(255, 0, 0);")
 
         self.gridLayout_30.addWidget(self.digite_um_id_2, 5, 0, 1, 2)
@@ -1313,10 +1319,10 @@ class Ui_MainWindow(object):
         self.tableWidget_7 = QTableWidget(self.frame_127)
         if (self.tableWidget_7.columnCount() < 10):
             self.tableWidget_7.setColumnCount(10)
-        font14 = QFont()
-        font14.setPointSize(6)
+        font15 = QFont()
+        font15.setPointSize(6)
         __qtablewidgetitem = QTableWidgetItem()
-        __qtablewidgetitem.setFont(font14);
+        __qtablewidgetitem.setFont(font15);
         self.tableWidget_7.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         self.tableWidget_7.setHorizontalHeaderItem(1, __qtablewidgetitem1)
@@ -1336,54 +1342,6 @@ class Ui_MainWindow(object):
         self.tableWidget_7.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
         self.tableWidget_7.setHorizontalHeaderItem(9, __qtablewidgetitem9)
-        if (self.tableWidget_7.rowCount() < 2):
-            self.tableWidget_7.setRowCount(2)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget_7.setVerticalHeaderItem(0, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget_7.setVerticalHeaderItem(1, __qtablewidgetitem11)
-        __qtablewidgetitem12 = QTableWidgetItem()
-        __qtablewidgetitem12.setCheckState(Qt.Unchecked);
-        self.tableWidget_7.setItem(0, 0, __qtablewidgetitem12)
-        __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 1, __qtablewidgetitem13)
-        __qtablewidgetitem14 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 2, __qtablewidgetitem14)
-        __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 3, __qtablewidgetitem15)
-        __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 4, __qtablewidgetitem16)
-        __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 5, __qtablewidgetitem17)
-        __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 6, __qtablewidgetitem18)
-        __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 7, __qtablewidgetitem19)
-        __qtablewidgetitem20 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 8, __qtablewidgetitem20)
-        __qtablewidgetitem21 = QTableWidgetItem()
-        self.tableWidget_7.setItem(0, 9, __qtablewidgetitem21)
-        __qtablewidgetitem22 = QTableWidgetItem()
-        __qtablewidgetitem22.setCheckState(Qt.Unchecked);
-        self.tableWidget_7.setItem(1, 0, __qtablewidgetitem22)
-        __qtablewidgetitem23 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 1, __qtablewidgetitem23)
-        __qtablewidgetitem24 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 2, __qtablewidgetitem24)
-        __qtablewidgetitem25 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 3, __qtablewidgetitem25)
-        __qtablewidgetitem26 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 4, __qtablewidgetitem26)
-        __qtablewidgetitem27 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 5, __qtablewidgetitem27)
-        __qtablewidgetitem28 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 6, __qtablewidgetitem28)
-        __qtablewidgetitem29 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 7, __qtablewidgetitem29)
-        __qtablewidgetitem30 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 8, __qtablewidgetitem30)
-        __qtablewidgetitem31 = QTableWidgetItem()
-        self.tableWidget_7.setItem(1, 9, __qtablewidgetitem31)
         self.tableWidget_7.setObjectName(u"tableWidget_7")
         self.tableWidget_7.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
@@ -1460,7 +1418,7 @@ class Ui_MainWindow(object):
         self.tableWidget_7.setAlternatingRowColors(True)
         self.tableWidget_7.setSelectionMode(QAbstractItemView.SingleSelection)
         self.tableWidget_7.setSortingEnabled(True)
-        self.tableWidget_7.setRowCount(2)
+        self.tableWidget_7.setRowCount(0)
         self.tableWidget_7.horizontalHeader().setDefaultSectionSize(109)
         self.tableWidget_7.horizontalHeader().setProperty("showSortIndicator", True)
         self.tableWidget_7.horizontalHeader().setStretchLastSection(True)
@@ -1504,7 +1462,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_5.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_5.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_5.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_5.setFont(font10)
+        self.aba_relatorio_button_5.setFont(font11)
         self.aba_relatorio_button_5.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_5.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -1542,27 +1500,27 @@ class Ui_MainWindow(object):
         self.data_depois_de_2 = QRadioButton(self.frame_125)
         self.data_depois_de_2.setObjectName(u"data_depois_de_2")
         self.data_depois_de_2.setMinimumSize(QSize(0, 1))
-        self.data_depois_de_2.setFont(font11)
+        self.data_depois_de_2.setFont(font12)
 
         self.gridLayout_20.addWidget(self.data_depois_de_2, 2, 0, 1, 1)
 
         self.data_fixa_2 = QRadioButton(self.frame_125)
         self.data_fixa_2.setObjectName(u"data_fixa_2")
-        self.data_fixa_2.setFont(font11)
+        self.data_fixa_2.setFont(font12)
 
         self.gridLayout_20.addWidget(self.data_fixa_2, 0, 0, 1, 1)
 
         self.data_antes_de_2 = QRadioButton(self.frame_125)
         self.data_antes_de_2.setObjectName(u"data_antes_de_2")
         self.data_antes_de_2.setMinimumSize(QSize(0, 1))
-        self.data_antes_de_2.setFont(font11)
+        self.data_antes_de_2.setFont(font12)
 
         self.gridLayout_20.addWidget(self.data_antes_de_2, 1, 0, 1, 1)
 
         self.text_date_2 = QDateEdit(self.frame_125)
         self.text_date_2.setObjectName(u"text_date_2")
         self.text_date_2.setMinimumSize(QSize(0, 27))
-        self.text_date_2.setFont(font11)
+        self.text_date_2.setFont(font12)
         self.text_date_2.setStyleSheet(u"QDateEdit{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -1613,18 +1571,18 @@ class Ui_MainWindow(object):
 
         self.label_43 = QLabel(self.frame_123)
         self.label_43.setObjectName(u"label_43")
-        self.label_43.setMaximumSize(QSize(16777215, 13))
+        self.label_43.setMaximumSize(QSize(16777215, 17))
         self.label_43.setFont(font7)
 
         self.gridLayout_18.addWidget(self.label_43, 1, 1, 1, 1, Qt.AlignBottom)
 
-        self.comboBox_cliente_2 = QComboBox(self.frame_123)
-        self.comboBox_cliente_2.addItem("")
-        self.comboBox_cliente_2.setObjectName(u"comboBox_cliente_2")
-        self.comboBox_cliente_2.setMinimumSize(QSize(0, 27))
-        self.comboBox_cliente_2.setMaximumSize(QSize(500, 16777215))
-        self.comboBox_cliente_2.setFont(font11)
-        self.comboBox_cliente_2.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_cliente = QComboBox(self.frame_123)
+        self.comboBox_cliente.addItem("")
+        self.comboBox_cliente.setObjectName(u"comboBox_cliente")
+        self.comboBox_cliente.setMinimumSize(QSize(0, 27))
+        self.comboBox_cliente.setMaximumSize(QSize(500, 16777215))
+        self.comboBox_cliente.setFont(font12)
+        self.comboBox_cliente.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -1654,21 +1612,21 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_cliente_2.setMaxVisibleItems(10)
-        self.comboBox_cliente_2.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_cliente_2.setIconSize(QSize(32, 32))
-        self.comboBox_cliente_2.setDuplicatesEnabled(True)
-        self.comboBox_cliente_2.setFrame(True)
+        self.comboBox_cliente.setMaxVisibleItems(10)
+        self.comboBox_cliente.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_cliente.setIconSize(QSize(32, 32))
+        self.comboBox_cliente.setDuplicatesEnabled(True)
+        self.comboBox_cliente.setFrame(True)
 
-        self.gridLayout_18.addWidget(self.comboBox_cliente_2, 2, 1, 1, 1)
+        self.gridLayout_18.addWidget(self.comboBox_cliente, 2, 1, 1, 1)
 
-        self.comboBox_produto_2 = QComboBox(self.frame_123)
-        self.comboBox_produto_2.addItem("")
-        self.comboBox_produto_2.setObjectName(u"comboBox_produto_2")
-        self.comboBox_produto_2.setMinimumSize(QSize(0, 27))
-        self.comboBox_produto_2.setMaximumSize(QSize(500, 16777215))
-        self.comboBox_produto_2.setFont(font11)
-        self.comboBox_produto_2.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_veiculo = QComboBox(self.frame_123)
+        self.comboBox_veiculo.addItem("")
+        self.comboBox_veiculo.setObjectName(u"comboBox_veiculo")
+        self.comboBox_veiculo.setMinimumSize(QSize(0, 27))
+        self.comboBox_veiculo.setMaximumSize(QSize(500, 16777215))
+        self.comboBox_veiculo.setFont(font12)
+        self.comboBox_veiculo.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -1698,28 +1656,30 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_produto_2.setMaxVisibleItems(10)
-        self.comboBox_produto_2.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_produto_2.setIconSize(QSize(32, 32))
-        self.comboBox_produto_2.setDuplicatesEnabled(True)
-        self.comboBox_produto_2.setFrame(True)
+        self.comboBox_veiculo.setMaxVisibleItems(10)
+        self.comboBox_veiculo.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_veiculo.setIconSize(QSize(32, 32))
+        self.comboBox_veiculo.setDuplicatesEnabled(True)
+        self.comboBox_veiculo.setFrame(True)
 
-        self.gridLayout_18.addWidget(self.comboBox_produto_2, 2, 3, 1, 1)
+        self.gridLayout_18.addWidget(self.comboBox_veiculo, 2, 3, 1, 1)
 
         self.label_49 = QLabel(self.frame_123)
         self.label_49.setObjectName(u"label_49")
+        self.label_49.setMinimumSize(QSize(0, 12))
         self.label_49.setMaximumSize(QSize(16777215, 13))
         self.label_49.setFont(font7)
+        self.label_49.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
         self.gridLayout_18.addWidget(self.label_49, 1, 2, 1, 1, Qt.AlignBottom)
 
-        self.comboBox_veiculo_2 = QComboBox(self.frame_123)
-        self.comboBox_veiculo_2.addItem("")
-        self.comboBox_veiculo_2.setObjectName(u"comboBox_veiculo_2")
-        self.comboBox_veiculo_2.setMinimumSize(QSize(0, 27))
-        self.comboBox_veiculo_2.setMaximumSize(QSize(500, 16777215))
-        self.comboBox_veiculo_2.setFont(font11)
-        self.comboBox_veiculo_2.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_carga = QComboBox(self.frame_123)
+        self.comboBox_carga.addItem("")
+        self.comboBox_carga.setObjectName(u"comboBox_carga")
+        self.comboBox_carga.setMinimumSize(QSize(0, 27))
+        self.comboBox_carga.setMaximumSize(QSize(500, 16777215))
+        self.comboBox_carga.setFont(font12)
+        self.comboBox_carga.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -1749,27 +1709,27 @@ class Ui_MainWindow(object):
 "	outline:0;\n"
 "}\n"
 "")
-        self.comboBox_veiculo_2.setMaxVisibleItems(10)
-        self.comboBox_veiculo_2.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_veiculo_2.setIconSize(QSize(32, 32))
-        self.comboBox_veiculo_2.setDuplicatesEnabled(True)
-        self.comboBox_veiculo_2.setFrame(True)
+        self.comboBox_carga.setMaxVisibleItems(10)
+        self.comboBox_carga.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_carga.setIconSize(QSize(32, 32))
+        self.comboBox_carga.setDuplicatesEnabled(True)
+        self.comboBox_carga.setFrame(True)
 
-        self.gridLayout_18.addWidget(self.comboBox_veiculo_2, 2, 2, 1, 1)
+        self.gridLayout_18.addWidget(self.comboBox_carga, 2, 2, 1, 1)
 
         self.label_70 = QLabel(self.frame_123)
         self.label_70.setObjectName(u"label_70")
-        self.label_70.setMaximumSize(QSize(16777215, 13))
+        self.label_70.setMaximumSize(QSize(16777215, 17))
         self.label_70.setFont(font7)
 
         self.gridLayout_18.addWidget(self.label_70, 1, 3, 1, 1, Qt.AlignBottom)
 
-        self.lineEdit_7 = QLineEdit(self.frame_123)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setMinimumSize(QSize(0, 27))
-        self.lineEdit_7.setMaximumSize(QSize(300, 16777215))
-        self.lineEdit_7.setFont(font11)
-        self.lineEdit_7.setStyleSheet(u"QLineEdit{\n"
+        self.motorista_filtro = QLineEdit(self.frame_123)
+        self.motorista_filtro.setObjectName(u"motorista_filtro")
+        self.motorista_filtro.setMinimumSize(QSize(0, 27))
+        self.motorista_filtro.setMaximumSize(QSize(300, 16777215))
+        self.motorista_filtro.setFont(font12)
+        self.motorista_filtro.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
 "	border:1px solid;\n"
@@ -1783,7 +1743,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
 
-        self.gridLayout_18.addWidget(self.lineEdit_7, 2, 4, 1, 1)
+        self.gridLayout_18.addWidget(self.motorista_filtro, 2, 4, 1, 1)
 
         self.label_62 = QLabel(self.frame_123)
         self.label_62.setObjectName(u"label_62")
@@ -1837,7 +1797,7 @@ class Ui_MainWindow(object):
 
         self.label_68 = QLabel(self.frame_123)
         self.label_68.setObjectName(u"label_68")
-        self.label_68.setMaximumSize(QSize(16777215, 13))
+        self.label_68.setMaximumSize(QSize(16777215, 17))
         self.label_68.setFont(font7)
 
         self.gridLayout_18.addWidget(self.label_68, 1, 4, 1, 1, Qt.AlignBottom)
@@ -1847,7 +1807,7 @@ class Ui_MainWindow(object):
 
         self.digite_um_id = QLabel(self.frame_121)
         self.digite_um_id.setObjectName(u"digite_um_id")
-        self.digite_um_id.setFont(font13)
+        self.digite_um_id.setFont(font14)
         self.digite_um_id.setStyleSheet(u"color: rgb(255, 0, 0);")
 
         self.verticalLayout_27.addWidget(self.digite_um_id)
@@ -1919,21 +1879,21 @@ class Ui_MainWindow(object):
         self.tableWidget_4 = QTableWidget(self.frame_121)
         if (self.tableWidget_4.columnCount() < 7):
             self.tableWidget_4.setColumnCount(7)
-        __qtablewidgetitem32 = QTableWidgetItem()
-        __qtablewidgetitem32.setFont(font14);
-        self.tableWidget_4.setHorizontalHeaderItem(0, __qtablewidgetitem32)
-        __qtablewidgetitem33 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(1, __qtablewidgetitem33)
-        __qtablewidgetitem34 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(2, __qtablewidgetitem34)
-        __qtablewidgetitem35 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(3, __qtablewidgetitem35)
-        __qtablewidgetitem36 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(4, __qtablewidgetitem36)
-        __qtablewidgetitem37 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(5, __qtablewidgetitem37)
-        __qtablewidgetitem38 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(6, __qtablewidgetitem38)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        __qtablewidgetitem10.setFont(font15);
+        self.tableWidget_4.setHorizontalHeaderItem(0, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(1, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(2, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(3, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(4, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(5, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(6, __qtablewidgetitem16)
         self.tableWidget_4.setObjectName(u"tableWidget_4")
         self.tableWidget_4.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
@@ -2036,10 +1996,10 @@ class Ui_MainWindow(object):
         self.frame_23.setObjectName(u"frame_23")
         self.frame_23.setMinimumSize(QSize(0, 37))
         self.frame_23.setMaximumSize(QSize(16777215, 37))
-        font15 = QFont()
-        font15.setFamily(u"Segoe UI")
-        font15.setPointSize(13)
-        self.frame_23.setFont(font15)
+        font16 = QFont()
+        font16.setFamily(u"Segoe UI")
+        font16.setPointSize(13)
+        self.frame_23.setFont(font16)
         self.frame_23.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgb(43, 43, 43);")
         self.frame_23.setFrameShape(QFrame.NoFrame)
@@ -2053,7 +2013,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_3.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_3.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_3.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_3.setFont(font10)
+        self.aba_relatorio_button_3.setFont(font11)
         self.aba_relatorio_button_3.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_3.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -2309,12 +2269,12 @@ class Ui_MainWindow(object):
 
         self.label_14 = QLabel(self.widget)
         self.label_14.setObjectName(u"label_14")
-        font16 = QFont()
-        font16.setFamily(u"Segoe UI")
-        font16.setPointSize(13)
-        font16.setBold(True)
-        font16.setWeight(75)
-        self.label_14.setFont(font16)
+        font17 = QFont()
+        font17.setFamily(u"Segoe UI")
+        font17.setPointSize(13)
+        font17.setBold(True)
+        font17.setWeight(75)
+        self.label_14.setFont(font17)
 
         self.gridLayout_10.addWidget(self.label_14, 0, 1, 1, 1)
 
@@ -2343,21 +2303,21 @@ class Ui_MainWindow(object):
         self.tableWidget_2 = QTableWidget(self.frame_46)
         if (self.tableWidget_2.columnCount() < 7):
             self.tableWidget_2.setColumnCount(7)
-        __qtablewidgetitem39 = QTableWidgetItem()
-        __qtablewidgetitem39.setFont(font14);
-        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem39)
-        __qtablewidgetitem40 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem40)
-        __qtablewidgetitem41 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem41)
-        __qtablewidgetitem42 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem42)
-        __qtablewidgetitem43 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(4, __qtablewidgetitem43)
-        __qtablewidgetitem44 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(5, __qtablewidgetitem44)
-        __qtablewidgetitem45 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(6, __qtablewidgetitem45)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        __qtablewidgetitem17.setFont(font15);
+        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(4, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(5, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(6, __qtablewidgetitem23)
         self.tableWidget_2.setObjectName(u"tableWidget_2")
         self.tableWidget_2.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
@@ -2480,7 +2440,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_6.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_6.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_6.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_6.setFont(font10)
+        self.aba_relatorio_button_6.setFont(font11)
         self.aba_relatorio_button_6.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_6.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -2625,13 +2585,13 @@ class Ui_MainWindow(object):
         self.comboBox_veiculos_produtos.addItem("")
         self.comboBox_veiculos_produtos.setObjectName(u"comboBox_veiculos_produtos")
         self.comboBox_veiculos_produtos.setMinimumSize(QSize(154, 33))
-        font17 = QFont()
-        font17.setFamily(u"Century Gothic")
-        font17.setPointSize(11)
-        font17.setBold(False)
-        font17.setItalic(False)
-        font17.setWeight(50)
-        self.comboBox_veiculos_produtos.setFont(font17)
+        font18 = QFont()
+        font18.setFamily(u"Century Gothic")
+        font18.setPointSize(11)
+        font18.setBold(False)
+        font18.setItalic(False)
+        font18.setWeight(50)
+        self.comboBox_veiculos_produtos.setFont(font18)
         self.comboBox_veiculos_produtos.setCursor(QCursor(Qt.ArrowCursor))
         self.comboBox_veiculos_produtos.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
@@ -2738,7 +2698,7 @@ class Ui_MainWindow(object):
 
         self.label_28 = QLabel(self.widget_3)
         self.label_28.setObjectName(u"label_28")
-        self.label_28.setFont(font16)
+        self.label_28.setFont(font17)
 
         self.gridLayout_12.addWidget(self.label_28, 0, 1, 1, 1)
 
@@ -2767,17 +2727,17 @@ class Ui_MainWindow(object):
         self.tableWidget_3 = QTableWidget(self.frame_78)
         if (self.tableWidget_3.columnCount() < 5):
             self.tableWidget_3.setColumnCount(5)
-        __qtablewidgetitem46 = QTableWidgetItem()
-        __qtablewidgetitem46.setFont(font14);
-        self.tableWidget_3.setHorizontalHeaderItem(0, __qtablewidgetitem46)
-        __qtablewidgetitem47 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(1, __qtablewidgetitem47)
-        __qtablewidgetitem48 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(2, __qtablewidgetitem48)
-        __qtablewidgetitem49 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(3, __qtablewidgetitem49)
-        __qtablewidgetitem50 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(4, __qtablewidgetitem50)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        __qtablewidgetitem24.setFont(font15);
+        self.tableWidget_3.setHorizontalHeaderItem(0, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(1, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(2, __qtablewidgetitem26)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(3, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(4, __qtablewidgetitem28)
         self.tableWidget_3.setObjectName(u"tableWidget_3")
         self.tableWidget_3.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
@@ -2901,7 +2861,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_12.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_12.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_12.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_12.setFont(font10)
+        self.aba_relatorio_button_12.setFont(font11)
         self.aba_relatorio_button_12.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_12.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -3110,12 +3070,12 @@ class Ui_MainWindow(object):
 
         self.label_42 = QLabel(self.frame_8)
         self.label_42.setObjectName(u"label_42")
-        font18 = QFont()
-        font18.setFamily(u"Segoe UI")
-        font18.setPointSize(14)
-        font18.setBold(True)
-        font18.setWeight(75)
-        self.label_42.setFont(font18)
+        font19 = QFont()
+        font19.setFamily(u"Segoe UI")
+        font19.setPointSize(14)
+        font19.setBold(True)
+        font19.setWeight(75)
+        self.label_42.setFont(font19)
         self.label_42.setStyleSheet(u"color: rgb(15, 202, 2);")
 
         self.horizontalLayout_38.addWidget(self.label_42)
@@ -3183,7 +3143,7 @@ class Ui_MainWindow(object):
 
         self.label_37 = QLabel(self.widget_6)
         self.label_37.setObjectName(u"label_37")
-        self.label_37.setFont(font16)
+        self.label_37.setFont(font17)
 
         self.gridLayout_15.addWidget(self.label_37, 0, 1, 1, 1)
 
@@ -3212,19 +3172,19 @@ class Ui_MainWindow(object):
         self.tableWidget = QTableWidget(self.frame_115)
         if (self.tableWidget.columnCount() < 6):
             self.tableWidget.setColumnCount(6)
-        __qtablewidgetitem51 = QTableWidgetItem()
-        __qtablewidgetitem51.setFont(font14);
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem51)
-        __qtablewidgetitem52 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem52)
-        __qtablewidgetitem53 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem53)
-        __qtablewidgetitem54 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem54)
-        __qtablewidgetitem55 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem55)
-        __qtablewidgetitem56 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem56)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        __qtablewidgetitem29.setFont(font15);
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem31)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem33)
+        __qtablewidgetitem34 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem34)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
@@ -3348,7 +3308,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_8.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_8.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_8.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_8.setFont(font10)
+        self.aba_relatorio_button_8.setFont(font11)
         self.aba_relatorio_button_8.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_8.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -3403,7 +3363,7 @@ class Ui_MainWindow(object):
         self.label_33 = QLabel(self.frame_86)
         self.label_33.setObjectName(u"label_33")
         self.label_33.setMaximumSize(QSize(16777215, 20))
-        self.label_33.setFont(font10)
+        self.label_33.setFont(font11)
         self.label_33.setStyleSheet(u"")
         self.label_33.setAlignment(Qt.AlignCenter)
 
@@ -3423,10 +3383,10 @@ class Ui_MainWindow(object):
         self.lcdNumber_2.setObjectName(u"lcdNumber_2")
         self.lcdNumber_2.setMinimumSize(QSize(0, 100))
         self.lcdNumber_2.setMaximumSize(QSize(16777215, 19999))
-        font19 = QFont()
-        font19.setFamily(u"Segoe UI")
-        font19.setPointSize(4)
-        self.lcdNumber_2.setFont(font19)
+        font20 = QFont()
+        font20.setFamily(u"Segoe UI")
+        font20.setPointSize(4)
+        self.lcdNumber_2.setFont(font20)
         self.lcdNumber_2.setFrameShape(QFrame.NoFrame)
         self.lcdNumber_2.setSmallDecimalPoint(True)
         self.lcdNumber_2.setDigitCount(13)
@@ -3440,12 +3400,12 @@ class Ui_MainWindow(object):
         self.label_50 = QLabel(self.frame_87)
         self.label_50.setObjectName(u"label_50")
         self.label_50.setMaximumSize(QSize(50, 50))
-        font20 = QFont()
-        font20.setFamily(u"Segoe UI")
-        font20.setPointSize(26)
-        font20.setBold(True)
-        font20.setWeight(75)
-        self.label_50.setFont(font20)
+        font21 = QFont()
+        font21.setFamily(u"Segoe UI")
+        font21.setPointSize(26)
+        font21.setBold(True)
+        font21.setWeight(75)
+        self.label_50.setFont(font21)
 
         self.horizontalLayout_22.addWidget(self.label_50)
 
@@ -3513,7 +3473,7 @@ class Ui_MainWindow(object):
         self.peso_manualmente_2.setObjectName(u"peso_manualmente_2")
         self.peso_manualmente_2.setMinimumSize(QSize(0, 30))
         self.peso_manualmente_2.setMaximumSize(QSize(0, 16777215))
-        self.peso_manualmente_2.setFont(font17)
+        self.peso_manualmente_2.setFont(font18)
         self.peso_manualmente_2.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:13px;\n"
@@ -3535,7 +3495,7 @@ class Ui_MainWindow(object):
 
         self.label_67 = QLabel(self.frame_dados_avulsa_2)
         self.label_67.setObjectName(u"label_67")
-        self.label_67.setFont(font16)
+        self.label_67.setFont(font17)
         self.label_67.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_79.addWidget(self.label_67)
@@ -3551,12 +3511,28 @@ class Ui_MainWindow(object):
         self.gridLayout_14.setHorizontalSpacing(15)
         self.gridLayout_14.setVerticalSpacing(6)
         self.gridLayout_14.setContentsMargins(-1, 0, -1, -1)
+        self.label_52 = QLabel(self.frame_89)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setMinimumSize(QSize(0, 19))
+        self.label_52.setMaximumSize(QSize(16777215, 13))
+        self.label_52.setFont(font5)
+
+        self.gridLayout_14.addWidget(self.label_52, 1, 3, 1, 1, Qt.AlignTop)
+
+        self.label_54 = QLabel(self.frame_89)
+        self.label_54.setObjectName(u"label_54")
+        self.label_54.setMinimumSize(QSize(0, 19))
+        self.label_54.setMaximumSize(QSize(16777215, 13))
+        self.label_54.setFont(font5)
+
+        self.gridLayout_14.addWidget(self.label_54, 0, 0, 2, 1)
+
         self.input_avulsas_motorista = QLineEdit(self.frame_89)
         self.input_avulsas_motorista.setObjectName(u"input_avulsas_motorista")
         self.input_avulsas_motorista.setMinimumSize(QSize(0, 30))
         self.input_avulsas_motorista.setMaximumSize(QSize(200, 16777215))
-        font21 = QFont()
-        self.input_avulsas_motorista.setFont(font21)
+        font22 = QFont()
+        self.input_avulsas_motorista.setFont(font22)
         self.input_avulsas_motorista.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -3579,57 +3555,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_14.addWidget(self.label_55, 1, 1, 1, 1)
 
-        self.label_54 = QLabel(self.frame_89)
-        self.label_54.setObjectName(u"label_54")
-        self.label_54.setMinimumSize(QSize(0, 19))
-        self.label_54.setMaximumSize(QSize(16777215, 13))
-        self.label_54.setFont(font5)
-
-        self.gridLayout_14.addWidget(self.label_54, 0, 0, 2, 1)
-
-        self.comboBox_avulsas_veiculo = QComboBox(self.frame_89)
-        self.comboBox_avulsas_veiculo.addItem("")
-        self.comboBox_avulsas_veiculo.setObjectName(u"comboBox_avulsas_veiculo")
-        self.comboBox_avulsas_veiculo.setMinimumSize(QSize(0, 30))
-        self.comboBox_avulsas_veiculo.setFont(font21)
-        self.comboBox_avulsas_veiculo.setStyleSheet(u"QComboBox{\n"
-"	border:1px solid rgb(15, 202, 2);\n"
-"	padding-left:10px;\n"
-"	font-size:15px;\n"
-"	\n"
-"	background-color: rgb(250, 252, 250);\n"
-"}\n"
-"\n"
-"QComboBox::drop-down{\n"
-"	border:0px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow{\n"
-"	image: url(:/icons/angle-down-solid.svg);\n"
-"	width:12px;\n"
-"	height:12px;\n"
-"	margin-right:15px;\n"
-"}\n"
-"\n"
-"QComboBox::on{\n"
-"	border:2px solid rgb(67, 202, 0);\n"
-"}\n"
-"\n"
-"QComboBox QListView{\n"
-"	padding:5px;\n"
-"	border:1px solid;\n"
-"	background-color: rgba(255, 255, 255, 50%);\n"
-"	outline:0;\n"
-"}\n"
-"")
-        self.comboBox_avulsas_veiculo.setMaxVisibleItems(10)
-        self.comboBox_avulsas_veiculo.setInsertPolicy(QComboBox.NoInsert)
-        self.comboBox_avulsas_veiculo.setIconSize(QSize(32, 32))
-        self.comboBox_avulsas_veiculo.setDuplicatesEnabled(True)
-        self.comboBox_avulsas_veiculo.setFrame(True)
-
-        self.gridLayout_14.addWidget(self.comboBox_avulsas_veiculo, 3, 1, 1, 1)
-
         self.label_51 = QLabel(self.frame_89)
         self.label_51.setObjectName(u"label_51")
         self.label_51.setMinimumSize(QSize(0, 19))
@@ -3642,7 +3567,7 @@ class Ui_MainWindow(object):
         self.comboBox_avulsas_cliente.addItem("")
         self.comboBox_avulsas_cliente.setObjectName(u"comboBox_avulsas_cliente")
         self.comboBox_avulsas_cliente.setMinimumSize(QSize(0, 30))
-        self.comboBox_avulsas_cliente.setFont(font21)
+        self.comboBox_avulsas_cliente.setFont(font22)
         self.comboBox_avulsas_cliente.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -3685,7 +3610,7 @@ class Ui_MainWindow(object):
         self.comboBox_avulsas_carga.addItem("")
         self.comboBox_avulsas_carga.setObjectName(u"comboBox_avulsas_carga")
         self.comboBox_avulsas_carga.setMinimumSize(QSize(0, 30))
-        self.comboBox_avulsas_carga.setFont(font21)
+        self.comboBox_avulsas_carga.setFont(font22)
         self.comboBox_avulsas_carga.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -3724,13 +3649,48 @@ class Ui_MainWindow(object):
 
         self.gridLayout_14.addWidget(self.comboBox_avulsas_carga, 3, 3, 1, 1)
 
-        self.label_52 = QLabel(self.frame_89)
-        self.label_52.setObjectName(u"label_52")
-        self.label_52.setMinimumSize(QSize(0, 19))
-        self.label_52.setMaximumSize(QSize(16777215, 13))
-        self.label_52.setFont(font5)
+        self.comboBox_avulsas_veiculo = QComboBox(self.frame_89)
+        self.comboBox_avulsas_veiculo.addItem("")
+        self.comboBox_avulsas_veiculo.setObjectName(u"comboBox_avulsas_veiculo")
+        self.comboBox_avulsas_veiculo.setMinimumSize(QSize(0, 30))
+        self.comboBox_avulsas_veiculo.setFont(font22)
+        self.comboBox_avulsas_veiculo.setStyleSheet(u"QComboBox{\n"
+"	border:1px solid rgb(15, 202, 2);\n"
+"	padding-left:10px;\n"
+"	font-size:15px;\n"
+"	\n"
+"	background-color: rgb(250, 252, 250);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down{\n"
+"	border:0px;\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow{\n"
+"	image: url(:/icons/angle-down-solid.svg);\n"
+"	width:12px;\n"
+"	height:12px;\n"
+"	margin-right:15px;\n"
+"}\n"
+"\n"
+"QComboBox::on{\n"
+"	border:2px solid rgb(67, 202, 0);\n"
+"}\n"
+"\n"
+"QComboBox QListView{\n"
+"	padding:5px;\n"
+"	border:1px solid;\n"
+"	background-color: rgba(255, 255, 255, 50%);\n"
+"	outline:0;\n"
+"}\n"
+"")
+        self.comboBox_avulsas_veiculo.setMaxVisibleItems(10)
+        self.comboBox_avulsas_veiculo.setInsertPolicy(QComboBox.NoInsert)
+        self.comboBox_avulsas_veiculo.setIconSize(QSize(32, 32))
+        self.comboBox_avulsas_veiculo.setDuplicatesEnabled(True)
+        self.comboBox_avulsas_veiculo.setFrame(True)
 
-        self.gridLayout_14.addWidget(self.label_52, 1, 3, 1, 1, Qt.AlignTop)
+        self.gridLayout_14.addWidget(self.comboBox_avulsas_veiculo, 3, 1, 1, 1)
 
 
         self.verticalLayout_79.addWidget(self.frame_89, 0, Qt.AlignTop)
@@ -3773,7 +3733,7 @@ class Ui_MainWindow(object):
         self.input_avulsas_obs.setObjectName(u"input_avulsas_obs")
         self.input_avulsas_obs.setMinimumSize(QSize(400, 30))
         self.input_avulsas_obs.setMaximumSize(QSize(16777215, 16777215))
-        self.input_avulsas_obs.setFont(font21)
+        self.input_avulsas_obs.setFont(font22)
         self.input_avulsas_obs.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -3896,7 +3856,7 @@ class Ui_MainWindow(object):
         self.label_57.setObjectName(u"label_57")
         self.label_57.setMinimumSize(QSize(0, 30))
         self.label_57.setMaximumSize(QSize(16777215, 30))
-        self.label_57.setFont(font10)
+        self.label_57.setFont(font11)
         self.label_57.setStyleSheet(u"	color:white;\n"
 "")
         self.label_57.setAlignment(Qt.AlignCenter)
@@ -3909,27 +3869,27 @@ class Ui_MainWindow(object):
         self.tableWidget_6 = QTableWidget(self.frame_obs)
         if (self.tableWidget_6.columnCount() < 3):
             self.tableWidget_6.setColumnCount(3)
-        font22 = QFont()
-        font22.setBold(True)
-        font22.setWeight(75)
-        __qtablewidgetitem57 = QTableWidgetItem()
-        __qtablewidgetitem57.setFont(font22);
-        self.tableWidget_6.setHorizontalHeaderItem(0, __qtablewidgetitem57)
-        __qtablewidgetitem58 = QTableWidgetItem()
-        __qtablewidgetitem58.setFont(font22);
-        self.tableWidget_6.setHorizontalHeaderItem(1, __qtablewidgetitem58)
-        __qtablewidgetitem59 = QTableWidgetItem()
-        __qtablewidgetitem59.setFont(font22);
-        self.tableWidget_6.setHorizontalHeaderItem(2, __qtablewidgetitem59)
+        font23 = QFont()
+        font23.setBold(True)
+        font23.setWeight(75)
+        __qtablewidgetitem35 = QTableWidgetItem()
+        __qtablewidgetitem35.setFont(font23);
+        self.tableWidget_6.setHorizontalHeaderItem(0, __qtablewidgetitem35)
+        __qtablewidgetitem36 = QTableWidgetItem()
+        __qtablewidgetitem36.setFont(font23);
+        self.tableWidget_6.setHorizontalHeaderItem(1, __qtablewidgetitem36)
+        __qtablewidgetitem37 = QTableWidgetItem()
+        __qtablewidgetitem37.setFont(font23);
+        self.tableWidget_6.setHorizontalHeaderItem(2, __qtablewidgetitem37)
         self.tableWidget_6.setObjectName(u"tableWidget_6")
         self.tableWidget_6.setMaximumSize(QSize(16777215, 1999999))
-        font23 = QFont()
-        font23.setFamily(u"Century Gothic")
-        font23.setPointSize(10)
-        font23.setBold(False)
-        font23.setItalic(False)
-        font23.setWeight(50)
-        self.tableWidget_6.setFont(font23)
+        font24 = QFont()
+        font24.setFamily(u"Century Gothic")
+        font24.setPointSize(10)
+        font24.setBold(False)
+        font24.setItalic(False)
+        font24.setWeight(50)
+        self.tableWidget_6.setFont(font24)
         self.tableWidget_6.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
 "	outline:0;	color:white;\n"
@@ -4068,7 +4028,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_7.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_7.setMaximumSize(QSize(5555, 45))
         self.aba_relatorio_button_7.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_7.setFont(font10)
+        self.aba_relatorio_button_7.setFont(font11)
         self.aba_relatorio_button_7.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_7.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -4123,7 +4083,7 @@ class Ui_MainWindow(object):
         self.label_32 = QLabel(self.frame_116)
         self.label_32.setObjectName(u"label_32")
         self.label_32.setMaximumSize(QSize(16777215, 20))
-        self.label_32.setFont(font10)
+        self.label_32.setFont(font11)
         self.label_32.setStyleSheet(u"")
         self.label_32.setAlignment(Qt.AlignCenter)
 
@@ -4132,7 +4092,7 @@ class Ui_MainWindow(object):
         self.label_61 = QLabel(self.frame_116)
         self.label_61.setObjectName(u"label_61")
         self.label_61.setMaximumSize(QSize(16777215, 20))
-        self.label_61.setFont(font10)
+        self.label_61.setFont(font11)
         self.label_61.setStyleSheet(u"color: rgb(6, 180, 20);")
         self.label_61.setAlignment(Qt.AlignCenter)
 
@@ -4156,7 +4116,7 @@ class Ui_MainWindow(object):
         self.lcdNumber.setObjectName(u"lcdNumber")
         self.lcdNumber.setMinimumSize(QSize(0, 90))
         self.lcdNumber.setMaximumSize(QSize(16777215, 19999))
-        self.lcdNumber.setFont(font19)
+        self.lcdNumber.setFont(font20)
         self.lcdNumber.setFrameShape(QFrame.NoFrame)
         self.lcdNumber.setSmallDecimalPoint(True)
         self.lcdNumber.setDigitCount(13)
@@ -4170,7 +4130,7 @@ class Ui_MainWindow(object):
         self.label_31 = QLabel(self.frame_77)
         self.label_31.setObjectName(u"label_31")
         self.label_31.setMaximumSize(QSize(50, 50))
-        self.label_31.setFont(font20)
+        self.label_31.setFont(font21)
 
         self.horizontalLayout_17.addWidget(self.label_31)
 
@@ -4206,7 +4166,7 @@ class Ui_MainWindow(object):
         self.label_60 = QLabel(self.frame_dados_avulsa)
         self.label_60.setObjectName(u"label_60")
         self.label_60.setMinimumSize(QSize(458, 0))
-        self.label_60.setFont(font16)
+        self.label_60.setFont(font17)
         self.label_60.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_69.addWidget(self.label_60)
@@ -4225,7 +4185,7 @@ class Ui_MainWindow(object):
         self.input_entrada_motorista.setObjectName(u"input_entrada_motorista")
         self.input_entrada_motorista.setMinimumSize(QSize(0, 30))
         self.input_entrada_motorista.setMaximumSize(QSize(200, 16777215))
-        self.input_entrada_motorista.setFont(font21)
+        self.input_entrada_motorista.setFont(font22)
         self.input_entrada_motorista.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -4260,7 +4220,7 @@ class Ui_MainWindow(object):
         self.comboBox_entrada_cliente.addItem("")
         self.comboBox_entrada_cliente.setObjectName(u"comboBox_entrada_cliente")
         self.comboBox_entrada_cliente.setMinimumSize(QSize(0, 30))
-        self.comboBox_entrada_cliente.setFont(font21)
+        self.comboBox_entrada_cliente.setFont(font22)
         self.comboBox_entrada_cliente.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -4311,7 +4271,7 @@ class Ui_MainWindow(object):
         self.comboBox_entrada_carga.addItem("")
         self.comboBox_entrada_carga.setObjectName(u"comboBox_entrada_carga")
         self.comboBox_entrada_carga.setMinimumSize(QSize(0, 30))
-        self.comboBox_entrada_carga.setFont(font21)
+        self.comboBox_entrada_carga.setFont(font22)
         self.comboBox_entrada_carga.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -4362,7 +4322,7 @@ class Ui_MainWindow(object):
         self.comboBox_entrada_veiculo.addItem("")
         self.comboBox_entrada_veiculo.setObjectName(u"comboBox_entrada_veiculo")
         self.comboBox_entrada_veiculo.setMinimumSize(QSize(0, 30))
-        self.comboBox_entrada_veiculo.setFont(font21)
+        self.comboBox_entrada_veiculo.setFont(font22)
         self.comboBox_entrada_veiculo.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding-left:10px;\n"
@@ -4417,7 +4377,7 @@ class Ui_MainWindow(object):
         self.input_entrada_obs.setObjectName(u"input_entrada_obs")
         self.input_entrada_obs.setMinimumSize(QSize(400, 30))
         self.input_entrada_obs.setMaximumSize(QSize(16777215, 16777215))
-        self.input_entrada_obs.setFont(font21)
+        self.input_entrada_obs.setFont(font22)
         self.input_entrada_obs.setStyleSheet(u"QLineEdit{\n"
 "	padding-left:10px;\n"
 "	font-size:15px;\n"
@@ -4495,7 +4455,7 @@ class Ui_MainWindow(object):
         self.btn_historico_obs.setSizePolicy(sizePolicy1)
         self.btn_historico_obs.setMinimumSize(QSize(0, 26))
         self.btn_historico_obs.setMaximumSize(QSize(16777215, 26))
-        self.btn_historico_obs.setFont(font21)
+        self.btn_historico_obs.setFont(font22)
         self.btn_historico_obs.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_historico_obs.setStyleSheet(u"\n"
 "QPushButton{\n"
@@ -4540,7 +4500,7 @@ class Ui_MainWindow(object):
         self.label_48.setObjectName(u"label_48")
         self.label_48.setMinimumSize(QSize(0, 30))
         self.label_48.setMaximumSize(QSize(16777215, 30))
-        self.label_48.setFont(font18)
+        self.label_48.setFont(font19)
         self.label_48.setStyleSheet(u"	color:white;\n"
 "")
         self.label_48.setAlignment(Qt.AlignCenter)
@@ -4549,14 +4509,14 @@ class Ui_MainWindow(object):
 
         self.label_25 = QLabel(self.frame_41)
         self.label_25.setObjectName(u"label_25")
-        self.label_25.setFont(font18)
+        self.label_25.setFont(font19)
         self.label_25.setStyleSheet(u"color: rgb(6, 180, 20);")
 
         self.horizontalLayout_20.addWidget(self.label_25)
 
         self.label_29 = QLabel(self.frame_41)
         self.label_29.setObjectName(u"label_29")
-        self.label_29.setFont(font18)
+        self.label_29.setFont(font19)
         self.label_29.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_20.addWidget(self.label_29)
@@ -4599,26 +4559,26 @@ class Ui_MainWindow(object):
         self.tableWidget_5 = QTableWidget(self.frame_pendentes)
         if (self.tableWidget_5.columnCount() < 4):
             self.tableWidget_5.setColumnCount(4)
-        __qtablewidgetitem60 = QTableWidgetItem()
-        __qtablewidgetitem60.setFont(font7);
-        self.tableWidget_5.setHorizontalHeaderItem(0, __qtablewidgetitem60)
+        __qtablewidgetitem38 = QTableWidgetItem()
+        __qtablewidgetitem38.setFont(font7);
+        self.tableWidget_5.setHorizontalHeaderItem(0, __qtablewidgetitem38)
         brush = QBrush(QColor(43, 43, 43, 255))
         brush.setStyle(Qt.SolidPattern)
-        __qtablewidgetitem61 = QTableWidgetItem()
-        __qtablewidgetitem61.setFont(font7);
-        __qtablewidgetitem61.setForeground(brush);
-        self.tableWidget_5.setHorizontalHeaderItem(1, __qtablewidgetitem61)
-        __qtablewidgetitem62 = QTableWidgetItem()
-        __qtablewidgetitem62.setFont(font7);
-        __qtablewidgetitem62.setForeground(brush);
-        self.tableWidget_5.setHorizontalHeaderItem(2, __qtablewidgetitem62)
-        __qtablewidgetitem63 = QTableWidgetItem()
-        __qtablewidgetitem63.setFont(font7);
-        __qtablewidgetitem63.setForeground(brush);
-        self.tableWidget_5.setHorizontalHeaderItem(3, __qtablewidgetitem63)
+        __qtablewidgetitem39 = QTableWidgetItem()
+        __qtablewidgetitem39.setFont(font7);
+        __qtablewidgetitem39.setForeground(brush);
+        self.tableWidget_5.setHorizontalHeaderItem(1, __qtablewidgetitem39)
+        __qtablewidgetitem40 = QTableWidgetItem()
+        __qtablewidgetitem40.setFont(font7);
+        __qtablewidgetitem40.setForeground(brush);
+        self.tableWidget_5.setHorizontalHeaderItem(2, __qtablewidgetitem40)
+        __qtablewidgetitem41 = QTableWidgetItem()
+        __qtablewidgetitem41.setFont(font7);
+        __qtablewidgetitem41.setForeground(brush);
+        self.tableWidget_5.setHorizontalHeaderItem(3, __qtablewidgetitem41)
         self.tableWidget_5.setObjectName(u"tableWidget_5")
         self.tableWidget_5.setMaximumSize(QSize(16777215, 1999999))
-        self.tableWidget_5.setFont(font23)
+        self.tableWidget_5.setFont(font24)
         self.tableWidget_5.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
 "	outline:0;	color:white;\n"
@@ -4752,7 +4712,7 @@ class Ui_MainWindow(object):
         self.aba_relatorio_button_9.setMinimumSize(QSize(160, 37))
         self.aba_relatorio_button_9.setMaximumSize(QSize(5555, 37))
         self.aba_relatorio_button_9.setBaseSize(QSize(555, 2))
-        self.aba_relatorio_button_9.setFont(font10)
+        self.aba_relatorio_button_9.setFont(font11)
         self.aba_relatorio_button_9.setLayoutDirection(Qt.LeftToRight)
         self.aba_relatorio_button_9.setStyleSheet(u"QPushButton{\n"
 "	border:0;\n"
@@ -4817,7 +4777,7 @@ class Ui_MainWindow(object):
         self.label_65 = QLabel(self.frame_118)
         self.label_65.setObjectName(u"label_65")
         self.label_65.setMaximumSize(QSize(16777215, 20))
-        self.label_65.setFont(font10)
+        self.label_65.setFont(font11)
         self.label_65.setStyleSheet(u"")
         self.label_65.setAlignment(Qt.AlignCenter)
 
@@ -4826,7 +4786,7 @@ class Ui_MainWindow(object):
         self.label_66 = QLabel(self.frame_118)
         self.label_66.setObjectName(u"label_66")
         self.label_66.setMaximumSize(QSize(16777215, 20))
-        self.label_66.setFont(font10)
+        self.label_66.setFont(font11)
         self.label_66.setStyleSheet(u"color: rgb(255, 48, 48);")
         self.label_66.setAlignment(Qt.AlignCenter)
 
@@ -4853,7 +4813,7 @@ class Ui_MainWindow(object):
         self.lcdNumber_3.setObjectName(u"lcdNumber_3")
         self.lcdNumber_3.setMinimumSize(QSize(0, 90))
         self.lcdNumber_3.setMaximumSize(QSize(16777215, 19999))
-        self.lcdNumber_3.setFont(font19)
+        self.lcdNumber_3.setFont(font20)
         self.lcdNumber_3.setFrameShape(QFrame.NoFrame)
         self.lcdNumber_3.setSmallDecimalPoint(True)
         self.lcdNumber_3.setDigitCount(13)
@@ -4867,7 +4827,7 @@ class Ui_MainWindow(object):
         self.label_58 = QLabel(self.frame_98)
         self.label_58.setObjectName(u"label_58")
         self.label_58.setMaximumSize(QSize(50, 50))
-        self.label_58.setFont(font20)
+        self.label_58.setFont(font21)
 
         self.horizontalLayout_19.addWidget(self.label_58)
 
@@ -4914,7 +4874,7 @@ class Ui_MainWindow(object):
         self.comboBox_pesagem_entrada.addItem("")
         self.comboBox_pesagem_entrada.setObjectName(u"comboBox_pesagem_entrada")
         self.comboBox_pesagem_entrada.setMinimumSize(QSize(0, 30))
-        self.comboBox_pesagem_entrada.setFont(font21)
+        self.comboBox_pesagem_entrada.setFont(font22)
         self.comboBox_pesagem_entrada.setStyleSheet(u"QComboBox{\n"
 "	border:1px solid;\n"
 "	padding-left:10px;\n"
@@ -4955,15 +4915,15 @@ class Ui_MainWindow(object):
 
         self.label_59 = QLabel(self.frame_100)
         self.label_59.setObjectName(u"label_59")
-        font24 = QFont()
-        font24.setFamily(u"Segoe UI")
-        font24.setPointSize(13)
-        font24.setBold(True)
-        font24.setUnderline(False)
-        font24.setWeight(75)
-        font24.setKerning(True)
-        font24.setStyleStrategy(QFont.PreferDefault)
-        self.label_59.setFont(font24)
+        font25 = QFont()
+        font25.setFamily(u"Segoe UI")
+        font25.setPointSize(13)
+        font25.setBold(True)
+        font25.setUnderline(False)
+        font25.setWeight(75)
+        font25.setKerning(True)
+        font25.setStyleStrategy(QFont.PreferDefault)
+        self.label_59.setFont(font25)
         self.label_59.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_17.addWidget(self.label_59, 0, 0, 1, 1)
@@ -5102,9 +5062,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
         self.frame_58 = QFrame(self.frame_57)
         self.frame_58.setObjectName(u"frame_58")
-        font25 = QFont()
-        font25.setPointSize(11)
-        self.frame_58.setFont(font25)
+        font26 = QFont()
+        font26.setPointSize(11)
+        self.frame_58.setFont(font26)
         self.frame_58.setFrameShape(QFrame.NoFrame)
         self.frame_58.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_47 = QHBoxLayout(self.frame_58)
@@ -5244,7 +5204,7 @@ class Ui_MainWindow(object):
         self.label_64.setObjectName(u"label_64")
         self.label_64.setMinimumSize(QSize(0, 30))
         self.label_64.setMaximumSize(QSize(16777215, 30))
-        self.label_64.setFont(font10)
+        self.label_64.setFont(font11)
         self.label_64.setStyleSheet(u"	color:white;\n"
 "")
         self.label_64.setAlignment(Qt.AlignCenter)
@@ -5257,21 +5217,21 @@ class Ui_MainWindow(object):
         self.tableWidget_8 = QTableWidget(self.frame_historico_avulsas_3)
         if (self.tableWidget_8.columnCount() < 3):
             self.tableWidget_8.setColumnCount(3)
-        __qtablewidgetitem64 = QTableWidgetItem()
-        __qtablewidgetitem64.setFont(font22);
-        self.tableWidget_8.setHorizontalHeaderItem(0, __qtablewidgetitem64)
-        __qtablewidgetitem65 = QTableWidgetItem()
-        __qtablewidgetitem65.setFont(font22);
-        self.tableWidget_8.setHorizontalHeaderItem(1, __qtablewidgetitem65)
+        __qtablewidgetitem42 = QTableWidgetItem()
+        __qtablewidgetitem42.setFont(font23);
+        self.tableWidget_8.setHorizontalHeaderItem(0, __qtablewidgetitem42)
+        __qtablewidgetitem43 = QTableWidgetItem()
+        __qtablewidgetitem43.setFont(font23);
+        self.tableWidget_8.setHorizontalHeaderItem(1, __qtablewidgetitem43)
         brush1 = QBrush(QColor(255, 170, 0, 255))
         brush1.setStyle(Qt.SolidPattern)
-        __qtablewidgetitem66 = QTableWidgetItem()
-        __qtablewidgetitem66.setFont(font22);
-        __qtablewidgetitem66.setForeground(brush1);
-        self.tableWidget_8.setHorizontalHeaderItem(2, __qtablewidgetitem66)
+        __qtablewidgetitem44 = QTableWidgetItem()
+        __qtablewidgetitem44.setFont(font23);
+        __qtablewidgetitem44.setForeground(brush1);
+        self.tableWidget_8.setHorizontalHeaderItem(2, __qtablewidgetitem44)
         self.tableWidget_8.setObjectName(u"tableWidget_8")
         self.tableWidget_8.setMaximumSize(QSize(16777215, 1999999))
-        self.tableWidget_8.setFont(font23)
+        self.tableWidget_8.setFont(font24)
         self.tableWidget_8.setStyleSheet(u"QTableWidget{\n"
 "	font: 10pt \"Century Gothic\";\n"
 "	outline:0;	color:white;\n"
@@ -5405,7 +5365,7 @@ class Ui_MainWindow(object):
         self.title.setMinimumSize(QSize(160, 37))
         self.title.setMaximumSize(QSize(5555, 37))
         self.title.setBaseSize(QSize(555, 2))
-        self.title.setFont(font10)
+        self.title.setFont(font11)
         self.title.setLayoutDirection(Qt.LeftToRight)
         self.title.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgb(43, 43, 43);")
@@ -5420,7 +5380,7 @@ class Ui_MainWindow(object):
 
         self.frame_13 = QFrame(self.frame_11)
         self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setFont(font13)
+        self.frame_13.setFont(font14)
         self.frame_13.setFrameShape(QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QFrame.Raised)
         self.verticalLayout_17 = QVBoxLayout(self.frame_13)
@@ -5451,12 +5411,12 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(127, 0))
         self.label_3.setMaximumSize(QSize(241, 30))
-        font26 = QFont()
-        font26.setFamily(u"Segoe UI")
-        font26.setPointSize(15)
-        font26.setBold(True)
-        font26.setWeight(75)
-        self.label_3.setFont(font26)
+        font27 = QFont()
+        font27.setFamily(u"Segoe UI")
+        font27.setPointSize(15)
+        font27.setBold(True)
+        font27.setWeight(75)
+        self.label_3.setFont(font27)
         self.label_3.setStyleSheet(u"color:  rgb(15, 202, 2);")
         self.label_3.setAlignment(Qt.AlignCenter)
 
@@ -5783,9 +5743,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_35.setContentsMargins(0, 0, 0, 0)
         self.frame_saida = QFrame(self.frame_7)
         self.frame_saida.setObjectName(u"frame_saida")
-        font27 = QFont()
-        font27.setPointSize(1)
-        self.frame_saida.setFont(font27)
+        font28 = QFont()
+        font28.setPointSize(1)
+        self.frame_saida.setFont(font28)
         self.frame_saida.setStyleSheet(u"")
         self.frame_saida.setFrameShape(QFrame.NoFrame)
         self.frame_saida.setFrameShadow(QFrame.Raised)
@@ -5796,10 +5756,10 @@ class Ui_MainWindow(object):
         self.label_logo_saida = QLabel(self.frame_saida)
         self.label_logo_saida.setObjectName(u"label_logo_saida")
         self.label_logo_saida.setMaximumSize(QSize(25, 25))
-        font28 = QFont()
-        font28.setFamily(u"MS Outlook")
-        font28.setPointSize(15)
-        self.label_logo_saida.setFont(font28)
+        font29 = QFont()
+        font29.setFamily(u"MS Outlook")
+        font29.setPointSize(15)
+        self.label_logo_saida.setFont(font29)
         self.label_logo_saida.setStyleSheet(u"border:0")
         self.label_logo_saida.setPixmap(QPixmap(u":/icons/check-solid_green.svg"))
         self.label_logo_saida.setScaledContents(True)
@@ -5808,7 +5768,7 @@ class Ui_MainWindow(object):
 
         self.label_realizada_ou_erro = QLabel(self.frame_saida)
         self.label_realizada_ou_erro.setObjectName(u"label_realizada_ou_erro")
-        self.label_realizada_ou_erro.setFont(font16)
+        self.label_realizada_ou_erro.setFont(font17)
         self.label_realizada_ou_erro.setStyleSheet(u"color:rgb(6, 180, 20);")
 
         self.horizontalLayout_36.addWidget(self.label_realizada_ou_erro)
@@ -5943,17 +5903,17 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.aba_pesagem_button.setDefault(False)
-        self.stackedWidget.setCurrentIndex(6)
-        self.comboBox_veiculo_6.setCurrentIndex(0)
-        self.comboBox_produto_6.setCurrentIndex(0)
-        self.comboBox_cliente_6.setCurrentIndex(0)
-        self.comboBox_cliente_2.setCurrentIndex(0)
-        self.comboBox_produto_2.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
         self.comboBox_veiculo_2.setCurrentIndex(0)
+        self.comboBox_carga_2.setCurrentIndex(0)
+        self.comboBox_cliente_2.setCurrentIndex(0)
+        self.comboBox_cliente.setCurrentIndex(0)
+        self.comboBox_veiculo.setCurrentIndex(0)
+        self.comboBox_carga.setCurrentIndex(0)
         self.comboBox_veiculos_produtos.setCurrentIndex(0)
-        self.comboBox_avulsas_veiculo.setCurrentIndex(0)
         self.comboBox_avulsas_cliente.setCurrentIndex(0)
         self.comboBox_avulsas_carga.setCurrentIndex(0)
+        self.comboBox_avulsas_veiculo.setCurrentIndex(0)
         self.comboBox_entrada_cliente.setCurrentIndex(0)
         self.comboBox_entrada_carga.setCurrentIndex(0)
         self.comboBox_entrada_veiculo.setCurrentIndex(0)
@@ -6000,14 +5960,14 @@ class Ui_MainWindow(object):
         self.data_antes_de_6.setText(QCoreApplication.translate("MainWindow", u"Antes de", None))
         self.data_depois_de_6.setText(QCoreApplication.translate("MainWindow", u"Depois de", None))
         self.label_95.setText(QCoreApplication.translate("MainWindow", u"Data:", None))
-        self.comboBox_veiculo_6.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
+        self.comboBox_veiculo_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
 
-        self.comboBox_produto_6.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
+        self.comboBox_carga_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
 
-        self.comboBox_cliente_6.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
+        self.comboBox_cliente_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
 
         self.label_98.setText(QCoreApplication.translate("MainWindow", u"Placa do Ve\u00edculo:", None))
-        self.label_94.setText(QCoreApplication.translate("MainWindow", u"Produto:", None))
+        self.label_94.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
         self.label_96.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
         self.radioButton.setText(QCoreApplication.translate("MainWindow", u"Calcular valor e quantidade da carga          ", None))
         self.digite_um_id_2.setText(QCoreApplication.translate("MainWindow", u"Digite um ID", None))
@@ -6034,63 +5994,18 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"DATA(SA\u00cdDA)", None));
         ___qtablewidgetitem9 = self.tableWidget_7.horizontalHeaderItem(9)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"PESO L\u00cdQUIDO", None));
-        ___qtablewidgetitem10 = self.tableWidget_7.verticalHeaderItem(0)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem11 = self.tableWidget_7.verticalHeaderItem(1)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"2", None));
-
-        __sortingEnabled = self.tableWidget_7.isSortingEnabled()
-        self.tableWidget_7.setSortingEnabled(False)
-        ___qtablewidgetitem12 = self.tableWidget_7.item(0, 1)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Ryan", None));
-        ___qtablewidgetitem13 = self.tableWidget_7.item(0, 2)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Caltec", None));
-        ___qtablewidgetitem14 = self.tableWidget_7.item(0, 3)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Whisky", None));
-        ___qtablewidgetitem15 = self.tableWidget_7.item(0, 4)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"546GHY", None));
-        ___qtablewidgetitem16 = self.tableWidget_7.item(0, 5)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"5000", None));
-        ___qtablewidgetitem17 = self.tableWidget_7.item(0, 6)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"1000", None));
-        ___qtablewidgetitem18 = self.tableWidget_7.item(0, 7)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"12:00 07/06/2022", None));
-        ___qtablewidgetitem19 = self.tableWidget_7.item(0, 8)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"12:45 07/06/2022", None));
-        ___qtablewidgetitem20 = self.tableWidget_7.item(0, 9)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"4000", None));
-        ___qtablewidgetitem21 = self.tableWidget_7.item(1, 1)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Jo\u00e3o", None));
-        ___qtablewidgetitem22 = self.tableWidget_7.item(1, 2)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"Caltec", None));
-        ___qtablewidgetitem23 = self.tableWidget_7.item(1, 3)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Whisky", None));
-        ___qtablewidgetitem24 = self.tableWidget_7.item(1, 4)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"852IKM", None));
-        ___qtablewidgetitem25 = self.tableWidget_7.item(1, 5)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"5000", None));
-        ___qtablewidgetitem26 = self.tableWidget_7.item(1, 6)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"1000", None));
-        ___qtablewidgetitem27 = self.tableWidget_7.item(1, 7)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"12:50 07/09/2022", None));
-        ___qtablewidgetitem28 = self.tableWidget_7.item(1, 8)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"13:30 07/06/2022", None));
-        ___qtablewidgetitem29 = self.tableWidget_7.item(1, 9)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"4000", None));
-        self.tableWidget_7.setSortingEnabled(__sortingEnabled)
-
         self.aba_relatorio_button_5.setText(QCoreApplication.translate("MainWindow", u"Relat\u00f3rio Avulsas", None))
         self.data_depois_de_2.setText(QCoreApplication.translate("MainWindow", u"Depois de", None))
         self.data_fixa_2.setText(QCoreApplication.translate("MainWindow", u"Data fixa", None))
         self.data_antes_de_2.setText(QCoreApplication.translate("MainWindow", u"Antes de", None))
         self.label_69.setText("")
         self.label_43.setText(QCoreApplication.translate("MainWindow", u"Cliente:", None))
-        self.comboBox_cliente_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
+        self.comboBox_cliente.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
 
-        self.comboBox_produto_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
+        self.comboBox_veiculo.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
 
-        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Produto:", None))
-        self.comboBox_veiculo_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
+        self.comboBox_carga.setItemText(0, QCoreApplication.translate("MainWindow", u"Todos", None))
 
         self.label_70.setText(QCoreApplication.translate("MainWindow", u"Placa do Ve\u00edculo:", None))
         self.label_62.setText(QCoreApplication.translate("MainWindow", u"Data:", None))
@@ -6101,20 +6016,20 @@ class Ui_MainWindow(object):
         self.btn_Aplicar_filtro_geral_2.setText(QCoreApplication.translate("MainWindow", u"Aplicar Filtragem", None))
         self.btn_inprimir_2.setText(QCoreApplication.translate("MainWindow", u"Imprimir relat\u00f3rio", None))
         self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"Remover relat\u00f3rio(s) selecionado(s)", None))
-        ___qtablewidgetitem30 = self.tableWidget_4.horizontalHeaderItem(0)
-        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
-        ___qtablewidgetitem31 = self.tableWidget_4.horizontalHeaderItem(1)
-        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"MOTORISTA", None));
-        ___qtablewidgetitem32 = self.tableWidget_4.horizontalHeaderItem(2)
-        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"PRODUTO", None));
-        ___qtablewidgetitem33 = self.tableWidget_4.horizontalHeaderItem(3)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"CLIENTE", None));
-        ___qtablewidgetitem34 = self.tableWidget_4.horizontalHeaderItem(4)
-        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"PESO BRUTO", None));
-        ___qtablewidgetitem35 = self.tableWidget_4.horizontalHeaderItem(5)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"DATA", None));
-        ___qtablewidgetitem36 = self.tableWidget_4.horizontalHeaderItem(6)
-        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"PLACA VE\u00cdCULO", None));
+        ___qtablewidgetitem10 = self.tableWidget_4.horizontalHeaderItem(0)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
+        ___qtablewidgetitem11 = self.tableWidget_4.horizontalHeaderItem(1)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"MOTORISTA", None));
+        ___qtablewidgetitem12 = self.tableWidget_4.horizontalHeaderItem(2)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"PRODUTO", None));
+        ___qtablewidgetitem13 = self.tableWidget_4.horizontalHeaderItem(3)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"CLIENTE", None));
+        ___qtablewidgetitem14 = self.tableWidget_4.horizontalHeaderItem(4)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"PESO BRUTO", None));
+        ___qtablewidgetitem15 = self.tableWidget_4.horizontalHeaderItem(5)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"DATA", None));
+        ___qtablewidgetitem16 = self.tableWidget_4.horizontalHeaderItem(6)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"PLACA VE\u00cdCULO", None));
         self.aba_relatorio_button_3.setText(QCoreApplication.translate("MainWindow", u"Clientes", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"Adicionar novos clientes", None))
         self.input_clientes_nome.setText("")
@@ -6134,20 +6049,20 @@ class Ui_MainWindow(object):
         self.label_16.setText("")
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Historico de Clientes adicionados", None))
         self.btn_remover_clientes.setText(QCoreApplication.translate("MainWindow", u"Remover cliente(s) selecionado(s)", None))
-        ___qtablewidgetitem37 = self.tableWidget_2.horizontalHeaderItem(0)
-        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
-        ___qtablewidgetitem38 = self.tableWidget_2.horizontalHeaderItem(1)
-        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
-        ___qtablewidgetitem39 = self.tableWidget_2.horizontalHeaderItem(2)
-        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"CPF / CNPJ", None));
-        ___qtablewidgetitem40 = self.tableWidget_2.horizontalHeaderItem(3)
-        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"RG", None));
-        ___qtablewidgetitem41 = self.tableWidget_2.horizontalHeaderItem(4)
-        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
-        ___qtablewidgetitem42 = self.tableWidget_2.horizontalHeaderItem(5)
-        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"CEP", None));
-        ___qtablewidgetitem43 = self.tableWidget_2.horizontalHeaderItem(6)
-        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"ENDERE\u00c7O", None));
+        ___qtablewidgetitem17 = self.tableWidget_2.horizontalHeaderItem(0)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
+        ___qtablewidgetitem18 = self.tableWidget_2.horizontalHeaderItem(1)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
+        ___qtablewidgetitem19 = self.tableWidget_2.horizontalHeaderItem(2)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"CPF / CNPJ", None));
+        ___qtablewidgetitem20 = self.tableWidget_2.horizontalHeaderItem(3)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"RG", None));
+        ___qtablewidgetitem21 = self.tableWidget_2.horizontalHeaderItem(4)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
+        ___qtablewidgetitem22 = self.tableWidget_2.horizontalHeaderItem(5)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"CEP", None));
+        ___qtablewidgetitem23 = self.tableWidget_2.horizontalHeaderItem(6)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"ENDERE\u00c7O", None));
         self.aba_relatorio_button_6.setText(QCoreApplication.translate("MainWindow", u"Ve\u00edculos", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Adicionar novos ve\u00edculos", None))
         self.input_veiculos_valor_2.setText("")
@@ -6164,16 +6079,16 @@ class Ui_MainWindow(object):
         self.label_27.setText("")
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Historico de Ve\u00edculos adicionados", None))
         self.btn_remover_veiculos.setText(QCoreApplication.translate("MainWindow", u"Remover ve\u00edculo(s) selecionado(s)", None))
-        ___qtablewidgetitem44 = self.tableWidget_3.horizontalHeaderItem(0)
-        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
-        ___qtablewidgetitem45 = self.tableWidget_3.horizontalHeaderItem(1)
-        ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"PLACA", None));
-        ___qtablewidgetitem46 = self.tableWidget_3.horizontalHeaderItem(2)
-        ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"PROPRIET\u00c1RIO", None));
-        ___qtablewidgetitem47 = self.tableWidget_3.horizontalHeaderItem(3)
-        ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
-        ___qtablewidgetitem48 = self.tableWidget_3.horizontalHeaderItem(4)
-        ___qtablewidgetitem48.setText(QCoreApplication.translate("MainWindow", u"CARGA", None));
+        ___qtablewidgetitem24 = self.tableWidget_3.horizontalHeaderItem(0)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
+        ___qtablewidgetitem25 = self.tableWidget_3.horizontalHeaderItem(1)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"PLACA", None));
+        ___qtablewidgetitem26 = self.tableWidget_3.horizontalHeaderItem(2)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"PROPRIET\u00c1RIO", None));
+        ___qtablewidgetitem27 = self.tableWidget_3.horizontalHeaderItem(3)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
+        ___qtablewidgetitem28 = self.tableWidget_3.horizontalHeaderItem(4)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"CARGA", None));
         self.aba_relatorio_button_12.setText(QCoreApplication.translate("MainWindow", u"Carga", None))
         self.label_35.setText(QCoreApplication.translate("MainWindow", u"Adicionar nova carga", None))
         self.input_produtos_nome.setText("")
@@ -6195,47 +6110,47 @@ class Ui_MainWindow(object):
         self.label_36.setText("")
         self.label_37.setText(QCoreApplication.translate("MainWindow", u"Historico de Cargas adicionadas", None))
         self.btn_remover_produtos.setText(QCoreApplication.translate("MainWindow", u"Remover Carga(s) selecionado(s)", None))
-        ___qtablewidgetitem49 = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem49.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
-        ___qtablewidgetitem50 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem50.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
-        ___qtablewidgetitem51 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem51.setText(QCoreApplication.translate("MainWindow", u"PRE\u00c7O UNIT\u00c1RIO", None));
-        ___qtablewidgetitem52 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem52.setText(QCoreApplication.translate("MainWindow", u"DENSIDADE", None));
-        ___qtablewidgetitem53 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem53.setText(QCoreApplication.translate("MainWindow", u"EMBALAGEM", None));
-        ___qtablewidgetitem54 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem54.setText(QCoreApplication.translate("MainWindow", u"DESCONTO", None));
+        ___qtablewidgetitem29 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
+        ___qtablewidgetitem30 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
+        ___qtablewidgetitem31 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"PRE\u00c7O UNIT\u00c1RIO", None));
+        ___qtablewidgetitem32 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"DENSIDADE", None));
+        ___qtablewidgetitem33 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"EMBALAGEM", None));
+        ___qtablewidgetitem34 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"DESCONTO", None));
         self.aba_relatorio_button_8.setText(QCoreApplication.translate("MainWindow", u"Avulsa", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"Peso bruto", None))
         self.label_50.setText(QCoreApplication.translate("MainWindow", u"KG", None))
         self.btn_peso_manualmente_2.setText(QCoreApplication.translate("MainWindow", u"Capturar peso manualmente", None))
         self.peso_manualmente_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PESO (KG)", None))
         self.label_67.setText(QCoreApplication.translate("MainWindow", u"Insira os dados para a pesagem Avulsa", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
+        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
         self.input_avulsas_motorista.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome", None))
         self.label_55.setText(QCoreApplication.translate("MainWindow", u"Veiculo:", None))
-        self.label_54.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
-        self.comboBox_avulsas_veiculo.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
-
         self.label_51.setText(QCoreApplication.translate("MainWindow", u"Cliente:", None))
         self.comboBox_avulsas_cliente.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
 
         self.comboBox_avulsas_carga.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
 
-        self.label_52.setText(QCoreApplication.translate("MainWindow", u"Carga:", None))
+        self.comboBox_avulsas_veiculo.setItemText(0, QCoreApplication.translate("MainWindow", u"Nenhum", None))
+
         self.input_avulsas_obs.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00e3o (Opcional)", None))
         self.btn_fazer_pesagem_avulsa.setText(QCoreApplication.translate("MainWindow", u"Realizar pesagem", None))
         self.radioButton_2.setText(QCoreApplication.translate("MainWindow", u"Imprimir pesagem", None))
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"Ultima pesagem realizada em: Ainda n\u00e3o houve pesagem", None))
         self.label_56.setText("")
         self.label_57.setText(QCoreApplication.translate("MainWindow", u"Historico de Observa\u00e7\u00f5es", None))
-        ___qtablewidgetitem55 = self.tableWidget_6.horizontalHeaderItem(0)
-        ___qtablewidgetitem55.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem56 = self.tableWidget_6.horizontalHeaderItem(1)
-        ___qtablewidgetitem56.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
-        ___qtablewidgetitem57 = self.tableWidget_6.horizontalHeaderItem(2)
-        ___qtablewidgetitem57.setText(QCoreApplication.translate("MainWindow", u"OBSERVA\u00c7\u00c3O", None));
+        ___qtablewidgetitem35 = self.tableWidget_6.horizontalHeaderItem(0)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem36 = self.tableWidget_6.horizontalHeaderItem(1)
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
+        ___qtablewidgetitem37 = self.tableWidget_6.horizontalHeaderItem(2)
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"OBSERVA\u00c7\u00c3O", None));
         self.aba_relatorio_button_7.setText(QCoreApplication.translate("MainWindow", u"Entrada", None))
         self.label_32.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"(Entrada)", None))
@@ -6259,14 +6174,14 @@ class Ui_MainWindow(object):
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"(Entrada) ", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"Realizadas", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Remover pesagem(s) Selecionada(s)", None))
-        ___qtablewidgetitem58 = self.tableWidget_5.horizontalHeaderItem(0)
-        ___qtablewidgetitem58.setText(QCoreApplication.translate("MainWindow", u"Excluir", None));
-        ___qtablewidgetitem59 = self.tableWidget_5.horizontalHeaderItem(1)
-        ___qtablewidgetitem59.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem60 = self.tableWidget_5.horizontalHeaderItem(2)
-        ___qtablewidgetitem60.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
-        ___qtablewidgetitem61 = self.tableWidget_5.horizontalHeaderItem(3)
-        ___qtablewidgetitem61.setText(QCoreApplication.translate("MainWindow", u"Data da pesagem", None));
+        ___qtablewidgetitem38 = self.tableWidget_5.horizontalHeaderItem(0)
+        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"Excluir", None));
+        ___qtablewidgetitem39 = self.tableWidget_5.horizontalHeaderItem(1)
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem40 = self.tableWidget_5.horizontalHeaderItem(2)
+        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
+        ___qtablewidgetitem41 = self.tableWidget_5.horizontalHeaderItem(3)
+        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"Data da pesagem", None));
         self.aba_relatorio_button_9.setText(QCoreApplication.translate("MainWindow", u"Sa\u00edda", None))
         self.label_65.setText(QCoreApplication.translate("MainWindow", u"Peso bruto ", None))
         self.label_66.setText(QCoreApplication.translate("MainWindow", u"(Sa\u00edda)", None))
@@ -6292,12 +6207,12 @@ class Ui_MainWindow(object):
         self.btn_finalizar_pesagem.setText(QCoreApplication.translate("MainWindow", u"Finalizar pesagem", None))
         self.radioButton_3.setText(QCoreApplication.translate("MainWindow", u"Imprimir pesagem", None))
         self.label_64.setText(QCoreApplication.translate("MainWindow", u"Pesagens pendentes", None))
-        ___qtablewidgetitem62 = self.tableWidget_8.horizontalHeaderItem(0)
-        ___qtablewidgetitem62.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem63 = self.tableWidget_8.horizontalHeaderItem(1)
-        ___qtablewidgetitem63.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
-        ___qtablewidgetitem64 = self.tableWidget_8.horizontalHeaderItem(2)
-        ___qtablewidgetitem64.setText(QCoreApplication.translate("MainWindow", u"Status", None));
+        ___qtablewidgetitem42 = self.tableWidget_8.horizontalHeaderItem(0)
+        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem43 = self.tableWidget_8.horizontalHeaderItem(1)
+        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"Motorista", None));
+        ___qtablewidgetitem44 = self.tableWidget_8.horizontalHeaderItem(2)
+        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"Status", None));
         self.title.setText(QCoreApplication.translate("MainWindow", u"Conta", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Informa\u00e7\u00f5es da conta", None))
         self.label_12.setText("")

@@ -1142,7 +1142,7 @@ QPushButton:hover{
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>35</height>
+        <height>36</height>
        </size>
       </property>
       <property name="font">
@@ -1509,7 +1509,7 @@ background-color: rgb(218, 14, 14)}</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>183</width>
+              <width>190</width>
               <height>96</height>
              </size>
             </property>
@@ -1543,6 +1543,11 @@ background-color: rgb(218, 14, 14)}</string>
        </item>
        <item alignment="Qt::AlignLeft">
         <widget class="QFrame" name="frame_59">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -1591,14 +1596,14 @@ border:0</string>
             </property>
             <property name="maximumSize">
              <size>
-              <width>150</width>
+              <width>20000</width>
               <height>16777215</height>
              </size>
             </property>
             <property name="font">
              <font>
               <family>Segoe UI</family>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -1646,11 +1651,11 @@ border:0;
          </layout>
         </widget>
        </item>
-       <item alignment="Qt::AlignRight">
+       <item>
         <widget class="QFrame" name="conteudo_top_frame">
          <property name="minimumSize">
           <size>
-           <width>600</width>
+           <width>571</width>
            <height>70</height>
           </size>
          </property>
@@ -1707,7 +1712,7 @@ border:0;
             <property name="font">
              <font>
               <family>Segoe UI</family>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -1717,6 +1722,7 @@ border:0;
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
+color: rgb(43, 43, 43);
 	border:0;
 	border-radius:5px;
 	background-color: rgb(242, 242, 242);
@@ -1840,7 +1846,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>6</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2036,7 +2042,7 @@ background-color: rgb(43, 43, 43);</string>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>13</height>
+                     <height>23</height>
                     </size>
                    </property>
                    <property name="font">
@@ -2370,7 +2376,7 @@ QDateEdit::up-arrow{
                   </widget>
                  </item>
                  <item row="3" column="3">
-                  <widget class="QComboBox" name="comboBox_veiculo_6">
+                  <widget class="QComboBox" name="comboBox_veiculo_2">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -2447,7 +2453,7 @@ QComboBox QListView{
                   </widget>
                  </item>
                  <item row="3" column="2">
-                  <widget class="QComboBox" name="comboBox_produto_6">
+                  <widget class="QComboBox" name="comboBox_carga_2">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -2524,7 +2530,7 @@ QComboBox QListView{
                   </widget>
                  </item>
                  <item row="3" column="4">
-                  <widget class="QLineEdit" name="lineEdit_11">
+                  <widget class="QLineEdit" name="motorista_filtro_2">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -2563,7 +2569,7 @@ QLineEdit:focus{
                   </widget>
                  </item>
                  <item row="3" column="1">
-                  <widget class="QComboBox" name="comboBox_cliente_6">
+                  <widget class="QComboBox" name="comboBox_cliente_2">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -2660,12 +2666,18 @@ QComboBox QListView{
                    </property>
                   </widget>
                  </item>
-                 <item row="2" column="2">
+                 <item row="2" column="2" alignment="Qt::AlignTop">
                   <widget class="QLabel" name="label_94">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>2</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>13</height>
+                     <height>26</height>
                     </size>
                    </property>
                    <property name="font">
@@ -2677,7 +2689,10 @@ QComboBox QListView{
                     </font>
                    </property>
                    <property name="text">
-                    <string>Produto:</string>
+                    <string>Carga:</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                    </property>
                   </widget>
                  </item>
@@ -3003,7 +3018,7 @@ QScrollBar::add-line:horizontal {
                  <bool>true</bool>
                 </property>
                 <property name="rowCount">
-                 <number>2</number>
+                 <number>0</number>
                 </property>
                 <attribute name="horizontalHeaderDefaultSectionSize">
                  <number>109</number>
@@ -3014,16 +3029,6 @@ QScrollBar::add-line:horizontal {
                 <attribute name="horizontalHeaderStretchLastSection">
                  <bool>true</bool>
                 </attribute>
-                <row>
-                 <property name="text">
-                  <string>1</string>
-                 </property>
-                </row>
-                <row>
-                 <property name="text">
-                  <string>2</string>
-                 </property>
-                </row>
                 <column>
                  <property name="text">
                   <string>EXCLUIR</string>
@@ -3079,112 +3084,6 @@ QScrollBar::add-line:horizontal {
                   <string>PESO LÍQUIDO</string>
                  </property>
                 </column>
-                <item row="0" column="0">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                </item>
-                <item row="0" column="1">
-                 <property name="text">
-                  <string>Ryan</string>
-                 </property>
-                </item>
-                <item row="0" column="2">
-                 <property name="text">
-                  <string>Caltec</string>
-                 </property>
-                </item>
-                <item row="0" column="3">
-                 <property name="text">
-                  <string>Whisky</string>
-                 </property>
-                </item>
-                <item row="0" column="4">
-                 <property name="text">
-                  <string>546GHY</string>
-                 </property>
-                </item>
-                <item row="0" column="5">
-                 <property name="text">
-                  <string>5000</string>
-                 </property>
-                </item>
-                <item row="0" column="6">
-                 <property name="text">
-                  <string>1000</string>
-                 </property>
-                </item>
-                <item row="0" column="7">
-                 <property name="text">
-                  <string>12:00 07/06/2022</string>
-                 </property>
-                </item>
-                <item row="0" column="8">
-                 <property name="text">
-                  <string>12:45 07/06/2022</string>
-                 </property>
-                </item>
-                <item row="0" column="9">
-                 <property name="text">
-                  <string>4000</string>
-                 </property>
-                </item>
-                <item row="1" column="0">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                </item>
-                <item row="1" column="1">
-                 <property name="text">
-                  <string>João</string>
-                 </property>
-                </item>
-                <item row="1" column="2">
-                 <property name="text">
-                  <string>Caltec</string>
-                 </property>
-                </item>
-                <item row="1" column="3">
-                 <property name="text">
-                  <string>Whisky</string>
-                 </property>
-                </item>
-                <item row="1" column="4">
-                 <property name="text">
-                  <string>852IKM</string>
-                 </property>
-                </item>
-                <item row="1" column="5">
-                 <property name="text">
-                  <string>5000</string>
-                 </property>
-                </item>
-                <item row="1" column="6">
-                 <property name="text">
-                  <string>1000</string>
-                 </property>
-                </item>
-                <item row="1" column="7">
-                 <property name="text">
-                  <string>12:50 07/09/2022</string>
-                 </property>
-                </item>
-                <item row="1" column="8">
-                 <property name="text">
-                  <string>13:30 07/06/2022</string>
-                 </property>
-                </item>
-                <item row="1" column="9">
-                 <property name="text">
-                  <string>4000</string>
-                 </property>
-                </item>
                </widget>
               </item>
              </layout>
@@ -3577,7 +3476,7 @@ QDateEdit::up-arrow{
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>13</height>
+                     <height>17</height>
                     </size>
                    </property>
                    <property name="font">
@@ -3594,7 +3493,7 @@ QDateEdit::up-arrow{
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QComboBox" name="comboBox_cliente_2">
+                  <widget class="QComboBox" name="comboBox_cliente">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -3677,7 +3576,7 @@ QComboBox QListView{
                   </widget>
                  </item>
                  <item row="2" column="3">
-                  <widget class="QComboBox" name="comboBox_produto_2">
+                  <widget class="QComboBox" name="comboBox_veiculo">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -3761,6 +3660,12 @@ QComboBox QListView{
                  </item>
                  <item row="1" column="2" alignment="Qt::AlignBottom">
                   <widget class="QLabel" name="label_49">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>12</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
@@ -3776,12 +3681,15 @@ QComboBox QListView{
                     </font>
                    </property>
                    <property name="text">
-                    <string>Produto:</string>
+                    <string>Carga:</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="2">
-                  <widget class="QComboBox" name="comboBox_veiculo_2">
+                  <widget class="QComboBox" name="comboBox_carga">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -3868,7 +3776,7 @@ QComboBox QListView{
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>13</height>
+                     <height>17</height>
                     </size>
                    </property>
                    <property name="font">
@@ -3885,7 +3793,7 @@ QComboBox QListView{
                   </widget>
                  </item>
                  <item row="2" column="4">
-                  <widget class="QLineEdit" name="lineEdit_7">
+                  <widget class="QLineEdit" name="motorista_filtro">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -4055,7 +3963,7 @@ QLineEdit::focus{
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>13</height>
+                     <height>17</height>
                     </size>
                    </property>
                    <property name="font">
@@ -7828,6 +7736,60 @@ QLineEdit:focus{
                              <property name="verticalSpacing">
                               <number>6</number>
                              </property>
+                             <item row="1" column="3" alignment="Qt::AlignTop">
+                              <widget class="QLabel" name="label_52">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>19</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>13</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Carga:</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="0" column="0" rowspan="2">
+                              <widget class="QLabel" name="label_54">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>19</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>13</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Motorista:</string>
+                               </property>
+                              </widget>
+                             </item>
                              <item row="3" column="0">
                               <widget class="QLineEdit" name="input_avulsas_motorista">
                                <property name="minimumSize">
@@ -7890,106 +7852,6 @@ QLineEdit:focus{
                                <property name="text">
                                 <string>Veiculo:</string>
                                </property>
-                              </widget>
-                             </item>
-                             <item row="0" column="0" rowspan="2">
-                              <widget class="QLabel" name="label_54">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>19</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>16777215</width>
-                                 <height>13</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>Motorista:</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item row="3" column="1">
-                              <widget class="QComboBox" name="comboBox_avulsas_veiculo">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>30</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <pointsize>-1</pointsize>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QComboBox{
-	border:1px solid rgb(15, 202, 2);
-	padding-left:10px;
-	font-size:15px;
-	
-	background-color: rgb(250, 252, 250);
-}
-
-QComboBox::drop-down{
-	border:0px;
-}
-
-QComboBox::down-arrow{
-	image: url(:/icons/angle-down-solid.svg);
-	width:12px;
-	height:12px;
-	margin-right:15px;
-}
-
-QComboBox::on{
-	border:2px solid rgb(67, 202, 0);
-}
-
-QComboBox QListView{
-	padding:5px;
-	border:1px solid;
-	background-color: rgba(255, 255, 255, 50%);
-	outline:0;
-}
-</string>
-                               </property>
-                               <property name="currentIndex">
-                                <number>0</number>
-                               </property>
-                               <property name="maxVisibleItems">
-                                <number>10</number>
-                               </property>
-                               <property name="insertPolicy">
-                                <enum>QComboBox::NoInsert</enum>
-                               </property>
-                               <property name="iconSize">
-                                <size>
-                                 <width>32</width>
-                                 <height>32</height>
-                                </size>
-                               </property>
-                               <property name="duplicatesEnabled">
-                                <bool>true</bool>
-                               </property>
-                               <property name="frame">
-                                <bool>true</bool>
-                               </property>
-                               <item>
-                                <property name="text">
-                                 <string>Nenhum</string>
-                                </property>
-                               </item>
                               </widget>
                              </item>
                              <item row="1" column="2">
@@ -8165,31 +8027,77 @@ QComboBox QListView{
                                </item>
                               </widget>
                              </item>
-                             <item row="1" column="3" alignment="Qt::AlignTop">
-                              <widget class="QLabel" name="label_52">
+                             <item row="3" column="1">
+                              <widget class="QComboBox" name="comboBox_avulsas_veiculo">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
-                                 <height>19</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>16777215</width>
-                                 <height>13</height>
+                                 <height>30</height>
                                 </size>
                                </property>
                                <property name="font">
                                 <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>11</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
+                                 <pointsize>-1</pointsize>
                                 </font>
                                </property>
-                               <property name="text">
-                                <string>Carga:</string>
+                               <property name="styleSheet">
+                                <string notr="true">QComboBox{
+	border:1px solid rgb(15, 202, 2);
+	padding-left:10px;
+	font-size:15px;
+	
+	background-color: rgb(250, 252, 250);
+}
+
+QComboBox::drop-down{
+	border:0px;
+}
+
+QComboBox::down-arrow{
+	image: url(:/icons/angle-down-solid.svg);
+	width:12px;
+	height:12px;
+	margin-right:15px;
+}
+
+QComboBox::on{
+	border:2px solid rgb(67, 202, 0);
+}
+
+QComboBox QListView{
+	padding:5px;
+	border:1px solid;
+	background-color: rgba(255, 255, 255, 50%);
+	outline:0;
+}
+</string>
                                </property>
+                               <property name="currentIndex">
+                                <number>0</number>
+                               </property>
+                               <property name="maxVisibleItems">
+                                <number>10</number>
+                               </property>
+                               <property name="insertPolicy">
+                                <enum>QComboBox::NoInsert</enum>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="duplicatesEnabled">
+                                <bool>true</bool>
+                               </property>
+                               <property name="frame">
+                                <bool>true</bool>
+                               </property>
+                               <item>
+                                <property name="text">
+                                 <string>Nenhum</string>
+                                </property>
+                               </item>
                               </widget>
                              </item>
                             </layout>

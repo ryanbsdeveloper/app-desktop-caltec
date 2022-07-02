@@ -132,6 +132,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.clientes()
         self.veiculos()
         self.cargas_comboBox()
+        self.clientes_comboBox()
+        self.veiculos_comboBox()
+
 
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
@@ -143,7 +146,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.nome_pc.setText(f'{utils.name_locauser()} - Software de pesagem')
 
         #TOOLTIP
-        self.btn_salvar_entrada.setToolTip('Acesso somente com conexão com uma balança')
+        self.btn_finalizar_pesagem.setToolTip('Conecte-se a uma balança para realizar a pesagem')
+        self.btn_salvar_entrada.setToolTip('Conecte-se a uma balança para realizar a pesagem')
 
         # HIDE
         self.digite_um_id.hide()
@@ -220,8 +224,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_registrar_clientes.clicked.connect(self.get_dados_cliente)
         self.btn_registrar_veiculos.clicked.connect(self.get_dados_veiculos)
         self.btn_fazer_pesagem_avulsa.clicked.connect(self.get_pesagem_avulsas)
-        self.btn_salvar_entrada.clicked.connect(self.get_pesagem_entrada)
-        self.btn_finalizar_pesagem.clicked.connect(self.get_pesagem_saida)
+        self.btn_salvar_entrada.clicked.connect(self.limit)
+        self.btn_finalizar_pesagem.clicked.connect(self.limit)
         self.comboBox_pesagem_entrada.currentTextChanged.connect(
             self.detalhes_saida)
 
@@ -466,8 +470,67 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.comboBox_veiculos_produtos.clear()
         self.comboBox_veiculos_produtos.addItem('Nenhum')
 
+        self.comboBox_avulsas_carga.clear()
+        self.comboBox_avulsas_carga.addItem('Nenhum')
+
+        self.comboBox_entrada_carga.clear()
+        self.comboBox_entrada_carga.addItem('Nenhum')
+
+        self.comboBox_carga.clear()
+        self.comboBox_carga.addItem('Nenhum')
+
+        self.comboBox_carga_2.clear()
+        self.comboBox_carga_2.addItem('Nenhum')
+        
         for carga in cargas:
             self.comboBox_veiculos_produtos.addItem(f'{carga}')
+            self.comboBox_avulsas_carga.addItem(f'{carga}')
+            self.comboBox_entrada_carga.addItem(f'{carga}')
+            self.comboBox_carga.addItem(f'{carga}')
+            self.comboBox_carga_2.addItem(f'{carga}')
+
+    def clientes_comboBox(self):
+        clientes = models.list_clientes()
+
+        self.comboBox_cliente.clear()
+        self.comboBox_cliente.addItem('Nenhum')
+
+        self.comboBox_cliente_2.clear()
+        self.comboBox_cliente_2.addItem('Nenhum')
+
+        self.comboBox_avulsas_cliente.clear()
+        self.comboBox_avulsas_cliente.addItem('Nenhum')
+
+        self.comboBox_entrada_cliente.clear()
+        self.comboBox_entrada_cliente.addItem('Nenhum')
+
+        for cliente in clientes:
+            self.comboBox_cliente.addItem(f'{cliente}')
+            self.comboBox_cliente_2.addItem(f'{cliente}')
+            self.comboBox_avulsas_cliente.addItem(f'{cliente}')
+            self.comboBox_entrada_cliente.addItem(f'{cliente}')
+
+    def veiculos_comboBox(self):
+        veiculos = models.list_veiculos()
+
+        self.comboBox_veiculo.clear()
+        self.comboBox_veiculo.addItem('Nenhum')
+
+        self.comboBox_veiculo_2.clear()
+        self.comboBox_veiculo_2.addItem('Nenhum')
+
+        self.comboBox_avulsas_veiculo.clear()
+        self.comboBox_avulsas_veiculo.addItem('Nenhum')
+
+        self.comboBox_entrada_veiculo.clear()
+        self.comboBox_entrada_veiculo.addItem('Nenhum')
+
+        for veiculo in veiculos:
+            self.comboBox_veiculo.addItem(f'{veiculo}')
+            self.comboBox_veiculo_2.addItem(f'{veiculo}')
+            self.comboBox_avulsas_veiculo.addItem(f'{veiculo}')
+            self.comboBox_entrada_veiculo.addItem(f'{veiculo}')
+
 
     def cargas(self):
         cargas = models.list_cargas()
@@ -694,6 +757,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget_2.setItem(linha, 4, QTableWidgetItem(telefone))
             self.tableWidget_2.setItem(linha, 5, QTableWidgetItem(cep))
             self.tableWidget_2.setItem(linha, 6, QTableWidgetItem(endereco))
+            self.clientes_comboBox()
 
             # limpando campos
             nome = self.input_clientes_nome.setText('')
@@ -746,6 +810,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget_3.setItem(linha, 2, QTableWidgetItem(placa))
             self.tableWidget_3.setItem(linha, 3, QTableWidgetItem(proprietario))
             self.tableWidget_3.setItem(linha, 4, QTableWidgetItem(produto))
+            self.veiculos_comboBox()
 
             # limpando campos
             nome = self.input_veiculos_nome.setText('')
@@ -872,6 +937,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def get_pesagem_saida(self):
         pesagem_entrada = self.comboBox_pesagem_entrada.currentText()
         saida = None
+        self.ss15 = 30
 
         if pesagem_entrada != 'Nenhum':
             saida = True
@@ -919,6 +985,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setStartValue(height)
         self.animation.setEndValue(height_extend)
         self.animation.start()
+
+    # limitação
+    def limit(self):
+        self.ss15 = 30
+        self.frame_saida.show()
+        self.hide_segundos()
+        self.label_realizada_ou_erro.setText(
+            'Sem conexão')
+        self.label_realizada_ou_erro.setStyleSheet(
+            'color:rgb(255, 32, 32);')
+        self.label_veja_no_relatorio.setText(
+            'Conecte-se a uma balança')
+        self.label_logo_saida.setPixmap(
+            QPixmap(u":/icons/circle-info-solidr.svg"))
 
 
 class LoginWindow(QWidget, Ui_Login_Widget, QRegion):

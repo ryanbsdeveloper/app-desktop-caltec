@@ -130,7 +130,7 @@ class Veiculo(Base):
         "Carga", backref=backref("carga", uselist=False))
 
     def __repr__(self):
-        return f'({self.id}) {self.nome}'
+        return f'({self.id}) {self.placa}'
 
 
 #ADD and READ
