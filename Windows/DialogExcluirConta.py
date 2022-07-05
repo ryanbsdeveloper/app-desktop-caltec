@@ -40,7 +40,7 @@ class Ui_ExcluirConta(object):
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.frame_13 = QFrame(self.frame)
         self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setMaximumSize(QSize(388, 264))
+        self.frame_13.setMaximumSize(QSize(388, 262))
         self.frame_13.setFont(font)
         self.frame_13.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.frame_13.setFrameShape(QFrame.NoFrame)
@@ -51,12 +51,12 @@ class Ui_ExcluirConta(object):
         self.frame_3.setMinimumSize(QSize(0, 50))
         self.frame_3.setMaximumSize(QSize(16777215, 50))
         self.frame_3.setFont(font)
-        self.frame_3.setStyleSheet(u"background-color: rgb(43, 43, 43);")
+        self.frame_3.setStyleSheet(u"background-color: rgb(15, 15, 15);border:0")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.label_2 = QLabel(self.frame_3)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(127, 17, 144, 18))
+        self.label_2.setGeometry(QRect(120, 17, 171, 18))
         font1 = QFont()
         font1.setFamily(u"Segoe UI")
         font1.setPointSize(11)
@@ -67,7 +67,7 @@ class Ui_ExcluirConta(object):
         self.label_2.setAlignment(Qt.AlignCenter)
         self.pushButton = QPushButton(self.frame_3)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(341, 16, 20, 20))
+        self.pushButton.setGeometry(QRect(350, 16, 20, 20))
         self.pushButton.setFont(font)
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"border:0")
@@ -92,7 +92,7 @@ class Ui_ExcluirConta(object):
         self.sim.setObjectName(u"sim")
         font2 = QFont()
         font2.setFamily(u"Segoe UI")
-        font2.setPointSize(9)
+        font2.setPointSize(10)
         self.sim.setFont(font2)
         self.sim.setCursor(QCursor(Qt.PointingHandCursor))
         self.sim.setStyleSheet(u"QPushButton{border:1px solid;\n"
@@ -121,10 +121,7 @@ class Ui_ExcluirConta(object):
 
         self.text_info = QLabel(self.frame_2)
         self.text_info.setObjectName(u"text_info")
-        font3 = QFont()
-        font3.setFamily(u"Segoe UI")
-        font3.setPointSize(10)
-        self.text_info.setFont(font3)
+        self.text_info.setFont(font1)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
 
         self.gridLayout_2.addWidget(self.text_info, 1, 0, 1, 2, Qt.AlignHCenter)
@@ -132,6 +129,9 @@ class Ui_ExcluirConta(object):
         self.label = QLabel(self.frame_2)
         self.label.setObjectName(u"label")
         self.label.setMaximumSize(QSize(16777215, 50))
+        font3 = QFont()
+        font3.setFamily(u"Segoe UI")
+        font3.setPointSize(11)
         self.label.setFont(font3)
         self.label.setAlignment(Qt.AlignCenter)
 
@@ -139,15 +139,10 @@ class Ui_ExcluirConta(object):
 
         self.label_3 = QLabel(self.frame_13)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(0, 50, 388, 65))
-        self.label_3.setMinimumSize(QSize(197, 65))
-        self.label_3.setMaximumSize(QSize(16777215, 65))
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(10)
-        font4.setBold(True)
-        font4.setWeight(75)
-        self.label_3.setFont(font4)
+        self.label_3.setGeometry(QRect(0, 50, 388, 71))
+        self.label_3.setMinimumSize(QSize(197, 71))
+        self.label_3.setMaximumSize(QSize(16777215, 70))
+        self.label_3.setFont(font1)
         self.label_3.setStyleSheet(u"color: rgb(255, 0, 0);\n"
 "background-color: rgb(255, 170, 170);\n"
 "border:1px solid red;\n"
@@ -158,8 +153,8 @@ class Ui_ExcluirConta(object):
         self.lineEdit.setGeometry(QRect(50, 140, 291, 33))
         self.lineEdit.setMinimumSize(QSize(0, 30))
         self.lineEdit.setMaximumSize(QSize(16777215, 35))
-        self.lineEdit.setFont(font3)
-        self.lineEdit.setStyleSheet(u"QLineEdit{padding:3px}\n"
+        self.lineEdit.setFont(font2)
+        self.lineEdit.setStyleSheet(u"QLineEdit{padding:3px;border:1px solid}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")

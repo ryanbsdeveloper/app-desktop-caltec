@@ -137,7 +137,7 @@ class Veiculo(Base):
 def add_tables():
     Base.metadata.create_all(bind=engine)
 
-
+# DADOS
 def add_user(id_cloud, nome, email, telefone, senha, licenca, pesagens):
     # user = User(nome_empresa=nome, email=email, whatsapp=telefone,
     #             senha=senha, licenca=licenca, max_pesagens=pesagens)
@@ -154,7 +154,6 @@ def add_user(id_cloud, nome, email, telefone, senha, licenca, pesagens):
     session.commit()
     session.flush()
 
-
 def add_veiculo(id_user_local, proprietario, modelo, placa, produto):
     dados = Veiculo(
         user_id=id_user_local,
@@ -167,13 +166,11 @@ def add_veiculo(id_user_local, proprietario, modelo, placa, produto):
     session.commit()
     session.flush()
 
-
 def list_veiculos():
     query = session.query(Veiculo).all()
     session.commit()
 
     return query
-
 
 def add_carga(id_user_local, nome, preco, densidade, embalagem, desconto):
     dados = Carga(
@@ -188,7 +185,6 @@ def add_carga(id_user_local, nome, preco, densidade, embalagem, desconto):
     session.commit()
     session.flush()
 
-
 def list_cargas(carga=False):
     if carga:
         carga_id = carga.split(')')[0].replace('(', '')
@@ -199,7 +195,6 @@ def list_cargas(carga=False):
     session.commit()
 
     return query
-
 
 def add_cliente(id_user_local, nome, cpf_cnpj, rg, telefone, cep, endereço):
     dados = Cliente(
@@ -215,14 +210,13 @@ def add_cliente(id_user_local, nome, cpf_cnpj, rg, telefone, cep, endereço):
     session.commit()
     session.flush()
 
-
 def list_clientes():
     query = session.query(Cliente).all()
     session.commit()
 
     return query
 
-
+# USER
 def get_all_users():
     users = []
     with engine.begin() as conn:
@@ -231,19 +225,17 @@ def get_all_users():
 
     return users
 
-
+# CONTA
 def att_user_nome(nome):
     query = session.query(User).first()
     query.nome_empresa = nome
     session.commit()
     return True
 
-
 def att_user_telefone(telefone):
     query = session.query(User).first()
     query.whatsapp = telefone
     session.commit()
-
 
 def att_user_senha(senha_atual, senha_1, senha_2):
     query = session.query(User).first()
@@ -257,14 +249,29 @@ def att_user_senha(senha_atual, senha_1, senha_2):
     else:
         return False
 
-
 def excluir_conta(senha):
     query = session.query(User).first()
     if query.senha == senha:
         # Deletar conta
         pass
         
+# RELATORIOS
+def add_relatorio_avulsa(id_user,motorista, produto, cliente, peso_bruto, data, placa, obs):
+    dados = PesagemAvulsa(
+        id_user=id_user,
+        motorista=motorista,
+        produto=produto,
+        cliente=cliente,
+        peso_bruto=peso_bruto,
+        data=data,
+        placa=placa,
+        obs=obs
+    )
 
+    session.add(dados)
+    session.commit()
+    session.flush()
 
+#
 if __name__ == '__main__':
-    att_user_senha()
+    pass

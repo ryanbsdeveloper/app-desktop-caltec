@@ -1,11 +1,10 @@
-from pyexpat import model
+from datetime import datetime
 import sys
+import resources_rc
 from time import sleep
-
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog, QTableWidgetItem
 from PySide2.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup, QAbstractAnimation, QSize, QTime, QTimer, QDate
 from PySide2.QtGui import QRegion, QIcon, QFont, QPixmap
-
 from Windows.MainWindow import Ui_MainWindow
 from Windows.Premium import Ui_Dialog
 from Windows.Login import Ui_Login_Widget
@@ -17,7 +16,6 @@ from Windows.DialogExcluirConta import Ui_ExcluirConta
 from Windows.DialogSairConta import Ui_SairConta
 from utils import utils
 from models import database, models
-import resources_rc
 
 # DIALOGs
 
@@ -41,7 +39,7 @@ class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
         else:
             self.text_info.show()
 
-    
+
 class DialogAtualizarSenha(QDialog, Ui_AtualizarSenha):
     def __init__(self, parent):
         super(DialogAtualizarSenha, self).__init__(parent)
@@ -82,7 +80,8 @@ class DialogAtualizarTelefone(QDialog, Ui_AtualizarTelefone):
 
     def att_telefone(self):
         telefone = self.input_novo_telefone.text()
-        telefone = telefone.replace(' ', '').replace('-', '').replace('+55', '').replace('+', '')
+        telefone = telefone.replace(' ', '').replace(
+            '-', '').replace('+55', '').replace('+', '')
         if len(telefone) < 11:
             self.text_info.show()
             self.text_info.setText('Telefone inválido')
@@ -135,7 +134,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.clientes_comboBox()
         self.veiculos_comboBox()
 
-
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
         timer.start(1000)
@@ -145,9 +143,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.nome_pc.setText(f'{utils.name_locauser()} - Software de pesagem')
 
-        #TOOLTIP
-        self.btn_finalizar_pesagem.setToolTip('Conecte-se a uma balança para realizar a pesagem')
-        self.btn_salvar_entrada.setToolTip('Conecte-se a uma balança para realizar a pesagem')
+        # TOOLTIP
+        self.btn_finalizar_pesagem.setToolTip(
+            'Conecte-se a uma balança para realizar a pesagem')
+        self.btn_salvar_entrada.setToolTip(
+            'Conecte-se a uma balança para realizar a pesagem')
 
         # HIDE
         self.digite_um_id.hide()
@@ -216,7 +216,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # BUTTONS AVULSAS
         self.btn_peso_manualmente_2.toggled.connect(self.func_peso_manualmente)
-        self.btn_historico_obs.clicked.connect(self.animation_obs_avulsas)
 
         # FUCTIONS BUTTONS
         self.peso_manualmente_2.textChanged.connect(self.peso_manual)
@@ -346,7 +345,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         width = self.frame_43.maximumWidth()
 
         if width == 0:
-            width_extend = 300
+            width_extend = 400
         else:
             width_extend = 0
 
@@ -360,7 +359,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         width = self.frame_105.maximumWidth()
 
         if width == 0:
-            width_extend = 300
+            width_extend = 400
         else:
             width_extend = 0
 
@@ -370,25 +369,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setEndValue(width_extend)
         self.animation.start()
 
-    def animation_menu_forne(self):
-        width = self.frame_57.maximumWidth()
-
-        if width == 0:
-            width_extend = 300
-        else:
-            width_extend = 0
-
-        self.animation = QPropertyAnimation(self.frame_57, b'maximumWidth')
-        self.animation.setDuration(300)
-        self.animation.setStartValue(width)
-        self.animation.setEndValue(width_extend)
-        self.animation.start()
-
     def animation_menu_veiculos(self):
         width = self.frame_68.maximumWidth()
 
         if width == 0:
-            width_extend = 300
+            width_extend = 400
         else:
             width_extend = 0
 
@@ -401,7 +386,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def func_peso_manualmente(self):
         width = self.peso_manualmente_2.width()
 
-        if width == 135:
+        if width >= 135:
             self.peso_manualmente_2.setText('')
             self.lcdNumber_2.display(0)
             expand = 0
@@ -414,34 +399,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setStartValue(width)
         self.animation.setEndValue(expand)
         self.animation.start()
-
-    def animation_obs_avulsas(self):
-        height_frame_dados = self.frame_dados_avulsa.height()
-        height_frame_obs = self.frame_pendentes.height()
-
-        if height_frame_dados > 200:
-            expand_dados = 0
-            expand_obs = 250
-        else:
-            expand_dados = 250
-            expand_obs = 0
-
-        animation_dados = QPropertyAnimation(
-            self.frame_dados_avulsa, b'maximumHeight')
-        animation_dados.setDuration(300)
-        animation_dados.setStartValue(height_frame_dados)
-        animation_dados.setEndValue(expand_dados)
-
-        animation_obs = QPropertyAnimation(
-            self.frame_pendentes, b'maximumHeight')
-        animation_obs.setDuration(300)
-        animation_obs.setStartValue(height_frame_obs)
-        animation_obs.setEndValue(expand_obs)
-
-        group = QParallelAnimationGroup(self.frame_dados_avulsa)
-        group.addAnimation(animation_dados)
-        group.addAnimation(animation_obs)
-        group.start(QAbstractAnimation.DeleteWhenStopped)
 
     # FUNCTIONS
     def peso_manual(self):
@@ -481,7 +438,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.comboBox_carga_2.clear()
         self.comboBox_carga_2.addItem('Nenhum')
-        
+
         for carga in cargas:
             self.comboBox_veiculos_produtos.addItem(f'{carga}')
             self.comboBox_avulsas_carga.addItem(f'{carga}')
@@ -531,7 +488,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.comboBox_avulsas_veiculo.addItem(f'{veiculo}')
             self.comboBox_entrada_veiculo.addItem(f'{veiculo}')
 
-
     def cargas(self):
         cargas = models.list_cargas()
 
@@ -579,10 +535,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             check = QTableWidgetItem()
             check.setCheckState(Qt.Unchecked)
             self.tableWidget_3.setItem(linha, 0, check)
-            self.tableWidget_3.setItem(linha, 1, QTableWidgetItem(veiculo.placa))
-            self.tableWidget_3.setItem(linha, 2, QTableWidgetItem(veiculo.proprietario))
-            self.tableWidget_3.setItem(linha, 3, QTableWidgetItem(veiculo.nome))
-            self.tableWidget_3.setItem(linha, 4, QTableWidgetItem(f'{veiculo.carga}'))
+            self.tableWidget_3.setItem(
+                linha, 1, QTableWidgetItem(veiculo.placa))
+            self.tableWidget_3.setItem(
+                linha, 2, QTableWidgetItem(veiculo.proprietario))
+            self.tableWidget_3.setItem(
+                linha, 3, QTableWidgetItem(veiculo.nome))
+            self.tableWidget_3.setItem(
+                linha, 4, QTableWidgetItem(f'{veiculo.carga}'))
+
+    def relatorio_avulsa(self):
+        pesagens = []
+
+        for pesagem in pesagens:
+            linha = self.tableWidget_4.rowCount()
+            self.tableWidget_4.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget_4.setItem(linha, 0, check)
+            self.tableWidget_4.setItem(linha, 1, QTableWidgetItem(pesagem.motorista))
+            self.tableWidget_4.setItem(linha, 3, QTableWidgetItem(pesagem.carga))
+            self.tableWidget_4.setItem(linha, 4, QTableWidgetItem(pesagem.cliente))
+            self.tableWidget_4.setItem(linha, 5, QTableWidgetItem(pesagem.peso))
+            self.tableWidget_4.setItem(linha, 6, QTableWidgetItem(pesagem.data))
+            self.tableWidget_4.setItem(linha, 7, QTableWidgetItem(pesagem.veiculo))
 
     # Pegando dados
     def get_dados_carga(self):
@@ -659,7 +635,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget.setItem(linha, 5, QTableWidgetItem(desconto))
             self.cargas_comboBox()
 
-
             # limpando campos
             nome = self.input_produtos_nome.setText('')
             densidade = self.input_produtos_densidade.setText('')
@@ -694,7 +669,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
             if not self.is_num(telefone):
                 saida = False
-                detalhe_saida = 'Telefone inválido.'      
+                detalhe_saida = 'Telefone inválido.'
 
             if cep:
                 if len(cep.replace('-', '').replace(' ', '')) != 8 and self.is_num(cep.replace('-', '').replace(' ', '')):
@@ -733,7 +708,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText(f'Cliente "{self.nome}" adicionado')
+            self.label_realizada_ou_erro.setText(
+                f'Cliente "{self.nome}" adicionado')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText('')
@@ -808,7 +784,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget_3.setItem(linha, 0, check)
             self.tableWidget_3.setItem(linha, 1, QTableWidgetItem(nome))
             self.tableWidget_3.setItem(linha, 2, QTableWidgetItem(placa))
-            self.tableWidget_3.setItem(linha, 3, QTableWidgetItem(proprietario))
+            self.tableWidget_3.setItem(
+                linha, 3, QTableWidgetItem(proprietario))
             self.tableWidget_3.setItem(linha, 4, QTableWidgetItem(produto))
             self.veiculos_comboBox()
 
@@ -817,7 +794,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             placa = self.input_veiculos_placa.setText('')
             proprietario = self.input_veiculos_valor_2.setText('')
             produto = self.comboBox_veiculos_produtos.setCurrentIndex(0)
-
 
         else:
             self.frame_saida.show()
@@ -836,6 +812,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         cliente = self.comboBox_avulsas_cliente.currentText()
         carga = self.comboBox_avulsas_carga.currentText()
         obs = self.input_avulsas_obs.text()
+
+        peso = self.lcdNumber_2.value()
+        data = datetime.now.strftime(r"%d/%m/%Y, %H:%M")
         saida = None
         self.ss15 = 30
 
@@ -857,7 +836,32 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_veja_no_relatorio.setText('Veja em relatório avulsas')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/check-solid_green.svg"))
+        
+            # add db
+            db = database.DBLocal()
+            id_user = db.list_user_local()[0][0]
+            models.add_relatorio_avulsa(id_user, motorista, carga, cliente, peso, data, veiculo, obs)
 
+            # add table
+            linha = self.tableWidget_4.rowCount()
+            self.tableWidget_4.insertRow(linha)
+            check = QTableWidgetItem()
+            check.setCheckState(Qt.Unchecked)
+            self.tableWidget_4.setItem(linha, 0, check)
+            self.tableWidget_4.setItem(linha, 1, QTableWidgetItem(motorista))
+            self.tableWidget_4.setItem(linha, 3, QTableWidgetItem(carga))
+            self.tableWidget_4.setItem(linha, 4, QTableWidgetItem(cliente))
+            self.tableWidget_4.setItem(linha, 5, QTableWidgetItem(peso))
+            self.tableWidget_4.setItem(linha, 6, QTableWidgetItem(data))
+            self.tableWidget_4.setItem(linha, 7, QTableWidgetItem(veiculo))
+
+            # limpando campos
+            self.input_avulsas_motorista.setText('')
+            self.input_avulsas_obs.setText('')
+            self.comboBox_avulsas_veiculo.setCurrentIndex(0)
+            self.comboBox_avulsas_cliente.setCurrentIndex(0)
+            self.comboBox_avulsas_carga.setCurrentIndex(0)
+        
         elif saida == None:
             self.frame_saida.show()
             self.hide_segundos()
@@ -975,13 +979,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         height = self.frame_saida_detalhes.maximumHeight()
 
         if str(pesagem_entrada) != 'Nenhum':
-            height_extend = 80
+            height_extend = 300
         else:
             height_extend = 0
 
         self.animation = QPropertyAnimation(
             self.frame_saida_detalhes, b'maximumHeight')
-        self.animation.setDuration(300)
+        self.animation.setDuration(400)
         self.animation.setStartValue(height)
         self.animation.setEndValue(height_extend)
         self.animation.start()

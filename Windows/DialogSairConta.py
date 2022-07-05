@@ -40,7 +40,7 @@ class Ui_SairConta(object):
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.frame_5 = QFrame(self.frame_2)
         self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setMaximumSize(QSize(331, 171))
+        self.frame_5.setMaximumSize(QSize(421, 171))
         self.frame_5.setFont(font)
         self.frame_5.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border:0")
@@ -55,12 +55,12 @@ class Ui_SairConta(object):
         self.frame_6.setMinimumSize(QSize(0, 50))
         self.frame_6.setMaximumSize(QSize(16777215, 50))
         self.frame_6.setFont(font)
-        self.frame_6.setStyleSheet(u"background-color: rgb(43, 43, 43);")
+        self.frame_6.setStyleSheet(u"background-color: rgb(15, 15, 15);border:0")
         self.frame_6.setFrameShape(QFrame.NoFrame)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.label_2 = QLabel(self.frame_6)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(129, 16, 90, 20))
+        self.label_2.setGeometry(QRect(160, 16, 121, 20))
         font1 = QFont()
         font1.setFamily(u"Segoe UI")
         font1.setPointSize(11)
@@ -70,7 +70,7 @@ class Ui_SairConta(object):
         self.label_2.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.pushButton = QPushButton(self.frame_6)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(290, 16, 20, 20))
+        self.pushButton.setGeometry(QRect(380, 16, 20, 20))
         self.pushButton.setFont(font)
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         icon1 = QIcon()
@@ -102,10 +102,7 @@ class Ui_SairConta(object):
         self.label_3 = QLabel(self.frame_4)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(0, 21))
-        font3 = QFont()
-        font3.setFamily(u"Segoe UI")
-        font3.setPointSize(10)
-        self.label_3.setFont(font3)
+        self.label_3.setFont(font1)
 
         self.verticalLayout_2.addWidget(self.label_3, 0, Qt.AlignHCenter)
 
@@ -124,7 +121,10 @@ class Ui_SairConta(object):
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.sim = QPushButton(self.frame)
         self.sim.setObjectName(u"sim")
-        self.sim.setFont(font2)
+        font3 = QFont()
+        font3.setFamily(u"Segoe UI")
+        font3.setPointSize(10)
+        self.sim.setFont(font3)
         self.sim.setCursor(QCursor(Qt.PointingHandCursor))
         self.sim.setStyleSheet(u"QPushButton{border:1px solid;\n"
 "background:rgb(250, 250, 250);\n"
@@ -138,7 +138,7 @@ class Ui_SairConta(object):
 
         self.nao = QPushButton(self.frame)
         self.nao.setObjectName(u"nao")
-        self.nao.setFont(font2)
+        self.nao.setFont(font3)
         self.nao.setCursor(QCursor(Qt.PointingHandCursor))
         self.nao.setStyleSheet(u"QPushButton{border:1px solid red;\n"
 "background:rgb(250, 250, 250);\n"
@@ -152,7 +152,10 @@ class Ui_SairConta(object):
 
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
-        self.label.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI")
+        font4.setPointSize(11)
+        self.label.setFont(font4)
         self.label.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.label, 0, 0, 1, 2)

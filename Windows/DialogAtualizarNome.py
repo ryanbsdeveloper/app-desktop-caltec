@@ -64,12 +64,12 @@ class Ui_AtualizarNome(object):
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(0, 37))
         self.frame.setMaximumSize(QSize(16777215, 50))
-        self.frame.setStyleSheet(u"background-color: rgb(43, 43, 43);")
+        self.frame.setStyleSheet(u"background-color: rgb(15, 15, 15);")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.pushButton = QPushButton(self.frame)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(360, 14, 20, 21))
+        self.pushButton.setGeometry(QRect(365, 14, 20, 21))
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"border:0")
         icon1 = QIcon()
@@ -78,7 +78,7 @@ class Ui_AtualizarNome(object):
         self.pushButton.setIconSize(QSize(16, 21))
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(68, 15, 248, 20))
+        self.label.setGeometry(QRect(46, 15, 300, 20))
         self.label.setMinimumSize(QSize(0, 19))
         font1 = QFont()
         font1.setFamily(u"Segoe UI")
@@ -122,7 +122,12 @@ class Ui_AtualizarNome(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.label_2 = QLabel(self.frame_4)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setFont(font1)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI")
+        font4.setPointSize(12)
+        font4.setBold(True)
+        font4.setWeight(75)
+        self.label_2.setFont(font4)
 
         self.verticalLayout_2.addWidget(self.label_2)
 
@@ -134,19 +139,19 @@ class Ui_AtualizarNome(object):
 
         self.label_3 = QLabel(self.frame_6)
         self.label_3.setObjectName(u"label_3")
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(10)
-        font4.setBold(False)
-        font4.setWeight(50)
-        self.label_3.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI")
+        font5.setPointSize(12)
+        font5.setBold(False)
+        font5.setWeight(50)
+        self.label_3.setFont(font5)
 
         self.verticalLayout_13.addWidget(self.label_3)
 
         self.input_novo_nome = QLineEdit(self.frame_6)
         self.input_novo_nome.setObjectName(u"input_novo_nome")
         self.input_novo_nome.setFont(font2)
-        self.input_novo_nome.setStyleSheet(u"QLineEdit{padding:3px}\n"
+        self.input_novo_nome.setStyleSheet(u"QLineEdit{padding:3px;border:1px solid}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
@@ -156,12 +161,7 @@ class Ui_AtualizarNome(object):
 
         self.text_info = QLabel(self.frame_6)
         self.text_info.setObjectName(u"text_info")
-        font5 = QFont()
-        font5.setFamily(u"Segoe UI")
-        font5.setPointSize(10)
-        font5.setBold(True)
-        font5.setWeight(75)
-        self.text_info.setFont(font5)
+        self.text_info.setFont(font1)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
         self.text_info.setAlignment(Qt.AlignCenter)
 
@@ -179,7 +179,7 @@ class Ui_AtualizarNome(object):
         self.bt_cancelar.setObjectName(u"bt_cancelar")
         font6 = QFont()
         font6.setFamily(u"Segoe UI")
-        font6.setPointSize(10)
+        font6.setPointSize(12)
         self.bt_cancelar.setFont(font6)
         self.bt_cancelar.setCursor(QCursor(Qt.PointingHandCursor))
         self.bt_cancelar.setStyleSheet(u"\n"

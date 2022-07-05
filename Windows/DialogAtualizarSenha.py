@@ -43,8 +43,8 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.frame_2 = QFrame(self.frame)
         self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setMinimumSize(QSize(390, 316))
-        self.frame_2.setMaximumSize(QSize(390, 315))
+        self.frame_2.setMinimumSize(QSize(390, 343))
+        self.frame_2.setMaximumSize(QSize(448, 315))
         self.frame_2.setFont(font1)
         self.frame_2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border:0\n"
@@ -59,13 +59,12 @@ class Ui_AtualizarSenha(object):
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setMinimumSize(QSize(0, 50))
         self.frame_7.setFont(font1)
-        self.frame_7.setStyleSheet(u"background-color: rgb(43, 43, 43);\n"
-"border:0")
+        self.frame_7.setStyleSheet(u"background-color: rgb(15, 15, 15);border:0")
         self.frame_7.setFrameShape(QFrame.NoFrame)
         self.frame_7.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.frame_7)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(155, 17, 100, 16))
+        self.label.setGeometry(QRect(140, 17, 120, 16))
         font2 = QFont()
         font2.setFamily(u"Segoe UI")
         font2.setPointSize(11)
@@ -75,7 +74,7 @@ class Ui_AtualizarSenha(object):
         self.label.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.pushButton = QPushButton(self.frame_7)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(330, 15, 51, 23))
+        self.pushButton.setGeometry(QRect(350, 15, 51, 23))
         self.pushButton.setFont(font1)
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"border:0")
@@ -110,7 +109,12 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout_3.setContentsMargins(-1, 0, -1, 0)
         self.label_2 = QLabel(self.frame_3)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setFont(font2)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI")
+        font4.setPointSize(12)
+        font4.setBold(True)
+        font4.setWeight(75)
+        self.label_2.setFont(font4)
         self.label_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.label_2)
@@ -127,18 +131,22 @@ class Ui_AtualizarSenha(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.label_3 = QLabel(self.frame_4)
         self.label_3.setObjectName(u"label_3")
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(10)
-        font4.setBold(False)
-        font4.setWeight(50)
-        self.label_3.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI")
+        font5.setPointSize(11)
+        font5.setBold(False)
+        font5.setWeight(50)
+        self.label_3.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.label_3)
 
         self.input_senha_atual = QLineEdit(self.frame_4)
         self.input_senha_atual.setObjectName(u"input_senha_atual")
-        self.input_senha_atual.setFont(font1)
+        self.input_senha_atual.setMinimumSize(QSize(0, 32))
+        font6 = QFont()
+        font6.setFamily(u"Segoe UI")
+        font6.setPointSize(11)
+        self.input_senha_atual.setFont(font6)
         self.input_senha_atual.setStyleSheet(u"QLineEdit{padding:3px;\n"
 "border:1px solid}\n"
 "QLineEdit:focus{\n"
@@ -150,13 +158,14 @@ class Ui_AtualizarSenha(object):
 
         self.label_4 = QLabel(self.frame_4)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setFont(font4)
+        self.label_4.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.label_4)
 
         self.input_senha_nova_1 = QLineEdit(self.frame_4)
         self.input_senha_nova_1.setObjectName(u"input_senha_nova_1")
-        self.input_senha_nova_1.setFont(font1)
+        self.input_senha_nova_1.setMinimumSize(QSize(0, 32))
+        self.input_senha_nova_1.setFont(font6)
         self.input_senha_nova_1.setStyleSheet(u"QLineEdit{padding:3px;\n"
 "border:1px solid}\n"
 "QLineEdit:focus{\n"
@@ -168,13 +177,14 @@ class Ui_AtualizarSenha(object):
 
         self.label_5 = QLabel(self.frame_4)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font4)
+        self.label_5.setFont(font5)
 
         self.verticalLayout_4.addWidget(self.label_5)
 
         self.input_senha_nova_2 = QLineEdit(self.frame_4)
         self.input_senha_nova_2.setObjectName(u"input_senha_nova_2")
-        self.input_senha_nova_2.setFont(font1)
+        self.input_senha_nova_2.setMinimumSize(QSize(0, 32))
+        self.input_senha_nova_2.setFont(font6)
         self.input_senha_nova_2.setStyleSheet(u"QLineEdit{padding:3px;\n"
 "border:1px solid}\n"
 "QLineEdit:focus{\n"
@@ -186,12 +196,7 @@ class Ui_AtualizarSenha(object):
 
         self.text_info = QLabel(self.frame_4)
         self.text_info.setObjectName(u"text_info")
-        font5 = QFont()
-        font5.setFamily(u"Segoe UI")
-        font5.setPointSize(10)
-        font5.setBold(True)
-        font5.setWeight(75)
-        self.text_info.setFont(font5)
+        self.text_info.setFont(font2)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
         self.text_info.setAlignment(Qt.AlignCenter)
 
@@ -209,10 +214,10 @@ class Ui_AtualizarSenha(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.btn_cancelar = QPushButton(self.frame_5)
         self.btn_cancelar.setObjectName(u"btn_cancelar")
-        font6 = QFont()
-        font6.setFamily(u"Segoe UI")
-        font6.setPointSize(10)
-        self.btn_cancelar.setFont(font6)
+        font7 = QFont()
+        font7.setFamily(u"Segoe UI")
+        font7.setPointSize(12)
+        self.btn_cancelar.setFont(font7)
         self.btn_cancelar.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_cancelar.setStyleSheet(u"\n"
 "QPushButton{border:1px solid;\n"
@@ -226,7 +231,7 @@ class Ui_AtualizarSenha(object):
 
         self.btn_alterar = QPushButton(self.frame_5)
         self.btn_alterar.setObjectName(u"btn_alterar")
-        self.btn_alterar.setFont(font6)
+        self.btn_alterar.setFont(font7)
         self.btn_alterar.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_alterar.setStyleSheet(u"\n"
 "\n"

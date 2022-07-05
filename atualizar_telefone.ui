@@ -14,7 +14,7 @@
    <string>Alterar telefone</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Resources/resources.qrc">
+   <iconset resource="resources/resources.qrc">
     <normaloff>:/icons/logo.ico</normaloff>:/icons/logo.ico</iconset>
   </property>
   <property name="styleSheet">
@@ -60,13 +60,14 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>392</width>
-          <height>208</height>
+          <width>377</width>
+          <height>210</height>
          </size>
         </property>
         <property name="font">
          <font>
           <family>Segoe UI</family>
+          <pointsize>27</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -108,8 +109,7 @@
           <cursorShape>ArrowCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(43, 43, 43);
-</string>
+          <string notr="true">background-color: rgb(15, 15, 15);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -120,9 +120,9 @@
          <widget class="QLabel" name="label_4">
           <property name="geometry">
            <rect>
-            <x>141</x>
+            <x>140</x>
             <y>17</y>
-            <width>121</width>
+            <width>151</width>
             <height>16</height>
            </rect>
           </property>
@@ -144,7 +144,7 @@
          <widget class="QPushButton" name="pushButton">
           <property name="geometry">
            <rect>
-            <x>330</x>
+            <x>338</x>
             <y>15</y>
             <width>51</width>
             <height>23</height>
@@ -165,7 +165,7 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset resource="Resources/resources.qrc">
+           <iconset resource="resources/resources.qrc">
             <normaloff>:/icons/xmark-solid.svg</normaloff>:/icons/xmark-solid.svg</iconset>
           </property>
           <property name="iconSize">
@@ -203,7 +203,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">background-color: rgb(255, 255, 255);border:0</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -267,8 +267,11 @@
                  <pointsize>12</pointsize>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">border:0</string>
+               </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::NoFrame</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
@@ -285,7 +288,7 @@
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>12</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
@@ -350,7 +353,7 @@
                <property name="font">
                 <font>
                  <family>Segoe UI</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>11</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
@@ -365,10 +368,11 @@
                <property name="font">
                 <font>
                  <family>Segoe UI</family>
+                 <pointsize>11</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLineEdit{padding:3px}
+                <string notr="true">QLineEdit{padding:3px;border: 1px solid}
 QLineEdit:focus{
 border:1px solid rgb(67, 202, 0)
 }</string>
@@ -392,7 +396,7 @@ border:1px solid rgb(67, 202, 0)
             <property name="font">
              <font>
               <family>Segoe UI</family>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -448,7 +452,7 @@ border:1px solid rgb(67, 202, 0)
                <property name="font">
                 <font>
                  <family>Segoe UI</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="cursor">
@@ -473,7 +477,7 @@ QPushButton:hover{
                <property name="font">
                 <font>
                  <family>Segoe UI</family>
-                 <pointsize>10</pointsize>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="cursor">
@@ -509,7 +513,7 @@ QPushButton:hover{
   </layout>
  </widget>
  <resources>
-  <include location="Resources/resources.qrc"/>
+  <include location="resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

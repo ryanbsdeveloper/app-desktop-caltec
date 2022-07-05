@@ -14,7 +14,7 @@
    <string>Sair</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Resources/resources.qrc">
+   <iconset resource="resources/resources.qrc">
     <normaloff>:/icons/logo.ico</normaloff>:/icons/logo.ico</iconset>
   </property>
   <property name="styleSheet">
@@ -60,7 +60,7 @@
        <widget class="QFrame" name="frame_5">
         <property name="maximumSize">
          <size>
-          <width>331</width>
+          <width>421</width>
           <height>171</height>
          </size>
         </property>
@@ -115,7 +115,7 @@ border:0</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(43, 43, 43);</string>
+            <string notr="true">background-color: rgb(15, 15, 15);border:0</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
@@ -126,9 +126,9 @@ border:0</string>
            <widget class="QLabel" name="label_2">
             <property name="geometry">
              <rect>
-              <x>129</x>
+              <x>160</x>
               <y>16</y>
-              <width>90</width>
+              <width>121</width>
               <height>20</height>
              </rect>
             </property>
@@ -150,7 +150,7 @@ border:0</string>
            <widget class="QPushButton" name="pushButton">
             <property name="geometry">
              <rect>
-              <x>290</x>
+              <x>380</x>
               <y>16</y>
               <width>20</width>
               <height>20</height>
@@ -168,7 +168,7 @@ border:0</string>
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="Resources/resources.qrc">
+             <iconset resource="resources/resources.qrc">
               <normaloff>:/icons/xmark-solid.svg</normaloff>:/icons/xmark-solid.svg</iconset>
             </property>
             <property name="iconSize">
@@ -232,7 +232,7 @@ border:0</string>
                  <property name="font">
                   <font>
                    <family>Segoe UI</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -282,7 +282,7 @@ border:0</string>
                  <property name="font">
                   <font>
                    <family>Segoe UI</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>10</pointsize>
                   </font>
                  </property>
                  <property name="cursor">
@@ -307,7 +307,7 @@ QPushButton:hover{
                  <property name="font">
                   <font>
                    <family>Segoe UI</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>10</pointsize>
                   </font>
                  </property>
                  <property name="cursor">
@@ -332,7 +332,7 @@ QPushButton:hover{
                  <property name="font">
                   <font>
                    <family>Segoe UI</family>
-                   <pointsize>10</pointsize>
+                   <pointsize>11</pointsize>
                   </font>
                  </property>
                  <property name="text">
@@ -358,7 +358,7 @@ QPushButton:hover{
   </layout>
  </widget>
  <resources>
-  <include location="Resources/resources.qrc"/>
+  <include location="resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
