@@ -118,6 +118,7 @@ class DialogSairConta(QDialog, Ui_SairConta):
         Login.show()
 
 
+# DELETES
 class DialogRemoverDadosAvulsas(QDialog, Ui_RemoverDados):
     def __init__(self, parent):
         super(DialogRemoverDadosAvulsas, self).__init__(parent)
@@ -140,9 +141,102 @@ class DialogRemoverDadosAvulsas(QDialog, Ui_RemoverDados):
 
         self.close()
         self.input_delete.setText('')
+    
+    def disableButton(self):
+        if self.input_delete.text() == 'DELETE':
+            self.btn_remove.setDisabled(False)
+            self.btn_remove.setCursor(QCursor(Qt.PointingHandCursor))
 
+        else:
+            self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remove.setDisabled(True)
 
+class DialogRemoverDadosClientes(QDialog, Ui_RemoverDados):
+    def __init__(self, parent):
+        super(DialogRemoverDadosClientes, self).__init__(parent)
+        self.setupUi(self)
+        self.btn_remove.setDisabled(True)
+        self.close_window.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.input_delete.textChanged.connect(self.disableButton)
+        self.btn_remove.clicked.connect(self.delete)
 
+    def delete(self):
+        for i in range(self.parent().tableWidget_2.rowCount()):
+            if self.parent().tableWidget_2.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.parent().tableWidget_2.item(i, 7).text()
+                self.parent().tableWidget_2.removeRow(i)
+                models.del_pesagem_avulsa(indentificacao_data)
+                self.close()
+                self.input_delete.setText('')
+
+        self.close()
+        self.input_delete.setText('')
+    
+    def disableButton(self):
+        if self.input_delete.text() == 'DELETE':
+            self.btn_remove.setDisabled(False)
+            self.btn_remove.setCursor(QCursor(Qt.PointingHandCursor))
+
+        else:
+            self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remove.setDisabled(True)
+
+class DialogRemoverDadosVeiculos(QDialog, Ui_RemoverDados):
+    def __init__(self, parent):
+        super(DialogRemoverDadosVeiculos, self).__init__(parent)
+        self.setupUi(self)
+        self.btn_remove.setDisabled(True)
+        self.close_window.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.input_delete.textChanged.connect(self.disableButton)
+        self.btn_remove.clicked.connect(self.delete)
+
+    def delete(self):
+        for i in range(self.parent().tableWidget_4.rowCount()):
+            if self.parent().tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
+                self.parent().tableWidget_4.removeRow(i)
+                models.del_pesagem_avulsa(indentificacao_data)
+                self.close()
+                self.input_delete.setText('')
+
+        self.close()
+        self.input_delete.setText('')
+    
+    def disableButton(self):
+        if self.input_delete.text() == 'DELETE':
+            self.btn_remove.setDisabled(False)
+            self.btn_remove.setCursor(QCursor(Qt.PointingHandCursor))
+
+        else:
+            self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remove.setDisabled(True)
+
+class DialogRemoverDadosCargas(QDialog, Ui_RemoverDados):
+    def __init__(self, parent):
+        super(DialogRemoverDadosCargas, self).__init__(parent)
+        self.setupUi(self)
+        self.btn_remove.setDisabled(True)
+        self.close_window.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.input_delete.textChanged.connect(self.disableButton)
+        self.btn_remove.clicked.connect(self.delete)
+
+    def delete(self):
+        for i in range(self.parent().tableWidget_4.rowCount()):
+            if self.parent().tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
+                self.parent().tableWidget_4.removeRow(i)
+                models.del_pesagem_avulsa(indentificacao_data)
+                self.close()
+                self.input_delete.setText('')
+
+        self.close()
+        self.input_delete.setText('')
     
     def disableButton(self):
         if self.input_delete.text() == 'DELETE':
@@ -270,16 +364,56 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.detalhes_saida)
 
     # DISABLE BUTTONS
-    def disable_button_avulsa(self):
+    def disable_button(self):
         pesagens = models.list_pesagens_avulsa()
+        clientes = models.list_clientes()
+        cargas = models.list_cargas()
+        veiculos = models.list_veiculos()
 
         if pesagens:
             self.remove_pesagem_avulsas.setCursor(QCursor(Qt.PointingHandCursor))
             self.remove_pesagem_avulsas.setDisabled(False)
+            self.remove_pesagem_avulsas.setToolTip(
+            'Clique para remover')
         else:
             self.remove_pesagem_avulsas.setCursor(QCursor(Qt.ForbiddenCursor))
             self.remove_pesagem_avulsas.setDisabled(True)
+            self.remove_pesagem_avulsas.setToolTip(
+            'Ainda não tem pesagem para remoção.')
 
+        if clientes:
+            self.btn_remover_clientes.setCursor(QCursor(Qt.PointingHandCursor))
+            self.btn_remover_clientes.setDisabled(False)
+            self.btn_remover_clientes.setToolTip(
+            'Clique para remover')
+        else:
+            self.btn_remover_clientes.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remover_clientes.setDisabled(True)
+            self.btn_remover_clientes.setToolTip(
+            'Ainda não tem Clientes para remoção.')
+
+        if cargas:
+            self.btn_remover_produtos.setCursor(QCursor(Qt.PointingHandCursor))
+            self.btn_remover_produtos.setDisabled(False)
+            self.btn_remover_produtos.setToolTip(
+            'Clique para remover')
+        else:
+            self.btn_remover_produtos.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remover_produtos.setDisabled(True)
+            self.btn_remover_produtos.setToolTip(
+            'Ainda não tem Produtos para remoção.')
+        
+        if veiculos:
+            self.btn_remover_veiculos.setCursor(QCursor(Qt.PointingHandCursor))
+            self.btn_remover_veiculos.setDisabled(False)
+            self.btn_remover_veiculos.setToolTip(
+            'Clique para remover')
+        else:
+            self.btn_remover_veiculos.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remover_veiculos.setDisabled(True)
+            self.btn_remover_veiculos.setToolTip(
+            'Ainda não tem pesagem para remoção.')
+    
     # TIMES
     def hide_segundos(self):
         self.timer2.start(1000)
@@ -310,7 +444,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.data.setText(label_date)
         
         # FUCTIONS 
-        self.disable_button_avulsa()
+        self.disable_button()
 
     def menu_grupos(self):
         if self.menu_grupos_frame.height() == 0:
@@ -624,6 +758,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         embalagem = self.input_produtos_embalagemKG.text()
         preco = self.input_produtos_estoqueKG.text().replace(',', '.')
         desconto = self.input_produtos_desconto.text()
+        data = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
         saida = None
         self.ss15 = 30
 
@@ -677,7 +812,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             db = database.DBLocal()
             id_user = db.list_user_local()[0][0]
             models.add_carga(id_user, nome, preco,
-                             densidade, embalagem, desconto)
+                             densidade, embalagem, desconto, data)
 
             # add table
             linha = self.tableWidget.rowCount()
@@ -690,6 +825,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget.setItem(linha, 3, QTableWidgetItem(densidade))
             self.tableWidget.setItem(linha, 4, QTableWidgetItem(embalagem))
             self.tableWidget.setItem(linha, 5, QTableWidgetItem(desconto))
+            self.tableWidget.setItem(linha, 6, QTableWidgetItem(data))
             self.cargas_comboBox()
 
             # limpando campos
@@ -717,6 +853,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         cep = self.input_clientes_cep.text()
         endereco = self.input_clientes_endereco.text()
         telefone = self.input_clientes_telefone.text().replace(' ', '')
+        data = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
+
         detalhe_saida = ''
         saida = None
         self.ss15 = 30
@@ -775,7 +913,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # add a db
             db = database.DBLocal()
             id_user = db.list_user_local()[0][0]
-            models.add_cliente(id_user, nome, cpf, rg, telefone, cep, endereco)
+            models.add_cliente(id_user, nome, cpf, rg, telefone, cep, endereco, data)
 
             # add table
             linha = self.tableWidget_2.rowCount()
@@ -789,6 +927,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget_2.setItem(linha, 4, QTableWidgetItem(telefone))
             self.tableWidget_2.setItem(linha, 5, QTableWidgetItem(cep))
             self.tableWidget_2.setItem(linha, 6, QTableWidgetItem(endereco))
+            self.tableWidget_2.setItem(linha, 7, QTableWidgetItem(data))
             self.clientes_comboBox()
 
             # limpando campos
@@ -815,6 +954,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         proprietario = self.input_veiculos_valor_2.text()
         produto = self.comboBox_veiculos_produtos.currentText()
         id_produto = models.list_cargas(produto)
+        data = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
+
         self.ss15 = 30
 
         if nome and placa and proprietario and str(produto) != 'Nenhum':
@@ -830,7 +971,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             # add db
             db = database.DBLocal()
             id_user = db.list_user_local()[0][0]
-            models.add_veiculo(id_user, proprietario, nome, placa, id_produto)
+            models.add_veiculo(id_user, proprietario, nome, placa, id_produto, data)
 
             # add table
             linha = self.tableWidget_3.rowCount()
@@ -843,6 +984,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget_3.setItem(
                 linha, 3, QTableWidgetItem(proprietario))
             self.tableWidget_3.setItem(linha, 4, QTableWidgetItem(produto))
+            self.tableWidget_3.setItem(linha, 5, QTableWidgetItem(data))
             self.veiculos_comboBox()
 
             # limpando campos
@@ -862,20 +1004,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))
 
-    def delete_pesagem_avulsa(self):
-        for i in range(self.tableWidget_4.rowCount()):
-            if self.tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
-                indentificacao_data = self.tableWidget_4.item(i, 5).text()
-                self.tableWidget_4.removeRow(i)
-                models.del_pesagem_avulsa(indentificacao_data)
-
     def get_pesagem_avulsas(self):
         motorista = self.input_avulsas_motorista.text()
         veiculo = self.comboBox_avulsas_veiculo.currentText()
         cliente = self.comboBox_avulsas_cliente.currentText()
         carga = self.comboBox_avulsas_carga.currentText()
         obs = self.input_avulsas_obs.text()
-
         peso = self.lcdNumber_2.value()
         data = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
         saida = None
@@ -947,7 +1081,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 'Não foi possível coletar o peso com valor: 0')
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))
-
+   
     # Entrada e Saida
     def get_pesagem_entrada(self):
         motorista = self.input_entrada_motorista.text()

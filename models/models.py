@@ -89,12 +89,13 @@ class Cliente(Base):
     user = relationship(
         "User", backref=backref("cliente", uselist=False))
     nome = sql.Column(sql.String, index=True)
-    cpf_cnpj = sql.Column(sql.String, index=True, default=data)
+    cpf_cnpj = sql.Column(sql.String, index=True)
     rg = sql.Column(sql.String, index=True)
     telefone = sql.Column(sql.String, index=True)
     cep = sql.Column(sql.String, index=True)
     endereço = sql.Column(sql.String, index=True)
-
+    data = sql.Column(sql.String, index=True)
+    
     def __repr__(self):
         return f'({self.id}) {self.nome}'
 
@@ -111,6 +112,7 @@ class Carga(Base):
     densidade = sql.Column(sql.String, index=True)
     embalagem = sql.Column(sql.String, index=True)
     desconto = sql.Column(sql.String, index=True)
+    data = sql.Column(sql.String, index=True)
 
     def __repr__(self):
         return f"({self.id}) {self.nome}"
@@ -129,6 +131,7 @@ class Veiculo(Base):
     carga_id = sql.Column(sql.Integer, sql.ForeignKey("carga.id"))
     carga = relationship(
         "Carga", backref=backref("carga", uselist=False))
+    data = sql.Column(sql.String, index=True)
 
     def __repr__(self):
         return f'({self.id}) {self.placa}'
@@ -155,13 +158,14 @@ def add_user(id_cloud, nome, email, telefone, senha, licenca, pesagens):
     session.commit()
     session.flush()
 
-def add_veiculo(id_user_local, proprietario, modelo, placa, produto):
+def add_veiculo(id_user_local, proprietario, modelo, placa, produto,data):
     dados = Veiculo(
         user_id=id_user_local,
         proprietario=proprietario,
         nome=modelo,
         placa=placa,
         carga_id=produto,
+        data=data
     )
     session.add(dados)
     session.commit()
@@ -173,14 +177,15 @@ def list_veiculos():
 
     return query
 
-def add_carga(id_user_local, nome, preco, densidade, embalagem, desconto):
+def add_carga(id_user_local, nome, preco, densidade, embalagem, desconto,data):
     dados = Carga(
         user_id=id_user_local,
         nome=nome,
         preco=preco,
         densidade=densidade,
         embalagem=embalagem,
-        desconto=desconto)
+        desconto=desconto,
+        data=data)
 
     session.add(dados)
     session.commit()
@@ -197,7 +202,7 @@ def list_cargas(carga=False):
 
     return query
 
-def add_cliente(id_user_local, nome, cpf_cnpj, rg, telefone, cep, endereço):
+def add_cliente(id_user_local, nome, cpf_cnpj, rg, telefone, cep, endereço, data):
     dados = Cliente(
         user_id=id_user_local,
         nome=nome,
@@ -205,7 +210,8 @@ def add_cliente(id_user_local, nome, cpf_cnpj, rg, telefone, cep, endereço):
         rg=rg,
         telefone=telefone,
         cep=cep,
-        endereço=endereço)
+        endereço=endereço,
+        data=data)
 
     session.add(dados)
     session.commit()
@@ -285,6 +291,23 @@ def del_pesagem_avulsa(data):
     session.commit()
     session.flush()
 
+def del_cliente(data):
+    pesagem = delete(Cliente).where(Cliente.data == data)
+    session.execute(pesagem)
+    session.commit()
+    session.flush()
+
+def del_carga(data):
+    pesagem = delete(Carga).where(Carga.data == data)
+    session.execute(pesagem)
+    session.commit()
+    session.flush()
+
+def del_veiculo(data):
+    pesagem = delete(Veiculo).where(Veiculo.data == data)
+    session.execute(pesagem)
+    session.commit()
+    session.flush()
 
 if __name__ == '__main__':
-    del_pesagem_avulsa('06/07/2022, 00:10:26')
+    list_cargas()
