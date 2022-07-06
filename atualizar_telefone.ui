@@ -103,6 +103,7 @@
          <property name="font">
           <font>
            <family>Segoe UI</family>
+           <pointsize>1</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -203,7 +204,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);border:0</string>
+          <string notr="true">background-color: rgb(43, 43, 43);border:0</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -293,6 +294,9 @@
                     <bold>true</bold>
                    </font>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">color:white</string>
+                  </property>
                   <property name="text">
                    <string>Insira seu novo telefone</string>
                   </property>
@@ -353,10 +357,13 @@
                <property name="font">
                 <font>
                  <family>Segoe UI</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color:white</string>
                </property>
                <property name="text">
                 <string>NOVO TELEFONE</string>
@@ -372,13 +379,13 @@
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">QLineEdit{padding:3px;border: 1px solid}
+                <string notr="true">QLineEdit{padding:3px;border: 1px solid;color:white}
 QLineEdit:focus{
 border:1px solid rgb(67, 202, 0)
 }</string>
                </property>
                <property name="echoMode">
-                <enum>QLineEdit::Password</enum>
+                <enum>QLineEdit::Normal</enum>
                </property>
               </widget>
              </item>
@@ -462,9 +469,10 @@ border:1px solid rgb(67, 202, 0)
                 <string notr="true">
 QPushButton{border:1px solid;
 padding:3px;
-background-color: rgb(250, 250, 250);}
+background-color: rgb(15, 15, 15);
+color:white}
 QPushButton:hover{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(80, 80, 80);
 }</string>
                </property>
                <property name="text">
@@ -488,10 +496,11 @@ QPushButton:hover{
 
 QPushButton{border:1px solid rgb(67, 202, 0);
 padding:3px;
-background-color: rgb(250, 250, 250);}
+background-color: rgb(15, 15, 15);
+color:white}
 
 QPushButton:hover{
-	
+	color:black;
 	background-color: rgb(151, 255, 151);
 }</string>
                </property>

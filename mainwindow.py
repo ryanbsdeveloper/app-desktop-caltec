@@ -131,15 +131,24 @@ class DialogRemoverDadosAvulsas(QDialog, Ui_RemoverDados):
         self.btn_remove.clicked.connect(self.delete)
 
     def delete(self):
+        datas = []
         for i in range(self.parent().tableWidget_4.rowCount()):
-            if self.parent().tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
-                indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
-                self.parent().tableWidget_4.removeRow(i)
-                models.del_pesagem_avulsa(indentificacao_data)
-
+            try:
+                selecionado = str(self.parent().tableWidget_4.item(i, 0).checkState())
+            except:
+                selecionado = str(Qt.CheckState.Unchecked)
+        
+            if selecionado == str(Qt.CheckState.Checked):
+                indentificacao_data = self.parent().tableWidget_4.item(i, 6).text()
+                self.parent().tableWidget_4.setRowHidden(i, True)
+                datas.append(indentificacao_data)
+            
         self.close()
         self.input_delete.setText('')
-    
+
+        for data in datas:
+            models.del_pesagem_avulsa(data)
+
     def disableButton(self):
         if self.input_delete.text() == 'DELETE':
             self.btn_remove.setDisabled(False)
@@ -162,14 +171,23 @@ class DialogRemoverDadosClientes(QDialog, Ui_RemoverDados):
         self.btn_remove.clicked.connect(self.delete)
 
     def delete(self):
+        datas = []
         for i in range(self.parent().tableWidget_2.rowCount()):
-            if self.parent().tableWidget_2.item(i, 0).checkState() == Qt.CheckState.Checked:
-                indentificacao_data = self.parent().tableWidget_2.item(i, 7).text()
-                self.parent().tableWidget_2.removeRow(i)
-                models.del_cliente(indentificacao_data)
-
+            try:
+                selecionado = str(self.parent().tableWidget_2.item(i, 0).checkState())
+            except:
+                selecionado = str(Qt.CheckState.Unchecked)
+        
+            if selecionado == str(Qt.CheckState.Checked):
+                indentificacao_data = self.parent().tableWidget_2.item(i, 6).text()
+                self.parent().tableWidget_2.setRowHidden(i, True)
+                datas.append(indentificacao_data)
+            
         self.close()
         self.input_delete.setText('')
+
+        for data in datas:
+            models.del_cliente(data)
     
     def disableButton(self):
         if self.input_delete.text() == 'DELETE':
@@ -193,14 +211,23 @@ class DialogRemoverDadosVeiculos(QDialog, Ui_RemoverDados):
         self.btn_remove.clicked.connect(self.delete)
 
     def delete(self):
+        datas = []
         for i in range(self.parent().tableWidget_3.rowCount()):
-            if self.parent().tableWidget_3.item(i, 0).checkState() == Qt.CheckState.Checked:
-                indentificacao_data = self.parent().tableWidget_3.item(i, 5).text()
-                self.parent().tableWidget_3.removeRow(i)
-                models.del_veiculo(indentificacao_data)
-
+            try:
+                selecionado = str(self.parent().tableWidget_3.item(i, 0).checkState())
+            except:
+                selecionado = str(Qt.CheckState.Unchecked)
+        
+            if selecionado == str(Qt.CheckState.Checked):
+                indentificacao_data = self.parent().tableWidget_3.item(i, 6).text()
+                self.parent().tableWidget_3.setRowHidden(i, True)
+                datas.append(indentificacao_data)
+            
         self.close()
         self.input_delete.setText('')
+
+        for data in datas:
+            models.del_veiculo(data)
     
     def disableButton(self):
         if self.input_delete.text() == 'DELETE':
@@ -224,14 +251,25 @@ class DialogRemoverDadosCargas(QDialog, Ui_RemoverDados):
         self.btn_remove.clicked.connect(self.delete)
 
     def delete(self):
+        datas = []
         for i in range(self.parent().tableWidget.rowCount()):
-            if self.parent().tableWidget.item(i, 0).checkState() == Qt.CheckState.Checked:
+            try:
+                selecionado = str(self.parent().tableWidget.item(i, 0).checkState())
+            except:
+                selecionado = str(Qt.CheckState.Unchecked)
+        
+            if selecionado == str(Qt.CheckState.Checked):
                 indentificacao_data = self.parent().tableWidget.item(i, 6).text()
-                self.parent().tableWidget.removeRow(i)
-                models.del_carga(indentificacao_data)
-
+                self.parent().tableWidget.setRowHidden(i, True)
+                datas.append(indentificacao_data)
+            
         self.close()
         self.input_delete.setText('')
+
+        for data in datas:
+            models.del_carga(data)
+
+
     
     def disableButton(self):
         if self.input_delete.text() == 'DELETE':
@@ -251,7 +289,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.ss15 = 30
-
         # INITIAL
         self.user()
         self.cargas()
@@ -261,7 +298,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.clientes_comboBox()
         self.veiculos_comboBox()
         self.relatorio_avulsa()
-
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
         timer.start(1000)
@@ -751,7 +787,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 linha, 4, QTableWidgetItem(f'{veiculo.carga}'))
             self.tableWidget_3.setItem(
                 linha, 5, QTableWidgetItem(veiculo.data))
-                
+
     def relatorio_avulsa(self):
         pesagens = models.list_pesagens_avulsa()
 

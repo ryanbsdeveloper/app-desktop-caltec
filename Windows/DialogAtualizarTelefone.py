@@ -52,7 +52,10 @@ class Ui_AtualizarTelefone(object):
         self.frame_7.setGeometry(QRect(1, 1, 390, 50))
         self.frame_7.setMinimumSize(QSize(0, 50))
         self.frame_7.setMaximumSize(QSize(390, 50))
-        self.frame_7.setFont(font)
+        font2 = QFont()
+        font2.setFamily(u"Segoe UI")
+        font2.setPointSize(1)
+        self.frame_7.setFont(font2)
         self.frame_7.setCursor(QCursor(Qt.ArrowCursor))
         self.frame_7.setStyleSheet(u"background-color: rgb(15, 15, 15);")
         self.frame_7.setFrameShape(QFrame.NoFrame)
@@ -60,12 +63,12 @@ class Ui_AtualizarTelefone(object):
         self.label_4 = QLabel(self.frame_7)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(140, 17, 151, 16))
-        font2 = QFont()
-        font2.setFamily(u"Segoe UI")
-        font2.setPointSize(11)
-        font2.setBold(True)
-        font2.setWeight(75)
-        self.label_4.setFont(font2)
+        font3 = QFont()
+        font3.setFamily(u"Segoe UI")
+        font3.setPointSize(11)
+        font3.setBold(True)
+        font3.setWeight(75)
+        self.label_4.setFont(font3)
         self.label_4.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.pushButton = QPushButton(self.frame_7)
         self.pushButton.setObjectName(u"pushButton")
@@ -83,7 +86,7 @@ class Ui_AtualizarTelefone(object):
         self.frame_6.setMinimumSize(QSize(390, 155))
         self.frame_6.setMaximumSize(QSize(390, 231))
         self.frame_6.setFont(font)
-        self.frame_6.setStyleSheet(u"background-color: rgb(255, 255, 255);border:0")
+        self.frame_6.setStyleSheet(u"background-color: rgb(43, 43, 43);border:0")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_6)
@@ -102,10 +105,10 @@ class Ui_AtualizarTelefone(object):
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setMinimumSize(QSize(0, 0))
         self.frame_4.setMaximumSize(QSize(16777215, 32))
-        font3 = QFont()
-        font3.setFamily(u"Segoe UI")
-        font3.setPointSize(12)
-        self.frame_4.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI")
+        font4.setPointSize(12)
+        self.frame_4.setFont(font4)
         self.frame_4.setStyleSheet(u"border:0")
         self.frame_4.setFrameShape(QFrame.NoFrame)
         self.frame_4.setFrameShadow(QFrame.Raised)
@@ -114,12 +117,13 @@ class Ui_AtualizarTelefone(object):
         self.label_2 = QLabel(self.frame_4)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setMinimumSize(QSize(0, 13))
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(12)
-        font4.setBold(True)
-        font4.setWeight(75)
-        self.label_2.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI")
+        font5.setPointSize(12)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.label_2.setFont(font5)
+        self.label_2.setStyleSheet(u"color:white")
         self.label_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.label_2)
@@ -143,26 +147,27 @@ class Ui_AtualizarTelefone(object):
         self.label_3 = QLabel(self.frame)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMaximumSize(QSize(16777215, 30))
-        font5 = QFont()
-        font5.setFamily(u"Segoe UI")
-        font5.setPointSize(11)
-        font5.setBold(False)
-        font5.setWeight(50)
-        self.label_3.setFont(font5)
+        font6 = QFont()
+        font6.setFamily(u"Segoe UI")
+        font6.setPointSize(10)
+        font6.setBold(False)
+        font6.setWeight(50)
+        self.label_3.setFont(font6)
+        self.label_3.setStyleSheet(u"color:white")
 
         self.verticalLayout_4.addWidget(self.label_3)
 
         self.input_novo_telefone = QLineEdit(self.frame)
         self.input_novo_telefone.setObjectName(u"input_novo_telefone")
-        font6 = QFont()
-        font6.setFamily(u"Segoe UI")
-        font6.setPointSize(11)
-        self.input_novo_telefone.setFont(font6)
-        self.input_novo_telefone.setStyleSheet(u"QLineEdit{padding:3px;border: 1px solid}\n"
+        font7 = QFont()
+        font7.setFamily(u"Segoe UI")
+        font7.setPointSize(11)
+        self.input_novo_telefone.setFont(font7)
+        self.input_novo_telefone.setStyleSheet(u"QLineEdit{padding:3px;border: 1px solid;color:white}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
-        self.input_novo_telefone.setEchoMode(QLineEdit.Password)
+        self.input_novo_telefone.setEchoMode(QLineEdit.Normal)
 
         self.verticalLayout_4.addWidget(self.input_novo_telefone)
 
@@ -172,7 +177,7 @@ class Ui_AtualizarTelefone(object):
         self.text_info = QLabel(self.frame_6)
         self.text_info.setObjectName(u"text_info")
         self.text_info.setMaximumSize(QSize(16777215, 30))
-        self.text_info.setFont(font2)
+        self.text_info.setFont(font3)
         self.text_info.setStyleSheet(u"color: rgb(255, 0, 0);")
         self.text_info.setAlignment(Qt.AlignCenter)
 
@@ -190,30 +195,32 @@ class Ui_AtualizarTelefone(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.bt_cancelar = QPushButton(self.frame_2)
         self.bt_cancelar.setObjectName(u"bt_cancelar")
-        self.bt_cancelar.setFont(font3)
+        self.bt_cancelar.setFont(font4)
         self.bt_cancelar.setCursor(QCursor(Qt.PointingHandCursor))
         self.bt_cancelar.setStyleSheet(u"\n"
 "QPushButton{border:1px solid;\n"
 "padding:3px;\n"
-"background-color: rgb(250, 250, 250);}\n"
+"background-color: rgb(15, 15, 15);\n"
+"color:white}\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(204, 204, 204);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
 
         self.horizontalLayout_2.addWidget(self.bt_cancelar)
 
         self.btn_alterar = QPushButton(self.frame_2)
         self.btn_alterar.setObjectName(u"btn_alterar")
-        self.btn_alterar.setFont(font3)
+        self.btn_alterar.setFont(font4)
         self.btn_alterar.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_alterar.setStyleSheet(u"\n"
 "\n"
 "QPushButton{border:1px solid rgb(67, 202, 0);\n"
 "padding:3px;\n"
-"background-color: rgb(250, 250, 250);}\n"
+"background-color: rgb(15, 15, 15);\n"
+"color:white}\n"
 "\n"
 "QPushButton:hover{\n"
-"	\n"
+"	color:black;\n"
 "	background-color: rgb(151, 255, 151);\n"
 "}")
 

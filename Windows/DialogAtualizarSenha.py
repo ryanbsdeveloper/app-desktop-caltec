@@ -88,6 +88,7 @@ class Ui_AtualizarSenha(object):
         self.frame_6 = QFrame(self.frame_2)
         self.frame_6.setObjectName(u"frame_6")
         self.frame_6.setFont(font1)
+        self.frame_6.setStyleSheet(u"background-color:rgb(43,43,43)")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.frame_6)
@@ -115,6 +116,7 @@ class Ui_AtualizarSenha(object):
         font4.setBold(True)
         font4.setWeight(75)
         self.label_2.setFont(font4)
+        self.label_2.setStyleSheet(u"color:white")
         self.label_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.label_2)
@@ -125,6 +127,7 @@ class Ui_AtualizarSenha(object):
         self.frame_4 = QFrame(self.frame_6)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setFont(font1)
+        self.frame_4.setStyleSheet(u"color:white")
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.frame_4)
@@ -133,10 +136,11 @@ class Ui_AtualizarSenha(object):
         self.label_3.setObjectName(u"label_3")
         font5 = QFont()
         font5.setFamily(u"Segoe UI")
-        font5.setPointSize(11)
+        font5.setPointSize(10)
         font5.setBold(False)
         font5.setWeight(50)
         self.label_3.setFont(font5)
+        self.label_3.setStyleSheet(u"color:white")
 
         self.verticalLayout_4.addWidget(self.label_3)
 
@@ -148,7 +152,8 @@ class Ui_AtualizarSenha(object):
         font6.setPointSize(11)
         self.input_senha_atual.setFont(font6)
         self.input_senha_atual.setStyleSheet(u"QLineEdit{padding:3px;\n"
-"border:1px solid}\n"
+"border:1px solid;\n"
+"color:white}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
@@ -159,6 +164,7 @@ class Ui_AtualizarSenha(object):
         self.label_4 = QLabel(self.frame_4)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setFont(font5)
+        self.label_4.setStyleSheet(u"color:white")
 
         self.verticalLayout_4.addWidget(self.label_4)
 
@@ -167,17 +173,19 @@ class Ui_AtualizarSenha(object):
         self.input_senha_nova_1.setMinimumSize(QSize(0, 32))
         self.input_senha_nova_1.setFont(font6)
         self.input_senha_nova_1.setStyleSheet(u"QLineEdit{padding:3px;\n"
-"border:1px solid}\n"
+"border:1px solid;\n"
+"color:white}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
-        self.input_senha_nova_1.setEchoMode(QLineEdit.Password)
+        self.input_senha_nova_1.setEchoMode(QLineEdit.Normal)
 
         self.verticalLayout_4.addWidget(self.input_senha_nova_1)
 
         self.label_5 = QLabel(self.frame_4)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setFont(font5)
+        self.label_5.setStyleSheet(u"color:white")
 
         self.verticalLayout_4.addWidget(self.label_5)
 
@@ -186,11 +194,12 @@ class Ui_AtualizarSenha(object):
         self.input_senha_nova_2.setMinimumSize(QSize(0, 32))
         self.input_senha_nova_2.setFont(font6)
         self.input_senha_nova_2.setStyleSheet(u"QLineEdit{padding:3px;\n"
-"border:1px solid}\n"
+"border:1px solid;\n"
+"color:white}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
-        self.input_senha_nova_2.setEchoMode(QLineEdit.Password)
+        self.input_senha_nova_2.setEchoMode(QLineEdit.Normal)
 
         self.verticalLayout_4.addWidget(self.input_senha_nova_2)
 
@@ -222,9 +231,10 @@ class Ui_AtualizarSenha(object):
         self.btn_cancelar.setStyleSheet(u"\n"
 "QPushButton{border:1px solid;\n"
 "padding:3px;\n"
-"background-color: rgb(250, 250, 250);}\n"
+"background-color: rgb(15, 15, 15);\n"
+"color:white}\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(204, 204, 204);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
 
         self.horizontalLayout.addWidget(self.btn_cancelar)
@@ -237,10 +247,11 @@ class Ui_AtualizarSenha(object):
 "\n"
 "QPushButton{border:1px solid rgb(67, 202, 0);\n"
 "padding:3px;\n"
-"background-color: rgb(250, 250, 250);}\n"
+"background-color: rgb(15, 15, 15);\n"
+"color:white;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	\n"
+"	color:black;\n"
 "	background-color: rgb(151, 255, 151);\n"
 "}")
 

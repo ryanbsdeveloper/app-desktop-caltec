@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>arrow-right-to-bracket-solid.svg</file>
+    <file>github-brands.svg</file>
     <file>filter-solid.svg</file>
     <file>print-solid.svg</file>
     <file>free_icon_1 (3).svg</file>
@@ -43,8 +45,6 @@
     <file>icon (2).png</file>
     <file>person-falling-burst-solid.svg</file>
     <file>person-walking-arrow-loop-left-solid.svg</file>
-    <file>arrow-right-to-bracket-solid.svg</file>
-    <file>github-brands.svg</file>
     <file>ori.png</file>
     <file>icon.png</file>
     <file>circle-info-solidg.svg</file>

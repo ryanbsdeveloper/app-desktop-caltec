@@ -38,8 +38,8 @@ class Ui_RemoverDados(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.frame = QFrame(self.frame_5)
         self.frame.setObjectName(u"frame")
-        self.frame.setMinimumSize(QSize(480, 0))
-        self.frame.setMaximumSize(QSize(480, 275))
+        self.frame.setMinimumSize(QSize(480, 290))
+        self.frame.setMaximumSize(QSize(480, 290))
         self.frame.setStyleSheet(u"background-color:rgb(43,43,43)")
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -82,11 +82,26 @@ class Ui_RemoverDados(object):
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setFrameShape(QFrame.NoFrame)
         self.frame_2.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout = QHBoxLayout(self.frame_2)
-        self.horizontalLayout.setSpacing(15)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(0, -1, 0, -1)
-        self.label_2 = QLabel(self.frame_2)
+        self.verticalLayout_5 = QVBoxLayout(self.frame_2)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(0, -1, 0, 19)
+        self.frame_6 = QFrame(self.frame_2)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setFrameShape(QFrame.NoFrame)
+        self.frame_6.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_3 = QHBoxLayout(self.frame_6)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.label_5 = QLabel(self.frame_6)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setMaximumSize(QSize(30, 30))
+        self.label_5.setPixmap(QPixmap(u":/icons/circle-info-solid.svg"))
+        self.label_5.setScaledContents(True)
+        self.label_5.setWordWrap(True)
+
+        self.horizontalLayout_3.addWidget(self.label_5)
+
+        self.label_2 = QLabel(self.frame_6)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setMaximumSize(QSize(80, 50))
         font = QFont()
@@ -97,26 +112,23 @@ class Ui_RemoverDados(object):
         font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setStyleSheet(u"font: bold 12pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(255, 168, 0);")
 
-        self.horizontalLayout.addWidget(self.label_2)
+        self.horizontalLayout_3.addWidget(self.label_2)
+
+
+        self.verticalLayout_5.addWidget(self.frame_6, 0, Qt.AlignHCenter)
 
         self.label = QLabel(self.frame_2)
         self.label.setObjectName(u"label")
-        font1 = QFont()
-        font1.setFamily(u"Segoe UI")
-        font1.setPointSize(12)
-        font1.setBold(False)
-        font1.setItalic(False)
-        font1.setWeight(50)
-        self.label.setFont(font1)
-        self.label.setStyleSheet(u"font:  12pt \"Segoe UI\";\n"
+        self.label.setFont(font)
+        self.label.setStyleSheet(u"font:  bold 12pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);")
         self.label.setFrameShape(QFrame.NoFrame)
         self.label.setScaledContents(False)
         self.label.setWordWrap(True)
 
-        self.horizontalLayout.addWidget(self.label, 0, Qt.AlignRight)
+        self.verticalLayout_5.addWidget(self.label)
 
 
         self.verticalLayout_2.addWidget(self.frame_2, 0, Qt.AlignHCenter)
@@ -138,10 +150,12 @@ class Ui_RemoverDados(object):
         self.input_delete = QLineEdit(self.frame_3)
         self.input_delete.setObjectName(u"input_delete")
         self.input_delete.setMinimumSize(QSize(0, 36))
+        self.input_delete.setFont(font)
         self.input_delete.setStyleSheet(u"QLineEdit{\n"
 "	border:1px solid gray;\n"
-"	font: 12pt \"Segoe UI\";\n"
+"	font:  bold 12pt \"Segoe UI\";\n"
 "	color:white;\n"
+"padding:7px\n"
 "}")
 
         self.verticalLayout_3.addWidget(self.input_delete)
@@ -153,7 +167,7 @@ class Ui_RemoverDados(object):
         self.btn_remove.setStyleSheet(u"QPushButton{\n"
 "border:1px solid  rgb(237, 51, 59);\n"
 "font:  bold 12pt \"Segoe UI\";\n"
-"color: rgb(237, 51, 59)\n"
+"color: white\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
@@ -182,10 +196,11 @@ class Ui_RemoverDados(object):
         RemoverDados.setWindowTitle(QCoreApplication.translate("RemoverDados", u"Dialog", None))
         self.label_4.setText(QCoreApplication.translate("RemoverDados", u"          Remover dados", None))
         self.close_window.setText("")
+        self.label_5.setText("")
         self.label_2.setText(QCoreApplication.translate("RemoverDados", u"Aten\u00e7\u00e3o:", None))
         self.label.setText(QCoreApplication.translate("RemoverDados", u"Para continuar a remo\u00e7\u00e3o dos dados selecionados, prossiga abaixo", None))
         self.label_3.setText(QCoreApplication.translate("RemoverDados", u"Digite \"DELETE\" para continuar", None))
-        self.input_delete.setPlaceholderText(QCoreApplication.translate("RemoverDados", u"DELETE", None))
+        self.input_delete.setPlaceholderText("")
         self.btn_remove.setText(QCoreApplication.translate("RemoverDados", u"Remover", None))
     # retranslateUi
 

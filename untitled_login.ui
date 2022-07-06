@@ -105,7 +105,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">border:1px solid black;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(43, 43, 43);</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -131,7 +131,7 @@ background-color: rgb(255, 255, 255);</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>E-mail:</string>
@@ -149,7 +149,7 @@ background-color: rgb(255, 255, 255);</string>
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>11</pointsize>
+           <pointsize>12</pointsize>
            <weight>50</weight>
            <bold>false</bold>
           </font>
@@ -164,6 +164,7 @@ QLineEdit{
 	border-radius:5px;
 	border:1px solid;
 	padding:7px;
+color:white
 }</string>
          </property>
         </widget>
@@ -185,7 +186,7 @@ QLineEdit{
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>Senha:</string>
@@ -217,7 +218,8 @@ QLineEdit{
          <property name="styleSheet">
           <string notr="true">QPushButton{
 		border-radius:10px;
-		outline:0px
+		outline:0px;
+	color:white
 }
 
 
@@ -233,6 +235,12 @@ background-color: rgb(6, 180, 20);
           <iconset resource="resources/resources.qrc">
            <normaloff>:/icons/arrow-right-to-bracket-solid.svg</normaloff>:/icons/arrow-right-to-bracket-solid.svg</iconset>
          </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
         </widget>
         <widget class="QLineEdit" name="_senha_input">
          <property name="geometry">
@@ -246,7 +254,7 @@ background-color: rgb(6, 180, 20);
          <property name="font">
           <font>
            <family>Century Gothic</family>
-           <pointsize>10</pointsize>
+           <pointsize>12</pointsize>
            <weight>50</weight>
            <bold>false</bold>
           </font>
@@ -261,6 +269,7 @@ QLineEdit{
 	border-radius:5px;
 	border:1px solid;
 	padding:7px;
+color:white
 }</string>
          </property>
          <property name="frame">
@@ -288,7 +297,7 @@ QLineEdit{
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>Created by:</string>
@@ -312,7 +321,7 @@ QLineEdit{
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>ryanbsdeveloper</string>
@@ -338,7 +347,7 @@ QLineEdit{
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>Entrar</string>
@@ -347,7 +356,7 @@ QLineEdit{
         <widget class="QPushButton" name="esqueceu_senha_button">
          <property name="geometry">
           <rect>
-           <x>208</x>
+           <x>214</x>
            <y>460</y>
            <width>102</width>
            <height>23</height>
@@ -356,7 +365,7 @@ QLineEdit{
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>12</pointsize>
+           <pointsize>13</pointsize>
            <weight>50</weight>
            <bold>false</bold>
           </font>
@@ -385,13 +394,13 @@ outline:0</string>
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>12</pointsize>
+           <pointsize>13</pointsize>
            <weight>50</weight>
            <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>Esqueceu a senha?</string>
@@ -401,7 +410,7 @@ outline:0</string>
          <property name="geometry">
           <rect>
            <x>260</x>
-           <y>50</y>
+           <y>54</y>
            <width>280</width>
            <height>140</height>
           </rect>
@@ -476,7 +485,7 @@ outline:0</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0</string>
+          <string notr="true">border:0;color:white</string>
          </property>
          <property name="text">
           <string>O melhor e mais completo aplicativo de pesagem. Acesse mais serviços da Caltec </string>
@@ -690,16 +699,16 @@ background-color: rgb(43, 43, 43);
         <widget class="QLabel" name="erro">
          <property name="geometry">
           <rect>
-           <x>460</x>
+           <x>440</x>
            <y>410</y>
-           <width>221</width>
+           <width>261</width>
            <height>21</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>11</pointsize>
+           <pointsize>12</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -746,8 +755,6 @@ background-color: rgb(43, 43, 43);
  </tabstops>
  <resources>
   <include location="resources/resources.qrc"/>
-  <include location="resources/resources.qrc"/>
-  <include location="Resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

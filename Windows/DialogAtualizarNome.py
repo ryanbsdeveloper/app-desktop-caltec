@@ -92,6 +92,7 @@ class Ui_AtualizarNome(object):
 
         self.frame_6 = QFrame(self.frame_30)
         self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setStyleSheet(u"background-color:rgb(43,43,43)")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.verticalLayout_13 = QVBoxLayout(self.frame_6)
@@ -102,7 +103,7 @@ class Ui_AtualizarNome(object):
         font2 = QFont()
         font2.setFamily(u"Segoe UI")
         self.frame_3.setFont(font2)
-        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShape(QFrame.NoFrame)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame_3)
         self.horizontalLayout.setSpacing(0)
@@ -116,7 +117,7 @@ class Ui_AtualizarNome(object):
         font3.setFamily(u"Segoe UI")
         font3.setPointSize(11)
         self.frame_4.setFont(font3)
-        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShape(QFrame.NoFrame)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_4)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -128,6 +129,7 @@ class Ui_AtualizarNome(object):
         font4.setBold(True)
         font4.setWeight(75)
         self.label_2.setFont(font4)
+        self.label_2.setStyleSheet(u"color:white")
 
         self.verticalLayout_2.addWidget(self.label_2)
 
@@ -141,17 +143,18 @@ class Ui_AtualizarNome(object):
         self.label_3.setObjectName(u"label_3")
         font5 = QFont()
         font5.setFamily(u"Segoe UI")
-        font5.setPointSize(12)
+        font5.setPointSize(10)
         font5.setBold(False)
         font5.setWeight(50)
         self.label_3.setFont(font5)
+        self.label_3.setStyleSheet(u"color:white")
 
         self.verticalLayout_13.addWidget(self.label_3)
 
         self.input_novo_nome = QLineEdit(self.frame_6)
         self.input_novo_nome.setObjectName(u"input_novo_nome")
         self.input_novo_nome.setFont(font2)
-        self.input_novo_nome.setStyleSheet(u"QLineEdit{padding:3px;border:1px solid}\n"
+        self.input_novo_nome.setStyleSheet(u"QLineEdit{padding:3px;border:1px solid;color:white}\n"
 "QLineEdit:focus{\n"
 "border:1px solid rgb(67, 202, 0)\n"
 "}")
@@ -185,7 +188,8 @@ class Ui_AtualizarNome(object):
         self.bt_cancelar.setStyleSheet(u"\n"
 "QPushButton{border:1px solid;\n"
 "padding:3px;\n"
-"background-color: rgb(250, 250, 250);}\n"
+"background-color: rgb(15, 15, 15);\n"
+"color:white}\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(204, 204, 204);\n"
 "}")
@@ -200,10 +204,10 @@ class Ui_AtualizarNome(object):
 "\n"
 "QPushButton{border:1px solid rgb(67, 202, 0);\n"
 "padding:3px;\n"
-"background-color: rgb(250, 250, 250);}\n"
+"background-color: rgb(15, 15, 15);\n"
+"color:white}\n"
 "\n"
 "QPushButton:hover{\n"
-"	\n"
 "	background-color: rgb(151, 255, 151);\n"
 "}")
 

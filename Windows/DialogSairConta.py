@@ -83,6 +83,7 @@ class Ui_SairConta(object):
         self.frame_3 = QFrame(self.frame_5)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setFont(font)
+        self.frame_3.setStyleSheet(u"background-color:rgb(43,43,43)")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_3)
@@ -103,6 +104,7 @@ class Ui_SairConta(object):
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(0, 21))
         self.label_3.setFont(font1)
+        self.label_3.setStyleSheet(u"color:white")
 
         self.verticalLayout_2.addWidget(self.label_3, 0, Qt.AlignHCenter)
 
@@ -123,15 +125,16 @@ class Ui_SairConta(object):
         self.sim.setObjectName(u"sim")
         font3 = QFont()
         font3.setFamily(u"Segoe UI")
-        font3.setPointSize(10)
+        font3.setPointSize(11)
         self.sim.setFont(font3)
         self.sim.setCursor(QCursor(Qt.PointingHandCursor))
         self.sim.setStyleSheet(u"QPushButton{border:1px solid;\n"
-"background:rgb(250, 250, 250);\n"
-"padding:5px}\n"
+"background:rgb(15, 15, 15);\n"
+"padding:5px;\n"
+"color:white}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(204, 204, 204);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
 
         self.gridLayout_2.addWidget(self.sim, 2, 1, 1, 1)
@@ -141,21 +144,20 @@ class Ui_SairConta(object):
         self.nao.setFont(font3)
         self.nao.setCursor(QCursor(Qt.PointingHandCursor))
         self.nao.setStyleSheet(u"QPushButton{border:1px solid red;\n"
-"background:rgb(250, 250, 250);\n"
-"padding:5px}\n"
+"background:rgb(15, 15, 15);\n"
+"padding:5px;\n"
+"color:white}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(255, 170, 170);\n"
+"	background-color: rgb(255, 50, 50);\n"
 "}")
 
         self.gridLayout_2.addWidget(self.nao, 2, 0, 1, 1)
 
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(11)
-        self.label.setFont(font4)
+        self.label.setFont(font3)
+        self.label.setStyleSheet(u"color:white")
         self.label.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.label, 0, 0, 1, 2)
