@@ -151,6 +151,7 @@ class DialogRemoverDadosAvulsas(QDialog, Ui_RemoverDados):
             self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
             self.btn_remove.setDisabled(True)
 
+
 class DialogRemoverDadosClientes(QDialog, Ui_RemoverDados):
     def __init__(self, parent):
         super(DialogRemoverDadosClientes, self).__init__(parent)
@@ -167,7 +168,7 @@ class DialogRemoverDadosClientes(QDialog, Ui_RemoverDados):
             if self.parent().tableWidget_2.item(i, 0).checkState() == Qt.CheckState.Checked:
                 indentificacao_data = self.parent().tableWidget_2.item(i, 7).text()
                 self.parent().tableWidget_2.removeRow(i)
-                models.del_pesagem_avulsa(indentificacao_data)
+                models.del_cliente(indentificacao_data)
                 self.close()
                 self.input_delete.setText('')
 
@@ -182,6 +183,7 @@ class DialogRemoverDadosClientes(QDialog, Ui_RemoverDados):
         else:
             self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
             self.btn_remove.setDisabled(True)
+
 
 class DialogRemoverDadosVeiculos(QDialog, Ui_RemoverDados):
     def __init__(self, parent):
@@ -195,11 +197,11 @@ class DialogRemoverDadosVeiculos(QDialog, Ui_RemoverDados):
         self.btn_remove.clicked.connect(self.delete)
 
     def delete(self):
-        for i in range(self.parent().tableWidget_4.rowCount()):
-            if self.parent().tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
-                indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
-                self.parent().tableWidget_4.removeRow(i)
-                models.del_pesagem_avulsa(indentificacao_data)
+        for i in range(self.parent().tableWidget_3.rowCount()):
+            if self.parent().tableWidget_3.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.parent().tableWidget_3.item(i, 5).text()
+                self.parent().tableWidget_3.removeRow(i)
+                models.del_veiculo(indentificacao_data)
                 self.close()
                 self.input_delete.setText('')
 
@@ -215,6 +217,7 @@ class DialogRemoverDadosVeiculos(QDialog, Ui_RemoverDados):
             self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
             self.btn_remove.setDisabled(True)
 
+
 class DialogRemoverDadosCargas(QDialog, Ui_RemoverDados):
     def __init__(self, parent):
         super(DialogRemoverDadosCargas, self).__init__(parent)
@@ -227,11 +230,11 @@ class DialogRemoverDadosCargas(QDialog, Ui_RemoverDados):
         self.btn_remove.clicked.connect(self.delete)
 
     def delete(self):
-        for i in range(self.parent().tableWidget_4.rowCount()):
-            if self.parent().tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
-                indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
-                self.parent().tableWidget_4.removeRow(i)
-                models.del_pesagem_avulsa(indentificacao_data)
+        for i in range(self.parent().tableWidget.rowCount()):
+            if self.parent().tableWidget.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.parent().tableWidget.item(i, 6).text()
+                self.parent().tableWidget.removeRow(i)
+                models.del_carga(indentificacao_data)
                 self.close()
                 self.input_delete.setText('')
 
@@ -315,6 +318,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dialog_atualizar_senha = DialogAtualizarSenha(self)
         self.dialog_atualizar_telefone = DialogAtualizarTelefone(self)
         self.dialog_remover_dados = DialogRemoverDadosAvulsas(self)
+        self.dialog_remover_clientes = DialogRemoverDadosClientes(self)
+        self.dialog_remover_cargas = DialogRemoverDadosCargas(self)
+        self.dialog_remover_veiculos = DialogRemoverDadosVeiculos(self)
+
         self.premium = PremiumWindow(self)
         self.btn_virepro_button.clicked.connect(
             lambda: self.premium.showFullScreen())
