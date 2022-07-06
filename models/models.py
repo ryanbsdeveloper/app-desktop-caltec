@@ -299,9 +299,11 @@ def del_cliente(data):
 
 def del_carga(data):
     pesagem = delete(Carga).where(Carga.data == data)
+
     session.execute(pesagem)
     session.commit()
     session.flush()
+    
 
 def del_veiculo(data):
     pesagem = delete(Veiculo).where(Veiculo.data == data)

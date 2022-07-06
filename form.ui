@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1492</width>
+    <width>1535</width>
     <height>895</height>
    </rect>
   </property>
@@ -5871,7 +5871,7 @@ QScrollBar::add-line:horizontal {
                       </column>
                       <column>
                        <property name="text">
-                        <string>ADICIONADO EM</string>
+                        <string>DATA CRIAÇÃO</string>
                        </property>
                       </column>
                      </widget>
@@ -7139,6 +7139,11 @@ QScrollBar::add-line:horizontal {
                         <string>CARGA</string>
                        </property>
                       </column>
+                      <column>
+                       <property name="text">
+                        <string>DATA CRIAÇÃO</string>
+                       </property>
+                      </column>
                      </widget>
                     </item>
                    </layout>
@@ -8379,6 +8384,11 @@ QScrollBar::add-line:horizontal {
                       <column>
                        <property name="text">
                         <string>DESCONTO</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>DATA CRIAÇÃO</string>
                        </property>
                       </column>
                      </widget>

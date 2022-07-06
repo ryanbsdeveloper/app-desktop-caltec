@@ -136,8 +136,6 @@ class DialogRemoverDadosAvulsas(QDialog, Ui_RemoverDados):
                 indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
                 self.parent().tableWidget_4.removeRow(i)
                 models.del_pesagem_avulsa(indentificacao_data)
-                self.close()
-                self.input_delete.setText('')
 
         self.close()
         self.input_delete.setText('')
@@ -169,8 +167,6 @@ class DialogRemoverDadosClientes(QDialog, Ui_RemoverDados):
                 indentificacao_data = self.parent().tableWidget_2.item(i, 7).text()
                 self.parent().tableWidget_2.removeRow(i)
                 models.del_cliente(indentificacao_data)
-                self.close()
-                self.input_delete.setText('')
 
         self.close()
         self.input_delete.setText('')
@@ -202,8 +198,6 @@ class DialogRemoverDadosVeiculos(QDialog, Ui_RemoverDados):
                 indentificacao_data = self.parent().tableWidget_3.item(i, 5).text()
                 self.parent().tableWidget_3.removeRow(i)
                 models.del_veiculo(indentificacao_data)
-                self.close()
-                self.input_delete.setText('')
 
         self.close()
         self.input_delete.setText('')
@@ -235,8 +229,6 @@ class DialogRemoverDadosCargas(QDialog, Ui_RemoverDados):
                 indentificacao_data = self.parent().tableWidget.item(i, 6).text()
                 self.parent().tableWidget.removeRow(i)
                 models.del_carga(indentificacao_data)
-                self.close()
-                self.input_delete.setText('')
 
         self.close()
         self.input_delete.setText('')
@@ -353,6 +345,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_alterar_senha.clicked.connect(self.show_atualizar_senha)
         self.btn_alterar_telefone.clicked.connect(self.show_atualizar_telefone)
         self.remove_pesagem_avulsas.clicked.connect(self.show_remover_dados_avulsas)
+        self.btn_remover_clientes.clicked.connect(self.show_remover_dados_clientes)
+        self.btn_remover_produtos.clicked.connect(self.show_remover_dados_cargas)
+        self.btn_remover_veiculos.clicked.connect(self.show_remover_dados_veiculos)
         self.btn_atualizar_licenca.clicked.connect(
             lambda: self.premium.showFullScreen())
 
@@ -408,7 +403,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.btn_remover_produtos.setCursor(QCursor(Qt.ForbiddenCursor))
             self.btn_remover_produtos.setDisabled(True)
             self.btn_remover_produtos.setToolTip(
-            'Ainda não tem Produtos para remoção.')
+            'Ainda não tem Cargas para remoção.')
         
         if veiculos:
             self.btn_remover_veiculos.setCursor(QCursor(Qt.PointingHandCursor))
@@ -492,6 +487,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def show_remover_dados_avulsas(self):
         self.dialog_remover_dados.showFullScreen()
+
+    def show_remover_dados_clientes(self):
+        self.dialog_remover_clientes.showFullScreen()
+
+    def show_remover_dados_cargas(self):
+        self.dialog_remover_cargas.showFullScreen()
+
+    def show_remover_dados_veiculos(self):
+        self.dialog_remover_veiculos.showFullScreen()
 
     # ANIMATIONS FUNCTIONS
     def animation_pesagem(self):
@@ -703,6 +707,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 linha, 4, QTableWidgetItem(carga.embalagem))
             self.tableWidget.setItem(
                 linha, 5, QTableWidgetItem(carga.desconto))
+            self.tableWidget.setItem(
+                linha, 6, QTableWidgetItem(carga.data))
 
     def clientes(self):
         clientes = models.list_clientes()
@@ -723,6 +729,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.tableWidget_2.setItem(linha, 5, QTableWidgetItem(cliente.cep))
             self.tableWidget_2.setItem(
                 linha, 6, QTableWidgetItem(cliente.endereço))
+            self.tableWidget_2.setItem(
+                linha, 7, QTableWidgetItem(cliente.data))
 
     def veiculos(self):
         veiculos = models.list_veiculos()
@@ -741,7 +749,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 linha, 3, QTableWidgetItem(veiculo.nome))
             self.tableWidget_3.setItem(
                 linha, 4, QTableWidgetItem(f'{veiculo.carga}'))
-
+            self.tableWidget_3.setItem(
+                linha, 5, QTableWidgetItem(veiculo.data))
+                
     def relatorio_avulsa(self):
         pesagens = models.list_pesagens_avulsa()
 
