@@ -3,8 +3,8 @@ import sys
 import resources_rc
 from time import sleep
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget, QDialog, QTableWidgetItem
-from PySide2.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup, QAbstractAnimation, QSize, QTime, QTimer, QDate
-from PySide2.QtGui import QRegion, QIcon, QFont, QPixmap
+from PySide2.QtCore import QPropertyAnimation, Qt, QSize, QTime, QTimer, QDate
+from PySide2.QtGui import QRegion, QIcon, QFont, QPixmap, QCursor
 from Windows.MainWindow import Ui_MainWindow
 from Windows.Premium import Ui_Dialog
 from Windows.Login import Ui_Login_Widget
@@ -14,11 +14,11 @@ from Windows.DialogAtualizarSenha import Ui_AtualizarSenha
 from Windows.DialogAtualizarTelefone import Ui_AtualizarTelefone
 from Windows.DialogExcluirConta import Ui_ExcluirConta
 from Windows.DialogSairConta import Ui_SairConta
+from Windows.DialogRemoverDados import Ui_RemoverDados
 from utils import utils
 from models import database, models
 
 # DIALOGs
-
 
 class DialogAtualizarNome(QDialog, Ui_AtualizarNome):
     def __init__(self, parent):
@@ -116,6 +116,44 @@ class DialogSairConta(QDialog, Ui_SairConta):
         self.parent().close()
         self.close()
         Login.show()
+
+
+class DialogRemoverDadosAvulsas(QDialog, Ui_RemoverDados):
+    def __init__(self, parent):
+        super(DialogRemoverDadosAvulsas, self).__init__(parent)
+        self.setupUi(self)
+        self.btn_remove.setDisabled(True)
+        self.close_window.clicked.connect(lambda: self.close())
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.input_delete.textChanged.connect(self.disableButton)
+        self.btn_remove.clicked.connect(self.delete)
+
+    def delete(self):
+        for i in range(self.parent().tableWidget_4.rowCount()):
+            if self.parent().tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.parent().tableWidget_4.item(i, 5).text()
+                self.parent().tableWidget_4.removeRow(i)
+                models.del_pesagem_avulsa(indentificacao_data)
+                self.close()
+                self.input_delete.setText('')
+
+        self.close()
+        self.input_delete.setText('')
+
+
+
+    
+    def disableButton(self):
+        if self.input_delete.text() == 'DELETE':
+            self.btn_remove.setDisabled(False)
+            self.btn_remove.setCursor(QCursor(Qt.PointingHandCursor))
+
+        else:
+            self.btn_remove.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.btn_remove.setDisabled(True)
+
+
 #######################################################################
 
 
@@ -133,6 +171,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.cargas_comboBox()
         self.clientes_comboBox()
         self.veiculos_comboBox()
+        self.relatorio_avulsa()
 
         timer = QTimer(self)
         timer.timeout.connect(self.showTime)
@@ -181,6 +220,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.dialog_atualizar_nome = DialogAtualizarNome(self)
         self.dialog_atualizar_senha = DialogAtualizarSenha(self)
         self.dialog_atualizar_telefone = DialogAtualizarTelefone(self)
+        self.dialog_remover_dados = DialogRemoverDadosAvulsas(self)
         self.premium = PremiumWindow(self)
         self.btn_virepro_button.clicked.connect(
             lambda: self.premium.showFullScreen())
@@ -211,6 +251,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_alterar_nome.clicked.connect(self.show_atualizar_nome)
         self.btn_alterar_senha.clicked.connect(self.show_atualizar_senha)
         self.btn_alterar_telefone.clicked.connect(self.show_atualizar_telefone)
+        self.remove_pesagem_avulsas.clicked.connect(self.show_remover_dados_avulsas)
         self.btn_atualizar_licenca.clicked.connect(
             lambda: self.premium.showFullScreen())
 
@@ -228,6 +269,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.comboBox_pesagem_entrada.currentTextChanged.connect(
             self.detalhes_saida)
 
+    # DISABLE BUTTONS
+    def disable_button_avulsa(self):
+        pesagens = models.list_pesagens_avulsa()
+
+        if pesagens:
+            self.remove_pesagem_avulsas.setCursor(QCursor(Qt.PointingHandCursor))
+            self.remove_pesagem_avulsas.setDisabled(False)
+        else:
+            self.remove_pesagem_avulsas.setCursor(QCursor(Qt.ForbiddenCursor))
+            self.remove_pesagem_avulsas.setDisabled(True)
+
     # TIMES
     def hide_segundos(self):
         self.timer2.start(1000)
@@ -241,7 +293,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.ss15 = self.ss15 - 1
 
     # FUCTIONS INITIAL
-
     def user(self):
         db = database.DBLocal()
         user = db.list_user_local()[0]
@@ -257,6 +308,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         label_time = current_time.toString('hh:mm:ss')
         self.hora.setText(label_time)
         self.data.setText(label_date)
+        
+        # FUCTIONS 
+        self.disable_button_avulsa()
 
     def menu_grupos(self):
         if self.menu_grupos_frame.height() == 0:
@@ -294,6 +348,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def show_atualizar_telefone(self):
         self.dialog_atualizar_telefone.showFullScreen()
+
+    def show_remover_dados_avulsas(self):
+        self.dialog_remover_dados.showFullScreen()
 
     # ANIMATIONS FUNCTIONS
     def animation_pesagem(self):
@@ -545,7 +602,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 linha, 4, QTableWidgetItem(f'{veiculo.carga}'))
 
     def relatorio_avulsa(self):
-        pesagens = []
+        pesagens = models.list_pesagens_avulsa()
 
         for pesagem in pesagens:
             linha = self.tableWidget_4.rowCount()
@@ -554,11 +611,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             check.setCheckState(Qt.Unchecked)
             self.tableWidget_4.setItem(linha, 0, check)
             self.tableWidget_4.setItem(linha, 1, QTableWidgetItem(pesagem.motorista))
-            self.tableWidget_4.setItem(linha, 3, QTableWidgetItem(pesagem.carga))
-            self.tableWidget_4.setItem(linha, 4, QTableWidgetItem(pesagem.cliente))
-            self.tableWidget_4.setItem(linha, 5, QTableWidgetItem(pesagem.peso))
-            self.tableWidget_4.setItem(linha, 6, QTableWidgetItem(pesagem.data))
-            self.tableWidget_4.setItem(linha, 7, QTableWidgetItem(pesagem.veiculo))
+            self.tableWidget_4.setItem(linha, 2, QTableWidgetItem(pesagem.produto))
+            self.tableWidget_4.setItem(linha, 3, QTableWidgetItem(pesagem.cliente))
+            self.tableWidget_4.setItem(linha, 4, QTableWidgetItem(pesagem.peso_bruto))
+            self.tableWidget_4.setItem(linha, 5, QTableWidgetItem(pesagem.data))
+            self.tableWidget_4.setItem(linha, 6, QTableWidgetItem(pesagem.placa))
 
     # Pegando dados
     def get_dados_carga(self):
@@ -659,7 +716,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         rg = self.input_clientes_rg.text()
         cep = self.input_clientes_cep.text()
         endereco = self.input_clientes_endereco.text()
-        telefone = self.input_clientes_telefone.text()
+        telefone = self.input_clientes_telefone.text().replace(' ', '')
         detalhe_saida = ''
         saida = None
         self.ss15 = 30
@@ -688,7 +745,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if cpf:
                 if not utils.validador(cpf):
                     saida = False
-                    detalhe_saida = 'Certificação de pessoa física (CPF) inválido'
+                    detalhe_saida = 'Certificação de pessoa física (CPF) inválida'
             else:
                 cpf = 'n/a'
 
@@ -708,8 +765,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if saida == True:
             self.frame_saida.show()
             self.hide_segundos()
-            self.label_realizada_ou_erro.setText(
-                f'Cliente "{self.nome}" adicionado')
+            self.label_realizada_ou_erro.setText(f'Cliente "{nome}" adicionado')
             self.label_realizada_ou_erro.setStyleSheet(
                 'color:rgb(6, 180, 20);')
             self.label_veja_no_relatorio.setText('')
@@ -736,12 +792,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.clientes_comboBox()
 
             # limpando campos
-            nome = self.input_clientes_nome.setText('')
-            cpf = self.input_clientes_cpf.setText('')
-            rg = self.input_clientes_rg.setText('')
-            cep = self.input_clientes_cep.setText('')
-            endereco = self.input_clientes_endereco.setText('')
-            telefone = self.input_clientes_telefone.setText('')
+            self.input_clientes_nome.setText('')
+            self.input_clientes_cpf.setText('')
+            self.input_clientes_rg.setText('')
+            self.input_clientes_cep.setText('')
+            self.input_clientes_endereco.setText('')
+            self.input_clientes_telefone.setText('')
 
         elif saida == False:
             self.frame_saida.show()
@@ -806,6 +862,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.label_logo_saida.setPixmap(
                 QPixmap(u":/icons/circle-info-solidr.svg"))
 
+    def delete_pesagem_avulsa(self):
+        for i in range(self.tableWidget_4.rowCount()):
+            if self.tableWidget_4.item(i, 0).checkState() == Qt.CheckState.Checked:
+                indentificacao_data = self.tableWidget_4.item(i, 5).text()
+                self.tableWidget_4.removeRow(i)
+                models.del_pesagem_avulsa(indentificacao_data)
+
     def get_pesagem_avulsas(self):
         motorista = self.input_avulsas_motorista.text()
         veiculo = self.comboBox_avulsas_veiculo.currentText()
@@ -814,7 +877,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         obs = self.input_avulsas_obs.text()
 
         peso = self.lcdNumber_2.value()
-        data = datetime.now.strftime(r"%d/%m/%Y, %H:%M")
+        data = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
         saida = None
         self.ss15 = 30
 
@@ -849,11 +912,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             check.setCheckState(Qt.Unchecked)
             self.tableWidget_4.setItem(linha, 0, check)
             self.tableWidget_4.setItem(linha, 1, QTableWidgetItem(motorista))
-            self.tableWidget_4.setItem(linha, 3, QTableWidgetItem(carga))
-            self.tableWidget_4.setItem(linha, 4, QTableWidgetItem(cliente))
-            self.tableWidget_4.setItem(linha, 5, QTableWidgetItem(peso))
-            self.tableWidget_4.setItem(linha, 6, QTableWidgetItem(data))
-            self.tableWidget_4.setItem(linha, 7, QTableWidgetItem(veiculo))
+            self.tableWidget_4.setItem(linha, 2, QTableWidgetItem(carga))
+            self.tableWidget_4.setItem(linha, 3, QTableWidgetItem(cliente))
+            self.tableWidget_4.setItem(linha, 4, QTableWidgetItem(str(peso)))
+            self.tableWidget_4.setItem(linha, 5, QTableWidgetItem(data))
+            self.tableWidget_4.setItem(linha, 6, QTableWidgetItem(veiculo))
 
             # limpando campos
             self.input_avulsas_motorista.setText('')
@@ -894,6 +957,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         obs = self.input_entrada_obs.text()
         saida = None
         self.ss15 = 30
+
+        self.bindApply()
 
         if motorista and veiculo != 'Nenhum' and cliente != 'Nenhum' and carga != 'Nenhum':
             if not obs:

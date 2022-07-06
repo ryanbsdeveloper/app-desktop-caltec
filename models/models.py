@@ -1,9 +1,10 @@
+from email.policy import default
 import os
 from datetime import datetime
 import sqlalchemy as sql
 from sqlalchemy.orm import relationship, backref, Session, sessionmaker
 import sqlalchemy.ext.declarative as declarative
-from sqlalchemy import select, update
+from sqlalchemy import null, select, update, delete
 
 
 BASE_DIR = os.path.dirname(__file__)
@@ -44,7 +45,7 @@ class PesagemAvulsa(Base):
     peso_bruto = sql.Column(sql.String, index=True)
     data = sql.Column(sql.String, index=True, default=data)
     placa = sql.Column(sql.String, index=True)
-    obs = sql.Column(sql.String, index=True)
+    obs = sql.Column(sql.String, index=True, default='Sem observação')
 
 
 class PesagemEntrada(Base):
@@ -258,7 +259,7 @@ def excluir_conta(senha):
 # RELATORIOS
 def add_relatorio_avulsa(id_user,motorista, produto, cliente, peso_bruto, data, placa, obs):
     dados = PesagemAvulsa(
-        id_user=id_user,
+        user_id=id_user,
         motorista=motorista,
         produto=produto,
         cliente=cliente,
@@ -272,6 +273,18 @@ def add_relatorio_avulsa(id_user,motorista, produto, cliente, peso_bruto, data, 
     session.commit()
     session.flush()
 
-#
+def list_pesagens_avulsa():
+    query = session.query(PesagemAvulsa).all()
+    session.commit()
+
+    return query
+
+def del_pesagem_avulsa(data):
+    pesagem = delete(PesagemAvulsa).where(PesagemAvulsa.data == data)
+    session.execute(pesagem)
+    session.commit()
+    session.flush()
+
+
 if __name__ == '__main__':
-    pass
+    del_pesagem_avulsa('06/07/2022, 00:10:26')

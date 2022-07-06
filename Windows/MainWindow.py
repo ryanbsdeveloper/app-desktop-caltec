@@ -13,7 +13,6 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 import resources_rc
-import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1268,7 +1267,9 @@ class Ui_MainWindow(object):
         self.btn_Aplicar_filtro_geral_6.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid rgb(67, 202, 0);\n"
-"	padding:5px\n"
+"padding:5px;\n"
+"	color: rgb(255, 255, 255);\n"
+"background-color: rgb(43, 43, 43);\n"
 "}\n"
 "QPushButton::hover{\n"
 "	color: rgb(15, 202, 2)\n"
@@ -1289,12 +1290,13 @@ class Ui_MainWindow(object):
         self.btn_inprimir_6.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid;\n"
-"	padding:5px\n"
-"\n"
+"padding:5px;\n"
+"	color: rgb(255, 255, 255);\n"
+"background-color: rgb(43, 43, 43);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(209, 209, 209);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
         icon11 = QIcon()
         icon11.addFile(u":/icons/print-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
@@ -1313,13 +1315,14 @@ class Ui_MainWindow(object):
 "QPushButton{\n"
 "border: 1px solid rgb(255, 33, 33);\n"
 "padding:5px;\n"
-"\n"
+"	color: rgb(255, 255, 255);\n"
+"background-color: rgb(43, 43, 43);\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 33, 33)\n"
 "}")
         icon12 = QIcon()
-        icon12.addFile(u":/icons/trash-can-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon12.addFile(u":/icons/trash-can-solid-white.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_6.setIcon(icon12)
         self.pushButton_6.setIconSize(QSize(24, 24))
 
@@ -1845,7 +1848,9 @@ class Ui_MainWindow(object):
         self.btn_Aplicar_filtro_geral_2.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid rgb(67, 202, 0);\n"
-"	padding:5px\n"
+"padding:5px;\n"
+"	color: rgb(255, 255, 255);\n"
+"background-color: rgb(43, 43, 43);\n"
 "}\n"
 "QPushButton::hover{\n"
 "	color: rgb(15, 202, 2)\n"
@@ -1863,36 +1868,38 @@ class Ui_MainWindow(object):
         self.btn_inprimir_2.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(250, 250, 250);\n"
 "	border:1px solid;\n"
-"	padding:5px\n"
-"\n"
+"padding:5px;\n"
+"	color: rgb(255, 255, 255);\n"
+"background-color: rgb(43, 43, 43);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(209, 209, 209);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
         self.btn_inprimir_2.setIcon(icon11)
         self.btn_inprimir_2.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_31.addWidget(self.btn_inprimir_2)
 
-        self.pushButton_8 = QPushButton(self.frame_126)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setMinimumSize(QSize(0, 40))
-        self.pushButton_8.setFont(font11)
-        self.pushButton_8.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_8.setStyleSheet(u"\n"
+        self.remove_pesagem_avulsas = QPushButton(self.frame_126)
+        self.remove_pesagem_avulsas.setObjectName(u"remove_pesagem_avulsas")
+        self.remove_pesagem_avulsas.setMinimumSize(QSize(0, 40))
+        self.remove_pesagem_avulsas.setFont(font11)
+        self.remove_pesagem_avulsas.setCursor(QCursor(Qt.PointingHandCursor))
+        self.remove_pesagem_avulsas.setStyleSheet(u"\n"
 "QPushButton{\n"
 "border: 1px solid rgb(255, 33, 33);\n"
 "padding:5px;\n"
-"\n"
+"	color: rgb(255, 255, 255);\n"
+"background-color: rgb(43, 43, 43);\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 33, 33)\n"
 "}")
-        self.pushButton_8.setIcon(icon12)
-        self.pushButton_8.setIconSize(QSize(24, 24))
+        self.remove_pesagem_avulsas.setIcon(icon12)
+        self.remove_pesagem_avulsas.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_31.addWidget(self.pushButton_8)
+        self.horizontalLayout_31.addWidget(self.remove_pesagem_avulsas)
 
 
         self.verticalLayout_27.addWidget(self.frame_126)
@@ -2527,9 +2534,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	color: rgb(255, 80, 80);\n"
 "}")
-        icon14 = QIcon()
-        icon14.addFile(u":/icons/trash-can-solid-white.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_remover_clientes.setIcon(icon14)
+        self.btn_remover_clientes.setIcon(icon12)
         self.btn_remover_clientes.setIconSize(QSize(25, 22))
 
         self.verticalLayout_26.addWidget(self.btn_remover_clientes)
@@ -3088,7 +3093,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	color: rgb(255, 80, 80);\n"
 "}")
-        self.btn_remover_veiculos.setIcon(icon14)
+        self.btn_remover_veiculos.setIcon(icon12)
         self.btn_remover_veiculos.setIconSize(QSize(23, 22))
 
         self.verticalLayout_25.addWidget(self.btn_remover_veiculos)
@@ -3606,7 +3611,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	color: rgb(255, 80, 80);\n"
 "}")
-        self.btn_remover_produtos.setIcon(icon14)
+        self.btn_remover_produtos.setIcon(icon12)
         self.btn_remover_produtos.setIconSize(QSize(25, 22))
 
         self.verticalLayout_13.addWidget(self.btn_remover_produtos)
@@ -4945,9 +4950,9 @@ class Ui_MainWindow(object):
 "background-color: rgb(60, 60, 60);\n"
 "}\n"
 "")
-        icon15 = QIcon()
-        icon15.addFile(u":/icons/angle-up-solid_white.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_historico_obs.setIcon(icon15)
+        icon14 = QIcon()
+        icon14.addFile(u":/icons/angle-up-solid_white.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_historico_obs.setIcon(icon14)
         self.btn_historico_obs.setIconSize(QSize(23, 23))
         self.btn_historico_obs.setAutoRepeatDelay(1)
         self.btn_historico_obs.setAutoDefault(False)
@@ -5763,11 +5768,12 @@ class Ui_MainWindow(object):
 "	border:1px solid;\n"
 "	padding:10px;\n"
 "	border-radius:10px;\n"
-"	background-color: rgb(250, 250, 250);\n"
+"	color:white;\n"
+"	background-color: rgb(43, 43, 43);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(209, 209, 209);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
 
         self.gridLayout_6.addWidget(self.btn_alterar_nome, 0, 1, 2, 1)
@@ -5832,13 +5838,12 @@ class Ui_MainWindow(object):
 "	border:1px solid;\n"
 "	padding:10px;\n"
 "	border-radius:10px;\n"
-"	background-color: rgb(250, 250, 250);\n"
-"\n"
+"	color:white;\n"
+"	background-color: rgb(43, 43, 43);\n"
 "}\n"
 "\n"
-"\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(209, 209, 209);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
 
         self.gridLayout_7.addWidget(self.btn_alterar_telefone, 0, 1, 2, 1)
@@ -5879,11 +5884,12 @@ class Ui_MainWindow(object):
 "	border:1px solid rgb(15, 202, 2);\n"
 "	padding:10px;\n"
 "	border-radius:10px;\n"
-"	background-color: rgb(250, 250, 250);\n"
+"color:white;\n"
+"	background-color: rgb(43, 43, 43);\n"
 "}\n"
-"\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(145, 255, 133);\n"
+"	color:black;\n"
 "}")
 
         self.gridLayout_9.addWidget(self.btn_atualizar_licenca, 0, 1, 2, 1)
@@ -5933,12 +5939,12 @@ class Ui_MainWindow(object):
         self.btn_alterar_senha.setStyleSheet(u"QPushButton{\n"
 "	border:1px solid;\n"
 "	padding:8px;\n"
-"	background-color: rgb(250, 250, 250);\n"
+"	color:white;\n"
+"	background-color: rgb(43, 43, 43);\n"
 "}\n"
 "\n"
-"\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(209, 209, 209);\n"
+"	background-color: rgb(80, 80, 80);\n"
 "}")
 
         self.verticalLayout_20.addWidget(self.btn_alterar_senha)
@@ -5979,14 +5985,15 @@ class Ui_MainWindow(object):
         self.btn_excluir_conta.setFont(font11)
         self.btn_excluir_conta.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_excluir_conta.setStyleSheet(u"QPushButton{\n"
-"	border:1px solid red;\n"
-"	padding:7px;\n"
-"	background-color: rgb(250, 250, 250);\n"
-"\n"
+"	border:1px solid rgb(255, 80, 80);\n"
+"	padding:8px;\n"
+"	color:white;\n"
+"	background-color: rgb(43, 43, 43);\n"
 "}\n"
-"\n"
 "QPushButton:hover{\n"
 "	background-color: rgb(255, 147, 147);\n"
+"color:black;\n"
+"\n"
 "}")
 
         self.verticalLayout_21.addWidget(self.btn_excluir_conta)
@@ -6080,9 +6087,9 @@ class Ui_MainWindow(object):
         font38.setPointSize(12)
         self.pushButton_3.setFont(font38)
         self.pushButton_3.setStyleSheet(u"border:0")
-        icon16 = QIcon()
-        icon16.addFile(u":/icons/eye-slash-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon16)
+        icon15 = QIcon()
+        icon15.addFile(u":/icons/eye-slash-solid.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_3.setIcon(icon15)
         self.pushButton_3.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_40.addWidget(self.pushButton_3, 0, Qt.AlignRight)
@@ -6193,7 +6200,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.aba_pesagem_button.setDefault(False)
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(1)
         self.comboBox_veiculo_2.setCurrentIndex(0)
         self.comboBox_carga_2.setCurrentIndex(0)
         self.comboBox_cliente_2.setCurrentIndex(0)
@@ -6271,7 +6278,7 @@ class Ui_MainWindow(object):
         self.label_96.setText(QCoreApplication.translate("MainWindow", u"Motorista:", None))
         self.digite_um_id_2.setText(QCoreApplication.translate("MainWindow", u"Digite um ID", None))
         self.btn_Aplicar_filtro_geral_6.setText(QCoreApplication.translate("MainWindow", u"Aplicar Filtragem", None))
-        self.btn_inprimir_6.setText(QCoreApplication.translate("MainWindow", u"Imprimir relat\u00f3rio", None))
+        self.btn_inprimir_6.setText(QCoreApplication.translate("MainWindow", u"Imprimir relat\u00f3rio atual", None))
         self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"Remover relat\u00f3rio(s) selecionado(s)", None))
         ___qtablewidgetitem = self.tableWidget_7.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
@@ -6312,8 +6319,8 @@ class Ui_MainWindow(object):
         self.btn_filtro_id_2.setText("")
         self.digite_um_id.setText(QCoreApplication.translate("MainWindow", u"Digite um ID", None))
         self.btn_Aplicar_filtro_geral_2.setText(QCoreApplication.translate("MainWindow", u"Aplicar Filtragem", None))
-        self.btn_inprimir_2.setText(QCoreApplication.translate("MainWindow", u"Imprimir relat\u00f3rio", None))
-        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"Remover relat\u00f3rio(s) selecionado(s)", None))
+        self.btn_inprimir_2.setText(QCoreApplication.translate("MainWindow", u"Imprimir relat\u00f3rio atual", None))
+        self.remove_pesagem_avulsas.setText(QCoreApplication.translate("MainWindow", u"Remover relat\u00f3rio(s) selecionado(s)", None))
         ___qtablewidgetitem10 = self.tableWidget_4.horizontalHeaderItem(0)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"EXCLUIR", None));
         ___qtablewidgetitem11 = self.tableWidget_4.horizontalHeaderItem(1)

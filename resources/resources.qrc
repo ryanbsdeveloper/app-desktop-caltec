@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/icons">
+    <file>filter-solid.svg</file>
+    <file>print-solid.svg</file>
     <file>free_icon_1 (3).svg</file>
     <file>16089630971558965371.svg</file>
     <file>trash-can-solid-white.svg</file>
@@ -35,8 +37,6 @@
     <file>caret-left-solid.svg</file>
     <file>angle-up-solid_white.svg</file>
     <file>angle-down-solid_white.svg</file>
-    <file>print-solid.svg</file>
-    <file>filter-solid.svg</file>
     <file>magnifying-glass-solid.svg</file>
     <file>logo.ico</file>
     <file>angle-down-solid.svg</file>

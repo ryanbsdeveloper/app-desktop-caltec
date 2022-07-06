@@ -1879,7 +1879,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2862,7 +2862,9 @@ QComboBox QListView{
                     <string notr="true">QPushButton{
 	background-color: rgb(250, 250, 250);
 	border:1px solid rgb(67, 202, 0);
-	padding:5px
+padding:5px;
+	color: rgb(255, 255, 255);
+background-color: rgb(43, 43, 43);
 }
 QPushButton::hover{
 	color: rgb(15, 202, 2)
@@ -2912,16 +2914,17 @@ QPushButton::hover{
                     <string notr="true">QPushButton{
 	background-color: rgb(250, 250, 250);
 	border:1px solid;
-	padding:5px
-
+padding:5px;
+	color: rgb(255, 255, 255);
+background-color: rgb(43, 43, 43);
 }
 
 QPushButton:hover{
-	background-color: rgb(209, 209, 209);
+	background-color: rgb(80, 80, 80);
 }</string>
                    </property>
                    <property name="text">
-                    <string>Imprimir relatório</string>
+                    <string>Imprimir relatório atual</string>
                    </property>
                    <property name="icon">
                     <iconset resource="resources/resources.qrc">
@@ -2965,7 +2968,8 @@ QPushButton:hover{
 QPushButton{
 border: 1px solid rgb(255, 33, 33);
 padding:5px;
-
+	color: rgb(255, 255, 255);
+background-color: rgb(43, 43, 43);
 }
 QPushButton:hover{
 color:rgb(255, 33, 33)
@@ -2976,7 +2980,7 @@ color:rgb(255, 33, 33)
                    </property>
                    <property name="icon">
                     <iconset resource="resources/resources.qrc">
-                     <normaloff>:/icons/trash-can-solid.svg</normaloff>:/icons/trash-can-solid.svg</iconset>
+                     <normaloff>:/icons/trash-can-solid-white.svg</normaloff>:/icons/trash-can-solid-white.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -4119,7 +4123,9 @@ QLineEdit::focus{
                     <string notr="true">QPushButton{
 	background-color: rgb(250, 250, 250);
 	border:1px solid rgb(67, 202, 0);
-	padding:5px
+padding:5px;
+	color: rgb(255, 255, 255);
+background-color: rgb(43, 43, 43);
 }
 QPushButton::hover{
 	color: rgb(15, 202, 2)
@@ -4163,16 +4169,17 @@ QPushButton::hover{
                     <string notr="true">QPushButton{
 	background-color: rgb(250, 250, 250);
 	border:1px solid;
-	padding:5px
-
+padding:5px;
+	color: rgb(255, 255, 255);
+background-color: rgb(43, 43, 43);
 }
 
 QPushButton:hover{
-	background-color: rgb(209, 209, 209);
+	background-color: rgb(80, 80, 80);
 }</string>
                    </property>
                    <property name="text">
-                    <string>Imprimir relatório</string>
+                    <string>Imprimir relatório atual</string>
                    </property>
                    <property name="icon">
                     <iconset resource="resources/resources.qrc">
@@ -4187,7 +4194,7 @@ QPushButton:hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_8">
+                  <widget class="QPushButton" name="remove_pesagem_avulsas">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -4210,7 +4217,8 @@ QPushButton:hover{
 QPushButton{
 border: 1px solid rgb(255, 33, 33);
 padding:5px;
-
+	color: rgb(255, 255, 255);
+background-color: rgb(43, 43, 43);
 }
 QPushButton:hover{
 color:rgb(255, 33, 33)
@@ -4221,7 +4229,7 @@ color:rgb(255, 33, 33)
                    </property>
                    <property name="icon">
                     <iconset resource="resources/resources.qrc">
-                     <normaloff>:/icons/trash-can-solid.svg</normaloff>:/icons/trash-can-solid.svg</iconset>
+                     <normaloff>:/icons/trash-can-solid-white.svg</normaloff>:/icons/trash-can-solid-white.svg</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -13126,11 +13134,12 @@ border:0</string>
 	border:1px solid;
 	padding:10px;
 	border-radius:10px;
-	background-color: rgb(250, 250, 250);
+	color:white;
+	background-color: rgb(43, 43, 43);
 }
 
 QPushButton:hover{
-	background-color: rgb(209, 209, 209);
+	background-color: rgb(80, 80, 80);
 }</string>
                             </property>
                             <property name="text">
@@ -13291,13 +13300,12 @@ QPushButton:hover{
 	border:1px solid;
 	padding:10px;
 	border-radius:10px;
-	background-color: rgb(250, 250, 250);
-
+	color:white;
+	background-color: rgb(43, 43, 43);
 }
 
-
 QPushButton:hover{
-	background-color: rgb(209, 209, 209);
+	background-color: rgb(80, 80, 80);
 }</string>
                             </property>
                             <property name="text">
@@ -13401,11 +13409,12 @@ QPushButton:hover{
 	border:1px solid rgb(15, 202, 2);
 	padding:10px;
 	border-radius:10px;
-	background-color: rgb(250, 250, 250);
+color:white;
+	background-color: rgb(43, 43, 43);
 }
-
 QPushButton:hover{
 	background-color: rgb(145, 255, 133);
+	color:black;
 }</string>
                             </property>
                             <property name="text">
@@ -13535,12 +13544,12 @@ QPushButton:hover{
                        <string notr="true">QPushButton{
 	border:1px solid;
 	padding:8px;
-	background-color: rgb(250, 250, 250);
+	color:white;
+	background-color: rgb(43, 43, 43);
 }
 
-
 QPushButton:hover{
-	background-color: rgb(209, 209, 209);
+	background-color: rgb(80, 80, 80);
 }</string>
                       </property>
                       <property name="text">
@@ -13656,14 +13665,15 @@ QPushButton:hover{
                       </property>
                       <property name="styleSheet">
                        <string notr="true">QPushButton{
-	border:1px solid red;
-	padding:7px;
-	background-color: rgb(250, 250, 250);
-
+	border:1px solid rgb(255, 80, 80);
+	padding:8px;
+	color:white;
+	background-color: rgb(43, 43, 43);
 }
-
 QPushButton:hover{
 	background-color: rgb(255, 147, 147);
+color:black;
+
 }</string>
                       </property>
                       <property name="text">
@@ -14127,7 +14137,6 @@ QPushButton:hover{
   </action>
  </widget>
  <resources>
-  <include location="resources/resources.qrc"/>
   <include location="resources/resources.qrc"/>
  </resources>
  <connections/>
