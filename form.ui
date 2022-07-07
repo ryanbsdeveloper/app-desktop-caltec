@@ -1879,7 +1879,7 @@ QPushButton:hover{
 </string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="page_relatorio_entradaesaida">
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -9009,60 +9009,6 @@ QLineEdit:focus{
                              <property name="verticalSpacing">
                               <number>6</number>
                              </property>
-                             <item row="1" column="3" alignment="Qt::AlignTop">
-                              <widget class="QLabel" name="label_52">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>19</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>16777215</width>
-                                 <height>13</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>13</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>Carga:</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item row="0" column="0" rowspan="2">
-                              <widget class="QLabel" name="label_54">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>19</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>16777215</width>
-                                 <height>13</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>13</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>Motorista:</string>
-                               </property>
-                              </widget>
-                             </item>
                              <item row="3" column="0">
                               <widget class="QLineEdit" name="input_avulsas_motorista">
                                <property name="minimumSize">
@@ -9102,138 +9048,6 @@ QLineEdit:focus{
                                <property name="placeholderText">
                                 <string>Nome</string>
                                </property>
-                              </widget>
-                             </item>
-                             <item row="1" column="1">
-                              <widget class="QLabel" name="label_55">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>19</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>16777215</width>
-                                 <height>13</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>13</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>Veiculo:</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item row="1" column="2">
-                              <widget class="QLabel" name="label_51">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>19</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>16777215</width>
-                                 <height>13</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>13</pointsize>
-                                 <weight>75</weight>
-                                 <bold>true</bold>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>Cliente:</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item row="3" column="2">
-                              <widget class="QComboBox" name="comboBox_avulsas_cliente">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>0</width>
-                                 <height>40</height>
-                                </size>
-                               </property>
-                               <property name="font">
-                                <font>
-                                 <family>Segoe UI</family>
-                                 <pointsize>13</pointsize>
-                                 <weight>50</weight>
-                                 <italic>false</italic>
-                                 <bold>false</bold>
-                                </font>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true">QComboBox{
-	border:1px solid rgb(15, 202, 2);
-	padding-left:10px;
-	font: 13pt &quot;Segoe UI&quot;;
-	background-color: rgb(255, 255, 255);
-	color:black
-}
-
-QComboBox::drop-down{
-	border:0px;
-	
-}
-
-QComboBox::down-arrow{
-	image: url(:/icons/angle-down-solid.svg);
-	width:12px;
-	height:12px;
-	margin-right:15px;
-}
-
-QComboBox::on{
-	border:1px solid rgb(67, 202, 0);
-}
-
-QComboBox QListView{
-	padding:5px;
-	border:1px solid green;
-	outline:0;
-	color:red;
-}
-</string>
-                               </property>
-                               <property name="currentIndex">
-                                <number>0</number>
-                               </property>
-                               <property name="maxVisibleItems">
-                                <number>10</number>
-                               </property>
-                               <property name="insertPolicy">
-                                <enum>QComboBox::NoInsert</enum>
-                               </property>
-                               <property name="iconSize">
-                                <size>
-                                 <width>32</width>
-                                 <height>32</height>
-                                </size>
-                               </property>
-                               <property name="duplicatesEnabled">
-                                <bool>true</bool>
-                               </property>
-                               <property name="frame">
-                                <bool>true</bool>
-                               </property>
-                               <item>
-                                <property name="text">
-                                 <string>Nenhum</string>
-                                </property>
-                               </item>
                               </widget>
                              </item>
                              <item row="3" column="3">
@@ -9390,6 +9204,411 @@ QComboBox QListView{
                                  <string>Nenhum</string>
                                 </property>
                                </item>
+                              </widget>
+                             </item>
+                             <item row="4" column="1">
+                              <widget class="QFrame" name="frame_26">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>16777215</height>
+                                </size>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_41">
+                                <property name="spacing">
+                                 <number>0</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QLineEdit" name="input_veiculo_manualmente">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>16777215</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QLineEdit{
+	padding:6px;
+	font: 13pt &quot;Segoe UI&quot;;
+	border:1px solid;
+	background-color: rgb(250, 252, 250);
+}
+
+QLineEdit:focus{
+	border:1px solid rgb(15, 202, 2);
+}</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item alignment="Qt::AlignTop">
+                                 <widget class="QPushButton" name="btn_veiculo_manualmente">
+                                  <property name="cursor">
+                                   <cursorShape>PointingHandCursor</cursorShape>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">padding:5px;
+background-color:rgb(43,43,43);
+color:white;
+border-radius:5px</string>
+                                  </property>
+                                  <property name="text">
+                                   <string>Escolher veículo manualmente</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                             <item row="3" column="2">
+                              <widget class="QComboBox" name="comboBox_avulsas_cliente">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>13</pointsize>
+                                 <weight>50</weight>
+                                 <italic>false</italic>
+                                 <bold>false</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QComboBox{
+	border:1px solid rgb(15, 202, 2);
+	padding-left:10px;
+	font: 13pt &quot;Segoe UI&quot;;
+	background-color: rgb(255, 255, 255);
+	color:black
+}
+
+QComboBox::drop-down{
+	border:0px;
+	
+}
+
+QComboBox::down-arrow{
+	image: url(:/icons/angle-down-solid.svg);
+	width:12px;
+	height:12px;
+	margin-right:15px;
+}
+
+QComboBox::on{
+	border:1px solid rgb(67, 202, 0);
+}
+
+QComboBox QListView{
+	padding:5px;
+	border:1px solid green;
+	outline:0;
+	color:red;
+}
+</string>
+                               </property>
+                               <property name="currentIndex">
+                                <number>0</number>
+                               </property>
+                               <property name="maxVisibleItems">
+                                <number>10</number>
+                               </property>
+                               <property name="insertPolicy">
+                                <enum>QComboBox::NoInsert</enum>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="duplicatesEnabled">
+                                <bool>true</bool>
+                               </property>
+                               <property name="frame">
+                                <bool>true</bool>
+                               </property>
+                               <item>
+                                <property name="text">
+                                 <string>Nenhum</string>
+                                </property>
+                               </item>
+                              </widget>
+                             </item>
+                             <item row="1" column="3" alignment="Qt::AlignTop">
+                              <widget class="QLabel" name="label_52">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>19</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>13</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>13</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Carga:</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="0" column="0" rowspan="2">
+                              <widget class="QLabel" name="label_54">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>19</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>13</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>13</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Motorista:</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="1" column="1">
+                              <widget class="QLabel" name="label_55">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>19</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>13</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>13</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Veiculo:</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="1" column="2">
+                              <widget class="QLabel" name="label_51">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>19</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>13</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Segoe UI</family>
+                                 <pointsize>13</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Cliente:</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="4" column="2">
+                              <widget class="QFrame" name="frame_41">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>16777215</height>
+                                </size>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_72">
+                                <property name="spacing">
+                                 <number>0</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QLineEdit" name="input_cliente_manualmente">
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>16777215</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QLineEdit{
+	padding:6px;
+	font: 13pt &quot;Segoe UI&quot;;
+	border:1px solid;
+	background-color: rgb(250, 252, 250);
+}
+
+QLineEdit:focus{
+	border:1px solid rgb(15, 202, 2);
+}</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item alignment="Qt::AlignTop">
+                                 <widget class="QPushButton" name="btn_cliente_manualmente">
+                                  <property name="cursor">
+                                   <cursorShape>PointingHandCursor</cursorShape>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">padding:5px;
+background-color:rgb(43,43,43);
+color:white;
+border-radius:5px</string>
+                                  </property>
+                                  <property name="text">
+                                   <string>Escolher cliente manualmente</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                             <item row="4" column="3">
+                              <widget class="QFrame" name="frame_142">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_73">
+                                <property name="spacing">
+                                 <number>0</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QLineEdit" name="input_carga_manualmente">
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>16777215</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QLineEdit{
+	padding:6px;
+	font: 13pt &quot;Segoe UI&quot;;
+	border:1px solid;
+	background-color: rgb(250, 252, 250);
+}
+
+QLineEdit:focus{
+	border:1px solid rgb(15, 202, 2);
+}</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item alignment="Qt::AlignTop">
+                                 <widget class="QPushButton" name="btn_carga_manualmente">
+                                  <property name="cursor">
+                                   <cursorShape>PointingHandCursor</cursorShape>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">padding:5px;
+background-color:rgb(43,43,43);
+color:white;
+border-radius:5px</string>
+                                  </property>
+                                  <property name="text">
+                                   <string>Escolher carga manualmente</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
                               </widget>
                              </item>
                             </layout>

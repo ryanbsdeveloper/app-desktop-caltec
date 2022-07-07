@@ -338,6 +338,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.animation_menu_produtos)
         self.btn_menu_registrar_veiculos.clicked.connect(
             self.animation_menu_veiculos)
+        self.btn_cliente_manualmente.clicked.connect(self.animation_cliente_manual)
+        self.btn_veiculo_manualmente.clicked.connect(self.animation_veiculo_manual)
+        self.btn_carga_manualmente.clicked.connect(self.animation_carga_manual)
 
         # DIALOGS
         self.dialog_sair_conta = DialogSairConta(self)
@@ -483,6 +486,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         # FUCTIONS 
         self.disable_button()
+        self.comboSelect()
 
     def menu_grupos(self):
         if self.menu_grupos_frame.height() == 0:
@@ -638,6 +642,61 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setEndValue(expand)
         self.animation.start()
 
+    def animation_veiculo_manual(self):
+        height = self.input_veiculo_manualmente.height()
+
+        if height == 0:
+            self.btn_veiculo_manualmente.setText('Esconder')
+            self.comboBox_avulsas_veiculo.setCurrentIndex(0)
+            height_extend = 40
+        else:
+            self.btn_veiculo_manualmente.setText('Escolher veículo manualmente')
+            self.input_veiculo_manualmente.setText('')
+            height_extend = 0
+
+        self.animation = QPropertyAnimation(self.input_veiculo_manualmente, b'maximumHeight')
+        self.animation.setDuration(250)
+        self.animation.setStartValue(height)
+        self.animation.setEndValue(height_extend)
+        self.animation.start()
+
+    def animation_cliente_manual(self):
+        height = self.input_cliente_manualmente.height()
+
+        if height == 0:
+            self.btn_cliente_manualmente.setText('Esconder')
+            self.comboBox_avulsas_cliente.setCurrentIndex(0)
+            height_extend = 40
+        else:
+            self.btn_cliente_manualmente.setText('Escolher cliente manualmente')
+            self.input_cliente_manualmente.setText('')
+
+            height_extend = 0
+
+        self.animation = QPropertyAnimation(self.input_cliente_manualmente, b'maximumHeight')
+        self.animation.setDuration(250)
+        self.animation.setStartValue(height)
+        self.animation.setEndValue(height_extend)
+        self.animation.start()
+
+    def animation_carga_manual(self):
+        height = self.input_carga_manualmente.height()
+
+        if height == 0:
+            self.btn_carga_manualmente.setText('Esconder')
+            self.comboBox_avulsas_carga.setCurrentIndex(0)
+            height_extend = 40
+        else:
+            self.btn_carga_manualmente.setText('Escolher carga manualmente')
+            self.input_carga_manualmente.setText('')
+            height_extend = 0
+
+        self.animation = QPropertyAnimation(self.input_carga_manualmente, b'maximumHeight')
+        self.animation.setDuration(250)
+        self.animation.setStartValue(height)
+        self.animation.setEndValue(height_extend)
+        self.animation.start()
+
     # FUNCTIONS
     def peso_manual(self):
         text = self.peso_manualmente_2.text()
@@ -658,6 +717,42 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 return False
             else:
                 return True
+
+    def comboSelect(self):
+        if self.comboBox_avulsas_carga.currentText() != 'Nenhum':
+            height = self.input_carga_manualmente.height()
+            self.btn_carga_manualmente.setText('Escolher carga manualmente')
+            self.input_carga_manualmente.setText('')
+            height_extend = 0
+
+            self.animation = QPropertyAnimation(self.input_carga_manualmente, b'maximumHeight')
+            self.animation.setDuration(250)
+            self.animation.setStartValue(height)
+            self.animation.setEndValue(height_extend)
+            self.animation.start()
+        
+        if self.comboBox_avulsas_cliente.currentText() != 'Nenhum':
+            height = self.input_cliente_manualmente.height()
+            self.btn_cliente_manualmente.setText('Escolher cliente manualmente')
+            self.input_cliente_manualmente.setText('')
+            height_extend = 0
+
+            self.animation = QPropertyAnimation(self.input_cliente_manualmente, b'maximumHeight')
+            self.animation.setDuration(250)
+            self.animation.setStartValue(height)
+            self.animation.setEndValue(height_extend)
+            self.animation.start()
+
+        if self.comboBox_avulsas_veiculo.currentText() != 'Nenhum':
+            height = self.input_veiculo_manualmente.height()
+            self.btn_veiculo_manualmente.setText('Escolher veículo manualmente')
+            self.input_veiculo_manualmente.setText('')
+            height_extend = 0
+            self.animation = QPropertyAnimation(self.input_veiculo_manualmente, b'maximumHeight')
+            self.animation.setDuration(250)
+            self.animation.setStartValue(height)
+            self.animation.setEndValue(height_extend)
+            self.animation.start()
 
     # Dados adicionados
     def cargas_comboBox(self):
@@ -1060,15 +1155,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def get_pesagem_avulsas(self):
         motorista = self.input_avulsas_motorista.text()
         veiculo = self.comboBox_avulsas_veiculo.currentText()
+        veiculo_2 = self.input_veiculo_manualmente.text()
         cliente = self.comboBox_avulsas_cliente.currentText()
+        cliente_2 = self.input_cliente_manualmente.text()
         carga = self.comboBox_avulsas_carga.currentText()
+        carga_2 = self.input_carga_manualmente.text()
         obs = self.input_avulsas_obs.text()
         peso = self.lcdNumber_2.value()
         data = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
         saida = None
         self.ss15 = 30
 
+        if veiculo_2:
+            veiculo = veiculo_2
+        if cliente_2:
+            cliente = cliente_2
+        if carga_2:
+            carga = carga_2
+
         if motorista and veiculo != 'Nenhum' and cliente != 'Nenhum' and carga != 'Nenhum':
+
             if not obs:
                 obs = 'Sem observação'
             if int(self.lcdNumber_2.value()) == 0:
@@ -1111,6 +1217,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.comboBox_avulsas_veiculo.setCurrentIndex(0)
             self.comboBox_avulsas_cliente.setCurrentIndex(0)
             self.comboBox_avulsas_carga.setCurrentIndex(0)
+            self.input_cliente_manualmente.setText('')
+            self.input_carga_manualmente.setText('')
+            self.input_veiculo_manualmente.setText('')
         
         elif saida == None:
             self.frame_saida.show()
@@ -1387,5 +1496,5 @@ class PremiumWindow(QDialog, Ui_Dialog):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     Window = MainWindow()
-    Window.showFullScreen()
+    Window.showMaximized()
     app.exec_()

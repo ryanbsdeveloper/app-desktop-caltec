@@ -379,7 +379,7 @@ border:1px solid rgb(67, 202, 0)
                <item>
                 <widget class="QFrame" name="frame_32">
                  <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                  <enum>QFrame::NoFrame</enum>
                  </property>
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
@@ -418,7 +418,8 @@ padding:3px;
 background-color: rgb(15, 15, 15);
 color:white}
 QPushButton:hover{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(80, 80, 80);
+
 }</string>
                     </property>
                     <property name="text">
@@ -447,6 +448,7 @@ color:white}
 
 QPushButton:hover{
 	background-color: rgb(151, 255, 151);
+	color:black
 }</string>
                     </property>
                     <property name="text">

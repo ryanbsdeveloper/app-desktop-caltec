@@ -115,6 +115,12 @@ border:0
              <height>50</height>
             </size>
            </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
            <property name="font">
             <font>
              <family>Segoe UI</family>
