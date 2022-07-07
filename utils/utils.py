@@ -42,4 +42,3 @@ def validador(entrada):
         return True
     else:
         return False
-
